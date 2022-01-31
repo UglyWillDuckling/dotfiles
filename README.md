@@ -1,1 +1,3 @@
 # dotfiles
+
+Just a basic list of my dotfiles, dot dot dot ...
