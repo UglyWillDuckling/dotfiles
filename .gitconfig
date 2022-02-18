@@ -1,15 +1,21 @@
+[core]
+	fileMode = false
+	ignorecase = false
 [user]
+	email = vladimi.sedlar@monsoonconsulting.com
 	name = vladimir
-	email = v.s3dlar@gmail.com
 [alias]
 	adog = log --all --decorate --oneline --graph
-	fix-perm = "git diff -p | grep -E '^(diff|old mode|new mode)' | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' | git apply; };"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  js = status
   st = status
   ci = commit --verbose
   co = checkout
   di = diff --find-copies-harder
   dc = diff --find-copies-harder --cached
+  am = amend
   amend = commit --amend
+  a = add
   aa = add --all
   ff = merge --ff-only
   noff = merge --no-ff
@@ -17,23 +23,13 @@
   pom = push origin main
   ds = diff --stat=160,120
   dh1 = diff HEAD~1
-    l = "!. ~/.githelpers && pretty_git_log"
+  l = "!. ~/.githelpers && pretty_git_log"
   r = !GIT_NO_PAGER=1 git l -30
   ra = !git r --all
-[core]
-	autocrlf = input
-	fileMode = false
-[color]
-    ui = auto
-[color "diff-highlight"]
-	  oldNormal = red
-	  oldHighlight = red "#500000"
-	  newNormal = green
-	  newHighlight = green "#003000"
-[color "diff"]
-	  meta = 11
-	  frag = magenta bold
-	  commit = yellow bold
-	  old = red
-	  new = green
-	  whitespace = "#ffff00" reverse
+  pu = push --set-upstream origin
+  dr = push origin --delete
+  b = branch
+  bc = b --contains
+  unstage = restore --staged
+  ss = stash
+  ls = log --stat --oneline
