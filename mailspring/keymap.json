@@ -1,0 +1,8 @@
+{
+  "core:focus-search": "/",
+  "core:mark-unimportant": "shift+n",
+  "core:mark-important": "n",
+  "application:new-message": "c",
+  "core:delete-item": "d",
+  "core:undo": "r"
+}
