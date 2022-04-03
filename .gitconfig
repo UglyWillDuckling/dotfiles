@@ -11,6 +11,7 @@
   st = status
   ci = commit --verbose
   co = checkout
+  d = !git diff --color=always | less --quit-if-one-screen
   di = diff --find-copies-harder
   dc = diff --find-copies-harder --cached
   am = amend
@@ -27,9 +28,12 @@
   r = !GIT_NO_PAGER=1 git l -30
   ra = !git r --all
   pu = push --set-upstream origin
+  p = pull
   dr = push origin --delete
   b = branch
   bc = b --contains
   unstage = restore --staged
   ss = stash
   ls = log --stat --oneline
+  rem = remote -v
+  s = show
