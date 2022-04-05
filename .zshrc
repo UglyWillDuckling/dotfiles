@@ -5,7 +5,7 @@ umask 002
 export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/vlado/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -158,7 +158,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_aliases_l]; then
+if [ -f ~/.bash_aliases_l ]; then
     . ~/.bash_aliases_l
 fi
+
 
