@@ -30,4 +30,4 @@ alias j='jobs'
 alias upgrade='sudo apt-get update; sudo apt-get upgrade'
 alias linux_version='uname -srm'
 alias vpn_reconnect='sudo ipsec down monsoon && sudo ipsec up monsoon'
-
+alias xdebug_staging='php -c /etc/platform/uut3dca33gxuq_stg/php.xdebug.ini -d xdebug.profiler_enable=On  bin/magento'
