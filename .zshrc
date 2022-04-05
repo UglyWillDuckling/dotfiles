@@ -74,7 +74,6 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
 	zsh-syntax-highlighting
 )
 
@@ -162,4 +161,5 @@ if [ -f ~/.bash_aliases_l ]; then
     . ~/.bash_aliases_l
 fi
 
+source ~/.local/bin/bashmarks.sh
 
