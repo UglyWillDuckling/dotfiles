@@ -11,9 +11,9 @@
   st = status
   ci = commit --verbose
   co = checkout
-  d = !git diff --color=always | less --quit-if-one-screen
+  d =  diff --color=always
   di = diff --find-copies-harder
-  dc = diff --find-copies-harder --cached
+  dc = diff --find-copies-harder --cached --color=always
   am = amend
   amend = commit --amend
   a = add

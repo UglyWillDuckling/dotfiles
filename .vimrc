@@ -13,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Command-T Plugin
 Plugin 'wincent/command-t'
 
+" Comment Plugin https://github.com/yaocccc/vim-comment
+Plugin 'yaocccc/vim-comment'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -180,6 +183,9 @@ vnoremap <leader>ib :!align<cr>
 " Close all other splits
 nnoremap <leader>o :only<cr>
 
+" 
+nnoremap <leader>w :w<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
@@ -221,4 +227,13 @@ map <leader>n :call RenameFile()<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT src/app/code<cr>
 map <leader>gd :CommandTFlush<cr>\|:CommandT src/app/design<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT src/vendor/magento<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Comment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> ?? :NToggleComment<CR>
+xmap <silent> /  :<c-u>VToggleComment<CR>
+smap <silent> /  <c-g>:<c-u>VToggleComment<CR>
+xmap <silent> ?  :<c-u>CToggleComment<CR>
+smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
 
