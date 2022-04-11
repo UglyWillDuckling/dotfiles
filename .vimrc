@@ -161,8 +161,6 @@ cnoremap <expr> %% expand('%:h').'/'
 command! -range Md5 :echo system('echo '.shellescape(join(getline(<line1>, <line2>), '\n')) . '| md5')
 
 
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -182,7 +180,6 @@ nnoremap <leader><leader> <c-^>
 vnoremap <leader>ib :!align<cr>
 " Close all other splits
 nnoremap <leader>o :only<cr>
-
 " 
 nnoremap <leader>w :w<cr>
 
