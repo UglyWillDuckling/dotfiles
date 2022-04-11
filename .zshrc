@@ -74,6 +74,14 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  k
+  chucknorris
+  copypath
+  web-search
+  sudo
+  zsh-autosuggestions
+  compleat
+  emoji
 	zsh-syntax-highlighting
 )
 
@@ -124,6 +132,10 @@ setopt EXTENDED_GLOB
 setopt extended_glob
 setopt KSH_GLOB
 
+# Directory colors
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
 
 # Functions
 extract_words() {sed 's/^.*\///' | sed 's/\..*//'}
@@ -165,3 +177,6 @@ fi
 source ~/.local/bin/bashmarks.sh
 # Ruby
 eval "$(rbenv init -)"
+
+eval $(thefuck --alias)
+
