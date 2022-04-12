@@ -214,3 +214,7 @@ _gen_fzf_default_opts() {
 }
 _gen_fzf_default_opts
 
+
+# Navi
+eval "$(navi widget zsh)"
+
