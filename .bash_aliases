@@ -37,3 +37,4 @@ alias remove_color_codes='sed -r "s/\x1B\[(([0-9]{1,2})?(;)?([0-9]{1,2})?)?[m,K,
 alias suderbobo='sponge'
 alias hyper='hyperfine'
 alias cpath='copypath'
+alias gt='git'
