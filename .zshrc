@@ -175,8 +175,10 @@ fi
 
 # Bashmarks
 source ~/.local/bin/bashmarks.sh
+
 # Ruby
 eval "$(rbenv init -)"
 
+# The !uck
 eval $(thefuck --alias)
 
