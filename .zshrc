@@ -217,5 +217,5 @@ _gen_fzf_default_opts
 
 
 # Navi
-eval "$(navi widget zsh)"
+[ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
 
