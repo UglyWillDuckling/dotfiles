@@ -22,7 +22,7 @@ mutagen_restart() { mutagen daemon stop; mutagen daemon start; }
 log_find_order_state_change() { find . -name '*.gz' -mtime -200 | grep system | sort | xargs zcat  | grep -e "State Handler" | grep closed | awk '{print $17}' | sed 's/^/"/' | sed 's/$/",/'; }
 log_find_call_on_null () { cat system.log | grep -e "getValue() on null" -A 2 | grep getCalculator | sort -u | awk -F\' '{print $2","}'; }
 log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\t%p\n" | sort | awk '{print $2}' | xargs grep -e "getValue() on null"; }
-file_open() { fdfind --type f -e $1 . $2 |  rofi -keep-right -dmenu -i -p Docs | read file; xdg-open $file; }
+file_open() { fd --type f $2 $1 |  rofi -keep-right -dmenu -i -p Docs | read file; xdg-open $file 2>/dev/null; }
 
 alias msl='bin/mutagen-sync_list'
 alias grep='grep --color=always'
