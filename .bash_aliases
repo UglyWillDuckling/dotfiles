@@ -25,6 +25,7 @@ log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\
 file_open() { fd --type f $2 $1 |  rofi -keep-right -dmenu -i -p Docs | read file; xdg-open $file 2>/dev/null; }
 
 alias msl='bin/mutagen-sync_list'
+alias open='xdg-open >/dev/null 2>/dev/null'
 alias grep='grep --color=always'
 alias diff='diff --color'
 alias j='jobs'
@@ -39,5 +40,15 @@ alias suderbobo='sponge'
 alias hyper='hyperfine'
 alias cpath='copypath'
 alias gt='git'
-alias fd='fdfind'
-alias run='rofi -show drun'
+alias run='rofi -show drun 2>/dev/null'
+alias batman='man bat'
+alias .l="ls -lhGgod ./*"
+
+if [ -x "$(command -v fdfind)" ]
+then
+    alias fd='fdfind'
+fi
+
+# test
+alias fdoc='find_files "pdf|md"'
+

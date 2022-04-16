@@ -2,7 +2,8 @@
 umask 002
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.local/bin:$HOME/.nvm:$PATH
+export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.local/bin:$HOME/.nvm:$HOME/dev/scripts:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -166,19 +167,11 @@ extract () {
    fi
 }
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-if [ -f ~/.bash_aliases_l ]; then
-    . ~/.bash_aliases_l
-fi
-
 # Bashmarks
 source ~/.local/bin/bashmarks.sh
 
 # Ruby
-eval "$(rbenv init -)"
+[ -x "$(command -v rbenv)" ] && eval "$(rbenv init -)"
 
 # The !uck
 eval $(thefuck --alias)
@@ -217,5 +210,19 @@ _gen_fzf_default_opts
 
 
 # Navi
-eval "$(navi widget zsh)"
+[ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
 
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_l ]; then
+    . ~/.bash_aliases_l
+fi
+
+# Add navi to path
+export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
+
+# Bluetooth enable
+rfkill unblock  bluetooth

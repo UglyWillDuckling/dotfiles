@@ -16,6 +16,10 @@ Plugin 'wincent/command-t'
 " Comment Plugin https://github.com/yaocccc/vim-comment
 Plugin 'yaocccc/vim-comment'
 
+Plugin 'tpope/vim-sleuth'
+
+Plugin 'romainl/vim-cool'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
