@@ -223,3 +223,6 @@ fi
 
 # Add navi to path
 export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
+
+# Bluetooth enable
+rfkill unblock  bluetooth
