@@ -39,5 +39,9 @@ alias suderbobo='sponge'
 alias hyper='hyperfine'
 alias cpath='copypath'
 alias gt='git'
-alias fd='fdfind'
 alias run='rofi -show drun 2>/dev/null'
+if [ -x "$(command -v fdfind)" ]
+then
+    alias fd='fdfind'
+fi
+
