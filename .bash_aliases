@@ -50,5 +50,7 @@ then
 fi
 
 # test
-alias fdoc='find_files "pdf|md"'
-
+if [ -x "$(command -v find_files)" ]
+then
+    alias fdoc='find_files "pdf|md"'
+fi
