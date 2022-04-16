@@ -24,6 +24,7 @@ log_find_call_on_null () { cat system.log | grep -e "getValue() on null" -A 2 | 
 log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\t%p\n" | sort | awk '{print $2}' | xargs grep -e "getValue() on null"; }
 
 alias msl='bin/mutagen-sync_list'
+alias open='xdg-open >/dev/null 2>/dev/null'
 alias grep='grep --color=always'
 alias diff='diff --color'
 alias j='jobs'
