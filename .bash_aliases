@@ -40,6 +40,9 @@ alias hyper='hyperfine'
 alias cpath='copypath'
 alias gt='git'
 alias run='rofi -show drun 2>/dev/null'
+alias batman='man bat'
+alias .l="ls -lhGgod ./*"
+
 if [ -x "$(command -v fdfind)" ]
 then
     alias fd='fdfind'
