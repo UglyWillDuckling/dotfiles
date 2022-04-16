@@ -221,3 +221,5 @@ if [ -f ~/.bash_aliases_l ]; then
     . ~/.bash_aliases_l
 fi
 
+# Add navi to path
+export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
