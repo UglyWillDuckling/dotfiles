@@ -48,3 +48,6 @@ then
     alias fd='fdfind'
 fi
 
+# test
+alias fdoc='find_files "pdf|md"'
+
