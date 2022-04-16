@@ -167,14 +167,6 @@ extract () {
    fi
 }
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-if [ -f ~/.bash_aliases_l ]; then
-    . ~/.bash_aliases_l
-fi
-
 # Bashmarks
 source ~/.local/bin/bashmarks.sh
 
@@ -219,4 +211,13 @@ _gen_fzf_default_opts
 
 # Navi
 [ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
+
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_l ]; then
+    . ~/.bash_aliases_l
+fi
 
