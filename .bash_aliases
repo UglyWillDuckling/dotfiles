@@ -59,3 +59,4 @@ then
 fi
 
 alias wbs='web-search'
+alias pi='bc -l <<< "scale=10; 4*a(1);"'
