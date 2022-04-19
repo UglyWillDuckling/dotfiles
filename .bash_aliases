@@ -57,3 +57,5 @@ if [ -x "$(command -v find_files)" ]
 then
     alias fdoc='find_files "pdf|md"'
 fi
+
+alias wbs='web-search'
