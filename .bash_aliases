@@ -45,6 +45,7 @@ alias cpath='copypath'
 alias gt='git'
 alias run='rofi -show drun 2>/dev/null'
 alias batman='man bat'
+alias bat_empty='bat --style="header"'
 alias .l="ls -lhGgod ./*"
 
 if [ -x "$(command -v fdfind)" ]
