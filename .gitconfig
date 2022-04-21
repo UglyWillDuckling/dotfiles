@@ -9,9 +9,8 @@
 [alias]
   dog = log --all --decorate --oneline --graph
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  js = status
-  st = status
-  sts = st -s
+  st = "!git status | bat -l rb"
+  sts = status -s
   ci = commit --verbose
   co = checkout
   d =  diff --color=always
