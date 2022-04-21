@@ -24,7 +24,7 @@ log_find_call_on_null () { cat system.log | grep -e "getValue() on null" -A 2 | 
 log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\t%p\n" | sort | awk '{print $2}' | xargs grep -e "getValue() on null"; }
 file_open() { fd --type f $2 $1 |  rofi -keep-right -dmenu -i -p Docs | read file; xdg-open $file 2>/dev/null; }
 emojis() {
-    bat /home/vlado/.oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh | tail +25 | awk 'BEGIN{ FS="=" } {print $2}' | head -n 200 | xargs | sed "s/\\$/\$\'/g" | sed "s/\s/' /g" | sed "s/$/\'/"
+    bat ~/.oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh | tail +25 | awk 'BEGIN{ FS="=" } {print $2}' | head -n 200 | xargs | sed "s/\\$/\$\'/g" | sed "s/\s/' /g" | sed "s/$/\'/"
 }
 
 alias msl='bin/mutagen-sync_list'
