@@ -241,3 +241,7 @@ smap <silent> /  <c-g>:<c-u>VToggleComment<CR>
 xmap <silent> ?  :<c-u>CToggleComment<CR>
 smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
 
+
+" Make Y yank till end of line. Super useful.
+nnoremap Y y$
+
