@@ -20,6 +20,8 @@ Plugin 'tpope/vim-sleuth'
 
 Plugin 'romainl/vim-cool'
 
+" https://github.com/tpope/vim-rsi
+Plugin 'tpope/vim-rsi'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
