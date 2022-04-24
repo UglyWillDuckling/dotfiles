@@ -22,6 +22,10 @@ Plugin 'romainl/vim-cool'
 
 " https://github.com/tpope/vim-rsi
 Plugin 'tpope/vim-rsi'
+
+" https://github.com/tpope/vim-surround
+Plugin 'tpope/vim-surround'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
