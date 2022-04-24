@@ -47,6 +47,7 @@ alias run='rofi -show drun 2>/dev/null'
 alias batman='man bat'
 alias bat_empty='bat --style="header"'
 alias .l="ls -lhGgod ./*"
+alias wbs='web-search'
 
 if [ -x "$(command -v fdfind)" ]
 then
@@ -59,7 +60,6 @@ then
     alias fdoc='find_files "pdf|md"'
 fi
 
-alias wbs='web-search'
 alias pi='bc -l <<< "scale=10; 4*a(1);"'
 
 ascii2pdf_and_open() { a2ps | ps2pdf - |okular - 2>/dev/null}
