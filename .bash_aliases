@@ -62,4 +62,4 @@ fi
 
 alias pi='bc -l <<< "scale=10; 4*a(1);"'
 
-ascii2pdf_and_open() { a2ps | ps2pdf - |okular - 2>/dev/null}
+ascii2pdf_and_open() { a2ps -o - | ps2pdf - |okular - 2>/dev/null}
