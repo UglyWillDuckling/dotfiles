@@ -65,3 +65,4 @@ alias pi='bc -l <<< "scale=10; 4*a(1);"'
 ascii2pdf_and_open() { a2ps -o - | ps2pdf - |okular - 2>/dev/null}
 null() { cat > /dev/null 2>&1}
 prepend_to() { <<(echo "$1") < $2 | sponge |cat }
+trim_whitespace_start() { sed -e 's/^[[:space:]]//' }
