@@ -39,6 +39,7 @@
   ls = log --stat --oneline
   rem = remote -v
   s = show
+  db = branch -D
 [init]
   defaultBranch = main
 
