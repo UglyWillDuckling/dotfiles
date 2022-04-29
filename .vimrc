@@ -7,6 +7,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/morhetz/gruvbox/wiki/Installation
+Plugin 'morhetz/gruvbox'
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -25,6 +28,10 @@ Plugin 'tpope/vim-rsi'
 
 " https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
+
+" GruvBox Init
+let g:gruvbox_contrast_light = 'hard'
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
