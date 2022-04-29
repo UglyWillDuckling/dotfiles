@@ -48,6 +48,7 @@ alias batman='man bat'
 alias bat_empty='bat --style="header"'
 alias .l="ls -lhGgod ./*"
 alias wbs='web-search'
+alias gi='git'
 
 if [ -x "$(command -v fdfind)" ]
 then
