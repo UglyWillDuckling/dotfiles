@@ -224,3 +224,7 @@ fi
 # Add navi to path
 export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
 
+if [ -f ~/.zshrc_l ]; then
+    . ~/.zshrc_l
+fi
+
