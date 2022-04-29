@@ -1,0 +1,186 @@
+{
+  "*": {
+    "env": "production",
+    "core": {
+      "themes": [
+        "ui-light"
+      ],
+      "disabledPackages": [
+        "message-view-on-github",
+        "personal-level-indicators",
+        "phishing-detection",
+        "nylas-private-salesforce",
+        "github-contact-card",
+        "keybase",
+        "composer-markdown",
+        "composer-scheduler",
+        "composer-mail-merge",
+        "send-and-archive",
+        "main-calendar"
+      ],
+      "workspace": {
+        "mode": "list",
+        "interfaceZoom": 1.05,
+        "hiddenLocations": {
+          "MessageListSidebar": {
+            "id": "MessageListSidebar",
+            "Toolbar": {
+              "id": "MessageListSidebar:Toolbar"
+            }
+          }
+        }
+      },
+      "keymapTemplate": "Gmail",
+      "tutorial": {
+        "seen": [
+          "ThreadSearchBar",
+          "ActivityListButton",
+          "ToolbarSnooze",
+          "ModeToggle",
+          "SendRemindersPopoverButton",
+          "LinkTrackingButton",
+          "OpenTrackingButton",
+          "SendLaterButton",
+          "SendRemindersComposerButton"
+        ]
+      },
+      "sending": {
+        "sounds": false,
+        "undoSend": 3000
+      },
+      "composing": {
+        "spellcheck": true,
+        "html": true
+      }
+    },
+    "identity": {
+      "id": "ba7d3f13-569c-4ad6-9bb4-de5570e75db7",
+      "firstName": "Vladimir",
+      "lastName": "Sedlar",
+      "emailAddress": "vladokiller33@gmail.com",
+      "object": "identity",
+      "createdAt": "2020-11-01T16:10:59.000Z",
+      "stripePlan": "Basic",
+      "stripePlanEffective": "Basic",
+      "stripeCustomerId": "cus_IJLqSPpt2GiQfE",
+      "stripePeriodEnd": "2022-05-01T16:10:59.000Z",
+      "featureUsage": {
+        "snooze": {
+          "quota": 15,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "send-later": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "thread-sharing": {
+          "quota": 3,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "link-tracking": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "open-tracking": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "contact-profiles": {
+          "quota": 3,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "send-reminders": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "translation": {
+          "quota": 50,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        }
+      }
+    },
+    "accounts": [
+      {
+        "id": "06b7b95c",
+        "metadata": [],
+        "name": "Vladimir Sedlar",
+        "provider": "gmail",
+        "emailAddress": "vladimir.sedlar@monsoonconsulting.com",
+        "settings": {
+          "imap_host": "imap.gmail.com",
+          "imap_port": 993,
+          "imap_username": "vladimir.sedlar@monsoonconsulting.com",
+          "imap_security": "SSL / TLS",
+          "imap_allow_insecure_ssl": false,
+          "smtp_host": "smtp.gmail.com",
+          "smtp_port": 587,
+          "smtp_username": "vladimir.sedlar@monsoonconsulting.com",
+          "smtp_security": "STARTTLS",
+          "smtp_allow_insecure_ssl": false,
+          "container_folder": "",
+          "refresh_client_id": "662287800555-0a5h4ii0e9hsbpq0mqtul7fja0jhf9uf.apps.googleusercontent.com"
+        },
+        "label": "vladimir.sedlar@monsoonconsulting.com",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "syncError": {
+          "code": 134,
+          "error": {
+            "stack": "Error: null134067 [2021-12-07 11:59:47.835] [background] [critical] \n***\n*** Mailspring Sync \n*** An exception occurred during program execution: \n*** {\"debuginfo\":\"https://www.googleapis.com/oauth2/v4/token RETURNED {\\n  \\\"error\\\": \\\"invalid_grant\\\",\\n  \\\"error_description\\\": \\\"Token has been expired or revoked.\\\"\\n}\",\"key\":\"Invalid Response Code: 400\",\"retryable\":false,\"what\":\"std::exception\"}\n***\n\n/snap/mailspring/506/usr/share/mailspring/resources/app.asar.unpacked/mailsync: line 5: 134067 Aborted                 (core dumped) SASL_PATH=\"$SCRIPTPATH\" LD_LIBRARY_PATH=\"$SCRIPTPATH;$LD_LIBRARY_PATH\" \"$SCRIPTPATH/mailsync.bin\" \"$@\"\n\n    at ChildProcess.onStreamCloseOrExit (file:///tmp/nylas-build/electron-packager/linux-x64/mailspring-linux-x64/resources/app/src/mailsync-process.ts:301:17)\n    at ChildProcess.emit (events.js:210:5)\n    at ChildProcess.EventEmitter.emit (domain.js:476:20)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)",
+            "message": "null134067 [2021-12-07 11:59:47.835] [background] [critical] \n***\n*** Mailspring Sync \n*** An exception occurred during program execution: \n*** {\"debuginfo\":\"https://www.googleapis.com/oauth2/v4/token RETURNED {\\n  \\\"error\\\": \\\"invalid_grant\\\",\\n  \\\"error_description\\\": \\\"Token has been expired or revoked.\\\"\\n}\",\"key\":\"Invalid Response Code: 400\",\"retryable\":false,\"what\":\"std::exception\"}\n***\n\n/snap/mailspring/506/usr/share/mailspring/resources/app.asar.unpacked/mailsync: line 5: 134067 Aborted                 (core dumped) SASL_PATH=\"$SCRIPTPATH\" LD_LIBRARY_PATH=\"$SCRIPTPATH;$LD_LIBRARY_PATH\" \"$SCRIPTPATH/mailsync.bin\" \"$@\"\n"
+          },
+          "signal": null
+        },
+        "authedAt": 1638874811.99,
+        "color": "",
+        "__cls": "Account"
+      }
+    ],
+    "accountsVersion": 29,
+    "containerFolderDefault": "",
+    "plugins": {
+      "link-tracking": {
+        "defaultOn": false
+      },
+      "open-tracking": {
+        "defaultOn": false
+      }
+    },
+    "signatures": {
+      "initial": {
+        "title": "Personal signature",
+        "id": "initial",
+        "body": "<table cellPadding=\"0\" cellSpacing=\"0\"><tbody><tr><td style=\"vertical-align:top\"></td><td><div>Vladimir Sedlar</div><div style=\"font-size:0.9em;border-top:1px solid gray;min-width:250px;max-width:300px;margin-top:4px;padding-top:4px\"><div><div><a href=\"mailto:vladimir.sedlar@monsoonconsulting.com\">vladimir.sedlar@monsoonconsulting.com</a></div><div></div><div></div></div></div></td></tr></tbody></table>",
+        "data": {
+          "title": "",
+          "name": "Vladimir Sedlar",
+          "templateName": "SignatureA",
+          "email": "vladimir.sedlar@monsoonconsulting.com"
+        }
+      }
+    },
+    "defaultSignatures": {
+      "vladimir.sedlar@monsoonconsulting.com": "initial"
+    }
+  }
+}
