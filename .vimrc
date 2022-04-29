@@ -7,7 +7,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" https://github.com/morhetz/gruvbox/wiki/Installation
+" https://github.com/morhetz/gruvbox/
 Plugin 'morhetz/gruvbox'
 
 " let Vundle manage Vundle, required
@@ -28,10 +28,6 @@ Plugin 'tpope/vim-rsi'
 
 " https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
-
-" GruvBox Init
-let g:gruvbox_contrast_light = 'hard'
-autocmd vimenter * ++nested colorscheme gruvbox
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -65,11 +61,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-syntax enable
-set background=light
-colorscheme solarized
+let g:gruvbox_contrast_light = 'hard'
+" GruvBox Init
+autocmd vimenter * ++nested colorscheme gruvbox
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
+
+if strftime("%H") < 21 
+  set background=light
+else
+  set background=dark
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
