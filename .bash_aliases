@@ -49,6 +49,7 @@ alias bat_empty='bat --style="header"'
 alias .l="ls -lhGgod ./*"
 alias wbs='web-search'
 alias gi='git'
+alias dockerps_names='docker ps --format '{{.Names}}''
 
 if [ -x "$(command -v fdfind)" ]
 then
