@@ -40,6 +40,8 @@
   rem = remote -v
   s = show
   db = branch -D
+  update = pull
+  createbranch = checkout -b
 [init]
   defaultBranch = main
 
