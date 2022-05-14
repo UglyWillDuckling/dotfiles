@@ -7,8 +7,8 @@ dk-debug-shell-php()
         exit 0;
     fi
  
-    echo "This will start the debug for the file $1"
-    docker-compose exec php sh -c "php -dxdebug.profiler_enable=1 -dxdebug.remote_autostart=1 $1"
+    # echo "This will start the debug for the file $1"
+    docker-compose exec phpfpm sh -c "export XDEBUG_MODE=profiler XDEBUG_SESSION=1 XDEBUG_OUTPUT_DIR='/var/www/html/'; export PHP_IDE_CONFIG='serverName=aap-publisher.local'; php $1"
 }
 
 branches-clean() {
