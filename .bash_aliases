@@ -56,7 +56,6 @@ then
     alias fd='fdfind'
 fi
 
-# test
 if [ -x "$(command -v find_files)" ]
 then
     alias fdoc='find_files "pdf|md"'
@@ -72,7 +71,6 @@ trim_whitespace_start() { sed -e 's/^[[:space:]]//' }
 magento_trace_format() {
     sed 's/^#[0-9]* //' | grep -v "closure\|___callParent\|___callPlugins" | awk '{print $0 "\n|"}' | awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' | head -n -1
 }
-
 magento_trace_format_2() {
     awk '{tabs=""; for (counter = NR; counter > 0; counter--){ tabs=tabs"  "}; print tabs$0}' | sed 's/#[0-9]*//'
 }

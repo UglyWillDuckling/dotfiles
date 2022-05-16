@@ -174,7 +174,10 @@ source ~/.local/bin/bashmarks.sh
 [ -x "$(command -v rbenv)" ] && eval "$(rbenv init -)"
 
 # The !uck
-eval $(thefuck --alias)
+if [ -x "$(command -v thefuck)" ]
+then
+    eval $(thefuck --alias)
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
