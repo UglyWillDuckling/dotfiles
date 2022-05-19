@@ -31,6 +31,9 @@ Plugin 'tpope/vim-surround'
 
 " https://github.com/tpope/vim-repeat
 Plugin 'tpope/vim-repeat'
+
+" https://github.com/tpope/vim-unimpaired
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
