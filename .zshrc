@@ -231,3 +231,5 @@ if [ -f ~/.zshrc_l ]; then
     . ~/.zshrc_l
 fi
 
+# disable the ctrl+s shortcut
+stty -ixon
