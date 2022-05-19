@@ -29,9 +29,8 @@ Plugin 'tpope/vim-rsi'
 " https://github.com/tpope/vim-surround
 Plugin 'tpope/vim-surround'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+" https://github.com/tpope/vim-repeat
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
