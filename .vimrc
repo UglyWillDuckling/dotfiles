@@ -39,6 +39,10 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'svermeulen/vim-easyclip'
 
 Plugin 'tpope/vim-fugitive'
+
+" https://github.com/glts/vim-magnum
+Plugin 'glts/vim-magnum'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
