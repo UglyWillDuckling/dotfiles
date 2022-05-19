@@ -34,6 +34,10 @@ Plugin 'tpope/vim-repeat'
 
 " https://github.com/tpope/vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
+
+" https://github.com/svermeulen/vim-easyclip
+Plugin 'svermeulen/vim-easyclip'
+
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
