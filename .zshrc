@@ -214,7 +214,8 @@ _gen_fzf_default_opts
 
 # Navi
 [ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
-
+# Add navi to path
+export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -223,9 +224,6 @@ fi
 if [ -f ~/.bash_aliases_l ]; then
     . ~/.bash_aliases_l
 fi
-
-# Add navi to path
-export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
 
 if [ -f ~/.zshrc_l ]; then
     . ~/.zshrc_l
