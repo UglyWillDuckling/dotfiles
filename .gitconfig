@@ -36,6 +36,8 @@
   bc = b --contains
   unstage = restore --staged
   ss = stash
+  ssl = stash list
+  sss = stash save
   ls = log --stat --oneline
   rem = remote -v
   s = show
