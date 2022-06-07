@@ -45,6 +45,7 @@
   db = branch -D
   update = pull
   createbranch = checkout -b
+  recent = r --all --no-merges --since="2.weeks"
 [init]
   defaultBranch = main
 
