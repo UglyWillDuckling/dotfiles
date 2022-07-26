@@ -77,7 +77,7 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 syntax enable
 
-if strftime("%H") < 21 
+if strftime("%H") < 21 && strftime("%H") > 7
   set background=light
 else
   set background=dark
