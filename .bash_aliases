@@ -15,7 +15,8 @@ branches-clean() {
   git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 
-filter_out_empty() { awk 'NF'; }
+filter_empty() { awk 'NF'; }
+remove_empty_lines() { filter_empty }
 filtersortconfig() { awk -f config_dump.awk config_dump_prod.txt 2>/dev/null | sort;}
 uniq_difference_config() { diff --color dump_config_staging.txt dump_config_prod.txt | egrep "^>|^<" | awk '{print $2}' | egrep -e ".*/.*/" |sort -u; }
 mutagen_restart() { mutagen daemon stop; mutagen daemon start; }
