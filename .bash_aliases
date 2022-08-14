@@ -29,6 +29,7 @@ emojis() {
 }
 
 alias msl='bin/mutagen-sync_list'
+alias tolower="awk '{print tolower($0)}'"
 alias open='xdg-open >/dev/null 2>/dev/null'
 alias grep='grep --color=always'
 alias diff='diff --color'
