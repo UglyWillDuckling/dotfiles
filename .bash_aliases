@@ -82,4 +82,5 @@ my_ip() {
 curl_domain_to_ip() {
     curl --connect-to www.persen.de:443:194.6.194.235:443 https://www.persen.de/
 }
+yml_remove-ports() { yq 'del(.services | .[] | .ports)' }
 
