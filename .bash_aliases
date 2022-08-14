@@ -86,4 +86,5 @@ curl_domain_to_ip() {
 }
 yml_remove-ports() { yq 'del(.services | .[] | .ports)' }
 mage_clean_composer() { rm -rf vendor/magento/framework* vendor/magento/magento-composer-installer vendor/magento/composer vendor/composer }
+mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password=Admin123 --admin-email=test@admin.com --admin-firstname=Admin --admin-lastname=Bob}
 
