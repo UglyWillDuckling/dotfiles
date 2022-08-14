@@ -46,6 +46,8 @@
   update = pull
   createbranch = checkout -b
   recent = r --all --no-merges --since="2.weeks"
+  last= log -1
+  parent= log --pretty=%P -n 1
 [init]
   defaultBranch = main
 
