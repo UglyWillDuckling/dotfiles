@@ -90,3 +90,4 @@ mage_clean_composer() { rm -rf vendor/magento/framework* vendor/magento/magento-
 mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password=Admin123 --admin-email=test@admin.com --admin-firstname=Admin --admin-lastname=Bob}
 
 repeat_100() { for i in {1..100}; do "$@"; done }
+center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
