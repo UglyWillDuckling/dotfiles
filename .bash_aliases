@@ -28,6 +28,8 @@ emojis() {
     bat ~/.oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh | tail +25 | awk 'BEGIN{ FS="=" } {print $2}' | head -n 200 | xargs | sed "s/\\$/\$\'/g" | sed "s/\s/' /g" | sed "s/$/\'/"
 }
 
+alias b="bat"
+alias l="alias l='ls --color -lhF --group-directories-first'"
 alias msl='bin/mutagen-sync_list'
 alias tolower="awk '{print tolower($0)}'"
 alias open='xdg-open >/dev/null 2>/dev/null'

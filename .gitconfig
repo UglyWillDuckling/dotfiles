@@ -7,6 +7,10 @@
 	email = vladimi.sedlar@monsoonconsulting.com
 	name = vladimir
 [alias]
+  # Goodness (summary of diff lines added/removed/total)
+  gn = goodness
+  gnc = goodness --cached
+
   dog = log --all --decorate --oneline --graph
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   st = "!git status"
@@ -28,11 +32,14 @@
   dh1 = diff HEAD~1
   l = "!. ~/.githelpers && pretty_git_log"
   r = !GIT_NO_PAGER=1 git l -11
+  la = !git l --all
   ra = !git r --all
   pu = push --set-upstream origin
   p = pull
   dr = push origin --delete
-  b = branch
+  # b = branch
+  b = "!. ~/.githelpers && pretty_git_branch"
+  bs = "!. ~/.githelpers && pretty_git_branch_sorted"
   bc = b --contains
   unstage = restore --staged
   ss = stash
