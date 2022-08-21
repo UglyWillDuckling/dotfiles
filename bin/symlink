@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-echo "Symlinking files"
-
 rm $HOME/.gitconfig
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig
 rm $HOME/.zshrc
 ln -s $(pwd)/.zshrc $HOME/.zshrc
 rm $HOME/.vimrc
 ln -s $(pwd)/.vimrc $HOME/.vimrc
+rm $HOME/.bash_aliases
+ln -s $(pwd)/.bash_aliases $HOME/.bash_aliases
 
