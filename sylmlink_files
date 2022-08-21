@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "Symlinking files"
+
+rm $HOME/.gitconfig
+ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+rm $HOME/.zshrc
+ln -s $(pwd)/.zshrc $HOME/.zshrc
+rm $HOME/.vimrc
+ln -s $(pwd)/.vimrc $HOME/.vimrc
+
