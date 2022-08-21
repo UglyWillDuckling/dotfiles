@@ -29,7 +29,8 @@ emojis() {
 }
 
 alias b="bat"
-alias l="alias l='ls --color -lhF --group-directories-first'"
+alias ll="ls --color -lhF --group-directories-first"
+alias l="ls --color -lAhF --group-directories-first"
 alias msl='bin/mutagen-sync_list'
 alias tolower="awk '{print tolower($0)}'"
 alias open='xdg-open >/dev/null 2>/dev/null'
