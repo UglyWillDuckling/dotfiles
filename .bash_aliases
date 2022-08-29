@@ -117,3 +117,5 @@ clipc () {
         echo ${(%):-"%B$content%b copied to clipboard."}
 }
 
+git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
+git_remove_branches_from_log () {sed -E 's/\([a-zA-Z_\ /,->]*\)//'}
