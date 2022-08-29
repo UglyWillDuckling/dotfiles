@@ -43,6 +43,9 @@ Plugin 'tpope/vim-fugitive'
 " https://github.com/glts/vim-magnum
 Plugin 'glts/vim-magnum'
 
+" https://github.com/pangloss/vim-javascript
+Plugin 'https://github.com/pangloss/vim-javascript'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
