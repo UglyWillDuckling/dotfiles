@@ -55,6 +55,8 @@
   recent = r --all --no-merges --since="2.weeks"
   last= log -1
   parent= log --pretty=%P -n 1
+  hp = "!. ~/.githelpers && show_git_head"
+  ra = !git r --all
 [init]
   defaultBranch = main
 
