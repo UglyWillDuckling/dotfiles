@@ -111,4 +111,9 @@ random-string() {
 filter_php_files () {
         grep -E '(\w*/\w*)+\.php' "$@"
 }
+clipc () {
+        local content=$(sponge)
+        echo -n "$content" | clipcopy || return 1
+        echo ${(%):-"%B$content%b copied to clipboard."}
+}
 
