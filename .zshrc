@@ -105,9 +105,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
    export EDITOR='mvim'
  fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -121,11 +118,6 @@ alias j="jobs"
 
 # bashmarks
 source ~/.local/bin/bashmarks.sh
-
-# default editor
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-
 
 # GREP
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
@@ -184,6 +176,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 _gen_fzf_default_opts() {
@@ -211,7 +204,6 @@ _gen_fzf_default_opts() {
   "  
 }
 _gen_fzf_default_opts
-
 
 # Navi
 [ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
