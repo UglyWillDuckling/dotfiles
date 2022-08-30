@@ -102,7 +102,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='vim'
  fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
