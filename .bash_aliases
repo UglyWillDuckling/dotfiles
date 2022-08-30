@@ -28,6 +28,7 @@ emojis() {
     echo $(bat ~/.oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh | tail +25 | awk 'BEGIN{ FS="=" } {print $2}' | head -n 200 | xargs | sed "s/\\$/\$\'/g" | sed "s/\s/' /g" | sed "s/$/\'/" | sed -E "s/\\$|'//g")
 }
 
+alias reload='_omz::reload'
 alias b="bat"
 alias ll="ls --color -lhF --group-directories-first"
 alias l="ls --color -lAhF --group-directories-first"
