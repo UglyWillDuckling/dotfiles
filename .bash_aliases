@@ -121,3 +121,6 @@ alias cpc='clipc'
 
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
 git_remove_branches_from_log () {sed -E 's/\([a-zA-Z_\ /,->]*\)//'}
+sqlresult2csv () {
+	grep -v '^+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | sed -E 's/\s+//g' | sed 's/^,//;s/,$//'
+}
