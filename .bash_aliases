@@ -142,3 +142,8 @@ find_by_time () {
 }
 
 replace_each_char() { sed 's/./"\0"\n,/g' }
+
+### CSV
+csvlook_alt () {
+        /usr/bin/csvlook "$@" | sed 's/- | -/──┼──/g;s/| -/├──/g;s/- |/──┤/;s/|/│/g;2s/-/─/g'
+}
