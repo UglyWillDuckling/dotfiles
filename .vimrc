@@ -46,6 +46,9 @@ Plugin 'glts/vim-magnum'
 " https://github.com/pangloss/vim-javascript
 Plugin 'https://github.com/pangloss/vim-javascript'
 
+" https://github.com/vim-autoformat/vim-autoformat
+Plugin 'vim-autoformat/vim-autoformat'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -85,6 +88,9 @@ if strftime("%H") < 21 && strftime("%H") > 7
 else
   set background=dark
 endif
+
+" vim-autoformat configuration
+let g:python3_host_prog="/usr/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -274,4 +280,8 @@ smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
 
 " Make Y yank till end of line. Super useful.
 nnoremap Y y$
+
+" AutoFormat
+noremap <F3> :Autoformat<CR>
+" let g:autoformat_verbosemode=1
 
