@@ -131,3 +131,5 @@ find_by_time () {
 	find . -type f -printf "
 %AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
 }
+
+replace_each_char() { sed 's/./"\0"\n,/g' }
