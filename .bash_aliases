@@ -35,7 +35,7 @@ alias l="ls --color -lAhF --group-directories-first"
 alias msl='bin/mutagen-sync_list'
 alias tolower="awk '{print tolower($0)}'"
 alias open='xdg-open >/dev/null 2>/dev/null'
-alias grep='grep --color=always'
+alias grep='grep --color=auto'
 alias diff='diff --color'
 alias j='jobs'
 alias upgrade='sudo apt-get update; sudo apt-get upgrade; sudo flatpak update; sudo snap refresh;'
