@@ -81,6 +81,7 @@ ascii2pdf_and_open() { a2ps -o - | ps2pdf - |okular - 2>/dev/null}
 null() { cat > /dev/null 2>&1}
 prepend_to() {  sed "s/^/$1/" }
 trim_whitespace_start() { sed -e 's/^[[:space:]]//' }
+trim_all() {  awk '{$1=$1};1' }
 
 magento_trace_format() {
     sed 's/^#[0-9]* //' | grep -v "closure\|___callParent\|___callPlugins" | awk '{print $0 "\n|"}' | awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' | head -n -1
