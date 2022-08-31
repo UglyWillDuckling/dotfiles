@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "prettier/plugin-php": "0.18.9",
+    "corepack": "0.10.0",
+    "md-to-pdf": "5.1.0",
+    "npm_list": "",
+    "npm": "8.6.0",
+    "prettier": "2.7.1",
+    "tldr": "3.3.7",
+    "xml2json-command": "0.0.3"
+  }
+}
