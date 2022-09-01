@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Export
+npm list --global --parseable --depth=0 | sed '1d' | awk '{gsub(/\/.*\//,"",$1); print}' > package_list
+# Import
+xargs npm install --global < package_list
