@@ -7,6 +7,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+
 " https://github.com/morhetz/gruvbox/
 Plugin 'morhetz/gruvbox'
 
@@ -285,4 +288,14 @@ nnoremap Y y$
 " AutoFormat
 noremap <F3> :Autoformat<CR>
 " let g:autoformat_verbosemode=1
+
+""""""""""""""""""""""""""""""""""""""""""""
+" FZF mappings
+""""""""""""""""""""""""""""""""""""""""""""
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
+
+map <leader>t :Files<cr>
+map <leader>fv :Files vendor<cr>
+map <leader>fm :Files vendor/magento<cr>
+map <leader>fc :Files app/code<cr>
 
