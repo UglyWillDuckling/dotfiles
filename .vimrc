@@ -54,6 +54,9 @@ Plugin 'https://github.com/pangloss/vim-javascript'
 " https://github.com/vim-autoformat/vim-autoformat
 Plugin 'vim-autoformat/vim-autoformat'
 
+" https://phpactor.readthedocs.io/en/master/usage/vim-plugin.html
+Plugin 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
