@@ -9,6 +9,9 @@ call vundle#begin()
 
 Plugin 'vim-syntastic/syntastic'
 
+" https://github.com/prettier/vim-prettier
+Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['php'] }
+
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
