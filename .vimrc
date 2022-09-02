@@ -21,9 +21,6 @@ Plugin 'morhetz/gruvbox'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Command-T Plugin
-Plugin 'wincent/command-t'
-
 " Comment Plugin https://github.com/yaocccc/vim-comment
 Plugin 'yaocccc/vim-comment'
 
@@ -57,10 +54,6 @@ Plugin 'https://github.com/pangloss/vim-javascript'
 " https://github.com/vim-autoformat/vim-autoformat
 Plugin 'vim-autoformat/vim-autoformat'
 
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -269,13 +262,6 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Command-t mappings for Magento
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gc :CommandTFlush<cr>\|:CommandT src/app/code<cr>
-map <leader>gd :CommandTFlush<cr>\|:CommandT src/app/design<cr>
-map <leader>gv :CommandTFlush<cr>\|:CommandT src/vendor/magento<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comment
