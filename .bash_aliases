@@ -148,6 +148,11 @@ csvlook_alt () {
         /usr/bin/csvlook "$@" | sed 's/- | -/──┼──/g;s/| -/├──/g;s/- |/──┤/;s/|/│/g;2s/-/─/g'
 }
 
+composer_fd_pkg_lock() {
+    PACKAGE="$1"
+    jq --arg PACKAGE "$PACKAGE" '.packages[] | select(.name == $PACKAGE) | {version, name, dist, source, time}'
+}
+
 # fuzzy cd see https://github.com/NicolaiRuckel/dotfiles/blob/main/zshrc
 
 function fcd() {
