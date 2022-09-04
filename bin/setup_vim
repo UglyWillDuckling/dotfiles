@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+### This script needs to be run after Vim is installed
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+

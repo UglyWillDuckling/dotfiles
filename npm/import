@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+xargs npm install --global < package_list
