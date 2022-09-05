@@ -3,62 +3,61 @@
 	ignorecase = false
  # pager = less -eFiJM~ -j3 --tabs=3 --no-init
 	pager = bat --pager \"less -RF --no-init\"
+	editor = vim
 [user]
 	email = vladimi.sedlar@monsoonconsulting.com
 	name = vladimir
 [alias]
   # Goodness (summary of diff lines added/removed/total)
-  gn = goodness
-  gnc = goodness --cached
+	gn = goodness
+	gnc = goodness --cached
 
-  dog = log --all --decorate --oneline --graph
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  st = "!git status"
-  sts = status -s
-  ci = commit --verbose
-  co = checkout
-  d =  diff --color=always
-  di = diff --find-copies-harder
-  dc = diff --find-copies-harder --cached --color=always
-  am = amend
-  amend = commit --amend
-  a = add
-  aa = add --all
-  ff = merge --ff-only
-  noff = merge --no-ff
-  fa = fetch --all
-  pom = push origin main
-  ds = diff --stat=160,120
-  dh1 = diff HEAD~1
-  l = "!. ~/.githelpers && pretty_git_log"
-  r = !GIT_NO_PAGER=1 git l -11
-  la = !git l --all
-  ra = !git r --all
-  pu = push --set-upstream origin
-  p = pull
-  dr = push origin --delete
-  # b = branch
-  b = "!. ~/.githelpers && pretty_git_branch"
-  bs = "!. ~/.githelpers && pretty_git_branch_sorted"
-  bc = b --contains
-  unstage = restore --staged
-  ss = stash
-  ssl = stash list
-  sss = stash save
-  ssh = stash show
-  ls = log --stat --oneline
-  rem = remote -v
-  s = show
-  db = branch -D
-  update = pull
-  createbranch = checkout -b
-  recent = r --all --no-merges --since="2.weeks"
-  last= log -1
-  parent= log --pretty=%P -n 1
-  hp = "!. ~/.githelpers && show_git_head"
-  ra = !git r --all
+	dog = log --all --decorate --oneline --graph
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = "!git status"
+	sts = status -s
+	ci = commit --verbose
+	co = checkout
+	d =  diff --color=always
+	di = diff --find-copies-harder
+	dc = diff --find-copies-harder --cached --color=always
+	am = amend
+	amend = commit --amend
+	a = add
+	aa = add --all
+	ff = merge --ff-only
+	noff = merge --no-ff
+	fa = fetch --all
+	pom = push origin main
+	ds = diff --stat=160,120
+	dh1 = diff HEAD~1
+	l = "!. ~/.githelpers && pretty_git_log"
+	r = !GIT_NO_PAGER=1 git l -11
+	la = !git l --all
+	ra = !git r --all
+	pu = push --set-upstream origin
+	p = pull
+	dr = push origin --delete
+	b = "!. ~/.githelpers && pretty_git_branch"
+	bs = "!. ~/.githelpers && pretty_git_branch_sorted"
+	bc = b --contains
+	unstage = restore --staged
+	ss = stash
+	ssl = stash list
+	sss = stash save
+	ssh = stash show
+	ls = log --stat --oneline
+	rem = remote -v
+	s = show
+	db = branch -D
+	update = pull
+	createbranch = checkout -b
+	recent = r --all --no-merges --since="2.weeks"
+	last= log -1
+	parent= log --pretty=%P -n 1
+	hp = "!. ~/.githelpers && show_git_head"
+	ra = !git r --all
 [init]
-  defaultBranch = main
-
+	defaultBranch = main
 [credential]
 	helper = cache
