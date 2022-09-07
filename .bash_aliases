@@ -1,4 +1,4 @@
-
+### PHP ###
 dk-debug-shell-php()
 {
     if [ -z "$1" ]
@@ -10,6 +10,17 @@ dk-debug-shell-php()
     # echo "This will start the debug for the file $1"
     docker-compose exec phpfpm sh -c "export XDEBUG_MODE=profiler XDEBUG_SESSION=1 XDEBUG_OUTPUT_DIR='/var/www/html/'; export PHP_IDE_CONFIG='serverName=aap-publisher.local'; php $1"
 }
+
+composer_list_required() {
+    # needs to be run inside a composer project that contains a composer.json
+    < composer.json jq '.require' | sed '1d;$d;' | awk '{print $1}' | sed 's/"|://g'
+}
+
+composer_list_updated() {
+    # needs to run in a folder that contains a composer lock file
+    git diff composer.lock | grep "\+.*version" -B 2 | grep name | awk '{ print $2}' | sed 's/"|,//g'
+}
+### PHP ###
 
 branches-clean() {
   git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
