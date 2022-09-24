@@ -85,7 +85,7 @@ plugins=(
   zsh-autosuggestions
   compleat
   emoji
-	zsh-syntax-highlighting
+  zsh-syntax-highlighting
   dirhistory
 )
 
@@ -210,18 +210,6 @@ _gen_fzf_default_opts
 # Add navi to path
 export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-if [ -f ~/.bash_aliases_l ]; then
-    . ~/.bash_aliases_l
-fi
-
-if [ -f ~/.zshrc_l ]; then
-    . ~/.zshrc_l
-fi
-
 # disable the ctrl+s shortcut
 stty -ixon
 
@@ -262,3 +250,22 @@ TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
+
+
+### INCLUDES
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_l ]; then
+    . ~/.bash_aliases_l
+fi
+
+if [ -f ~/.zshrc_l ]; then
+    . ~/.zshrc_l
+fi
+
+if [ -f ~/.zsh_start ]; then
+    . ~/.zsh_start
+fi
+
