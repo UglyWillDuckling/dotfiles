@@ -147,7 +147,7 @@ branches-clean() {
 ### GIT
 
 sqlresult2csv () {
-	grep -v '^+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | sed -E 's/\s+//g' | sed 's/^,//;s/,$//'
+	grep -v '^\+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | trim_all | sed -E 's/\s+/ /g' | sed -E 's/^,//;s/,$//g' | sed -E 's/,$//g'
 }
 
 showfilesandpaths() { echo "$@"; display "$@" }
