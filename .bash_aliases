@@ -22,8 +22,9 @@ composer_list_updated() {
 }
 ### PHP ###
 
+add_every_other_nl() {
+    perl -pe 'print "\n" if ($.%2==1 && $.>1);'
 }
-
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
 filtersortconfig() { awk -f config_dump.awk config_dump_prod.txt 2>/dev/null | sort;}
