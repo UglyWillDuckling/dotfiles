@@ -282,6 +282,7 @@ nnoremap Y y$
 " AutoFormat
 noremap <F3> :Autoformat<CR>
 " let g:autoformat_verbosemode=1
+let g:formatters_js = ['eslint_local']
 
 """"""""""""""""""""""""""""""""""""""""""""
 " FZF mappings
