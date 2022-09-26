@@ -189,3 +189,7 @@ function fcd() {
 
 alias first='head -1'
 alias collapse_spaces="sed 's/\s+/ /g'"
+
+### DOCKER ###
+dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
+### DOCKER ###
