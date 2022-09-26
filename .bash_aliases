@@ -186,3 +186,6 @@ function fcd() {
         builtin cd "$dir" &> /dev/null
     done
 }
+
+alias first='head -1'
+alias collapse_spaces="sed 's/\s+/ /g'"
