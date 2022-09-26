@@ -193,3 +193,6 @@ alias collapse_spaces="sed 's/\s+/ /g'"
 ### DOCKER ###
 dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 ### DOCKER ###
+
+## VARIABLES ##
+export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
