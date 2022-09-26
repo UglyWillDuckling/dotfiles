@@ -22,8 +22,6 @@ composer_list_updated() {
 }
 ### PHP ###
 
-branches-clean() {
-  git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 
 filter_empty() { awk 'NF'; }
@@ -139,8 +137,14 @@ clipc () {
 }
 alias cpc='clipc'
 
+### GIT
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
 git_remove_branches_from_log () {sed -E 's/\([a-zA-Z_\ /,->]*\)//'}
+branches-clean() {
+  git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+}
+### GIT
+
 sqlresult2csv () {
 	grep -v '^+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | sed -E 's/\s+//g' | sed 's/^,//;s/,$//'
 }
