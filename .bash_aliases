@@ -25,11 +25,18 @@ composer_list_updated() {
 add_every_other_nl() {
     perl -pe 'print "\n" if ($.%2==1 && $.>1);'
 }
+
+### GIT ###
+branches-clean() {
+  git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+}
+### GIT ###
+
+### TEXT EDITTING ###
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
-filtersortconfig() { awk -f config_dump.awk config_dump_prod.txt 2>/dev/null | sort;}
-uniq_difference_config() { diff --color dump_config_staging.txt dump_config_prod.txt | egrep "^>|^<" | awk '{print $2}' | egrep -e ".*/.*/" |sort -u; }
-mutagen_restart() { mutagen daemon stop; mutagen daemon start; }
+### TEXT EDITTING ###
+
 log_find_order_state_change() { find . -name '*.gz' -mtime -200 | grep system | sort | xargs zcat  | grep -e "State Handler" | grep closed | awk '{print $17}' | sed 's/^/"/' | sed 's/$/",/'; }
 log_find_call_on_null () { cat system.log | grep -e "getValue() on null" -A 2 | grep getCalculator | sort -u | awk -F\' '{print $2","}'; }
 log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\t%p\n" | sort | awk '{print $2}' | xargs grep -e "getValue() on null"; }
@@ -44,7 +51,7 @@ random_emojis () {
 	done | xargs
 }
 
-
+### ALIASES ###
 alias reload='_omz::reload'
 alias b="bat"
 alias ll="ls --color -lhF --group-directories-first"
