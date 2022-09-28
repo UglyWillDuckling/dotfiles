@@ -203,3 +203,9 @@ dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 
 ## VARIABLES ##
 export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
+
+subtitle_name_update () {
+	subtitle=$(fd srt | head -1)
+        video_file=$(fd mp4 | head -1)
+        mv $subtitle ${video_file%.*}.${subtitle##*.}
+}
