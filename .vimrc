@@ -12,6 +12,7 @@ Plugin 'vim-syntastic/syntastic'
 " https://github.com/prettier/vim-prettier
 Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['php'] }
 
+" https://github.com/junegunn/fzf.vim
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
@@ -89,9 +90,9 @@ syntax enable
 
 " COLORSCHEME light/dark set
 if strftime("%H") < 21 && strftime("%H") > 7
-  set background=light
+    set background=light
 else
-  set background=dark
+    set background=dark
 endif
 
 " vim-autoformat configuration
@@ -228,7 +229,7 @@ nnoremap <leader><leader> <c-^>
 vnoremap <leader>ib :!align<cr>
 " Close all other splits
 nnoremap <leader>o :only<cr>
-" 
+"
 nnoremap <leader>w :w<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,6 +308,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass'] }
 
+""""""""""""""""""""""""""""""""""""""""""""
+" Comments
+""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_line_comments = {'vim': '"', '.vimrc': '"'}
+let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
 """"
 " Phpactor mappings
 "
