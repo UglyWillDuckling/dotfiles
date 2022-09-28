@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+arch_list_installed () {
+	pacman -Q | cut -d " " -f1
+}
+
+flathub_list_installed() {
+	flatpak list  --columns=application
+}
+
+snap_list_installed() {
+	snap list | awk '{print $1}' | tail -n +2
+}
+
+arch_list_installed > ./installed/arch
+flathub_list_installed > ./installed/flatpak
+snap_list_installed > ./installed/snap
