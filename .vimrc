@@ -319,3 +319,5 @@ let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
 " Phpactor mappings
 "
 map <leader>g :PhpactorGotoDefinition<cr>
+
+set mmp=7000
