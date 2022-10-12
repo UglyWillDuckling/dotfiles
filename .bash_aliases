@@ -196,6 +196,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 ## VARIABLES ##
 
 ### PERSONAL ###
+find_ip () {
+	ip neigh | grep --color=auto -E wlp | grep --color=auto -E -v FAIL | grep --color=auto -E -v '^192\.168\.1\.1 ' | cut -d " " -f1
+}
 calibre_update() {
     sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 }
