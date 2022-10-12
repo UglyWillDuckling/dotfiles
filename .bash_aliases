@@ -6,7 +6,7 @@ dk-debug-shell-php()
         echo "You must pass say what is the script to run";
         exit 0;
     fi
- 
+
     # echo "This will start the debug for the file $1"
     docker-compose exec phpfpm sh -c "export XDEBUG_MODE=profiler XDEBUG_SESSION=1 XDEBUG_OUTPUT_DIR='/var/www/html/'; export PHP_IDE_CONFIG='serverName=aap-publisher.local'; php $1"
 }
@@ -22,34 +22,43 @@ composer_list_updated() {
 }
 ### PHP ###
 
-add_every_other_nl() {
-    perl -pe 'print "\n" if ($.%2==1 && $.>1);'
-}
-
 ### GIT ###
 branches-clean() {
-  git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 ### GIT ###
 
 ### TEXT EDITTING ###
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
-### TEXT EDITTING ###
+add_every_other_nl() {
+    perl -pe 'print "\n" if ($.%2==1 && $.>1);'
+}
+replace_nl () {
+    tr "
+    " "$1"
+}
+urldecode() { php -R 'echo urldecode($argn)."\n";' }
 
 log_find_order_state_change() { find . -name '*.gz' -mtime -200 | grep system | sort | xargs zcat  | grep -e "State Handler" | grep closed | awk '{print $17}' | sed 's/^/"/' | sed 's/$/",/'; }
 log_find_call_on_null () { cat system.log | grep -e "getValue() on null" -A 2 | grep getCalculator | sort -u | awk -F\' '{print $2","}'; }
 log_find_call_on_null_allsystem () { find . -name "system.log*.gz" -printf "%T+\t%p\n" | sort | awk '{print $2}' | xargs grep -e "getValue() on null"; }
 file_open() { fd --type f $2 $1 |  rofi -keep-right -dmenu -i -p Docs | read file; xdg-open $file 2>/dev/null; }
+
 emojis() {
     echo $(bat ~/.oh-my-zsh/plugins/emoji/emoji-char-definitions.zsh | tail +25 | awk 'BEGIN{ FS="=" } {print $2}' | head -n 200 | xargs | sed "s/\\$/\$\'/g" | sed "s/\s/' /g" | sed "s/$/\'/" | sed -E "s/\\$|'//g")
 }
 random_emojis () {
-	for i in {1..200}
-	do
-		random_emoji $1
-	done | xargs
+    for i in {1..200}
+    do
+        random_emoji $1
+    done | xargs
 }
+
+### TEXT EDITTING ###
+alias first='head -1'
+alias collapse_spaces="sed 's/\s+/ /g'"
+## TEXT EDITTING ###
 
 ### ALIASES ###
 alias reload='_omz::reload'
@@ -98,7 +107,7 @@ ascii2pdf_and_open() { a2ps -o - | ps2pdf - |okular - 2>/dev/null}
 null() { cat > /dev/null 2>&1}
 prepend_to() {  sed "s/^/$1/" }
 trim_whitespace_start() { sed -e 's/^[[:space:]]//' }
-trim_all() {  awk '{$1=$1};1' }
+trim_all() { sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' }
 
 magento_trace_format() {
     sed 's/^#[0-9]* //' | grep -v "closure\|___callParent\|___callPlugins" | awk '{print $0 "\n|"}' | awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' | head -n -1
@@ -121,27 +130,28 @@ mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password
 repeat_100() { for i in {1..100}; do "$@"; done }
 center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
 find_sorted_by_time () {
-        find . -type f -printf "\n%AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
+    find . -type f -printf "\n%AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
 }
 
 sqlresult2json() {
     grep -v '^+' | \
-    awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
-    sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
-    csv2json
-}
+        awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
+        sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
+        csv2json
+    }
 
-random-string() {
-        cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+    random-string() {
+    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
 }
 
 filter_php_files () {
-        grep -E '(\w*/\w*)+\.php' "$@"
+    grep -E '(\w*/\w*)+\.php' "$@"
 }
 clipc () {
-        local content=$(sponge)
-        echo -n "$content" | clipcopy || return 1
-        echo ${(%):-"%B$content%b copied to clipboard."}
+    local content=$(sponge)
+    echo -n "$content" | clipcopy || return 1
+    local short="$(echo $content | trim)"
+    echo ${(%):-"%B$short%b copied to clipboard."}
 }
 alias cpc='clipc'
 
@@ -149,26 +159,26 @@ alias cpc='clipc'
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
 git_remove_branches_from_log () {sed -E 's/\([a-zA-Z_\ /,->]*\)//'}
 branches-clean() {
-  git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 ### GIT
 
 sqlresult2csv () {
-	grep -v '^\+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | trim_all | sed -E 's/\s+/ /g' | sed -E 's/^,//;s/,$//g' | sed -E 's/,$//g'
+    grep -v '^\+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | awk '{$1=$1};1' | sed -E 's/\s+/ /g' | sed -E 's/^,//;s/,$//g' | sed -E 's/,$//g'
 }
 
 showfilesandpaths() { echo "$@"; display "$@" }
 
 find_by_time () {
-	find . -type f -printf "
-%AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
+    find . -type f -printf "
+    %AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
 }
 
 replace_each_char() { sed 's/./"\0"\n,/g' }
 
 ### CSV
 csvlook_alt () {
-        /usr/bin/csvlook "$@" | sed 's/- | -/──┼──/g;s/| -/├──/g;s/- |/──┤/;s/|/│/g;2s/-/─/g'
+    /usr/bin/csvlook "$@" | sed 's/- | -/──┼──/g;s/| -/├──/g;s/- |/──┤/;s/|/│/g;2s/-/─/g'
 }
 
 composer_fd_pkg_lock() {
@@ -176,36 +186,39 @@ composer_fd_pkg_lock() {
     jq --arg PACKAGE "$PACKAGE" '.packages[] | select(.name == $PACKAGE) | {version, name, dist, source, time}'
 }
 
-# fuzzy cd see https://github.com/NicolaiRuckel/dotfiles/blob/main/zshrc
-
-function fcd() {
-    while true; do
-        local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
-        local dir="$(printf '%s\n' "${lsd[@]}" |
-            fzf --reverse --preview '
-                __cd_nxt="$(echo {})";
-                __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
-                echo $__cd_path;
-                echo;
-                ls -p --color=always "${__cd_path}";
-        ')"
-        [[ ${#dir} != 0 ]] || return 0
-        builtin cd "$dir" &> /dev/null
-    done
-}
-
-alias first='head -1'
-alias collapse_spaces="sed 's/\s+/ /g'"
-
 ### DOCKER ###
 dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 ### DOCKER ###
 
 ## VARIABLES ##
 export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+## VARIABLES ##
 
-subtitle_name_update () {
-	subtitle=$(fd srt | head -1)
-        video_file=$(fd mp4 | head -1)
-        mv $subtitle ${video_file%.*}.${subtitle##*.}
+### PERSONAL ###
+calibre_update() {
+    sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 }
+subtitle_name_update () {
+    subtitle=$(fd srt | head -1)
+    video_file=$(fd mp4 | head -1)
+    mv $subtitle ${video_file%.*}.${subtitle##*.}
+}
+
+# fuzzy cd see https://github.com/NicolaiRuckel/dotfiles/blob/main/zshrc
+function fcd() {
+    while true; do
+        local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
+        local dir="$(printf '%s\n' "${lsd[@]}" |
+            fzf --reverse --preview '
+                    __cd_nxt="$(echo {})";
+                    __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
+                    echo $__cd_path;
+                    echo;
+                    ls -p --color=always "${__cd_path}";
+                    ')"
+                    [[ ${#dir} != 0 ]] || return 0
+                    builtin cd "$dir" &> /dev/null
+                done
+            }
+            ### PERSONAL ###
