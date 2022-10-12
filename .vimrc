@@ -276,6 +276,8 @@ smap <silent> /  <c-g>:<c-u>VToggleComment<CR>
 xmap <silent> ?  :<c-u>CToggleComment<CR>
 smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
 
+let g:vim_line_comments = {'vim': '"', '.vimrc': '"', '.scss': '//'}
+let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
 
 " Make Y yank till end of line. Super useful.
 nnoremap Y y$
@@ -310,11 +312,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass'] }
 
-""""""""""""""""""""""""""""""""""""""""""""
-" Comments
-""""""""""""""""""""""""""""""""""""""""""""
-let g:vim_line_comments = {'vim': '"', '.vimrc': '"'}
-let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
 """"
 " Phpactor mappings
 "
