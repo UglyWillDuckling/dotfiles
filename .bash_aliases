@@ -200,8 +200,6 @@ find_ip () {
     me=$(whoami)
     filter="wlp"
 
-    echo $me
-
     if [[ "$me" == 'vlado' ]]; then filter='enp'; fi
 
     ip neigh | grep --color=auto -E "$filter" | grep --color=auto -E -v FAIL | grep --color=auto -E -v '^192\.168\.1\.1 ' | cut -d " " -f1
