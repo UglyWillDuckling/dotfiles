@@ -317,4 +317,4 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass']
 "
 map <leader>g :PhpactorGotoDefinition<cr>
 
-set mmp=7000
+set mmp=8000
