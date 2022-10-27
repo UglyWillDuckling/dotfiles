@@ -240,3 +240,21 @@ diff_in_days () {
 	days=$(($diff/(60*60*24)))
 	echo $days
 }
+
+urlencode () {
+	old_lc_collate=$LC_COLLATE
+	LC_COLLATE=C
+	local i=1
+	local length="${#1}"
+	while [ $i -le $length ]
+	do
+		local c=$(echo "$(expr substr $1 $i 1)")
+		case $c in
+			([a-zA-Z0-9.~_-]) printf "$c" ;;
+			(' ') printf "%%20" ;;
+			(*) printf '%%%02X' "'$c" ;;
+		esac
+		i=`expr $i + 1`
+	done
+	LC_COLLATE=$old_lc_collate
+}
