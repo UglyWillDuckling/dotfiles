@@ -329,3 +329,7 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass',
 map <leader>g :PhpactorGotoDefinition<cr>
 
 set mmp=8000
+
+" Surround
+autocmd FileType php let b:surround_45 = "<?php \r ?>"
+
