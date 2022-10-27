@@ -233,3 +233,10 @@ function fcd() {
                 done
             }
             ### PERSONAL ###
+diff_in_days () {
+	datum1=`date -d "$1" "+%s"`
+	datum2=`date -d "$2" "+%s"`
+	diff=$(($datum2-$datum1))
+	days=$(($diff/(60*60*24)))
+	echo $days
+}
