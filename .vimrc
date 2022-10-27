@@ -58,6 +58,9 @@ Plugin 'vim-autoformat/vim-autoformat'
 " https://phpactor.readthedocs.io/en/master/usage/vim-plugin.html
 Plugin 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
+" add this line to your .vimrc file
+Plugin 'mattn/emmet-vim'
+
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -266,6 +269,13 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Emmet
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:user_emmet_mode='n'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,xml EmmetInstall
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comment
