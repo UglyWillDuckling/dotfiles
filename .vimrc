@@ -105,6 +105,7 @@ let g:python3_host_prog="/usr/bin/python"
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
+set relativenumber  " Enable relative line numbers
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
