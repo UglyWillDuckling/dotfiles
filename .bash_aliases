@@ -26,6 +26,9 @@ composer_list_updated() {
 branches-clean() {
 git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
+git-files_between_revs () {
+	git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
+}
 ### GIT ###
 
 ### TEXT EDITTING ###
