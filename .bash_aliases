@@ -36,6 +36,15 @@ github_filter_commit_php_files () {
 ### GIT ###
 
 ### TEXT EDITTING ###
+trim_start () {
+	sed -E "s/^$1//"
+}
+trim_end () {
+	sed -E "s/$1\$//"
+}
+trim_both () {
+	trim_end "$1" | trim_start "$1"
+}
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
 add_every_other_nl() {
