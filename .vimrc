@@ -336,3 +336,7 @@ autocmd FileType php let b:surround_45 = "<?php \r ?>"
 
 " Remove trailing whitespace https://vim.fandom.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Clip
+" map mark to gm
+nnoremap gm m
