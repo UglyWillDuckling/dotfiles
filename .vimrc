@@ -340,3 +340,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Clip
 " map mark to gm
 nnoremap gm m
+
+" Special Chars
+:set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
