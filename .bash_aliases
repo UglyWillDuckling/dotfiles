@@ -45,6 +45,9 @@ trim_end () {
 trim_both () {
 	trim_end "$1" | trim_start "$1"
 }
+replace_separator () {
+	awk 'BEGIN {FS="'"$1"'"; OFS="'"$2"'"} {$1=$1; print $0}'
+}
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
 add_every_other_nl() {
