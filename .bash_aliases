@@ -29,6 +29,10 @@ git branch --merged | grep -v `git branch --show-current` | while read branch; d
 git-files_between_revs () {
 	git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
 }
+github_filter_commit_php_files () {
+        # get the php files from the GitHub commit page
+	grep --color=auto -E "\.php" | pup 'span[data-filterable-item-text=""] text{}'
+}
 ### GIT ###
 
 ### TEXT EDITTING ###
