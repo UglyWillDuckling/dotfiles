@@ -23,6 +23,9 @@ composer_list_updated() {
 ### PHP ###
 
 ### GIT ###
+git-selectdiff () {
+	git sts | fzf | sed -E 's/ M //'
+}
 branches-clean() {
 git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
