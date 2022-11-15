@@ -343,3 +343,5 @@ nnoremap gm m
 
 " Special Chars
 :set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+
+set timeoutlen=1500
