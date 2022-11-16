@@ -23,7 +23,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'VundleVim/Vundle.vim'
 
 " Comment Plugin https://github.com/yaocccc/vim-comment
-Plugin 'yaocccc/vim-comment'
+" Plugin 'yaocccc/vim-comment'
+
+" Comment plugin https://github.com/tomtom/tcomment_vim
+Plugin 'tomtom/tcomment_vim'
 
 Plugin 'tpope/vim-sleuth'
 
@@ -281,14 +284,15 @@ autocmd FileType html,css,xml EmmetInstall
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent> ?? :NToggleComment<CR>
-xmap <silent> /  :<c-u>VToggleComment<CR>
-smap <silent> /  <c-g>:<c-u>VToggleComment<CR>
-xmap <silent> ?  :<c-u>CToggleComment<CR>
-smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
-
-let g:vim_line_comments = {'vim': '"', '.vimrc': '"', '.scss': '//'}
-let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
+"
+" nmap <silent> ?? :NToggleComment<CR>
+" xmap <silent> /  :<c-u>VToggleComment<CR>
+" smap <silent> /  <c-g>:<c-u>VToggleComment<CR>
+" xmap <silent> ?  :<c-u>CToggleComment<CR>
+" smap <silent> ?  <c-g>:<c-u>CToggleComment<CR>
+"
+" let g:vim_line_comments = {'vim': '"', '.vimrc': '"', '.scss': '//'}
+" let g:vim_chunk_comments = {'vim': ['"', '"', '"'], '.vimrc': ['"', '"', '"']}
 
 " Make Y yank till end of line. Super useful.
 nnoremap Y y$
@@ -345,3 +349,5 @@ nnoremap gm m
 :set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 set timeoutlen=1500
+" Treat all numbers as decimal
+set nrformats=
