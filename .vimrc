@@ -351,3 +351,4 @@ nnoremap gm m
 set timeoutlen=1500
 " Treat all numbers as decimal
 set nrformats=
+nnoremap <F5> :buffers<CR>:buffer<CR>
