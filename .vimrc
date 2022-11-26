@@ -352,3 +352,6 @@ set timeoutlen=1500
 " Treat all numbers as decimal
 set nrformats=
 nnoremap <F5> :buffers<CR>:buffer<CR>
+set wildmenu
+set wildmode=full
+set history=200
