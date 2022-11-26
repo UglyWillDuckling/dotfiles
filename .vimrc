@@ -7,6 +7,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://gitlab.com/gi1242/vim-emoji-ab.git
+Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
+
 Plugin 'vim-syntastic/syntastic'
 
 " https://github.com/prettier/vim-prettier
@@ -355,3 +358,5 @@ nnoremap <F5> :buffers<CR>:buffer<CR>
 set wildmenu
 set wildmode=full
 set history=200
+
+au FileType html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
