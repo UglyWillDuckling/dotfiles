@@ -138,7 +138,7 @@ magento_trace_format_2() {
     awk '{tabs=""; for (counter = NR; counter > 0; counter--){ tabs=tabs"  "}; print tabs$0}' | sed 's/#[0-9]*//'
 }
 my_ip() {
-    curl -s https://icanhazip.com
+    dig +short myip.opendns.com @resolver1.opendns.com
 }
 
 curl_domain_to_ip() {
