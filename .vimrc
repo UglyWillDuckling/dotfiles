@@ -278,6 +278,23 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CUSTOM SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable the mouse for all modes
+set mouse=a
+
+" Special Chars
+:set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+
+set timeoutlen=1500
+" Treat all numbers as decimal
+set nrformats=
+nnoremap <F5> :buffers<CR>:buffer<CR>
+set wildmenu
+set wildmode=full
+set history=200
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Emmet
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:user_emmet_mode='n'
@@ -316,6 +333,7 @@ map <leader>t :Files<cr>
 map <leader>fv :Files vendor<cr>
 map <leader>fm :Files vendor/magento<cr>
 map <leader>fc :Files app/code<cr>
+map <leader>mt :Files app/code/OSI/MapViewer/view/frontend/web/js<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""
 " Syntastic
@@ -348,15 +366,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 " map mark to gm
 nnoremap gm m
 
-" Special Chars
-:set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
-
-set timeoutlen=1500
-" Treat all numbers as decimal
-set nrformats=
-nnoremap <F5> :buffers<CR>:buffer<CR>
-set wildmenu
-set wildmode=full
-set history=200
-
+" emoji file types
 au FileType html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
