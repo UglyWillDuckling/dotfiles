@@ -7,6 +7,10 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/vim-airline/vim-airline Status Line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
 
