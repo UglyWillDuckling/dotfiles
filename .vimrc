@@ -287,6 +287,10 @@ map <leader>n :call RenameFile()<cr>
 
 " use the system clipboard by default
 set clipboard^=unnamedplus
+
+" EastClip
+let g:EasyClipAutoFormat = 1
+
 " add hyphen to the iskeyword list
 set iskeyword+=-
 
