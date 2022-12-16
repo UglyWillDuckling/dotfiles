@@ -87,6 +87,7 @@ plugins=(
   emoji
   zsh-syntax-highlighting
   dirhistory
+  dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -207,6 +208,8 @@ _gen_fzf_default_opts() {
   "
 }
 _gen_fzf_default_opts
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow'
+
 
 # Navi
 [ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
