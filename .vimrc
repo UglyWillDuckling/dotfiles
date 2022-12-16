@@ -285,6 +285,9 @@ map <leader>n :call RenameFile()<cr>
 " CUSTOM SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" add hyphen to the iskeyword list
+set iskeyword+=-
+
 " Special Chars
 :set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
