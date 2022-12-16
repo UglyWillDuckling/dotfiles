@@ -291,6 +291,8 @@ set clipboard^=unnamedplus
 " EastClip
 let g:EasyClipAutoFormat = 1
 
+" Git
+au FileType gitcommit set tw=68 spell
 " add hyphen to the iskeyword list
 set iskeyword+=-
 
