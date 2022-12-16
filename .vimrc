@@ -285,6 +285,8 @@ map <leader>n :call RenameFile()<cr>
 " CUSTOM SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" use the system clipboard by default
+set clipboard^=unnamedplus
 " add hyphen to the iskeyword list
 set iskeyword+=-
 
