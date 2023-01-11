@@ -399,6 +399,10 @@ nnoremap <silent> <Leader>b :call fzf#run({
             \   'down':    len(<sid>buflist()) + 4
             \ })<CR>
 
+" Fugitive
+
+nnoremap <leader>G :Git<cr>
+
 " Ycm configuration
 
 let g:ycm_language_server = [
