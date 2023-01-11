@@ -66,13 +66,14 @@ Plugin 'https://github.com/pangloss/vim-javascript'
 Plugin 'vim-autoformat/vim-autoformat'
 
 " https://phpactor.readthedocs.io/en/master/usage/vim-plugin.html
-Plugin 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+" Plugin 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 " add this line to your .vimrc file
 Plugin 'mattn/emmet-vim'
 
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
+" https://github.com/ycm-core/YouCompleteMe
+Plugin 'ycm-core/YouCompleteMe'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -400,3 +401,17 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
             \   'options': '+m',
             \   'down':    len(<sid>buflist()) + 4
             \ })<CR>
+
+" Ycm configuration
+
+let g:ycm_language_server = [
+  \   {
+  \     'name': 'php',
+  \     'cmdline': [ 'php', '-d', 'memory_limt=4024M',  '/home/vladimir/dev/tools/phpactor/bin/phpactor', 'language-server' ],
+  \     'filetypes': [ 'php' ],
+  \   },
+  \ ]
+
+" toggle signature help in insert mode
+imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
+
