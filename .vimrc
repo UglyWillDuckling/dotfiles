@@ -392,7 +392,7 @@ function! s:bufopen(e)
     execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
 
-nnoremap <silent> <Leader><Enter> :call fzf#run({
+nnoremap <silent> <Leader>b :call fzf#run({
             \   'source':  reverse(<sid>buflist()),
             \   'sink':    function('<sid>bufopen'),
             \   'options': '+m',
