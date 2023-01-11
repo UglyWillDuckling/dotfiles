@@ -74,6 +74,9 @@ Plugin 'mattn/emmet-vim'
 " https://github.com/ycm-core/YouCompleteMe
 Plugin 'ycm-core/YouCompleteMe'
 
+" https://github.com/preservim/nerdtree
+Plugin 'preservim/nerdtree'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -414,4 +417,10 @@ let g:ycm_language_server = [
 
 " toggle signature help in insert mode
 imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
+
+" Nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
