@@ -74,7 +74,7 @@ Plugin 'mattn/emmet-vim'
 " https://github.com/ycm-core/YouCompleteMe
 Plugin 'ycm-core/YouCompleteMe'
 
-" https://github.com/preservim/nerdtree
+ https://github.com/preservim/nerdtree
 Plugin 'preservim/nerdtree'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -365,12 +365,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass', 'html'] }
-
-""""
-" Phpactor mappings
-"
-map <leader>g :PhpactorGotoDefinition<cr>
-map <leader>f :PhpactorFindReferences<cr>
 
 set mmp=8000
 
