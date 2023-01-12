@@ -77,11 +77,17 @@ Plugin 'mattn/emmet-vim'
 " https://github.com/ycm-core/YouCompleteMe
 Plugin 'ycm-core/YouCompleteMe'
 
- https://github.com/preservim/nerdtree
+" https://github.com/preservim/nerdtree
 Plugin 'preservim/nerdtree'
 "https://github.com/PhilRunninger/nerdtree-visual-selection
 Plugin 'PhilRunninger/nerdtree-visual-selection'
 
+" https://github.com/preservim/vim-markdown
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
