@@ -261,6 +261,8 @@ vnoremap <leader>ib :!align<cr>
 nnoremap <leader>o :only<cr>
 "
 nnoremap <leader>w :w<cr>
+"
+nnoremap <silent> vv <C-w>v
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
