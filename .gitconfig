@@ -58,6 +58,7 @@
 	parent= log --pretty=%P -n 1
 	hp = "!. ~/.githelpers && show_git_head"
 	ra = !git r --all
+	rs = reset
 [init]
 	defaultBranch = main
 [credential]
