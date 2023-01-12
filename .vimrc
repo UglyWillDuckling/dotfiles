@@ -333,7 +333,6 @@ set history=200
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,xml EmmetInstall
 
-" Make Y yank till end of line. Super useful.
 nnoremap Y y$
 
 " AutoFormat
@@ -347,7 +346,7 @@ let g:formatters_js = ['eslint_local']
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 " Replace the default dictionary completion with fzf-based fuzzy completion
 inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
-let $FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow'
+let $FZF_DEFAULT_COMMAND = 'fd -I --type f --strip-cwd-prefix --hidden --follow'
 
 map <leader>t :Files<cr>
 map <leader>fv :Files vendor<cr>
