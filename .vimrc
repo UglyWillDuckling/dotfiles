@@ -302,6 +302,8 @@ map <leader>n :call RenameFile()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable mouse use in all modes
+set mouse=a
 
 " use the system clipboard by default
 set clipboard^=unnamedplus
