@@ -79,6 +79,8 @@ Plugin 'ycm-core/YouCompleteMe'
 
  https://github.com/preservim/nerdtree
 Plugin 'preservim/nerdtree'
+"https://github.com/PhilRunninger/nerdtree-visual-selection
+Plugin 'PhilRunninger/nerdtree-visual-selection'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
