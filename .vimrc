@@ -446,3 +446,7 @@ endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
+" Ycm
+nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<CR>
+nmap <silent> leader>d <plug>(YCMHover)
+let g:ycm_auto_hover = ''
