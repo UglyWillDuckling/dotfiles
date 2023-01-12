@@ -3,8 +3,8 @@ dk-debug-shell-php()
 {
     if [ -z "$1" ]
     then
-        echo "You must pass say what is the script to run";
-        exit 0;
+	echo "You must pass say what is the script to run";
+	exit 0;
     fi
 
     # echo "This will start the debug for the file $1"
@@ -24,32 +24,32 @@ composer_list_updated() {
 
 ### GIT ###
 git-selectdiff () {
-	git sts | fzf | sed -E 's/ M //'
+    git sts | fzf | sed -E 's/ M //'
 }
 branches-clean() {
-git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+    git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 git-files_between_revs () {
-	git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
+    git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
 }
 github_filter_commit_php_files () {
-        # get the php files from the GitHub commit page
-	grep --color=auto -E "\.php" | pup 'span[data-filterable-item-text=""] text{}'
+    # get the php files from the GitHub commit page
+    grep --color=auto -E "\.php" | pup 'span[data-filterable-item-text=""] text{}'
 }
 ### GIT ###
 
 ### TEXT EDITTING ###
 trim_start () {
-	sed -E "s/^$1//"
+    sed -E "s/^$1//"
 }
 trim_end () {
-	sed -E "s/$1\$//"
+    sed -E "s/$1\$//"
 }
 trim_both () {
-	trim_end "$1" | trim_start "$1"
+    trim_end "$1" | trim_start "$1"
 }
 replace_separator () {
-	awk 'BEGIN {FS="'"$1"'"; OFS="'"$2"'"} {$1=$1; print $0}'
+    awk 'BEGIN {FS="'"$1"'"; OFS="'"$2"'"} {$1=$1; print $0}'
 }
 filter_empty() { awk 'NF'; }
 remove_empty_lines() { filter_empty }
@@ -73,7 +73,7 @@ emojis() {
 random_emojis () {
     for i in {1..200}
     do
-        random_emoji $1
+	random_emoji $1
     done | xargs
 }
 
@@ -81,6 +81,15 @@ random_emojis () {
 alias first='head -1'
 alias collapse_spaces="sed 's/\s+/ /g'"
 ## TEXT EDITTING ###
+
+### FILES ###
+vif () {
+    local fname
+    fname=$(fzf) || return
+    vim "$fname"
+}
+bindkey -s '^o' 'vif^M'
+### FILES ###
 
 ### ALIASES ###
 alias reload='_omz::reload'
@@ -157,31 +166,31 @@ find_sorted_by_time () {
 
 sqlresult2json() {
     grep -v '^+' | \
-        awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
-        sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
-        csv2json
+	awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
+	sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
+	csv2json
     }
 
     random-string() {
-    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
-}
+	cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+    }
 
-filter_php_files () {
-    grep -E '(\w*/\w*)+\.php' "$@"
-}
-clipc () {
-    local content=$(sponge)
-    echo -n "$content" | clipcopy || return 1
-    local short="$(echo $content | trim)"
-    echo ${(%):-"%B$short%b copied to clipboard."}
-}
-alias cpc='clipc'
+    filter_php_files () {
+	grep -E '(\w*/\w*)+\.php' "$@"
+    }
+    clipc () {
+	local content=$(sponge)
+	echo -n "$content" | clipcopy || return 1
+	local short="$(echo $content | trim)"
+	echo ${(%):-"%B$short%b copied to clipboard."}
+    }
+    alias cpc='clipc'
 
 ### GIT
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
 git_remove_branches_from_log () {sed -E 's/\([a-zA-Z_\ /,->]*\)//'}
 branches-clean() {
-git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+    git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
 ### GIT
 
@@ -238,42 +247,43 @@ subtitle_name_update () {
 # fuzzy cd see https://github.com/NicolaiRuckel/dotfiles/blob/main/zshrc
 function fcd() {
     while true; do
-        local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
-        local dir="$(printf '%s\n' "${lsd[@]}" |
-            fzf --reverse --preview '
-                    __cd_nxt="$(echo {})";
-                    __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
-                    echo $__cd_path;
-                    echo;
-                    ls -p --color=always "${__cd_path}";
-                    ')"
-                    [[ ${#dir} != 0 ]] || return 0
-                    builtin cd "$dir" &> /dev/null
-                done
-            }
-            ### PERSONAL ###
+	local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
+	local dir="$(printf '%s\n' "${lsd[@]}" |
+	    fzf --reverse --preview '
+		    __cd_nxt="$(echo {})";
+		    __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
+		    echo $__cd_path;
+		    echo;
+		    ls -p --color=always "${__cd_path}";
+		    ')"
+		    [[ ${#dir} != 0 ]] || return 0
+		    builtin cd "$dir" &> /dev/null
+		done
+	    }
+
+### PERSONAL ###
 diff_in_days () {
-	datum1=`date -d "$1" "+%s"`
-	datum2=`date -d "$2" "+%s"`
-	diff=$(($datum2-$datum1))
-	days=$(($diff/(60*60*24)))
-	echo $days
+    datum1=`date -d "$1" "+%s"`
+    datum2=`date -d "$2" "+%s"`
+    diff=$(($datum2-$datum1))
+    days=$(($diff/(60*60*24)))
+    echo $days
 }
 
 urlencode () {
-	old_lc_collate=$LC_COLLATE
-	LC_COLLATE=C
-	local i=1
-	local length="${#1}"
-	while [ $i -le $length ]
-	do
-		local c=$(echo "$(expr substr $1 $i 1)")
-		case $c in
-			([a-zA-Z0-9.~_-]) printf "$c" ;;
-			(' ') printf "%%20" ;;
-			(*) printf '%%%02X' "'$c" ;;
-		esac
-		i=`expr $i + 1`
-	done
-	LC_COLLATE=$old_lc_collate
+    old_lc_collate=$LC_COLLATE
+    LC_COLLATE=C
+    local i=1
+    local length="${#1}"
+    while [ $i -le $length ]
+    do
+	local c=$(echo "$(expr substr $1 $i 1)")
+	case $c in
+	    ([a-zA-Z0-9.~_-]) printf "$c" ;;
+	    (' ') printf "%%20" ;;
+	    (*) printf '%%%02X' "'$c" ;;
+	esac
+	i=`expr $i + 1`
+    done
+    LC_COLLATE=$old_lc_collate
 }
