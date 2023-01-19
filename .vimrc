@@ -408,7 +408,6 @@ nnoremap <leader>Gd :Gdiffsplit<CR>
 nnoremap <leader>Gc :G commit<CR>
 
 " Ycm configuration
-
 let g:ycm_language_server = [
   \   {
   \     'name': 'php',
@@ -451,5 +450,6 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " Ycm
 nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<CR>
+nnoremap <silent> <leader>z :YcmCompleter GoToImplementation<CR>
 nmap <silent> leader>d <plug>(YCMHover)
 let g:ycm_auto_hover = ''
