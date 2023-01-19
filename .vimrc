@@ -81,6 +81,8 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'preservim/nerdtree'
 "https://github.com/PhilRunninger/nerdtree-visual-selection
 Plugin 'PhilRunninger/nerdtree-visual-selection'
+" https://github.com/Xuyuanp/nerdtree-git-plugin
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " https://github.com/preservim/vim-markdown
 Plugin 'godlygeek/tabular'
@@ -401,8 +403,9 @@ nnoremap <silent> <Leader>b :call fzf#run({
             \ })<CR>
 
 " Fugitive
-
-nnoremap <leader>G :Git<cr>
+nnoremap <leader>Gg :Git<cr>
+nnoremap <leader>Gd :Gdiffsplit<CR>
+nnoremap <leader>Gc :G commit<CR>
 
 " Ycm configuration
 
