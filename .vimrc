@@ -453,3 +453,8 @@ nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<CR>
 nnoremap <silent> <leader>z :YcmCompleter GoToImplementation<CR>
 nmap <silent> leader>d <plug>(YCMHover)
 let g:ycm_auto_hover = ''
+
+
+" XML Folding
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
