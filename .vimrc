@@ -348,7 +348,7 @@ let g:formatters_js = ['eslint_local']
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 " Replace the default dictionary completion with fzf-based fuzzy completion
 inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
-let $FZF_DEFAULT_COMMAND = 'fd -I --type f --strip-cwd-prefix --hidden --follow'
+let $FZF_DEFAULT_COMMAND = 'fd --no-ignore-vcs --type f --strip-cwd-prefix --hidden'
 
 map <leader>t :Files<cr>
 map <leader>fv :Files vendor<cr>
