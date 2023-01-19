@@ -251,8 +251,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
+" Insert a forward arrow
+imap <c-s> ->
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 inoremap <c-c> <esc>
 " <leader><leader> is more convenient than <c-^>
