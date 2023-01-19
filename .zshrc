@@ -88,6 +88,7 @@ plugins=(
   zsh-syntax-highlighting
   dirhistory
   dotenv
+  qrcode
 )
 
 source $ZSH/oh-my-zsh.sh
