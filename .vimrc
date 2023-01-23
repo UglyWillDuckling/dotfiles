@@ -233,6 +233,11 @@ set undodir=/tmp/.vim-undo-dir
 set undofile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" F1 mapping to easily reload this .rc file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F1> :so ~/.vimrc<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUT TO REFERENCE CURRENT FILE'S PATH IN COMMAND LINE MODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap <expr> %% expand('%:h').'/'
@@ -472,3 +477,5 @@ augroup color_fix | au!
     autocmd ColorScheme * hi! SpellBad cterm=underline ctermbg=Magenta
     autocmd ColorScheme * hi! ColorColumn ctermbg=magenta guibg=Magenta
 augroup end
+" HTML wrapping
+:autocmd BufNewFile,BufRead *.html setlocal nowrap
