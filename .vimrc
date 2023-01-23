@@ -465,5 +465,10 @@ au FileType xml setlocal foldmethod=syntax
 augroup char_limit | au!
     au FileType rust,php,javascript,ruby call matchadd('ColorColumn', '\%121v', 100)
 augroup END
+
 " Spell Check
 au FileType markdown set spell spelllang=en_us
+augroup color_fix | au!
+    autocmd ColorScheme * hi! SpellBad cterm=underline ctermbg=Magenta
+    autocmd ColorScheme * hi! ColorColumn ctermbg=magenta guibg=Magenta
+augroup end
