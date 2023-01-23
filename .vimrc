@@ -451,7 +451,7 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 " Ycm
 nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<CR>
 nnoremap <silent> <leader>z :YcmCompleter GoToImplementation<CR>
-nmap <silent> leader>d <plug>(YCMHover)
+nmap <silent> <leader>d <plug>(YCMHover)
 let g:ycm_auto_hover = ''
 
 
