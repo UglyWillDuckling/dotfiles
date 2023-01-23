@@ -460,3 +460,8 @@ let g:ycm_auto_hover = ''
 " XML Folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+" Char limit
+augroup char_limit | au!
+    au FileType rust,php,javascript,ruby call matchadd('ColorColumn', '\%121v', 100)
+augroup END
