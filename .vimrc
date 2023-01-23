@@ -417,8 +417,10 @@ nnoremap <silent> <Leader>b :call fzf#run({
 
 " Fugitive
 nnoremap <leader>Gg :Git<cr>
+nnoremap <leader>GG :Git<cr>
 nnoremap <leader>Gd :Gdiffsplit<CR>
 nnoremap <leader>Gc :G commit<CR>
+nnoremap <leader>GC :G commit<CR>
 
 " Ycm configuration
 let g:ycm_language_server = [
@@ -483,5 +485,7 @@ augroup color_fix | au!
     autocmd ColorScheme * hi! SpellBad cterm=underline ctermbg=Magenta
     autocmd ColorScheme * hi! ColorColumn ctermbg=magenta guibg=Magenta
 augroup end
+
 " HTML wrapping
 :autocmd BufNewFile,BufRead *.html setlocal nowrap
+
