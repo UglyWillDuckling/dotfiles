@@ -384,7 +384,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 nnoremap gm m
 
 " emoji file types
-au FileType html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
+au FileType rs,html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
 
 function! s:buflist()
     redir => ls
