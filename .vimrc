@@ -185,6 +185,8 @@ set wildmode=longest,list
 set wildmenu
 let mapleader=","
 noremap \ ,
+" fix the changelist backword jump
+nnoremap g\ g,
 " Fix slow O inserts
 :set timeout timeoutlen=1000 ttimeoutlen=100
 " Normally, Vim messes with iskeyword when you open a shell file. This can
