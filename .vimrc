@@ -482,7 +482,7 @@ augroup END
 " Spell Check
 au FileType markdown set spell spelllang=en_us
 augroup color_fix | au!
-    autocmd ColorScheme * hi! SpellBad cterm=underline ctermbg=Magenta
+    autocmd ColorScheme * hi! SpellBad cterm=underline
     autocmd ColorScheme * hi! ColorColumn ctermbg=magenta guibg=Magenta
 augroup end
 
