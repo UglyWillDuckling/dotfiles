@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/skywind3000/asyncrun.vim
+Plugin 'skywind3000/asyncrun.vim'
+
 " https://github.com/vim-airline/vim-airline Status Line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -67,9 +70,6 @@ Plugin 'https://github.com/pangloss/vim-javascript'
 
 " https://github.com/vim-autoformat/vim-autoformat
 Plugin 'vim-autoformat/vim-autoformat'
-
-" https://phpactor.readthedocs.io/en/master/usage/vim-plugin.html
-" Plugin 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
 " add this line to your .vimrc file
 Plugin 'mattn/emmet-vim'
@@ -489,3 +489,10 @@ augroup end
 " HTML wrapping
 :autocmd BufNewFile,BufRead *.html setlocal nowrap
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" AsyncRun config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:let g:asyncrun_open = 11
+" F10 to toggle quickfix window
+nnoremap <F10> :call asyncrun#quickfix_toggle(11)<cr>
+"
