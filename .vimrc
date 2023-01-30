@@ -268,10 +268,14 @@ nnoremap <leader><leader> <c-^>
 vnoremap <leader>ib :!align<cr>
 " Close all other splits
 nnoremap <leader>o :only<cr>
-"
+" quicksave
 nnoremap <leader>w :w<cr>
-"
+" fast visual split
 nnoremap <silent> vv <C-w>v
+" Visual selection search alt+/
+vnoremap / <Esc>/\%V
+" just create a split when jumping to a file, works for gF
+nnoremap gf <C-W>f
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
