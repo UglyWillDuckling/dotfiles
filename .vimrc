@@ -430,8 +430,8 @@ nnoremap <leader>GC :G commit<CR>
 let g:ycm_language_server = [
   \   {
   \     'name': 'php',
-  \     'cmdline': [ 'php', '-d', 'memory_limt=4024M',  '/home/vladimir/dev/tools/phpactor/bin/phpactor', 'language-server' ],
-  \     'filetypes': [ 'php' ],
+  \     'cmdline': [ 'phpactor', 'language-server'],
+  \     'filetypes': [ 'php', 'xml'],
   \   },
   \ ]
 
