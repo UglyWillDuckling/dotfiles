@@ -123,6 +123,7 @@ alias dockerps_names='docker ps --format '{{.Names}}''
 alias 1pass='open https://monsoonconsulting.1password.com/home'
 alias k1='kill -9 %1'
 alias k2='kill -9 %2'
+alias w="which"
 # ALIAS END #
 
 if [ -x "$(command -v fdfind)" ]
@@ -162,6 +163,7 @@ mage_clean_composer() { rm -rf vendor/magento/framework* vendor/magento/magento-
 mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password=Admin123 --admin-email=test@admin.com --admin-firstname=Admin --admin-lastname=Bob}
 
 repeat_100() { for i in {1..100}; do "$@"; done }
+repeat_char() { for i in {1..$1}; do echo "$2"; done }
 center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
 find_sorted_by_time () {
     find . -type f -printf "\n%AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
