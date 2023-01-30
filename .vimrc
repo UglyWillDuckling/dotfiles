@@ -480,7 +480,7 @@ au FileType xml setlocal foldmethod=syntax
 
 " Char limit
 augroup char_limit | au!
-    au FileType rust,php,javascript,ruby call matchadd('ColorColumn', '\%121v', 100)
+    au BufNewFile,BufRead *.php,*.rs,*.js call matchadd('ColorColumn', '\%121v', 100)
 augroup END
 
 " Spell Check
