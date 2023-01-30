@@ -118,6 +118,16 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 
 alias j="jobs"
 
+# zsh coloring
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[function]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[command]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=green'
+ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=cyan'
+
 # bashmarks
 source ~/.local/bin/bashmarks.sh
 
