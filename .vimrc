@@ -276,6 +276,8 @@ nnoremap <silent> vv <C-w>v
 vnoremap / <Esc>/\%V
 " just create a split when jumping to a file, works for gF
 nnoremap gf <C-W>f
+" write out the current file path
+nnoremap e :!echo %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
