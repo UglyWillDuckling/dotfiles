@@ -278,8 +278,8 @@ vnoremap / <Esc>/\%V
 nnoremap gf <C-W>f
 " write out the current file path
 nnoremap e :!echo %<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" replace current word under cursor
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
