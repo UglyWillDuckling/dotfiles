@@ -276,10 +276,12 @@ nnoremap <silent> vv <C-w>v
 vnoremap / <Esc>/\%V
 " just create a split when jumping to a file, works for gF
 nnoremap gf <C-W>f
-" write out the current file path
+" Write out the current file path
 nnoremap e :!echo %<CR>
 " replace current word under cursor
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -430,12 +432,12 @@ nnoremap <leader>GC :G commit<CR>
 
 " Ycm configuration
 let g:ycm_language_server = [
-  \   {
-  \     'name': 'php',
-  \     'cmdline': [ 'phpactor', 'language-server'],
-  \     'filetypes': [ 'php', 'xml'],
-  \   },
-  \ ]
+            \   {
+            \     'name': 'php',
+            \     'cmdline': [ 'phpactor', 'language-server'],
+            \     'filetypes': [ 'php', 'xml'],
+            \   },
+            \ ]
 
 " toggle signature help in insert mode
 imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
@@ -452,19 +454,19 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
 function! CloseWindowOrKillBuffer()
-  let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
+    let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
 
-  " We should never bdelete a nerd tree
-  if matchstr(expand("%"), 'NERD') == 'NERD'
-    wincmd c
-    return
-  endif
+    " We should never bdelete a nerd tree
+    if matchstr(expand("%"), 'NERD') == 'NERD'
+        wincmd c
+        return
+    endif
 
-  if number_of_windows_to_this_buffer > 1
-    wincmd c
-  else
-    bdelete
-  endif
+    if number_of_windows_to_this_buffer > 1
+        wincmd c
+    else
+        bdelete
+    endif
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
@@ -511,3 +513,4 @@ autocmd VimEnter * command! -nargs=* Rg
             \   <bang>0 ? fzf#vim#with_preview('up:60%')
             \           : fzf#vim#with_preview('right:50%:hidden', '?'),
             \   <bang>0)
+
