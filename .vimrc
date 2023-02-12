@@ -113,6 +113,7 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 
 let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_improved_strings = 1
 " GruvBox Init
 autocmd vimenter * ++nested colorscheme gruvbox
 
