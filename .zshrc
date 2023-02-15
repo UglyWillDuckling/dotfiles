@@ -285,3 +285,8 @@ fi
 
 # motivate yourself
 motivate
+
+source ~/mouse.zsh
+bindkey '^[m' zle-toggle-mouse
+zle-toggle-mouse
+
