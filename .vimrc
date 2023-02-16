@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/junegunn/vim-peekaboo
+Plugin 'junegunn/vim-peekaboo'
+
 " https://github.com/skywind3000/asyncrun.vim
 Plugin 'skywind3000/asyncrun.vim'
 
@@ -512,10 +515,18 @@ augroup end
 " F10 to toggle quickfix window
 nnoremap <F10> :call asyncrun#quickfix_toggle(11)<cr>
 
-nnoremap <leader>a :Rg<space>
-nnoremap <leader>A :exec "Rg ".expand("<cword>")<cr>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" pikaboo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:peekaboo_window='vert bo 80new'
 
-autocmd VimEnter * command! -nargs=* Rg
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fzf Vim Grep command
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>a :Ag<space>
+nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
+
+autocmd VimEnter * command! -nargs=* Ag
             \ call fzf#vim#grep(
             \   'ag  -U --column --line-number --no-heading --color '.shellescape(<q-args>), 1,
             \   <bang>0 ? fzf#vim#with_preview('up:60%')
