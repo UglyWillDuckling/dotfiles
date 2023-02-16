@@ -528,7 +528,7 @@ nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
 
 autocmd VimEnter * command! -nargs=* Ag
             \ call fzf#vim#grep(
-            \   'ag  -U --column --line-number --no-heading --color '.shellescape(<q-args>), 1,
+            \   'ag  -U --column --line-number --no-heading --color --color-path "0;35" --color-match "46" --color-line-number "42" '.<q-args>, 1,
             \   <bang>0 ? fzf#vim#with_preview('up:60%')
             \           : fzf#vim#with_preview('right:50%:hidden', '?'),
             \   <bang>0)
