@@ -1,5 +1,4 @@
 ###########################################################################
-echo kursor je: $CURSOR >/dev/pts/0
 # zsh mouse (and X clipboard) support v1.6
 ###########################################################################
 #
@@ -428,15 +427,10 @@ if [[ $TERM = *[xeEk]term* ||
     # local -i n x=0 y=1 cursor=$((${#cur_prompt}+$CURSOR+1))
     local -i n x=0 y=1 cursor=$((${#clean_prompt}+$CURSOR+1))
 
-    debug() {
-      cat >/dev/pts/0
-    }
+    echo "current prompt\n" $clean_prompt > /home/vlado/prompt
 
     buf=$clean_prompt$BUFFER
     buff_length=${#buf}
-
-    echo mx is: $mx >/dev/pts/0
-    echo buff len is $buff_length >/dev/pts/0
 
     for ((i=1; i<=$buff_length; i++)); do
       (( i == cursor )) && Y=$y
@@ -482,12 +476,12 @@ if [[ $TERM = *[xeEk]term* ||
 	  (0)
 	    # Button 1.  Move cursor.
 	    CURSOR=$mouse_CURSOR
-	    echo >/dev/pts/0
-	    echo index: $y_index >/dev/pts/0
-	    echo value at index:  $(($pos[$y_index])) >/dev/pts/0
-	    echo kursor: $mouse_CURSOR | debug
-	    echo x je $x >/dev/pts/0
-	    echo >/dev/pts/0
+	    # echo >/dev/pts/0
+	    # echo index: $y_index >/dev/pts/0
+	    # echo value at index:  $(($pos[$y_index])) >/dev/pts/0
+	    # echo kursor: $mouse_CURSOR | debug
+	    # echo x je $x >/dev/pts/0
+	    # echo >/dev/pts/0
 	    ;;
 	  (1)
 	    # Button 2.  Insert selection at mouse cursor postion.
