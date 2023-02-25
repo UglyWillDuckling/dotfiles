@@ -284,9 +284,10 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
 
-# motivate yourself
-motivate
-
 source ~/mouse.zsh
 bindkey '^[m' zle-toggle-mouse
 zle-toggle-mouse
+
+# motivate yourself
+motivate
+
