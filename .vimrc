@@ -10,6 +10,12 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/kana/vim-textobj-user
+Plugin 'kana/vim-textobj-user'
+
+" https://github.com/rayburgemeestre/phpfolding.vim
+Plugin 'kana/vim-textobj-fold'
+
 " https://github.com/junegunn/vim-peekaboo
 Plugin 'junegunn/vim-peekaboo'
 
