@@ -555,3 +555,6 @@ xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
 " map tab key to toggle folding
 nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+" alt+h
+nnoremap h <Esc>:History<CR>
