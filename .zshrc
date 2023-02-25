@@ -222,12 +222,6 @@ _gen_fzf_default_opts() {
 _gen_fzf_default_opts
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow'
 
-
-# Navi
-[ -x "$(command -v navi)" ] && eval "$(navi widget zsh)"
-# Add navi to path
-export PATH="${PATH}:/home/vlado/.cargo/bin/navi"
-
 # disable the ctrl+s shortcut
 stty -ixon
 
