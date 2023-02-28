@@ -32,7 +32,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
 
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 
 " https://github.com/prettier/vim-prettier
 Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['php'] }
