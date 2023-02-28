@@ -32,8 +32,6 @@ Plugin 'vim-airline/vim-airline-themes'
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
 
-" Plugin 'vim-syntastic/syntastic'
-
 " https://github.com/prettier/vim-prettier
 Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['php'] }
 
@@ -406,19 +404,6 @@ map <leader>fv :Files vendor<cr>
 map <leader>fm :Files vendor/magento<cr>
 map <leader>fc :Files app/code<cr>
 map <leader>mt :Files app/code/OSI/MapViewer/view/frontend/web/js<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'passive_filetypes': ['sh', 'bash', 'scss', 'sass', 'html'] }
 
 set mmp=8000
 
