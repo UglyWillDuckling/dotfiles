@@ -191,7 +191,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source $HOME/dev/scripts/fzf-git.sh
 ### source the https://github.com/junegunn/fzf-git.sh script
 source $HOME/dev/scripts/fzf-git.sh
 

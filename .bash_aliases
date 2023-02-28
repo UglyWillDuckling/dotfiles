@@ -230,7 +230,7 @@ dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 
 ## VARIABLES ##
 export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
 ## VARIABLES ##
 
 ### PERSONAL ###
