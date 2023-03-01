@@ -17,6 +17,8 @@ Plugin 'sindrets/diffview.nvim'
 Plugin 'phaazon/hop.nvim'
 Plugin 'nvim-lualine/lualine.nvim'
 Plugin 'Pocco81/true-zen.nvim'
+" https://github.com/neoclide/coc.nvim
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -65,6 +67,12 @@ nnoremap <C-t> :NvimTreeToggle<CR>
 
 " alt+[
 nnoremap <M-[> :HopChar1<CR>
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 lua << EOF
 vim.g.loaded_netrw = 1
