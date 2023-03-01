@@ -33,8 +33,9 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <C-p> <cmd>Telescope registers<cr>
 
-" alt+i
-nnoremap <M-i> :HopWord<CR>
+nnoremap s :HopWord<CR>
+nnoremap <M-k> :HopChar1<CR>
+nnoremap <M-l> :HopLine<CR>
 
 function! WinMove(key)
     let t:curwin = winnr()
@@ -59,9 +60,6 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <leader>n :NvimTreeFocus<CR>
 nnoremap <C-f> :NvimTreeFindFile<CR>
 nnoremap <C-t> :NvimTreeToggle<CR>
-
-" alt+[
-nnoremap <M-[> :HopChar1<CR>
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
