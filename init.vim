@@ -55,11 +55,9 @@ nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
-nnoremap <C-n> :NERDTree<CR>
-
 nnoremap <leader>n :NvimTreeFocus<CR>
 nnoremap <C-f> :NvimTreeFindFile<CR>
-nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <leader>b :NvimTreeToggle<CR>
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
