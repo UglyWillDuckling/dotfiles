@@ -58,7 +58,7 @@ nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 nnoremap <leader>n :NvimTreeFocus<CR>
-nnoremap <C-f> :NvimTreeFindFile<CR>
+nnoremap <M-f> :NvimTreeFindFile<CR>
 nnoremap <leader>b :NvimTreeToggle<CR>
 
 " GoTo code navigation
