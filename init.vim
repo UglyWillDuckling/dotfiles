@@ -19,6 +19,8 @@ Plugin 'nvim-lualine/lualine.nvim'
 Plugin 'Pocco81/true-zen.nvim'
 " https://github.com/neoclide/coc.nvim
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" https://github.com/norcalli/nvim-colorizer.lua
+Plugin 'norcalli/nvim-colorizer.lua'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -73,6 +75,7 @@ vim.opt.termguicolors = true
 
 local api = vim.api
 
+require'colorizer'.setup()
 require'hop'.setup()
 require('lualine').setup()
 
