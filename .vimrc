@@ -90,7 +90,6 @@ Plugin 'vim-autoformat/vim-autoformat'
 " add this line to your .vimrc file
 Plugin 'mattn/emmet-vim'
 
-" https://github.com/ycm-core/YouCompleteMe
 Plugin 'ycm-core/YouCompleteMe'
 
 " https://github.com/preservim/nerdtree
@@ -451,18 +450,6 @@ nnoremap <leader>Gd :Gdiffsplit<CR>
 nnoremap <leader>Gc :G commit<CR>
 nnoremap <leader>GC :G commit<CR>
 
-" Ycm configuration
-let g:ycm_language_server = [
-            \   {
-            \     'name': 'php',
-            \     'cmdline': [ 'phpactor', 'language-server'],
-            \     'filetypes': [ 'php', 'xml'],
-            \   },
-            \ ]
-
-" toggle signature help in insert mode
-imap <silent> <C-l> <Plug>(YCMToggleSignatureHelp)
-
 " Nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -491,14 +478,6 @@ function! CloseWindowOrKillBuffer()
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
-
-" Ycm
-nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<CR>
-nnoremap <silent> <leader>z :YcmCompleter GoToImplementation<CR>
-nnoremap <silent> <leader>r :YcmCompleter GoToReferences<CR>
-nmap <silent> <leader>d <plug>(YCMHover)
-let g:ycm_auto_hover = ''
-
 
 " XML Folding
 let g:xml_syntax_folding=1
