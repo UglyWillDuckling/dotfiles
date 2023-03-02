@@ -231,6 +231,7 @@ dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 ## VARIABLES ##
 export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
 export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
+export GIT_LOG_ONELINE='%C(always,yellow)%h%C(always,reset) %C(always,green)(%ar)%C(always,reset) %C(always,reset)%s'
 ## VARIABLES ##
 
 ### PERSONAL ###
