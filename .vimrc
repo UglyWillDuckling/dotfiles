@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/chrisbra/Colorizer
+Plugin 'chrisbra/Colorizer'
+
 " https://github.com/justinmk/vim-sneak
 Plugin 'justinmk/vim-sneak'
 
