@@ -442,6 +442,8 @@ nnoremap <leader>GG :Git<cr>
 nnoremap <leader>Gd :Gdiffsplit<CR>
 nnoremap <leader>Gc :G commit<CR>
 nnoremap <leader>GC :G commit<CR>
+nnoremap <leader>GL :0Gclog<CR>
+vmap <leader>gl :Gclog<CR>
 
 " Nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
