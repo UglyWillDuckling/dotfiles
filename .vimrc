@@ -13,6 +13,9 @@ call vundle#begin()
 " https://github.com/chrisbra/Colorizer
 Plugin 'chrisbra/Colorizer'
 
+" https://github.com/editorconfig/editorconfig-vim
+Plugin 'editorconfig/editorconfig-vim'
+
 " https://github.com/justinmk/vim-sneak
 Plugin 'justinmk/vim-sneak'
 
