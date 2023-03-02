@@ -24,7 +24,7 @@ Plugin 'norcalli/nvim-colorizer.lua'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-set nofoldenable                     " Disable folding at startup." Find files using Telescope command-line sugar.
+autocmd BufReadPost,FileReadPost * normal zR
 
 " easily reload the .rc file
 noremap <F1> :so ~/.config/nvim/init.vim<CR>
