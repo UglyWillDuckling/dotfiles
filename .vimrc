@@ -436,13 +436,6 @@ function! s:bufopen(e)
     execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
 
-nnoremap <silent> <Leader>b :call fzf#run({
-            \   'source':  reverse(<sid>buflist()),
-            \   'sink':    function('<sid>bufopen'),
-            \   'options': '+m',
-            \   'down':    len(<sid>buflist()) + 4
-            \ })<CR>
-
 " Fugitive
 nnoremap <leader>Gg :Git<cr>
 nnoremap <leader>GG :Git<cr>
