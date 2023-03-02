@@ -348,9 +348,9 @@ if [[ $TERM = *[xeEk]term* ||
   ($TERM = *linux* && -S /dev/gpmctl)
   ]]; then
 
-  set-status() { return $1; }
+set-status() { return $1; }
 
-  handle-mouse-event() {
+handle-mouse-event() {
     emulate -L zsh
     local bt=$1
 
@@ -422,12 +422,10 @@ if [[ $TERM = *[xeEk]term* ||
 
     local -a pos # array holding the possible positions of
     # the mouse pointer
-    clean_prompt="$(echo $cur_prompt | sed 's/\x1B\[(([0-9]{1,2})?(;)?([0-9]{1,2})?)?[m,K,H,f,J]//g')"
+    clean_prompt=$(echo $cur_prompt | sed -r 's/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g')
     local Y
     # local -i n x=0 y=1 cursor=$((${#cur_prompt}+$CURSOR+1))
     local -i n x=0 y=1 cursor=$((${#clean_prompt}+$CURSOR+1))
-
-    echo "current prompt\n" $clean_prompt > /home/vlado/prompt
 
     buf=$clean_prompt$BUFFER
     buff_length=${#buf}
@@ -463,14 +461,14 @@ if [[ $TERM = *[xeEk]term* ||
 	[[ $y_index < 1 ]] && y_index=1
 
 	local mouse_CURSOR
-	if ((my + Y - cy > y)); then
-	  mouse_CURSOR=$#BUFFER
+	# if ((my + Y - cy > y)); then
+	#   mouse_CURSOR=$#BUFFER
 	# elif ((my + Y - cy < 1)); then
 	#   mouse_CURSOR=0
-	else
+	# else
 	  local xvalue=$(($pos[$y_index]))
 	  mouse_CURSOR=$(($xvalue - ${#clean_prompt} - 1))
-	fi
+	# fi
 
 	case $bt in
 	  (0)
@@ -501,11 +499,11 @@ if [[ $TERM = *[xeEk]term* ||
 	    set-x-clipboard $CUTBUFFER
 	    ;;
 	esac
-      }
+}
 
-      zle -N handle-mouse-event
+  zle -N handle-mouse-event
 
-      handle-xterm-mouse-event() {
+  handle-xterm-mouse-event() {
 	local last_status=$?
 	emulate -L zsh
 	local bt mx my
