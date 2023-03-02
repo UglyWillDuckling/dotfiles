@@ -1,0 +1,24 @@
+{
+    "intelephense": {
+        "licenceKey": "00L4L60CLKZA0OB",
+        "files": {
+            "associations": [
+                "*.php",
+                "*.phtml"
+            ]
+        },
+        "exclude": [
+            "**/.git/**",
+            "**/.svn/**",
+            "**/.hg/**",
+            "**/CVS/**",
+            "**/.DS_Store/**",
+            "**/node_modules/**",
+            "**/bower_components/**",
+            "**/vendor/**/{Tests,tests}/**",
+            "**/.history/**",
+            "**/vendor/**/vendor/**",
+            "**/generated/code/**"
+        ]
+    }
+}
