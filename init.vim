@@ -1,12 +1,13 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
-
 set termguicolors
 nnoremap <silent> <BS> <c-w>h
 
 " ------------------NVIM CONFIG------------------
 
+" https://github.com/euclidianAce/BetterLua.vim
+Plugin 'euclidianAce/BetterLua.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
