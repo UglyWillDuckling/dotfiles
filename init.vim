@@ -138,6 +138,15 @@ require("nvim-tree").setup({
     },
     filters = {
         dotfiles = false,
+        custom = { "^.git$" }
+    },
+    git = {
+        enable = true,
+        ignore = false,
+    },
+    modified = {
+        enable = true,
+        show_on_dirs = false
     },
 })
 EOF
