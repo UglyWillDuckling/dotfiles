@@ -410,12 +410,6 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
 let $FZF_DEFAULT_COMMAND = 'fd --no-ignore-vcs --type f --strip-cwd-prefix --hidden'
 
-map <leader>t :Files<cr>
-map <leader>fv :Files vendor<cr>
-map <leader>fm :Files vendor/magento<cr>
-map <leader>fc :Files app/code<cr>
-map <leader>mt :Files app/code/OSI/MapViewer/view/frontend/web/js<cr>
-
 set mmp=8000
 
 " Surround
