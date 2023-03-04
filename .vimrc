@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/tpope/vim-obsession
+Plugin 'tpope/vim-obsession'
+
 " https://github.com/tpope/vim-abolish
 Plugin 'tpope/vim-abolish'
 
