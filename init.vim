@@ -95,6 +95,29 @@ api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 require("true-zen").setup()
 
+local actions = require "telescope.actions"
+local action_layout = require("telescope.actions.layout")
+require("telescope").setup {
+    pickers = {
+        find_files = {
+            find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "--no-ignore-vcs" },
+            mappings = {
+                i = {
+                    ["<M-p>"] = action_layout.toggle_preview
+                }
+            }
+        },
+        buffers = {
+            mappings = {
+                i = {
+                    ["<c-d>"] = actions.delete_buffer + actions.move_to_top,
+                    ["<M-p>"] = action_layout.toggle_preview
+                }
+            }
+        }
+    }
+}
+
 require("nvim-tree").setup({
 sort_by = "case_sensitive",
 view = {
