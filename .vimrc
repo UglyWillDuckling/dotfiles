@@ -96,14 +96,14 @@ Plugin 'vim-autoformat/vim-autoformat'
 " add this line to your .vimrc file
 Plugin 'mattn/emmet-vim'
 
-Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouCompleteMe'
 
 " https://github.com/preservim/nerdtree
-Plugin 'preservim/nerdtree'
+" Plugin 'preservim/nerdtree'
 "https://github.com/PhilRunninger/nerdtree-visual-selection
-Plugin 'PhilRunninger/nerdtree-visual-selection'
+" Plugin 'PhilRunninger/nerdtree-visual-selection'
 " https://github.com/Xuyuanp/nerdtree-git-plugin
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " https://github.com/preservim/vim-markdown
 Plugin 'godlygeek/tabular'
@@ -450,12 +450,6 @@ nnoremap <leader>Gc :G commit<CR>
 nnoremap <leader>GC :G commit<CR>
 nnoremap <leader>GL :0Gclog<CR>
 vmap <leader>gl :Gclog<CR>
-
-" Nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 " from https://github.com/skwp/dotfiles/blob/master/vim/settings/yadr-window-killer.vim
 
