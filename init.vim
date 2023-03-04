@@ -118,16 +118,26 @@ require("telescope").setup {
     }
 }
 
+local M = require('treeutils')
 require("nvim-tree").setup({
-sort_by = "case_sensitive",
-view = {
-    width = 33,
-},
-renderer = {
-    group_empty = true,
-},
-filters = {
-    dotfiles = false,
-},
+    sort_by = "case_sensitive",
+    live_filter = {
+        prefix = "[FILTER]: ",
+    },
+
+    view = {
+        mappings = {
+            list = {
+                { key = "<leader>f", action_cb = M.launch_find_files},
+                { key = "<leader>g", action_cb = M.launch_live_grep},
+            }
+        }
+    },
+    renderer = {
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = false,
+    },
 })
 EOF
