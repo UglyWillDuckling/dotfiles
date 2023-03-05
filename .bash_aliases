@@ -125,6 +125,9 @@ alias 1pass='open https://monsoonconsulting.1password.com/home'
 alias k1='kill -9 %1'
 alias k2='kill -9 %2'
 alias w="which"
+alias push="git push"
+alias pull="git pull"
+alias commit="git commit"
 # ALIAS END #
 
 if [ -x "$(command -v fdfind)" ]
