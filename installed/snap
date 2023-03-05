@@ -3,8 +3,8 @@ core
 core18
 core20
 flameshot
-gnome-3-28-1804
 gnome-3-34-1804
+gnome-3-38-2004
 gtk-common-themes
 kde-frameworks-5-91-qt-5-15-3-core20
 kde-frameworks-5-core18
@@ -14,4 +14,5 @@ nightmayr-kf5-qt-5-15-2-core20
 postman
 slack
 snapd
+whatsapp-for-linux
 yuzu
