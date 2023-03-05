@@ -79,11 +79,10 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 lua << EOF
+local api = vim.api
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 vim.opt.winwidth = 30
-
-local api = vim.api
 
 require'colorizer'.setup()
 require'hop'.setup()
@@ -119,7 +118,7 @@ require("telescope").setup {
     }
 }
 
-local M = require('treeutils')
+local treeutils = require('treeutils')
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     live_filter = {
@@ -129,8 +128,8 @@ require("nvim-tree").setup({
     view = {
         mappings = {
             list = {
-                { key = "<leader>f", action_cb = M.launch_find_files},
-                { key = "<leader>g", action_cb = M.launch_live_grep},
+                { key = "<leader>f", action_cb = treeutils.launch_find_files},
+                { key = "<leader>g", action_cb = treeutils.launch_live_grep},
             }
         }
     },
