@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ### PHP ###
 dk-debug-shell-php()
 {
@@ -128,6 +129,7 @@ alias w="which"
 alias push="git push"
 alias pull="git pull"
 alias commit="git commit"
+alias st="git status"
 # ALIAS END #
 
 if [ -x "$(command -v fdfind)" ]
