@@ -125,11 +125,14 @@ alias dockerps_names='docker ps --format '{{.Names}}''
 alias 1pass='open https://monsoonconsulting.1password.com/home'
 alias k1='kill -9 %1'
 alias k2='kill -9 %2'
+alias k3='kill -9 %3'
 alias w="which"
 alias push="git push"
+alias pu="git push"
 alias pull="git pull"
 alias commit="git commit"
 alias st="git status"
+alias d="git diff"
 # ALIAS END #
 
 if [ -x "$(command -v fdfind)" ]
