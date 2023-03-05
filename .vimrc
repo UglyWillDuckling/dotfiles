@@ -437,12 +437,10 @@ function! s:bufopen(e)
 endfunction
 
 " Fugitive
-nnoremap <leader>Gg :Git<cr>
-nnoremap <leader>GG :Git<cr>
-nnoremap <leader>Gd :Gdiffsplit<CR>
-nnoremap <leader>Gc :G commit<CR>
-nnoremap <leader>GC :G commit<CR>
-nnoremap <leader>GL :0Gclog<CR>
+nnoremap <leader>gg :Git<cr>
+nnoremap <leader>gd :Gdiffsplit<CR>
+nnoremap <leader>gc :G commit<CR>
+nnoremap <leader>gl :0Gclog<CR>
 vmap <leader>gl :Gclog<CR>
 
 " from https://github.com/skwp/dotfiles/blob/master/vim/settings/yadr-window-killer.vim
