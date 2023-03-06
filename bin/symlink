@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 rm $HOME/.gitconfig || 1
-ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+ln -s $(pwd)/gitconfig $HOME/.gitconfig
 rm $HOME/.zshrc || 1
-ln -s $(pwd)/.zshrc $HOME/.zshrc
+ln -s $(pwd)/zshrc $HOME/.zshrc
 rm $HOME/.vimrc || 1
-ln -s $(pwd)/.vimrc $HOME/.vimrc
+ln -s $(pwd)/vimrc $HOME/.vimrc
 rm $HOME/.bash_aliases || 1
 ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
 

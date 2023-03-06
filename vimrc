@@ -25,6 +25,9 @@ Plugin 'editorconfig/editorconfig-vim'
 " https://github.com/justinmk/vim-sneak
 Plugin 'justinmk/vim-sneak'
 
+" https://github.com/moll/vim-bbye
+Plugin 'moll/vim-bbye'
+
 " https://github.com/kana/vim-textobj-user
 Plugin 'kana/vim-textobj-user'
 
@@ -134,7 +137,7 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 
 let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_improved_strings = 1
+" let g:gruvbox_improved_strings = 1
 " GruvBox Init
 autocmd vimenter * ++nested colorscheme gruvbox
 
@@ -513,7 +516,7 @@ nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
 
 autocmd VimEnter * command! -nargs=* Ag
             \ call fzf#vim#grep(
-            \   'ag  -U --column --line-number --no-heading --color --color-path "0;35" --color-match "46" --color-line-number "42" '.<q-args>, 1,
+            \   'ag  -U --column --line-number --no-heading --color --color-path "0;35" --color-match "46" --color-line-number "42" --hidden --ignore ".git" --ignore "app/code/OSI/MapViewer/view/frontend/web/vendor" '.<q-args>, 1,
             \   <bang>0 ? fzf#vim#with_preview('up:60%')
             \           : fzf#vim#with_preview('right:50%:hidden', '?'),
             \   <bang>0)
@@ -532,3 +535,5 @@ function! ClassName()
   let filePath = expand('%:p')
   let @c = system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
 endfunction
+
+:nnoremap <Leader>q :Bdelete<CR>
