@@ -338,3 +338,4 @@ urlencode () {
 }
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
 alias z='zsh'
+alias vim='nvim'
