@@ -52,7 +52,6 @@ function! WinMove(key)
         exec "wincmd ".a:key
     endif
 endfunction
-
 nnoremap <silent> <C-h> :call WinMove('h')<CR>
 nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
@@ -100,7 +99,7 @@ local action_layout = require("telescope.actions.layout")
 require("telescope").setup {
     pickers = {
         find_files = {
-            find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "--no-ignore-vcs" },
+            find_command = { "fd", "--type", "f", "--no-ignore-vcs" },
             mappings = {
                 i = {
                     ["<M-p>"] = action_layout.toggle_preview
