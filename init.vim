@@ -60,6 +60,7 @@ nnoremap <silent> <C-l> :call WinMove('l')<CR>
 nnoremap <leader>n :NvimTreeFocus<CR>
 nnoremap <M-f> :NvimTreeFindFile<CR>
 nnoremap <M-,> :NvimTreeToggle<CR>
+nnoremap <leader>t :NvimTreeToggle<CR>
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
