@@ -10,6 +10,8 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+Plugin 'vim-scripts/DrawIt'
+
 " https://github.com/tpope/vim-obsession
 Plugin 'tpope/vim-obsession'
 
@@ -537,3 +539,8 @@ function! ClassName()
 endfunction
 
 :nnoremap <Leader>q :Bdelete<CR>
+
+vnoremap <Right> lholhxp`[1v
+vnoremap <Left> hlohlxhP`[1v
+vnoremap <Down> jkojkxjzvP`[1v
+vnoremap <Up> kjokjxkzvP`[1v
