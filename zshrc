@@ -13,6 +13,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/dev/tools/dsutils:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=$HOME/miniconda3/bin/:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -290,4 +291,20 @@ bindkey '^[m' zle-toggle-mouse
 
 # motivate yourself
 motivate
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/vladimir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vladimir/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vladimir/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vladimir/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
