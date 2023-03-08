@@ -3,7 +3,7 @@
 	ignorecase = false
  # pager = less -eFiJM~ -j3 --tabs=3 --no-init
 	pager = bat --pager \"less -RF --no-init\"
-	editor = vim
+	editor = nvim
 [user]
 	email = vladimi.sedlar@monsoonconsulting.com
 	name = vladimir
