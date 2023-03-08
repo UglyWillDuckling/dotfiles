@@ -14,6 +14,7 @@ Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'nvim-tree/nvim-tree.lua'
 Plugin 'nvim-tree/nvim-web-devicons'
+" TODO check out the diff plugin
 Plugin 'sindrets/diffview.nvim'
 Plugin 'phaazon/hop.nvim'
 Plugin 'nvim-lualine/lualine.nvim'
@@ -82,7 +83,7 @@ lua << EOF
 local api = vim.api
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
-vim.opt.winwidth = 30
+vim.opt.winwidth = 40
 
 require'colorizer'.setup()
 require'hop'.setup()
@@ -148,5 +149,10 @@ require("nvim-tree").setup({
         enable = true,
         show_on_dirs = false
     },
+     actions = {
+        open_file = {
+          resize_window = false,
+        }
+    }
 })
 EOF
