@@ -316,6 +316,9 @@ cnoremap %s/ %smagic/
 cnoremap \>s/ \>smagic/
 cnoremap g/ :g/\v
 
+" alt+h
+nnoremap h <Esc>:History<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
@@ -529,9 +532,6 @@ xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
 " map tab key to toggle folding
 nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-
-" alt+h
-nnoremap h <Esc>:History<CR>
 
 nnoremap c :call ClassName()<cr>
 function! ClassName()
