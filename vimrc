@@ -545,3 +545,7 @@ vnoremap <Right> lholhxp`[1v
 vnoremap <Left> hlohlxhP`[1v
 vnoremap <Down> jkojkxjzvP`[1v
 vnoremap <Up> kjokjxkzvP`[1v
+
+" swap words
+nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
+
