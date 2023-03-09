@@ -37,8 +37,8 @@ Plugin 'kana/vim-textobj-user'
 " https://github.com/rayburgemeestre/phpfolding.vim
 Plugin 'kana/vim-textobj-fold'
 
-" https://github.com/junegunn/vim-peekaboo
-Plugin 'junegunn/vim-peekaboo'
+" https://github.com/junegunn/vim-peekaboo registers
+" Plugin 'junegunn/vim-peekaboo'
 
 " https://github.com/skywind3000/asyncrun.vim
 Plugin 'skywind3000/asyncrun.vim'
