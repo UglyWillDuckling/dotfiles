@@ -6,6 +6,9 @@ nnoremap <silent> <BS> <c-w>h
 
 " ------------------NVIM CONFIG------------------
 
+" https://github.com/tversteeg/registers.nvim
+Plugin 'tversteeg/registers.nvim'
+
 " https://github.com/euclidianAce/BetterLua.vim
 Plugin 'euclidianAce/BetterLua.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -26,6 +29,7 @@ Plugin 'norcalli/nvim-colorizer.lua'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+set fillchars+=diff:╱
 autocmd BufReadPost,FileReadPost * normal zR
 
 " easily reload the .rc file
@@ -84,10 +88,14 @@ local api = vim.api
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 vim.opt.winwidth = 40
+vim.opt.fillchars:append { diff = "╱" }
 
 require'colorizer'.setup()
 require'hop'.setup()
 require('lualine').setup()
+require("registers").setup({
+    show_empty = true,
+})
 
 api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
 api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
