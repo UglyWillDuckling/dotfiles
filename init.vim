@@ -9,6 +9,8 @@ nnoremap <silent> <BS> <c-w>h
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
 
+" https://github.com/chentoast/marks.nvim
+Plugin 'chentoast/marks.nvim'
 " https://github.com/euclidianAce/BetterLua.vim
 Plugin 'euclidianAce/BetterLua.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -96,6 +98,7 @@ require('lualine').setup()
 require("registers").setup({
     show_empty = true,
 })
+require'marks'.setup {}
 
 api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
 api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
