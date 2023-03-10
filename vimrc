@@ -244,7 +244,7 @@ let g:omni_sql_no_default_maps = 1
 " Diffs are shown side-by-side not above/below
 set diffopt=vertical
 " Always show the sign column
-set signcolumn=no
+" set signcolumn=no
 " True color mode! (Requires a fancy modern terminal, but iTerm works.)
 :set termguicolors
 " Write swap files to disk and trigger CursorHold event faster (default is
