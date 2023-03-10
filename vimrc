@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/airblade/vim-gitgutter
+Plugin 'airblade/vim-gitgutter'
+
 " https://github.com/vim-scripts/DrawIt
 Plugin 'vim-scripts/DrawIt'
 
