@@ -65,3 +65,8 @@
 	helper = cache
 [rebase]
 	autoStash = true
+
+[delta]
+    features = line-numbers decorations
+    syntax-theme = Monokai Extended Light
+
