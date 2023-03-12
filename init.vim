@@ -30,6 +30,8 @@ Plugin 'Pocco81/true-zen.nvim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " https://github.com/norcalli/nvim-colorizer.lua
 Plugin 'norcalli/nvim-colorizer.lua'
+" https://github.com/mrjones2014/smart-splits.nvim
+Plugin 'mrjones2014/smart-splits.nvim'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -94,11 +96,18 @@ vim.g.loaded_netrwPlugin = 0
 vim.opt.winwidth = 40
 vim.opt.fillchars:append { diff = "╱" }
 
+vim.keymap.set('n', '<Left>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<Down>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<Up>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<Right>', require('smart-splits').resize_right)
+
 require'colorizer'.setup()
 require'hop'.setup()
 require('lualine').setup()
 require("registers").setup({ show_empty = true, })
 require'marks'.setup {}
+
+require('smart-splits').setup({})
 
 require'sad'.setup({
   debug = false, -- print debug info
