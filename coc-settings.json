@@ -1,11 +1,17 @@
 {
+    "languageserver": {
+        "phpactor": {
+            "command": "phpactor",
+            "args": [
+                "language-server"
+            ],
+            "filetypes": ["php"]
+        }
+    },
     "intelephense": {
         "licenceKey": "00L4L60CLKZA0OB",
         "files": {
-            "associations": [
-                "*.php",
-                "*.phtml"
-            ]
+            "associations": ["*.php", "*.phtml"]
         },
         "exclude": [
             "**/.git/**",
