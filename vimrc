@@ -322,8 +322,11 @@ cnoremap g/ :g/\v
 " alt+h
 nnoremap h <Esc>:History<CR>
 
-" swap two words
+" swap words
 nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
+
+" Abbreviations
+iabbrev for@ for(let i = 0; i <z; i++) {<CR><CR>}<Esc>?z<CR>xi
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
@@ -551,7 +554,4 @@ vnoremap <Right> lholhxp`[1v
 vnoremap <Left> hlohlxhP`[1v
 vnoremap <Down> jkojkxjzvP`[1v
 vnoremap <Up> kjokjxkzvP`[1v
-
-" swap words
-nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
 
