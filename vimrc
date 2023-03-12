@@ -322,6 +322,9 @@ cnoremap g/ :g/\v
 " alt+h
 nnoremap h <Esc>:History<CR>
 
+" swap two words
+nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
