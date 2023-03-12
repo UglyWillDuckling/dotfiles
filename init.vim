@@ -163,6 +163,8 @@ require("nvim-tree").setup({
             list = {
                 { key = "<leader>f", action_cb = treeutils.launch_find_files},
                 { key = "<leader>g", action_cb = treeutils.launch_live_grep},
+                { key = "h", action = "close_node" },
+                { key = "gh", action = "tree.toggle_hidden_filter" }
             }
         }
     },
