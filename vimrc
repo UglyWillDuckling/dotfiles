@@ -31,9 +31,6 @@ Plugin 'editorconfig/editorconfig-vim'
 " https://github.com/justinmk/vim-sneak
 Plugin 'justinmk/vim-sneak'
 
-" https://github.com/moll/vim-bbye
-Plugin 'moll/vim-bbye'
-
 " https://github.com/kana/vim-textobj-user
 Plugin 'kana/vim-textobj-user'
 
@@ -43,12 +40,8 @@ Plugin 'kana/vim-textobj-fold'
 " https://github.com/junegunn/vim-peekaboo registers
 " Plugin 'junegunn/vim-peekaboo'
 
-" https://github.com/skywind3000/asyncrun.vim
-Plugin 'skywind3000/asyncrun.vim'
-
-" https://github.com/vim-airline/vim-airline Status Line
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
@@ -93,11 +86,8 @@ Plugin 'svermeulen/vim-easyclip'
 
 Plugin 'tpope/vim-fugitive'
 
-" https://github.com/glts/vim-magnum
-Plugin 'glts/vim-magnum'
-
 " https://github.com/pangloss/vim-javascript
-Plugin 'https://github.com/pangloss/vim-javascript'
+" Plugin 'https://github.com/pangloss/vim-javascript'
 
 " https://github.com/vim-autoformat/vim-autoformat
 Plugin 'vim-autoformat/vim-autoformat'
@@ -107,15 +97,8 @@ Plugin 'mattn/emmet-vim'
 
 " Plugin 'ycm-core/YouCompleteMe'
 
-" https://github.com/preservim/nerdtree
-" Plugin 'preservim/nerdtree'
-"https://github.com/PhilRunninger/nerdtree-visual-selection
-" Plugin 'PhilRunninger/nerdtree-visual-selection'
-" https://github.com/Xuyuanp/nerdtree-git-plugin
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-" https://github.com/preservim/vim-markdown
 Plugin 'godlygeek/tabular'
+" https://github.com/preservim/vim-markdown
 Plugin 'preservim/vim-markdown'
 
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -419,14 +402,6 @@ nnoremap Y y$
 noremap <F3> :Autoformat<CR>
 " let g:autoformat_verbosemode=1
 let g:formatters_js = ['eslint_local']
-
-""""""""""""""""""""""""""""""""""""""""""""
-" FZF
-""""""""""""""""""""""""""""""""""""""""""""
-inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
-" Replace the default dictionary completion with fzf-based fuzzy completion
-inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
-let $FZF_DEFAULT_COMMAND = 'fd --no-ignore-vcs --type f --strip-cwd-prefix --hidden'
 
 set mmp=8000
 
