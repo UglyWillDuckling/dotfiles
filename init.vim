@@ -33,6 +33,9 @@ Plugin 'norcalli/nvim-colorizer.lua'
 " https://github.com/mrjones2014/smart-splits.nvim
 Plugin 'mrjones2014/smart-splits.nvim'
 
+" https://github.com/karb94/neoscroll.nvim
+Plugin 'karb94/neoscroll.nvim'
+
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set fillchars+=diff:╱
@@ -100,6 +103,10 @@ vim.keymap.set('n', '<Left>', require('smart-splits').resize_left)
 vim.keymap.set('n', '<Down>', require('smart-splits').resize_down)
 vim.keymap.set('n', '<Up>', require('smart-splits').resize_up)
 vim.keymap.set('n', '<Right>', require('smart-splits').resize_right)
+
+require('neoscroll').setup({
+    performance_mode = false,
+})
 
 require'colorizer'.setup()
 require'hop'.setup()
