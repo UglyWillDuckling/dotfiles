@@ -70,7 +70,8 @@ nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
-nnoremap <leader>n :NvimTreeFocus<CR>
+" Tree
+nnoremap <M-m> :NvimTreeFocus<CR>
 nnoremap <M-f> :NvimTreeFindFile<CR>
 nnoremap <M-,> :NvimTreeToggle<CR>
 nnoremap <leader>t :NvimTreeToggle<CR>
@@ -161,7 +162,6 @@ require("nvim-tree").setup({
     live_filter = {
         prefix = "[FILTER]: ",
     },
-
     view = {
         mappings = {
             list = {
