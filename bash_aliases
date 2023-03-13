@@ -177,7 +177,14 @@ yml_remove-ports() { yq 'del(.services | .[] | .ports)' }
 mage_clean_composer() { rm -rf vendor/composer vendor/magento/framework* vendor/magento/magento-composer-installer vendor/magento/composer vendor/composer vendor/magento/composer-dependency-version-audit-plugin}
 mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password=Admin123 --admin-email=test@admin.com --admin-firstname=Admin --admin-lastname=Bob}
 
-rep-eat () {reps=$1; shift; for i in {1..$reps} ; do $*; done}
+rep-eat () {
+    reps=$1
+    shift
+    for i in {1..$reps}
+    do
+	echo "$*" | bash
+    done
+}
 repeat_100() { for i in {1..100}; do "$@"; done }
 repeat_char() { for i in {1..$1}; do echo "$2"; done }
 center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
