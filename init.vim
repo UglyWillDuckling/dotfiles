@@ -11,6 +11,12 @@ Plugin 'ray-x/sad.nvim'
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
 
+
+" https://github.com/ggandor/leap.nvim
+Plugin 'ggandor/leap.nvim'
+" https://github.com/ggandor/flit.nvim
+Plugin 'ggandor/flit.nvim'
+
 " https://github.com/chentoast/marks.nvim
 Plugin 'chentoast/marks.nvim'
 " https://github.com/euclidianAce/BetterLua.vim
@@ -115,6 +121,20 @@ require("registers").setup({ show_empty = true, })
 require'marks'.setup {}
 
 require('smart-splits').setup({})
+
+require('leap').add_default_mappings()
+require('leap').setup {
+    labeled_modes = "vno",
+}
+require('flit').setup {
+    keys = { f = 'f', F = 'F', t = 't', T = 'T', },
+    -- A string like "nv", "nvo", "o", etc.
+    labeled_modes = "vno",
+    multiline = true,
+    -- Like `leap`s similar argument (call-specific overrides).
+    -- E.g.: opts = { equivalence_classes = {} }
+    opts = {}
+}
 
 require'sad'.setup({
   debug = false,
