@@ -25,7 +25,6 @@ Plugin 'nvim-tree/nvim-web-devicons'
 Plugin 'sindrets/diffview.nvim'
 Plugin 'phaazon/hop.nvim'
 Plugin 'nvim-lualine/lualine.nvim'
-Plugin 'Pocco81/true-zen.nvim'
 " https://github.com/neoclide/coc.nvim
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " https://github.com/norcalli/nvim-colorizer.lua
@@ -131,7 +130,7 @@ api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
 api.nvim_set_keymap("n", "<leader>zf", ":TZFocus<CR>", {})
 api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
-require("true-zen").setup()
+-- require("true-zen").setup()
 
 local actions = require "telescope.actions"
 local action_layout = require("telescope.actions.layout")
