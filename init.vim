@@ -22,7 +22,7 @@ Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'nvim-tree/nvim-tree.lua'
 Plugin 'nvim-tree/nvim-web-devicons'
 " TODO check out the diff plugin
-Plugin 'sindrets/diffview.nvim'
+" Plugin 'sindrets/diffview.nvim'
 Plugin 'phaazon/hop.nvim'
 Plugin 'nvim-lualine/lualine.nvim'
 " https://github.com/neoclide/coc.nvim
