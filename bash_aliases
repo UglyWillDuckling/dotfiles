@@ -133,6 +133,12 @@ alias pull="git pull"
 alias commit="git commit"
 alias st="git status"
 alias d="git diff"
+
+hour=`date +%H`
+if [[ $hour -lt 21 && $hour -gt 7 ]]; then
+else
+    alias bat="bat --theme 'Monokai Extended Origin'"
+fi
 # ALIAS END #
 
 if [ -x "$(command -v fdfind)" ]
