@@ -11,6 +11,8 @@ Plugin 'ray-x/sad.nvim'
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
 
+" https://github.com/seandewar/killersheep.nvim
+Plugin 'seandewar/killersheep.nvim'
 
 " https://github.com/ggandor/leap.nvim
 Plugin 'ggandor/leap.nvim'
