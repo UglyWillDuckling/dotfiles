@@ -140,7 +140,7 @@ require('flit').setup {
 
 require'sad'.setup({
   debug = false,
-  exact = false,
+  exact = true,
   vsplit = false, -- split sad window the screen vertically, when set to number
   -- it is a threadhold when window is larger than the threshold sad will split vertically,
   height_ratio = 0.6, -- height ratio of sad window when split horizontally
