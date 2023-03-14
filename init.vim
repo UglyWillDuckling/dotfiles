@@ -112,16 +112,12 @@ vim.keymap.set('n', '<Down>', require('smart-splits').resize_down)
 vim.keymap.set('n', '<Up>', require('smart-splits').resize_up)
 vim.keymap.set('n', '<Right>', require('smart-splits').resize_right)
 
-require('neoscroll').setup({
-    performance_mode = false,
-})
-
+require('neoscroll').setup({})
 require'colorizer'.setup()
 require'hop'.setup()
 require('lualine').setup()
 require("registers").setup({ show_empty = true, })
 require'marks'.setup {}
-
 require('smart-splits').setup({})
 
 require('leap').add_default_mappings()
@@ -145,7 +141,6 @@ require'sad'.setup({
   -- it is a threadhold when window is larger than the threshold sad will split vertically,
   height_ratio = 0.6, -- height ratio of sad window when split horizontally
   width_ratio = 0.6, -- height ratio of sad window when split vertically
-
 })
 
 api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
