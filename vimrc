@@ -431,7 +431,7 @@ endfunction
 
 " Fugitive
 nnoremap <leader>gg :Git<cr>
-nnoremap <leader>gd :Gdiffsplit<CR>
+nnoremap <leader>gd :Gdiffsplit!<CR>
 nnoremap <leader>gc :G commit<CR>
 nnoremap <leader>gl :0Gclog<CR>
 vmap <leader>gl :Gclog<CR>
