@@ -3,9 +3,9 @@
         "phpactor": {
             "command": "phpactor",
             "args": [
-                "language-server"
+                "language-server", "--no-interaction"
             ],
-            "filetypes": ["php"]
+            "filetypes": ["php", "xml"]
         }
     },
     "intelephense": {
