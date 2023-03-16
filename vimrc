@@ -463,11 +463,6 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
-" Char limit
-augroup char_limit | au!
-    au BufNewFile,BufRead *.php,*.rs,*.js call matchadd('ColorColumn', '\%121v', 100)
-augroup END
-
 " Spell Check
 au FileType markdown set spell spelllang=en_us
 augroup color_fix | au!
