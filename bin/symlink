@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-rm $HOME/.gitconfig || 1
+rm $HOME/.gitconfig || 0
 ln -s $(pwd)/gitconfig $HOME/.gitconfig
-rm $HOME/.zshrc || 1
+rm $HOME/.zshrc || 0
 ln -s $(pwd)/zshrc $HOME/.zshrc
-rm $HOME/.vimrc || 1
+rm $HOME/.vimrc || 0
 ln -s $(pwd)/vimrc $HOME/.vimrc
-rm $HOME/.bash_aliases || 1
+rm $HOME/.bash_aliases || 0
 ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
-rm $HOME/.config/calibre || 1
+rm $HOME/.config/calibre || 0
 ln -s $(pwd)/calibre/config $HOME/.config/calibre
