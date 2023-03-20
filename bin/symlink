@@ -8,4 +8,5 @@ rm $HOME/.vimrc || 1
 ln -s $(pwd)/vimrc $HOME/.vimrc
 rm $HOME/.bash_aliases || 1
 ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
-
+rm $HOME/.config/calibre || 1
+ln -s $(pwd)/calibre/config $HOME/.config/calibre
