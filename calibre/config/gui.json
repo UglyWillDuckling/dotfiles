@@ -751,28 +751,28 @@
   },
   "geometry-of-preferences dialog geometry": {
     "frame_geometry": {
-      "height": 519,
+      "height": 842,
       "width": 1060,
       "x": -3,
       "y": -30
     },
     "full_screened": false,
     "geometry": {
-      "height": 486,
+      "height": 809,
       "width": 1054,
       "x": 0,
       "y": 0
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 486,
+      "height": 809,
       "width": 1054,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAD////9////4gAABCAAAAHoAAAAAAAAAAAAAAQdAAAB5QAAAAAAAAAAB4AAAAAAAAAAAAAABB0AAAHl"
+      "__value__": "AdnQywADAAD////9////4gAABCAAAAMrAAAAAAAAAAAAAAQdAAADKAAAAAAAAAAAB4AAAAAAAAAAAAAABB0AAAMo"
     },
     "screen": {
       "depth": 32,
@@ -854,7 +854,7 @@
   "grid view visible": true,
   "library_usage_stats": {
     "/home/vladimir/Calibre Library": 4,
-    "/home/vladimir/Documents/Books": 186
+    "/home/vladimir/Documents/Books": 188
   },
   "metadata-download-identify-widget-splitter-state": {
     "__class__": "bytearray",
