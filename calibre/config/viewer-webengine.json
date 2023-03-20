@@ -1,0 +1,537 @@
+{
+  "bookmarks_sort": "pos",
+  "configure-viewer-toolbar-geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAK4AAABCwAABSEAAANGAAACuAAAATAAAAUhAAADRgAAAAAAAAAAB4AAAAK4AAABMAAABSEAAANG"
+  },
+  "geometry-of-configure-viewer-toolbar-geometry": {
+    "frame_geometry": {
+      "height": 568,
+      "width": 624,
+      "x": 705,
+      "y": 394
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 535,
+      "width": 618,
+      "x": 708,
+      "y": 424
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 535,
+      "width": 618,
+      "x": 708,
+      "y": 424
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAALBAAABigAABTAAAAPBAAACxAAAAagAAAUtAAADvgAAAAAAAAAAB4AAAALEAAABqAAABS0AAAO+"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "DEL",
+      "model": "DELL P2719H",
+      "name": "HDMI-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 480,
+      "width": 640,
+      "x": -3,
+      "y": -30
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 447,
+      "width": 634,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 447,
+      "width": 634,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAD////9////4gAAAnwAAAHBAAAAAAAAAAAAAAJ5AAABvgAAAAAAAAAAB4AAAAAAAAAAAAAAAnkAAAG+"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "DEL",
+      "model": "DELL P2719H",
+      "name": "HDMI-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-viewer_image_popup_geometry": {
+    "frame_geometry": {
+      "height": 1053,
+      "width": 1920,
+      "x": 689,
+      "y": 1469
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1020,
+      "width": 1914,
+      "x": 692,
+      "y": 1499
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 657,
+      "width": 740,
+      "x": 689,
+      "y": 1469
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAKxAAAFvQAACjAAAAnZAAACsQAABb0AAAWUAAAITQAAAAACAAAAB4AAAAK0AAAF2wAACi0AAAnW"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 1.0,
+      "geometry_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "DEL",
+      "model": "DELL P2719H",
+      "name": "HDMI-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1080,
+        "width": 1920
+      },
+      "virtual_geometry": {
+        "height": 1080,
+        "width": 1920,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "local_storage": {
+    "search-bar-history-search-for-sc": [
+      "table",
+      "bar",
+      "font"
+    ],
+    "simple_input_history_net_search_url": [
+      "https://google.com/search?q={q}"
+    ]
+  },
+  "lookup_location": "Wordnik",
+  "main_window_geometry": {
+    "__class__": "bytearray",
+    "__value__": "AdnQywADAAAAAAAYAAAA8AAAB0YAAAUMAAAAGAAAAPAAAAKXAAADvwAAAAACAAAAB4AAAAAbAAABDgAAB0MAAAUJ"
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAH+AAAEDfwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAAAAAAAAAAAAAdsAAAP8+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAAQNAAAAlQD///8AAAABAAACYAAAA/z8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAAAAA/wAAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAAAAAD/AAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAdEAAAInAAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAAAAAD/AAAAMkA////AAACegAAAb8AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "saved-highlights-search-settings": {
+    "alice": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "aliceaa": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "palace": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "potter": {
+      "case_sensitive": false,
+      "mode": "normal"
+    }
+  },
+  "saved-search-settings": {
+    "\nTip 79\tEscape Problem Characters\nThe \\V literal switch makes it easier to search for text verbatim because it disables the special meanings for the ., +, and * symbols, but there are a few characters whose special meaning can’t be turned off. In this advanced tip, we’ll look at how to handle these.\n\nEscape / Characters When Searching Forward\nTake this excerpt from a Markdown document:\n\npatterns/search-url.markdown\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nSuppose that we want to search for all instances of the URL http://vimdoc.net/search?q=/\\\\. Rather than typing it out in full, we’ll just yank it into a register so that we can paste it into our search field. We want to match this text exactly as is, so we’ll use the \\V literal switch.\n\nWith our cursor placed anywhere inside the brackets, we can yank the URL into register u with the command \"uyi[ (mnemonic: u stands for URL). We then type /\\V<C-r>u<CR> to populate the search field with the contents of that same register. Our search prompt looks like this:\n\n​=> \t​/\\Vhttp://vimdoc.net/search?q=/\\\\​\nWhen we execute the search, we get this result:\n\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nWhat’s going on here? When we pasted the full URL into the search field, Vim interpreted the first / character as a search field terminator (see ​Search Field Terminators​). Everything after that first forward slash was ignored, so our search string became merely http:.\n\nWhen searching forward, we have to escape / characters. This is required whether we are doing a very magic search (with the \\v pattern switch) or a very nomagic search (with the \\V literal switch). Let’s amend the previous search, prefixing each / character with a backslash:\n\n​=> \t​/\\Vhttp:\\/\\/vimdoc.net\\/search?q=\\/\\\\​\nThis time, the result is closer to what we would expect:\n\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nIt’s still not perfect. The match stops short of the final backslash. We’ll find out why soon, but first, let’s consider searching backward.\n\nEscape ? Characters When Searching Backward\nWhen searching backward, the ? symbol acts as the search field terminator. That means we don’t have to escape / characters, but instead we have to escape the ? symbol. Watch what happens if we search backward for the URL that we yanked into register u:\n\n​=> \t​?http://vimdoc.net/search?q=/\\\\​\nWithout escaping anything, Vim matches the string “http://vimdoc.net/search”:\n\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nThat’s a better result than when we searched forward without escaping anything, but it still doesn’t match the full URL. We can do better if we prepend the ? character with a backslash:\n\n​=> \t​?http://vimdoc.net/search\\?q=/\\\\​\nThat matches the following:\n\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nEscape \\ Characters Every Time\nThere’s one more character that we have to escape in the search field: the backslash. Normally, a \\ indicates that the next character is to be given some special treatment. If we double it up as \\\\, the first backslash cancels out the special meaning of the second one. In effect, we’re telling Vim to search for a single backslash character.\n\nIn our example text, we’re searching for a URL that includes two consecutive backslashes. We have to include two backslashes in the search field for each of them. Searching forward, we end up with this:\n\n​=> \t​/\\Vhttp:\\/\\/vimdoc.net\\/search?q=\\/\\\\\\\\​\nAt last! Our search query matches the entire URL:\n\n​ \tSearch items: [http://vimdoc.net/search?q=/\\\\][s]\n​ \t...\n​ \t[s]: http://vimdoc.net/search?q=/\\\\\nThe backslash character always needs to be escaped, whether we’re searching forward or backward.\n\nEscape Characters Programmatically\nEscaping characters by hand is laborious, error-prone work. Fortunately, Vim script includes a library function that can do the hard work for us: escape({string}, {chars}) (see escape()ⓘ).\n\nThe {chars} argument specifies which characters must be escaped with a backslash. If we’re searching forward, we could call escape(@u, ’/\\’), which would prefix each / and \\ character with a backslash. If we were searching backward, we could instead call escape(@u, ’?\\’).\n\nFirst, make sure that the URL we want to search for is still stored in the u register. Then we’ll bring up the search prompt by pressing / or ?; either one will work just fine. Enter the \\V literal switch and then type <C-r>=. That switches from the search prompt to the expression register prompt. Now we type this:\n\n​=> \t​=escape(@u, getcmdtype().'\\')​\nWhen we press <CR>, the escape() function is evaluated, and the returned value gets inserted into the search field. The getcmdtype() function simply returns a / symbol if we’re searching forward or a ? symbol if we’re searching backward (see getcmdtype()ⓘ). In Vim script, the . operator performs string concatenation, so getcmdtype().’\\’ produces ’/\\’ if we’re searching forward and ’?\\’ if we’re searching backward. The end result is that no matter which way we’re searching, this expression escapes the contents of the u register so that we can find it.\n\nSwitching to the expression register and calling the escape() function by hand still involves a lot of typing. With just a little bit more Vim script, we could automate this, making it more convenient to use. Skip ahead to Tip 87, for an example.\n\nSearch Field Terminators\nYou might be wondering why the search field has to treat any character as a terminator. Why not just accept that everything following the search prompt is to be included in the search match? The behavior of Vim’s search command can be tuned by appending certain flags after the search field terminator. For example, if we run the command /vim/e<CR>, then our cursor will be placed at the end of any matches rather than at the start. In Tip 83, we’ll learn how to exploit this feature rather than let it exploit us.\n\nThere is one way of entering a pattern without having to worry about search field terminators, but it works only in GVim: use the :promptfind command (see :promptfindⓘ). This brings up a graphical dialog window with a field labeled “Find.” You can enter the / and ? characters here without having to escape them. However, the \\ and newline characters still cause problems.\n\nFootnotes\n[20]\nhttp://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/\n\n[21]\nhttp://www.regular-expressions.info/lookaround.html\n\nCopyright © 2016, The Pragmatic Bookshelf.": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "47808/": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "cmd": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "colon command": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "command in buffer": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "edit command": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "exhaustive": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "it started": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "kaplan": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "kaveh": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "pilgrim": {
+      "case_sensitive": false,
+      "mode": "normal"
+    }
+  },
+  "session_data": {
+    "background_image_style": "tiled",
+    "base_font_size": 20,
+    "book_scrollbar": true,
+    "columns_per_screen": {
+      "landscape": 1,
+      "portrait": 2
+    },
+    "controls_footer": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "progress"
+    },
+    "controls_help_shown_count": 2,
+    "current_color_scheme": "system",
+    "footer": {
+      "left": "empty",
+      "middle": "pos-book",
+      "right": "progress"
+    },
+    "header": {
+      "left": "authors",
+      "middle": "title",
+      "right": "empty"
+    },
+    "hide_tooltips": null,
+    "highlight_style": {
+      "kind": "color",
+      "type": "builtin",
+      "which": "blue"
+    },
+    "keyboard_shortcuts": {},
+    "left-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
+    "margin_bottom": 120,
+    "margin_left": 250,
+    "margin_right": 450,
+    "margin_top": 100,
+    "max_text_width": 1500,
+    "paged_taps_scroll_by_screen": false,
+    "paged_wheel_scrolls_by_screen": false,
+    "read_mode": "flow",
+    "right-margin": {
+      "left": "empty",
+      "middle": "empty",
+      "right": "empty"
+    },
+    "standalone_font_settings": {
+      "minimum_font_size": 12,
+      "mono_family": "Oswald",
+      "sans_family": "Oswald",
+      "serif_family": "Merriweather",
+      "standard_font": "sans"
+    },
+    "standalone_misc_settings": {
+      "hide_tooltips": null,
+      "show_actions_toolbar": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "Sandi Metz"
+        ],
+        "key": "/home/vladimir/Documents/Books/Sandi Metz/Practical Object-Oriented Design (74)/Practical Object-Oriented Design - Sandi Metz.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Sandi Metz/Practical Object-Oriented Design (74)/Practical Object-Oriented Design - Sandi Metz.epub",
+        "timestamp": "2023-03-10T11:00:49.884Z",
+        "title": "Practical Object-Oriented Design"
+      },
+      {
+        "authors": [
+          "Drew Neil"
+        ],
+        "key": "/home/vladimir/Documents/Books/Drew Neil/Practical Vim, Second Edition (for Stefano Alcazi) (61)/Practical Vim, Second Edition (for Stefano - Drew Neil.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Drew Neil/Practical Vim, Second Edition (for Stefano Alcazi) (61)/Practical Vim, Second Edition (for Stefano - Drew Neil.epub",
+        "timestamp": "2023-02-15T15:42:18.160Z",
+        "title": "Practical Vim, Second Edition (for Stefano Alcazi)"
+      },
+      {
+        "authors": [
+          "Wladston Ferreira Filho"
+        ],
+        "key": "/home/vladimir/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled_ Learn the Art of Solving Computational Problems (73)/Computer Science Distilled_ Learn the Art - Wladston Ferreira Filho.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled_ Learn the Art of Solving Computational Problems (73)/Computer Science Distilled_ Learn the Art - Wladston Ferreira Filho.epub",
+        "timestamp": "2023-02-08T10:12:22.228Z",
+        "title": "Computer Science Distilled"
+      },
+      {
+        "authors": [
+          "Wladston Ferreira Filho"
+        ],
+        "key": "/home/vladimir/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled (73)/Computer Science Distilled - Wladston Ferreira Filho.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled (73)/Computer Science Distilled - Wladston Ferreira Filho.epub",
+        "timestamp": "2023-02-07T14:14:51.923Z",
+        "title": "Computer Science Distilled"
+      },
+      {
+        "authors": [
+          "John Green"
+        ],
+        "key": "/home/vladimir/Documents/Books/John Green/The Anthropocene Reviewed_ Essays on a Human-Centered Planet (4)/The Anthropocene Reviewed_ Essays on a Hum - John Green.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/John Green/The Anthropocene Reviewed_ Essays on a Human-Centered Planet (4)/The Anthropocene Reviewed_ Essays on a Hum - John Green.epub",
+        "timestamp": "2023-01-24T14:32:30.603Z",
+        "title": "The Anthropocene Reviewed: Essays on a Human-Centered Planet"
+      },
+      {
+        "authors": [
+          "Charles Petzold"
+        ],
+        "key": "/home/vladimir/Documents/Books/Charles Petzold/Code_ The Hidden Language of Computer Hardware and Software, 2nd Edition (68)/Code_ The Hidden Language of Computer Hard - Charles Petzold.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Charles Petzold/Code_ The Hidden Language of Computer Hardware and Software, 2nd Edition (68)/Code_ The Hidden Language of Computer Hard - Charles Petzold.epub",
+        "timestamp": "2023-01-24T11:47:36.548Z",
+        "title": "Code: The Hidden Language of Computer Hardware and Software, 2nd Edition"
+      },
+      {
+        "authors": [
+          "Simon Stålenhag"
+        ],
+        "key": "/home/vladimir/Documents/Books/Simon Stalenhag/The Electric State (67)/The Electric State - Simon Stalenhag.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Simon Stalenhag/The Electric State (67)/The Electric State - Simon Stalenhag.epub",
+        "timestamp": "2023-01-16T18:26:38.977Z",
+        "title": "The Electric State"
+      },
+      {
+        "authors": [
+          "Stuart Kauffman"
+        ],
+        "key": "/home/vladimir/Documents/Books/Stuart Kauffman/At Home in the Universe_ The Search for the Laws of Self-Organization and Complexity (63)/At Home in the Universe_ The Search for th - Stuart Kauffman.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Stuart Kauffman/At Home in the Universe_ The Search for the Laws of Self-Organization and Complexity (63)/At Home in the Universe_ The Search for th - Stuart Kauffman.epub",
+        "timestamp": "2023-01-10T17:35:32.658Z",
+        "title": "At Home in the Universe: The Search for the Laws of Self-Organization and Complexity"
+      },
+      {
+        "authors": [
+          "Drew Neil"
+        ],
+        "key": "/home/vladimir/Documents/Books/Drew Neil/Modern Vim (65)/Modern Vim - Drew Neil.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Drew Neil/Modern Vim (65)/Modern Vim - Drew Neil.epub",
+        "timestamp": "2023-01-10T17:33:18.181Z",
+        "title": "Modern Vim"
+      },
+      {
+        "authors": [
+          "Philipp K. Janert"
+        ],
+        "key": "/home/vladimir/Documents/Books/Philipp K. Janert/Gnuplot in Action_ Understanding data with graphs, Second Edition MEAP V06 (64)/Gnuplot in Action_ Understanding data with - Philipp K. Janert.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Philipp K. Janert/Gnuplot in Action_ Understanding data with graphs, Second Edition MEAP V06 (64)/Gnuplot in Action_ Understanding data with - Philipp K. Janert.epub",
+        "timestamp": "2023-01-05T10:15:59.391Z",
+        "title": "Gnuplot in Action: Understanding data with graphs, Second Edition MEAP V06"
+      },
+      {
+        "authors": [
+          "David Spiegelhalter"
+        ],
+        "key": "/home/vladimir/Documents/Books/David Spiegelhalter/The Art of Statistics_ Learning From Data (Pelican Books) (62)/The Art of Statistics_ Learning From Data - David Spiegelhalter.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/David Spiegelhalter/The Art of Statistics_ Learning From Data (Pelican Books) (62)/The Art of Statistics_ Learning From Data - David Spiegelhalter.epub",
+        "timestamp": "2022-12-06T12:26:41.402Z",
+        "title": "The Art of Statistics: Learning From Data (Pelican Books)"
+      },
+      {
+        "authors": [
+          "James Gleick"
+        ],
+        "key": "/home/vladimir/Documents/Books/James Gleick/Chaos (60)/Chaos - James Gleick.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/James Gleick/Chaos (60)/Chaos - James Gleick.epub",
+        "timestamp": "2022-11-01T23:03:27.197Z",
+        "title": "Chaos"
+      },
+      {
+        "authors": [
+          "Michael Kerrisk"
+        ],
+        "key": "/home/vladimir/Documents/Books/Michael Kerrisk/The Linux Programming Interface_ A Linux and UNIX System Programming Handbook (3)/The Linux Programming Interface_ A Linux a - Michael Kerrisk.mobi",
+        "pathtoebook": "/home/vladimir/Documents/Books/Michael Kerrisk/The Linux Programming Interface_ A Linux and UNIX System Programming Handbook (3)/The Linux Programming Interface_ A Linux a - Michael Kerrisk.mobi",
+        "timestamp": "2022-11-01T23:03:07.361Z",
+        "title": "The Linux Programming Interface: A Linux and UNIX System Programming Handbook"
+      },
+      {
+        "authors": [
+          "James Gleick"
+        ],
+        "key": "/home/vladimir/Documents/Books/James Gleick/Chaos (58)/Chaos - James Gleick.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/James Gleick/Chaos (58)/Chaos - James Gleick.epub",
+        "timestamp": "2022-10-10T19:06:32.328Z",
+        "title": "Chaos"
+      },
+      {
+        "authors": [
+          "Martin Fowler"
+        ],
+        "key": "/home/vladimir/Documents/Books/Martin Fowler/Refactoring_ Improving the Design of Existing Code, Second Edition (Garner McCloud's Library) (53)/Refactoring_ Improving the Design of Exist - Martin Fowler.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Martin Fowler/Refactoring_ Improving the Design of Existing Code, Second Edition (Garner McCloud's Library) (53)/Refactoring_ Improving the Design of Exist - Martin Fowler.epub",
+        "timestamp": "2022-10-07T11:29:43.304Z",
+        "title": "Refactoring: Improving the Design of Existing Code, Second Edition (Garner McCloud's Library)"
+      },
+      {
+        "authors": [
+          "Eric Evans"
+        ],
+        "key": "/home/vladimir/Documents/Books/Eric Evans/Domain-Driven Design (55)/Domain-Driven Design - Eric Evans.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Eric Evans/Domain-Driven Design (55)/Domain-Driven Design - Eric Evans.epub",
+        "timestamp": "2022-10-07T09:38:54.647Z",
+        "title": "Domain-Driven Design"
+      },
+      {
+        "authors": [
+          "Gene Kim"
+        ],
+        "key": "/home/vladimir/Documents/Books/Gene Kim/The Pheonix Project (50)/The Pheonix Project - Gene Kim.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Gene Kim/The Pheonix Project (50)/The Pheonix Project - Gene Kim.epub",
+        "timestamp": "2022-09-26T20:25:47.431Z",
+        "title": "The Pheonix Project"
+      },
+      {
+        "key": "/home/vladimir/Documents/Books/Unknown/[No data] (48)/[No data] - Unknown.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Unknown/[No data] (48)/[No data] - Unknown.epub",
+        "timestamp": "2022-09-26T20:19:13.891Z",
+        "title": "[No data]"
+      },
+      {
+        "authors": [
+          "Brooks, Jr. Frederick P."
+        ],
+        "key": "/home/vladimir/Downloads/The Mythical Man-Month Essays on Software Engineering, Anniversary Edition (2nd Edition) (Frederick P. Brooks) (z-lib.org).epub",
+        "pathtoebook": "/home/vladimir/Downloads/The Mythical Man-Month Essays on Software Engineering, Anniversary Edition (2nd Edition) (Frederick P. Brooks) (z-lib.org).epub",
+        "timestamp": "2022-09-26T18:10:12.836Z",
+        "title": "The Mythical Man-Month"
+      },
+      {
+        "authors": [
+          "Amanda Ripley"
+        ],
+        "key": "/home/vladimir/Documents/Books/Amanda Ripley/The Smartest Kids in the World (42)/The Smartest Kids in the World - Amanda Ripley.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Amanda Ripley/The Smartest Kids in the World (42)/The Smartest Kids in the World - Amanda Ripley.epub",
+        "timestamp": "2022-09-26T15:24:20.498Z",
+        "title": "The Smartest Kids in the World"
+      },
+      {
+        "authors": [
+          "Amy Krouse Rosenthal"
+        ],
+        "key": "/home/vladimir/Documents/Books/Amy Krouse Rosenthal/Encyclopedia of an Ordinary Life (43)/Encyclopedia of an Ordinary Life - Amy Krouse Rosenthal.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Amy Krouse Rosenthal/Encyclopedia of an Ordinary Life (43)/Encyclopedia of an Ordinary Life - Amy Krouse Rosenthal.epub",
+        "timestamp": "2022-09-26T15:23:15.979Z",
+        "title": "Encyclopedia of an Ordinary Life"
+      },
+      {
+        "authors": [
+          "Weaver, Stephan"
+        ],
+        "key": "/home/vladimir/Documents/Books/Weaver, Stephan/Egyptian Mythology_ Gods, Pharaohs and Book of the Dead of Egyptian Mythology (Egyptian Mysterie (41)/Egyptian Mythology_ Gods, Pharaohs and Boo - Weaver, Stephan.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Weaver, Stephan/Egyptian Mythology_ Gods, Pharaohs and Book of the Dead of Egyptian Mythology (Egyptian Mysterie (41)/Egyptian Mythology_ Gods, Pharaohs and Boo - Weaver, Stephan.epub",
+        "timestamp": "2022-09-26T15:17:56.697Z",
+        "title": "Egyptian Mythology: Gods, Pharaohs and Book of the Dead of Egyptian Mythology (Egyptian Mysteries - Tutankhamen - Cleopatra - Ancient Egypt - Pyramids ... - Norse - Egyptian - Mythology Trilogy 3)"
+      },
+      {
+        "authors": [
+          "Amanda Ripley"
+        ],
+        "key": "/home/vladimir/Documents/Books/Amanda Ripley/High Conflict_ Why We Get Trapped and How We Get Out (35)/High Conflict_ Why We Get Trapped and How - Amanda Ripley.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Amanda Ripley/High Conflict_ Why We Get Trapped and How We Get Out (35)/High Conflict_ Why We Get Trapped and How - Amanda Ripley.epub",
+        "timestamp": "2022-09-14T14:20:34.502Z",
+        "title": "High Conflict: Why We Get Trapped and How We Get Out"
+      },
+      {
+        "authors": [
+          "Jurgen Appelo"
+        ],
+        "key": "/home/vladimir/Documents/Books/Jurgen Appelo/Management 3.0; Leading Agile Developers, Developing Agile Leaders (36)/Management 3.0; Leading Agile Developers, - Jurgen Appelo.epub",
+        "pathtoebook": "/home/vladimir/Documents/Books/Jurgen Appelo/Management 3.0; Leading Agile Developers, Developing Agile Leaders (36)/Management 3.0; Leading Agile Developers, - Jurgen Appelo.epub",
+        "timestamp": "2022-09-14T13:30:02.129Z",
+        "title": "Management 3.0; Leading Agile Developers, Developing Agile Leaders"
+      },
+      {
+        "authors": [
+          "Kaveh Akbar"
+        ],
+        "key": "/home/vladimir/Documents/Books/Kaveh Akbar/Calling a Wolf a Wolf (5)/Calling a Wolf a Wolf - Kaveh Akbar.azw3",
+        "pathtoebook": "/home/vladimir/Documents/Books/Kaveh Akbar/Calling a Wolf a Wolf (5)/Calling a Wolf a Wolf - Kaveh Akbar.azw3",
+        "timestamp": "2022-09-01T16:44:58.845Z",
+        "title": "Calling a Wolf a Wolf"
+      }
+    ]
+  },
+  "tts_speechd": {
+    "rate": -40
+  },
+  "viewer-highlights-search-case-sensitive": false,
+  "viewer-highlights-search-mode": "normal",
+  "viewer-search-case-sensitive": false,
+  "viewer-search-mode": "normal"
+}

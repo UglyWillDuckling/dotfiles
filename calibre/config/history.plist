@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>lineedit_history_viewer-highlights-search-panel-expression</key>
+	<array>
+		<string>alice</string>
+		<string>aliceaa</string>
+		<string>potter</string>
+		<string>palace</string>
+	</array>
+	<key>lineedit_history_viewer-search-panel-expression</key>
+	<array>
+		<string>
+Tip 79	Escape Problem Characters
+The \V literal switch makes it easier to search for text verbatim because it disables the special meanings for the ., +, and * symbols, but there are a few characters whose special meaning can’t be turned off. In this advanced tip, we’ll look at how to handle these.
+
+Escape / Characters When Searching Forward
+Take this excerpt from a Markdown document:
+
+patterns/search-url.markdown
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+Suppose that we want to search for all instances of the URL http://vimdoc.net/search?q=/\\. Rather than typing it out in full, we’ll just yank it into a register so that we can paste it into our search field. We want to match this text exactly as is, so we’ll use the \V literal switch.
+
+With our cursor placed anywhere inside the brackets, we can yank the URL into register u with the command "uyi[ (mnemonic: u stands for URL). We then type /\V&lt;C-r&gt;u&lt;CR&gt; to populate the search field with the contents of that same register. Our search prompt looks like this:
+
+​=&gt; 	​/\Vhttp://vimdoc.net/search?q=/\\​
+When we execute the search, we get this result:
+
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+What’s going on here? When we pasted the full URL into the search field, Vim interpreted the first / character as a search field terminator (see ​Search Field Terminators​). Everything after that first forward slash was ignored, so our search string became merely http:.
+
+When searching forward, we have to escape / characters. This is required whether we are doing a very magic search (with the \v pattern switch) or a very nomagic search (with the \V literal switch). Let’s amend the previous search, prefixing each / character with a backslash:
+
+​=&gt; 	​/\Vhttp:\/\/vimdoc.net\/search?q=\/\\​
+This time, the result is closer to what we would expect:
+
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+It’s still not perfect. The match stops short of the final backslash. We’ll find out why soon, but first, let’s consider searching backward.
+
+Escape ? Characters When Searching Backward
+When searching backward, the ? symbol acts as the search field terminator. That means we don’t have to escape / characters, but instead we have to escape the ? symbol. Watch what happens if we search backward for the URL that we yanked into register u:
+
+​=&gt; 	​?http://vimdoc.net/search?q=/\\​
+Without escaping anything, Vim matches the string “http://vimdoc.net/search”:
+
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+That’s a better result than when we searched forward without escaping anything, but it still doesn’t match the full URL. We can do better if we prepend the ? character with a backslash:
+
+​=&gt; 	​?http://vimdoc.net/search\?q=/\\​
+That matches the following:
+
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+Escape \ Characters Every Time
+There’s one more character that we have to escape in the search field: the backslash. Normally, a \ indicates that the next character is to be given some special treatment. If we double it up as \\, the first backslash cancels out the special meaning of the second one. In effect, we’re telling Vim to search for a single backslash character.
+
+In our example text, we’re searching for a URL that includes two consecutive backslashes. We have to include two backslashes in the search field for each of them. Searching forward, we end up with this:
+
+​=&gt; 	​/\Vhttp:\/\/vimdoc.net\/search?q=\/\\\\​
+At last! Our search query matches the entire URL:
+
+​ 	Search items: [http://vimdoc.net/search?q=/\\][s]
+​ 	...
+​ 	[s]: http://vimdoc.net/search?q=/\\
+The backslash character always needs to be escaped, whether we’re searching forward or backward.
+
+Escape Characters Programmatically
+Escaping characters by hand is laborious, error-prone work. Fortunately, Vim script includes a library function that can do the hard work for us: escape({string}, {chars}) (see escape()ⓘ).
+
+The {chars} argument specifies which characters must be escaped with a backslash. If we’re searching forward, we could call escape(@u, ’/\’), which would prefix each / and \ character with a backslash. If we were searching backward, we could instead call escape(@u, ’?\’).
+
+First, make sure that the URL we want to search for is still stored in the u register. Then we’ll bring up the search prompt by pressing / or ?; either one will work just fine. Enter the \V literal switch and then type &lt;C-r&gt;=. That switches from the search prompt to the expression register prompt. Now we type this:
+
+​=&gt; 	​=escape(@u, getcmdtype().'\')​
+When we press &lt;CR&gt;, the escape() function is evaluated, and the returned value gets inserted into the search field. The getcmdtype() function simply returns a / symbol if we’re searching forward or a ? symbol if we’re searching backward (see getcmdtype()ⓘ). In Vim script, the . operator performs string concatenation, so getcmdtype().’\’ produces ’/\’ if we’re searching forward and ’?\’ if we’re searching backward. The end result is that no matter which way we’re searching, this expression escapes the contents of the u register so that we can find it.
+
+Switching to the expression register and calling the escape() function by hand still involves a lot of typing. With just a little bit more Vim script, we could automate this, making it more convenient to use. Skip ahead to Tip 87, for an example.
+
+Search Field Terminators
+You might be wondering why the search field has to treat any character as a terminator. Why not just accept that everything following the search prompt is to be included in the search match? The behavior of Vim’s search command can be tuned by appending certain flags after the search field terminator. For example, if we run the command /vim/e&lt;CR&gt;, then our cursor will be placed at the end of any matches rather than at the start. In Tip 83, we’ll learn how to exploit this feature rather than let it exploit us.
+
+There is one way of entering a pattern without having to worry about search field terminators, but it works only in GVim: use the :promptfind command (see :promptfindⓘ). This brings up a graphical dialog window with a field labeled “Find.” You can enter the / and ? characters here without having to escape them. However, the \ and newline characters still cause problems.
+
+Footnotes
+[20]
+http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
+
+[21]
+http://www.regular-expressions.info/lookaround.html
+
+Copyright © 2016, The Pragmatic Bookshelf.</string>
+		<string>47808/</string>
+		<string>exhaustive</string>
+		<string>it started</string>
+		<string>pilgrim</string>
+		<string>cmd</string>
+		<string>colon command</string>
+		<string>command in buffer</string>
+		<string>edit command</string>
+		<string>kaplan</string>
+		<string>kaveh</string>
+	</array>
+</dict>
+</plist>

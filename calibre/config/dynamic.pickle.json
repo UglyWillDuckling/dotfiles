@@ -1,0 +1,40 @@
+{
+  "add books dialog dir": "/home/vladimir/Downloads",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "database location dialog": "/home/vladimir/Documents/Books",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "6.10",
+      "6.6",
+      "6.9",
+      "6.8",
+      "6.7",
+      "6.11",
+      "6.13",
+      "6.14",
+      "6.12",
+      "6.5"
+    ]
+  },
+  "sort_history": [
+    [
+      "rating",
+      false
+    ],
+    [
+      "#lastopened",
+      false
+    ],
+    [
+      "series",
+      true
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "welcome_wizard_device": "default",
+  "welcome_wizard_was_run": true
+}
