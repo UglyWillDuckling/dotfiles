@@ -3,3 +3,6 @@ calibre/config/viewer-webengine.json
 calibre/config/viewer/annots/
 calibre/config/gui.
 calibre/config/gui.json
+calibre/config/fonts/scanner_cache.json
+calibre/config/caches
+calibre/config/global.py.json
