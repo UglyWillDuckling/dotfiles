@@ -6,3 +6,4 @@ calibre/config/gui.json
 calibre/config/fonts/scanner_cache.json
 calibre/config/caches
 calibre/config/global.py.json
+calibre/config/gui.py.json
