@@ -21,6 +21,12 @@ composer_list_updated() {
     # needs to run in a folder that contains a composer lock file
     git diff composer.lock | grep "\+.*version" -B 2 | grep name | awk '{ print $2}' | sed 's/"|,//g'
 }
+php_extract_classes () {
+    while read file_path; do echo $(/usr/bin/grep -Po '^namespace\K.*[^;]' $file_path)'\'$(basename $file_path .php); done
+}
+php_classes_find () {
+    fdfind -t f 'php$' -I $* | xargs grep class -l | php_extract_classes
+}
 ### PHP ###
 
 ### GIT ###
