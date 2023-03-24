@@ -11,6 +11,13 @@
 	</array>
 	<key>lineedit_history_viewer-search-panel-expression</key>
 	<array>
+		<string>"Object-oriented" Style</string>
+		<string>Object-oriented" Style
+
+</string>
+		<string>Object-oriented" style</string>
+		<string>Object-oriented"</string>
+		<string>Object-oriented</string>
 		<string>
 Tip 79	Escape Problem Characters
 The \V literal switch makes it easier to search for text verbatim because it disables the special meanings for the ., +, and * symbols, but there are a few characters whose special meaning can’t be turned off. In this advanced tip, we’ll look at how to handle these.
