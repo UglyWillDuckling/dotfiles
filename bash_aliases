@@ -30,9 +30,8 @@ php_classes_find () {
 ### PHP ###
 
 ### GIT ###
-git-selectdiff () {
-    git sts | fzf | sed -E 's/ M //'
-}
+git-select () { git diff --name-only "$@" | fzf -m }
+git-diffselect () { git diff `git-select` }
 branches-clean() {
     git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
 }
