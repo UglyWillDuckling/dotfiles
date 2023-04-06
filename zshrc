@@ -308,6 +308,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# remamp caps-lock to be ctrl
-setxkbmap -option ctrl:nocaps
-
