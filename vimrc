@@ -424,9 +424,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " map mark to gm
 nnoremap gm m
 
-" emoji file types
-au FileType rs,html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
-
 function! s:buflist()
     redir => ls
     silent ls
@@ -511,6 +508,9 @@ function! ClassName()
     let @c = system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
 endfunction
 
+" +----------------------------------------+
+" |  Move selected block in visual mode    |
+" +----------------------------------------+
 vnoremap <Right> lholhxp`[1v
 vnoremap <Left> hlohlxhP`[1v
 vnoremap <Down> jkojkxjzvP`[1v
@@ -521,3 +521,9 @@ vnoremap <Up> kjokjxkzvP`[1v
 " +-------------------------------+
 vmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
+
+" +-------------------------------+
+" |             emoji             |
+" +-------------------------------+
+au FileType ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
+            \ runtime macros/emoji-ab.vim
