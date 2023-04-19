@@ -314,6 +314,12 @@ nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
 " Abbreviations
 iabbrev for@ for(let i = 0; i <z; i++) {<CR><CR>}<Esc>?z<CR>xi
 
+" delete current buffer
+:nnoremap <Leader>q :Bdelete<CR>
+
+" SPACE to toggle FOLDS
+nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Indent if we're at the beginning of a line. Else, do completion.
@@ -499,16 +505,11 @@ autocmd VimEnter * command! -nargs=* Ag
 xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
-" map tab key to toggle folding
-nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-
 nnoremap c :call ClassName()<cr>
 function! ClassName()
     let filePath = expand('%:p')
     let @c = system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
 endfunction
-
-:nnoremap <Leader>q :Bdelete<CR>
 
 vnoremap <Right> lholhxp`[1v
 vnoremap <Left> hlohlxhP`[1v
