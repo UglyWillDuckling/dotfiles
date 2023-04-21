@@ -527,3 +527,6 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 " +-------------------------------+
 au FileType ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
             \ runtime macros/emoji-ab.vim
+
+autocmd FileType make setlocal noexpandtab
+
