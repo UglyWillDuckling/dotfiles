@@ -1,0 +1,24 @@
+{
+	"monolog" : {
+		"title"			: "Monolog PHP log library format",
+		"description"	: "Log library for PHP",
+		"url"			: "https://seldaek.github.io/monolog",
+		"regex" : {
+			"default"	: {
+				"pattern" : "^\\[(?<timestamp>[^]]+)\\]\\s(?<channel>[^.]*)\\.(?<severity>[^:]*):\\s(?<message>.*?) \\[\\] \\[\\]$"
+			}
+		},
+		"value" : {
+			"date"	: { "kind" : "string", "identifier" : true },
+			"channel"	: { "kind" : "string", "identifier" : true },
+			"severity"	: { "kind" : "string", "identifier" : true },
+			"message"	: { "kind" : "string", "identifier" : true }
+		},
+		"multiline": true,
+		"sample" : [
+			{
+				"line"	: "[2023-04-05T00:00:27.427405+00:00] CoreLogger.INFO: Running cron to export Orders. Orders to sync: 0 [] []"
+			}
+		]
+	}
+}
