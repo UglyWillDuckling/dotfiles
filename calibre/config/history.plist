@@ -11,6 +11,10 @@
 	</array>
 	<key>lineedit_history_viewer-search-panel-expression</key>
 	<array>
+		<string>equivalence</string>
+		<string>functional equivalence</string>
+		<string>general</string>
+		<string>Watchmakers</string>
 		<string>"Object-oriented" Style</string>
 		<string>Object-oriented" Style
 

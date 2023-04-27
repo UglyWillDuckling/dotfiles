@@ -111,31 +111,31 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1053,
+      "height": 1036,
       "width": 1920,
       "x": 0,
-      "y": 0
+      "y": 44
     },
     "full_screened": false,
     "geometry": {
-      "height": 1020,
-      "width": 1914,
-      "x": 3,
-      "y": 30
+      "height": 999,
+      "width": 1920,
+      "x": 0,
+      "y": 81
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1030,
-      "width": 1870,
-      "x": 3,
-      "y": 30
+      "height": 902,
+      "width": 1717,
+      "x": 148,
+      "y": 81
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQcAAAAAwAAAB4AAAdQAAAEIwAAAAACAAAAB4AAAAADAAAAHgAAB3wAAAQZ"
+      "__value__": "AdnQywADAAAAAAAAAAAALAAAB38AAAQ3AAAAlAAAAFEAAAdIAAAD1gAAAAACAAAAB4AAAAAAAAAAUQAAB38AAAQ3"
     },
     "screen": {
-      "depth": 32,
+      "depth": 24,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
         "height": 1080,
@@ -144,10 +144,10 @@
         "y": 0
       },
       "index_in_screens_list": 0,
-      "manufacturer": "DEL",
-      "model": "DELL P2719H",
-      "name": "HDMI-1",
-      "serial": "",
+      "manufacturer": "Dell Inc.",
+      "model": "DELL P2719H-",
+      "name": "DP-2",
+      "serial": "1J13Q83-",
       "size_in_logical_pixels": {
         "height": 1080,
         "width": 1920
@@ -217,9 +217,10 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHkA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfoA////AAAAAQAAAoAAAAOq/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAA6oAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAABPQAAAOqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHkA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfgA////AAAAAQAAA14AAAOV/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAA5UAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAABBwAAAOVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/home/vlado/Documents/Books/Marvin Minsky/Computation_ Finite and Infinite Machines (98)/Computation_ Finite and Infinite Machines - Marvin Minsky.epub",
     "/home/vladimir/Documents/Books/Alan Kay/early history of smalltalk (80)/early history of smalltalk - Alan Kay.epub",
     "/home/vladimir/Downloads/The Pheonix Project () (z-lib.org).epub"
   ],
