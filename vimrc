@@ -424,8 +424,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 " map mark to gm
 nnoremap gm m
 
-" emoji file types
-au FileType rs,html,php,markdown,mmd,text,mail,gitcommit runtime macros/emoji-ab.vim
+" +-------------------------------+
+" |             emoji             |
+" +-------------------------------+
+au FileType rs,ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
+            \ runtime macros/emoji-ab.vim
 
 function! s:buflist()
     redir => ls
@@ -524,12 +527,6 @@ vnoremap <Up> kjokjxkzvP`[1v
 " +-------------------------------+
 vmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
-
-" +-------------------------------+
-" |             emoji             |
-" +-------------------------------+
-au FileType ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
-            \ runtime macros/emoji-ab.vim
 
 autocmd FileType make setlocal noexpandtab
 
