@@ -359,3 +359,13 @@ urlencode () {
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
 alias z='zsh'
 alias vim='nvim'
+
+### ZSH
+# put the cursor in a subshell $()
+# using Ctrl-j
+function _zle_subshell {
+    RBUFFER='$()'"$RBUFFER"
+    ((CURSOR=CURSOR+2))
+}
+zle -N _zle_subshell
+bindkey '^J' _zle_subshell
