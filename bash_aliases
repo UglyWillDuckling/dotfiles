@@ -101,6 +101,7 @@ bindkey -s '^o' 'vif^M'
 ### FILES ###
 
 ### ALIASES ###
+alias ej='emoj'
 alias reload='_omz::reload'
 alias b="bat"
 alias ll="ls --color -lhF --group-directories-first"
