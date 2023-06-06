@@ -12,6 +12,9 @@ dk-debug-shell-php()
     docker-compose exec phpfpm sh -c "export XDEBUG_MODE=profiler XDEBUG_SESSION=1 XDEBUG_OUTPUT_DIR='/var/www/html/'; export PHP_IDE_CONFIG='serverName=aap-publisher.local'; php $1"
 }
 
+lock_diff() {
+    git diff composer.lock | grep "\+.*version" -B 2 | grep name
+}
 composer_list_required() {
     # needs to be run inside a composer project that contains a composer.json
     < composer.json jq '.require' | sed '1d;$d;' | awk '{print $1}' | sed 's/"|://g'
