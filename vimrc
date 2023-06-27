@@ -427,7 +427,7 @@ nnoremap gm m
 " +-------------------------------+
 " |             emoji             |
 " +-------------------------------+
-au FileType rs,ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
+au FileType javascript,rs,ruby,rb,html,php,markdown,mmd,text,mail,gitcommit
             \ runtime macros/emoji-ab.vim
 
 function! s:buflist()
