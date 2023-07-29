@@ -289,10 +289,6 @@ source ~/mouse.zsh
 bindkey '^[m' zle-toggle-mouse
 # zle-toggle-mouse
 
-# motivate yourself
-motivate
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/vladimir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
