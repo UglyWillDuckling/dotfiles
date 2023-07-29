@@ -286,6 +286,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 " Insert a forward arrow
 imap <c-s> ->
+imap <c-l> =>
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 inoremap <c-c> <esc>
 " <leader><leader> is more convenient than <c-^>
