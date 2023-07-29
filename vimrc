@@ -40,6 +40,15 @@ Plugin 'kana/vim-textobj-user'
 " https://github.com/rayburgemeestre/phpfolding.vim
 Plugin 'kana/vim-textobj-fold'
 
+" https://github.com/akiyan/vim-textobj-php
+Plugin 'akiyan/vim-textobj-php'
+
+" https://github.com/glts/vim-textobj-comment
+Plugin 'glts/vim-textobj-comment'
+
+" https://github.com/michaeljsmith/vim-indent-object
+Plugin 'michaeljsmith/vim-indent-object'
+
 " https://github.com/junegunn/vim-peekaboo registers
 " Plugin 'junegunn/vim-peekaboo'
 
