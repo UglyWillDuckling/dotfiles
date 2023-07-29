@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/preservim/vim-pencil
+Plugin 'preservim/vim-pencil'
+
 " https://github.com/wellle/targets.vim
 Plugin 'wellle/targets.vim'
 
