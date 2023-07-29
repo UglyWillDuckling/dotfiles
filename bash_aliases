@@ -36,7 +36,7 @@ php_classes_find () {
 git-select () { git diff --name-only "$@" | fzf -m }
 git-diffselect () { git diff `git-select` }
 branches-clean() {
-    git branch --merged | grep -v `git branch --show-current` | while read branch; do git branch -d $branch; done
+    git branch --merged | grep -v `git branch --show-current` | grep -v 'master|production|staging' | while read branch; do git branch -d $branch; done
 }
 git-files_between_revs () {
     git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
