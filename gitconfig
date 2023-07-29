@@ -65,6 +65,7 @@
 	hp = "!. ~/.githelpers && show_git_head"
 	ra = !git r --all
 	rs = reset
+	sh = show HEAD
 [init]
 	defaultBranch = main
 [credential]
@@ -76,3 +77,5 @@
     features = line-numbers decorations
     syntax-theme = Monokai Extended Light
 
+[safe]
+	directory = /var/www/html
