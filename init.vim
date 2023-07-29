@@ -39,6 +39,8 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'norcalli/nvim-colorizer.lua'
 " https://github.com/mrjones2014/smart-splits.nvim
 Plugin 'mrjones2014/smart-splits.nvim'
+" https://github.com/rhysd/vim-fixjson
+Plugin 'rhysd/vim-fixjson'
 
 " https://github.com/karb94/neoscroll.nvim
 Plugin 'karb94/neoscroll.nvim'
