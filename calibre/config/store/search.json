@@ -2,31 +2,31 @@
   "first_run": false,
   "geometry-of-geometry": {
     "frame_geometry": {
-      "height": 633,
-      "width": 806,
-      "x": -3,
-      "y": -30
+      "height": 637,
+      "width": 800,
+      "x": 560,
+      "y": 244
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
       "width": 800,
-      "x": 0,
-      "y": 0
+      "x": 560,
+      "y": 281
     },
     "maximized": false,
     "normal_geometry": {
       "height": 600,
       "width": 800,
-      "x": 0,
-      "y": 0
+      "x": 560,
+      "y": 281
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAD////9////4gAAAyIAAAJaAAAAAAAAAAAAAAMfAAACVwAAAAAAAAAAB4AAAAAAAAAAAAAAAx8AAAJX"
+      "__value__": "AdnQywADAAAAAAIwAAAA9AAABU8AAANwAAACMAAAARkAAAVPAAADcAAAAAAAAAAAB4AAAAIwAAABGQAABU8AAANw"
     },
     "screen": {
-      "depth": 32,
+      "depth": 24,
       "device_pixel_ratio": 1.0,
       "geometry_in_logical_pixels": {
         "height": 1080,
@@ -35,10 +35,10 @@
         "y": 0
       },
       "index_in_screens_list": 0,
-      "manufacturer": "DEL",
-      "model": "DELL P2719H",
-      "name": "HDMI-1",
-      "serial": "",
+      "manufacturer": "Dell Inc.",
+      "model": "DELL P2719H-",
+      "name": "DP-2",
+      "serial": "1J13Q83-",
       "size_in_logical_pixels": {
         "height": 1080,
         "width": 1920
