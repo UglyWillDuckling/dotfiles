@@ -100,7 +100,9 @@ vif () {
     fname=$(fzf) || return
     vim "$fname"
 }
-bindkey -s '^o' 'vif^M'
+usage_by_size () {
+du -h -d 1 2> /dev/null | sort -hr | head -n 13
+}
 ### FILES ###
 
 ### ALIASES ###
@@ -377,3 +379,4 @@ function _zle_subshell {
 }
 zle -N _zle_subshell
 bindkey '^J' _zle_subshell
+bindkey -s '^o' 'vif^M'
