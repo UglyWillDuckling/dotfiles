@@ -89,7 +89,6 @@ random_emojis () {
     done | xargs
 }
 
-### TEXT EDITTING ###
 alias first='head -1'
 alias collapse_spaces="sed 's/\s+/ /g'"
 ## TEXT EDITTING ###
@@ -367,7 +366,6 @@ urlencode () {
     LC_COLLATE=$old_lc_collate
 }
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
-alias z='zsh'
 alias vim='nvim'
 
 ### ZSH
