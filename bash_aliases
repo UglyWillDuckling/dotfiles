@@ -33,6 +33,9 @@ php_classes_find () {
 ### PHP ###
 
 ### GIT ###
+git-ls_by_size () {
+    git ls-tree -r --long HEAD | sort -k 4 -n -r
+}
 git-select () { git diff --name-only "$@" | fzf -m }
 git-diffselect () { git diff `git-select` }
 branches-clean() {
