@@ -378,3 +378,15 @@ function _zle_subshell {
 zle -N _zle_subshell
 bindkey '^J' _zle_subshell
 bindkey -s '^o' 'vif^M'
+
+# current directory shortcut
+# Alt+k
+
+function _zle_current_dir() {
+    dir=`pwd`
+
+    RBUFFER=$dir"$RBUFFER"
+    ((CURSOR=CURSOR+${#dir}))
+}
+zle -N _zle_current_dir
+bindkey '^[k' _zle_current_dir
