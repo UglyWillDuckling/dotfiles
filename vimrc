@@ -560,4 +560,12 @@ augroup pencil
                 \ | call textobj#sentence#init()
 augroup END
 
+" +-------------------------------+
+" |         Log autocmd           |
+" +-------------------------------+
+augroup log
+    autocmd!
+    autocmd BufNewFile,BufReadPost *.log* :set filetype=log
+augroup END
+
 
