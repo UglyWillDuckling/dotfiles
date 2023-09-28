@@ -97,7 +97,7 @@ alias collapse_spaces="sed 's/\s+/ /g'"
 vif () {
     local fname
     fname=$(fzf) || return
-    vim "$fname"
+    nvim "$fname"
 }
 usage_by_size () {
 du -h -d 1 2> /dev/null | sort -hr | head -n 13
@@ -379,14 +379,54 @@ zle -N _zle_subshell
 bindkey '^J' _zle_subshell
 bindkey -s '^o' 'vif^M'
 
-# current directory shortcut
-# Alt+k
+# list files
+function _zle_ls_list() {
+    # list current files
+    # list=`ls --color -lhF --group-directories-first`
+    ls --color -lhF --group-directories-first
 
-function _zle_current_dir() {
-    dir=`pwd`
-
-    RBUFFER=$dir"$RBUFFER"
-    ((CURSOR=CURSOR+${#dir}))
+    zle reset-prompt; zle redisplay
+    # RBUFFER=$list"$RBUFFER"
+    # ((CURSOR=CURSOR+${#list}))
 }
-zle -N _zle_current_dir
-bindkey '^[k' _zle_current_dir
+zle -N _zle_ls_list
+bindkey '^[l' _zle_ls_list
+
+# toggles background shell
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+	BUFFER="fg"
+	zle accept-line
+    else
+	zle push-input
+	zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
+# _zle git diff
+function _git-diff {
+    zle push-input
+    BUFFER="git diff"
+    zle accept-line
+}
+
+zle -N _git-diff
+bindkey '^D' _git-diff
+
+# _zle git diff
+function _git-diff-staged {
+    zle push-input
+    BUFFER="git diff --find-copies-harder --cached --color=always"
+    zle accept-line
+}
+
+zle -N _git-diff-staged
+bindkey '^Dc' _git-diff-staged
+
+#
+# ctrl+<- | ctrl+->
+bindkey "^[." forward-word
+bindkey "^[," backward-word
+
