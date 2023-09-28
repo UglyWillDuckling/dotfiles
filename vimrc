@@ -61,9 +61,6 @@ Plugin 'michaeljsmith/vim-indent-object'
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
 
-" https://github.com/prettier/vim-prettier
-Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['php'] }
-
 " https://github.com/junegunn/fzf.vim
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
