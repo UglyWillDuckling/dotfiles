@@ -72,6 +72,20 @@ export UPDATE_ZSH_DAYS=7
 # see 'man strftime' for details.
  HIST_STAMPS="mm/dd/yyyy"
 
+ #set history size
+export HISTSIZE=200000
+#save history after logout
+export SAVEHIST=500000
+#history file
+export HISTFILE=~/.zsh_history
+#append into history file
+setopt INC_APPEND_HISTORY
+#save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+# add timestamp for each entry
+setopt EXTENDED_HISTORY
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
