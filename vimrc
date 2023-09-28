@@ -548,3 +548,16 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 
 autocmd FileType make setlocal noexpandtab
 
+" +-------------------------------+
+" |         Vim Pencil            |
+" +-------------------------------+
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,mkd,text call pencil#init()
+                " \ | call lexical#init()
+                \ | call litecorrect#init()
+                \ | call textobj#quote#init()
+                \ | call textobj#sentence#init()
+augroup END
+
+
