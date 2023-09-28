@@ -111,6 +111,9 @@ Plugin 'godlygeek/tabular'
 " https://github.com/preservim/vim-markdown
 Plugin 'preservim/vim-markdown'
 
+" https://github.com/stephpy/vim-php-cs-fixer
+Plugin 'stephpy/vim-php-cs-fixer'
+
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -568,4 +571,15 @@ augroup log
     autocmd BufNewFile,BufReadPost *.log* :set filetype=log
 augroup END
 
+" +-------------------------------+
+" |         PHP CS Fixer           |
+" +-------------------------------+
+" If you use php-cs-fixer version 2.x
+let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+"let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
+"let g:php_cs_fixer_config_file = '.php_cs' " options: --config
+let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky
+" End of php-cs-fixer version 2 config params
+" Mapping
+nnoremap <silent><leader>pc :call PhpCsFixerFixFile()<CR>
 
