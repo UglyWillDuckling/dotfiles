@@ -107,8 +107,6 @@ Plugin 'vim-autoformat/vim-autoformat'
 " add this line to your .vimrc file
 Plugin 'mattn/emmet-vim'
 
-" Plugin 'ycm-core/YouCompleteMe'
-
 Plugin 'godlygeek/tabular'
 " https://github.com/preservim/vim-markdown
 Plugin 'preservim/vim-markdown'
@@ -329,6 +327,10 @@ iabbrev for@ for(let i = 0; i <z; i++) {<CR><CR>}<Esc>?z<CR>xi
 
 " SPACE to toggle FOLDS
 nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+" Dict
+" use dictionary for completion in text and markdown files
+autocmd FileType txt md :set complete+=k
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
