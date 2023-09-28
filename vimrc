@@ -386,7 +386,7 @@ set mouse=a
 " use the system clipboard by default
 set clipboard^=unnamedplus
 
-" EastClip
+" EasyClip
 let g:EasyClipAutoFormat = 1
 
 " Git
@@ -520,10 +520,11 @@ autocmd VimEnter * command! -nargs=* Ag
 xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
+nnoremap <c-c>:call ClassName()<cr>
 nnoremap c :call ClassName()<cr>
 function! ClassName()
     let filePath = expand('%:p')
-    let @c = system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
+    let @+=system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
 endfunction
 
 nnoremap a :call FilePathCpc()<cr>
