@@ -317,7 +317,7 @@ cnoremap \>s/ \>smagic/
 cnoremap g/ :g/\v
 
 " alt+h
-nnoremap h <Esc>:History<CR>
+nnoremap <Leader>h :History<CR>
 
 " swap words
 nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
