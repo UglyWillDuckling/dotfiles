@@ -59,8 +59,6 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <C-p> <cmd>Telescope registers<cr>
 
-" nnoremap s :HopWord<CR>
-nnoremap <M-k> :HopChar1<CR>
 nnoremap <M-l> :HopLine<CR>
 
 function! WinMove(key)
