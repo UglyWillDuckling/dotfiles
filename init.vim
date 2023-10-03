@@ -160,13 +160,6 @@ require'sad'.setup({
   width_ratio = 0.6, -- height ratio of sad window when split vertically
 })
 
-api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
-api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
-api.nvim_set_keymap("n", "<leader>zf", ":TZFocus<CR>", {})
-api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
-api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
--- require("true-zen").setup()
-
 local actions = require "telescope.actions"
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup {
