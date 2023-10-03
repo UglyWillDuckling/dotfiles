@@ -128,15 +128,6 @@ require('lualine').setup()
 require("registers").setup({ show_empty = true, })
 require'marks'.setup {}
 require('smart-splits').setup({})
-
--- TREE API
--- local treeapi = require('nvim-tree.api')
--- local function opts(desc)
---     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
--- end
-
--- vim.keymap.set('n', '<C-]>', treeapi.tree.change_root_to_node,          opts('CD'))
--- vim.keymap.set('n', '<C-e>', treeapi.node.open.replace_tree_buffer,     opts('Open: In Place'))
 require('leap').add_default_mappings()
 require('leap').setup {
     labeled_modes = "vno",
