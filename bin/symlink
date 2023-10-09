@@ -11,4 +11,4 @@ ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
 rm $HOME/.config/calibre || 0
 ln -s $(pwd)/calibre/config $HOME/.config/calibre
 rm $HOME/.tmux.conf || 0
-ln -s $(pwd)/tmux.confg $HOME/.tmux.conf
+ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
