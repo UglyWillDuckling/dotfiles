@@ -1,4 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 set termguicolors
@@ -79,10 +78,10 @@ nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 " Tree
-nnoremap <M-m> :NvimTreeFocus<CR>
-nnoremap <M-f> :NvimTreeFindFile<CR>
-nnoremap <M-,> :NvimTreeToggle<CR>
-nnoremap <leader>t :NvimTreeToggle<CR>
+" nnoremap <silent> <M-m> :NvimTreeFocus<CR>
+nnoremap <silent> <M-f> :NvimTreeFindFile<CR>
+nnoremap <silent> <M-,> :NvimTreeToggle<CR>
+" nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " GoTo code navigation - COC
 nmap <silent> gd <Plug>(coc-definition)
@@ -206,7 +205,7 @@ local function my_on_attach(bufnr)
     vim.keymap.set('n', ']e',    api.node.navigate.diagnostics.next,    opts('Next Diagnostic'))
     vim.keymap.set('n', '[e',    api.node.navigate.diagnostics.prev,    opts('Prev Diagnostic'))
     vim.keymap.set('n', 'gy',    api.fs.copy.absolute_path,             opts('Copy Absolute Path'))
-    vim.keymap.set('n', 'H',     api.tree.toggle_hidden_filter,         opts('Toggle Dotfiles'))
+    vim.keymap.set('n', '<leader>h',     api.tree.toggle_hidden_filter,         opts('Toggle Dotfiles'))
     vim.keymap.set('n', 'I',     api.tree.toggle_gitignore_filter,      opts('Toggle Git Ignore'))
     vim.keymap.set('n', 'J',     api.node.navigate.sibling.last,        opts('Last Sibling'))
     vim.keymap.set('n', 'K',     api.node.navigate.sibling.first,       opts('First Sibling'))
@@ -226,7 +225,7 @@ local function my_on_attach(bufnr)
 
     -- custom mappings
     vim.keymap.set('n', '<C-f>', treeutils.launch_find_files)
-    vim.keymap.set('n', '<C-g>', treeutils.launch_live_grep)
+    vim.keymap.set('n', '<M-g>', treeutils.launch_live_grep)
     vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
