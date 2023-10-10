@@ -164,26 +164,26 @@
     "frame_geometry": {
       "height": 633,
       "width": 965,
-      "x": 472,
-      "y": 150
+      "x": -3,
+      "y": -30
     },
     "full_screened": false,
     "geometry": {
       "height": 600,
       "width": 959,
-      "x": 475,
-      "y": 180
+      "x": 0,
+      "y": 0
     },
     "maximized": false,
     "normal_geometry": {
       "height": 600,
       "width": 959,
-      "x": 475,
-      "y": 180
+      "x": 0,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAHYAAAAlgAABZwAAAMOAAAB2wAAALQAAAWZAAADCwAAAAAAAAAAB4AAAAHbAAAAtAAABZkAAAML"
+      "__value__": "AdnQywADAAD////9////4gAAA8EAAAJaAAAAAAAAAAAAAAO+AAACVwAAAAAAAAAAB4AAAAAAAAAAAAAAA74AAAJX"
     },
     "screen": {
       "depth": 32,
