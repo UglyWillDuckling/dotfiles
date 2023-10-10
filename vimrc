@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/skywind3000/asyncrun.vim
+Plugin 'skywind3000/asyncrun.vim'
+
 " https://github.com/preservim/vim-pencil
 Plugin 'preservim/vim-pencil'
 
@@ -104,7 +107,7 @@ Plugin 'tpope/vim-fugitive'
 " https://github.com/vim-autoformat/vim-autoformat
 Plugin 'vim-autoformat/vim-autoformat'
 
-" add this line to your .vimrc file
+" https://github.com/mattn/emmet-vim
 Plugin 'mattn/emmet-vim'
 
 Plugin 'godlygeek/tabular'
