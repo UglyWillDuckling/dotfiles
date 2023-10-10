@@ -8,3 +8,4 @@ calibre/config/global.py.json
 calibre/config/gui.py.json
 calibre/config/conversion
 calibre/config/xdg_open_with.json
+calibre/config/store/plugin_cache.json
