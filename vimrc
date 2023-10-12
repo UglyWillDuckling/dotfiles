@@ -336,6 +336,7 @@ nnoremap <silent> <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 " Dict
 " use dictionary for completion in text and markdown files
+set dictionary+=/usr/share/dict/words
 autocmd FileType txt md :set complete+=k
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
