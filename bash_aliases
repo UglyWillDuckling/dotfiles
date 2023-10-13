@@ -412,21 +412,24 @@ function _git-diff {
     zle accept-line
 }
 
-zle -N _git-diff
-bindkey '^D' _git-diff
-
-# _zle git diff
-function _git-diff-staged {
-    zle push-input
-    BUFFER="git diff --find-copies-harder --cached --color=always"
-    zle accept-line
-}
-
-zle -N _git-diff-staged
-bindkey '^Dc' _git-diff-staged
-
-#
 # ctrl+<- | ctrl+->
 bindkey "^[." forward-word
 bindkey "^[," backward-word
+
+# substitute for the default shell behavior of alt+.
+# maps to alt+p
+bindkey "^[p" insert-last-word
+
+# Create a function.
+insert-next-word() {
+    # Tell `insert-last-word` to go forward (1), instead of backward (-1).
+    zle insert-last-word -- 1
+}
+
+# Create a widget that calls the function above.
+zle -N insert-next-word
+
+# next word
+# alt+n???
+bindkey '^[n' insert-next-word
 
