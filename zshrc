@@ -300,6 +300,7 @@ fi
 if [ -f ~/.zsh_start ]; then
     . ~/.zsh_start
 fi
+[ -f ~/.env ] && source ~/.env
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
