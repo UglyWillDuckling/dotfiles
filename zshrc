@@ -6,6 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 umask 002
+setopt IGNORE_EOF
+
+# GLOBBING
+setopt EXTENDED_GLOB
+setopt extended_glob
+setopt KSH_GLOB
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.local/bin:$HOME/.nvm:$HOME/dev/scripts:$PATH
@@ -19,8 +25,6 @@ export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-setopt IGNORE_EOF
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -33,12 +37,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" 2>/dev/null
 fi
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -97,7 +95,7 @@ setopt EXTENDED_HISTORY
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  tmux
+  # tmux
   z
   k
   chucknorris
@@ -114,13 +112,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
  #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -150,49 +141,50 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=green'
 ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=cyan'
 
-# bashmarks
-source ~/.local/bin/bashmarks.sh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
 
-# GREP
+# ZLE
+
+# Expand multiple dots
+# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
+function expand-multiple-dots() {
+    local MATCH
+    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
+        LBUFFER=$LBUFFER:fs%\.\.\.%../..%
+    fi
+}
+
+function expand-multiple-dots-then-expand-or-complete() {
+    zle expand-multiple-dots
+    zle expand-or-complete
+}
+
+function expand-multiple-dots-then-accept-line() {
+    zle expand-multiple-dots
+    zle accept-line
+}
+
+zle -N expand-multiple-dots
+zle -N expand-multiple-dots-then-expand-or-complete
+zle -N expand-multiple-dots-then-accept-line
+bindkey '^I' expand-multiple-dots-then-expand-or-complete
+bindkey '^M' expand-multiple-dots-then-accept-line
+# end expand multiple dots
+
+source ~/mouse.zsh
+bindkey '^[m' zle-toggle-mouse
+
+# zle-toggle-mouse
+# end /ZLE
+
+# COLORS
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
-
-# GLOBBING
-setopt EXTENDED_GLOB
-setopt extended_glob
-setopt KSH_GLOB
 
 # Directory colors
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
-
-# Functions
-extract_words() {sed 's/^.*\///' | sed 's/\..*//'}
-unique() {awk '!cnt[$0]++'}
-strip_lines() { awk 'NF > 0'; }
-pacupdate() { sudo pacman -Syu }
-
-extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-        *.tar.bz2)      tar xvjf $1 ;;
-        *.tar.gz)       tar xvzf $1 ;;
-        *.tar.xz)       tar Jxvf $1 ;;
-        *.bz2)          bunzip2 $1 ;;
-        *.rar)          unrar x $1 ;;
-        *.gz)           gunzip $1 ;;
-        *.tar)          tar xvf $1 ;;
-        *.tbz2)         tar xvjf $1 ;;
-        *.tgz)          tar xvzf $1 ;;
-        *.zip)          unzip $1 ;;
-        *.Z)            uncompress $1 ;;
-        *.7z)           7z x $1 ;;
-        *)              echo "don't know how to extract '$1'..." ;;
-       esac
-   else
-       echo "'$1' is not a valid file!"
-   fi
-}
 
 # Bashmarks
 source ~/.local/bin/bashmarks.sh
@@ -244,33 +236,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow'
 
 # disable the ctrl+s shortcut
 stty -ixon
-
-# Expand multiple dots
-# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
-function expand-multiple-dots() {
-    local MATCH
-    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
-        LBUFFER=$LBUFFER:fs%\.\.\.%../..%
-    fi
-}
-
-function expand-multiple-dots-then-expand-or-complete() {
-    zle expand-multiple-dots
-    zle expand-or-complete
-}
-
-function expand-multiple-dots-then-accept-line() {
-    zle expand-multiple-dots
-    zle accept-line
-}
-
-zle -N expand-multiple-dots
-zle -N expand-multiple-dots-then-expand-or-complete
-zle -N expand-multiple-dots-then-accept-line
-bindkey '^I' expand-multiple-dots-then-expand-or-complete
-bindkey '^M' expand-multiple-dots-then-accept-line
-# end expand multiple dots
-
 # from https://superuser.com/a/767491
 # Format the time command output to include memory usage
 MAX_MEMORY_UNITS=MB
@@ -282,7 +247,6 @@ TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
 'max memory:                %M '$MAX_MEMORY_UNITS''$'\n'\
 'page faults from disk:     %F'$'\n'\
 'other page faults:         %R'
-
 
 ### INCLUDES
 if [ -f ~/.bash_aliases ]; then
@@ -302,13 +266,7 @@ if [ -f ~/.zsh_start ]; then
 fi
 [ -f ~/.env ] && source ~/.env
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
-
-source ~/mouse.zsh
-bindkey '^[m' zle-toggle-mouse
-# zle-toggle-mouse
-
+# THIRD PARTY INIT
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/vladimir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
