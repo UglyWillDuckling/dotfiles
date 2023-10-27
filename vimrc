@@ -282,7 +282,7 @@ command! -range Md5 :echo system('echo '.shellescape(join(getline(<line1>, <line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>y "*y
+" map <leader>y "*y
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -320,7 +320,7 @@ cnoremap \>s/ \>smagic/
 cnoremap g/ :g/\v
 
 " alt+h
-nnoremap <Leader>h :History<CR>
+nnoremap <Leader>hh :History<CR>
 
 " swap words
 nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
