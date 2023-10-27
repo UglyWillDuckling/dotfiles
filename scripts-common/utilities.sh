@@ -36,13 +36,13 @@
 #shopt -s compat31
 
 # Used variables MUST be initialized.
-set -o nounset
+# set -o nounset
 # Traces error in function & co.
-set -o errtrace
+# set -o errtrace
 
 # shellcheck disable=SC2154
 # Dumps function call in case of error, or when exiting with something else than status 0.
-[ "${BSC_DISABLE_ERROR_TRAP:-0}" -eq 0 ] && trap '_status=$?; dumpFuncCall $_status' ERR
+# [ "${BSC_DISABLE_ERROR_TRAP:-0}" -eq 0 ] && trap '_status=$?; dumpFuncCall $_status' ERR
 #trap '_status=$?; [ $_status -ne 0 ] && dumpFuncCall $_status' EXIT
 
 # N.B.: since version 2.1, global variable definition are at end of this script
@@ -1170,11 +1170,11 @@ function manageMavenHome() {
 
 # GNU/Bash printf Date feature is available since version 4.3
 # N.B.: the compatibility mode can be forced on/off with BSC_FORCE_COMPAT_MODE variable.
-if isVersionGreater "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}" "4.3" 1; then
-  declare -r _BSC_COMPAT_DATE_PRINTF=1
-  declare -r _BSC_COMPAT_ASSOCIATIVE_ARRAY=1
-fi
-
+# if isVersionGreater "${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}" "4.3" 1; then
+#   declare -r _BSC_COMPAT_DATE_PRINTF=1
+#   declare -r _BSC_COMPAT_ASSOCIATIVE_ARRAY=1
+# fi
+#
 #########################
 ## Default variables' values
 launchedScriptName="$( basename "$0" )"
