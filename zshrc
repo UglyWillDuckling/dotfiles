@@ -144,40 +144,6 @@ ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=cyan'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
 
-# ZLE
-
-# Expand multiple dots
-# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
-function expand-multiple-dots() {
-    local MATCH
-    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
-        LBUFFER=$LBUFFER:fs%\.\.\.%../..%
-    fi
-}
-
-function expand-multiple-dots-then-expand-or-complete() {
-    zle expand-multiple-dots
-    zle expand-or-complete
-}
-
-function expand-multiple-dots-then-accept-line() {
-    zle expand-multiple-dots
-    zle accept-line
-}
-
-zle -N expand-multiple-dots
-zle -N expand-multiple-dots-then-expand-or-complete
-zle -N expand-multiple-dots-then-accept-line
-bindkey '^I' expand-multiple-dots-then-expand-or-complete
-bindkey '^M' expand-multiple-dots-then-accept-line
-# end expand multiple dots
-
-source ~/mouse.zsh
-bindkey '^[m' zle-toggle-mouse
-
-# zle-toggle-mouse
-# end /ZLE
-
 # COLORS
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 

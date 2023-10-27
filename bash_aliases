@@ -389,7 +389,37 @@ urlencode () {
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
 alias vim='nvim'
 
-### ZSH
+### ZLE
+# Expand multiple dots
+# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
+function expand-multiple-dots() {
+    local MATCH
+    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
+	LBUFFER=$LBUFFER:fs%\.\.\.%../..%
+    fi
+}
+
+function expand-multiple-dots-then-expand-or-complete() {
+    zle expand-multiple-dots
+    zle expand-or-complete
+}
+
+function expand-multiple-dots-then-accept-line() {
+    zle expand-multiple-dots
+    zle accept-line
+}
+
+zle -N expand-multiple-dots
+zle -N expand-multiple-dots-then-expand-or-complete
+zle -N expand-multiple-dots-then-accept-line
+bindkey '^I' expand-multiple-dots-then-expand-or-complete
+bindkey '^M' expand-multiple-dots-then-accept-line
+# end expand multiple dots
+
+source ~/mouse.zsh
+bindkey '^[m' zle-toggle-mouse
+# zle-toggle-mouse
+
 # put the cursor in a subshell $()
 # using Ctrl-j
 function _zle_subshell {
@@ -453,4 +483,5 @@ zle -N insert-next-word
 # next word
 # alt+n???
 bindkey '^[n' insert-next-word
-
+#
+# end /ZLE
