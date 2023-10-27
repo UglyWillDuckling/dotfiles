@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+### ZLE
+# Expand multiple dots
+# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
+function expand-multiple-dots() {
+  local MATCH
+    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
+      LBUFFER=$LBUFFER:fs%\.\.\.%../..%
+        fi
+}
+
+function expand-multiple-dots-then-expand-or-complete() {
+  zle expand-multiple-dots
+    zle expand-or-complete
+}
+
+function expand-multiple-dots-then-accept-line() {
+  zle expand-multiple-dots
+    zle accept-line
+}
+
+zle -N expand-multiple-dots
+zle -N expand-multiple-dots-then-expand-or-complete
+zle -N expand-multiple-dots-then-accept-line
+bindkey '^I' expand-multiple-dots-then-expand-or-complete
+bindkey '^M' expand-multiple-dots-then-accept-line
+# end expand multiple dots
+
+source ~/mouse.zsh
+bindkey '^[m' zle-toggle-mouse
+# zle-toggle-mouse
+
+# put the cursor in a subshell $()
+# using Ctrl-j
+function _zle_subshell {
+  RBUFFER='$()'"$RBUFFER"
+    ((CURSOR=CURSOR+2))
+}
+zle -N _zle_subshell
+bindkey '^J' _zle_subshell
+bindkey -s '^o' 'vif^M'
+
+# list files
+function _zle_ls_list() {
+# list current files
+# list=`ls --color -lhF --group-directories-first`
+  ls --color -lhF --group-directories-first
+
+    zle reset-prompt; zle redisplay
+# RBUFFER=$list"$RBUFFER"
+# ((CURSOR=CURSOR+${#list}))
+}
+zle -N _zle_ls_list
+bindkey '^[l' _zle_ls_list
+
+# toggles background shell
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+      zle accept-line
+  else
+    zle push-input
+      zle clear-screen
+      fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
+# _zle git diff
+function _git-diff {
+  zle push-input
+    BUFFER="git diff"
+    zle accept-line
+}
+
+# ctrl+<- | ctrl+->
+bindkey "^[." forward-word
+bindkey "^[," backward-word
+
+# substitute for the default shell behavior of alt+.
+# maps to alt+p
+bindkey "^[p" insert-last-word
+
+# Create a function.
+insert-next-word() {
+# Tell `insert-last-word` to go forward (1), instead of backward (-1).
+  zle insert-last-word -- 1
+}
+
+# Create a widget that calls the function above.
+zle -N insert-next-word
+
+# next word
+# alt+n???
+bindkey '^[n' insert-next-word
+#
+# end /ZLE
+

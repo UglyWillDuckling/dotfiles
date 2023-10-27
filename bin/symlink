@@ -8,6 +8,8 @@ rm $HOME/.vimrc || 0
 ln -s $(pwd)/vimrc $HOME/.vimrc
 rm $HOME/.bash_aliases || 0
 ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
+rm $HOME/.zle || 0
+ln -s $(pwd)/zle $HOME/.zle
 rm $HOME/.config/calibre || 0
 ln -s $(pwd)/calibre/config $HOME/.config/calibre
 rm $HOME/.tmux.conf || 0

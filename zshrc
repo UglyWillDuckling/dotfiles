@@ -129,8 +129,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 
-alias j="jobs"
-
 # zsh coloring
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
@@ -140,6 +138,7 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=green'
 ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=cyan'
+# END /ZSH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
@@ -230,6 +229,11 @@ fi
 if [ -f ~/.zsh_start ]; then
     . ~/.zsh_start
 fi
+# zle bindings
+if [ -f ~/.zle ]; then
+    . ~/.zle
+fi
+# main env file
 [ -f ~/.env ] && source ~/.env
 
 # THIRD PARTY INIT

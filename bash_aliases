@@ -1,4 +1,79 @@
 #!/usr/bin/env bash
+
+## VARIABLES ##
+export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
+export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
+export GIT_LOG_ONELINE='%C(always,yellow)%h%C(always,reset) %C(always,green)(%ar)%C(always,reset) %C(always,reset)%s'
+export DEV_DIR="$HOME/dev/"
+## /VARIABLES ##
+
+### ALIASES ###
+alias vim='nvim'
+alias j="jobs"
+alias cpc='clipc'
+alias ej='emoj'
+alias reload='_omz::reload'
+alias b="bat"
+alias ll="ls --color -lhF --group-directories-first"
+alias l="ls --color -lAhF --group-directories-first"
+alias msl='bin/mutagen-sync_list'
+alias tolower="awk '{print tolower($0)}'"
+alias open='xdg-open >/dev/null 2>/dev/null'
+alias grep='grep --color=auto -E'
+alias sed='sed -E'
+alias diff='diff --color'
+alias j='jobs -l'
+alias upgrade='sudo apt-get update; sudo apt-get upgrade; sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;'
+alias arch_pgrade='sudo pacman -Syu'
+alias linux_version='uname -srm'
+alias xdebug_staging='php -c /etc/platform/uut3dca33gxuq_stg/php.xdebug.ini -d xdebug.profiler_enable=On  bin/magento'
+alias h='highlight'
+alias remove_color_codes='sed -r "s/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g"'
+alias rm-colors='sed -r "s/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g"'
+alias suderbobo='sponge'
+alias hyper='hyperfine'
+alias cpath='copypath'
+alias gt='git'
+alias run='rofi -show drun 2>/dev/null'
+alias batman='man bat'
+alias bat_empty='bat --style="header"'
+alias .l="ls -lhGgod ./*"
+alias wbs='web-search'
+alias gi='git'
+alias dockerps_names='docker ps --format '{{.Names}}''
+alias 1pass='open https://monsoonconsulting.1password.com/home'
+alias k1='kill -9 %1'
+alias k2='kill -9 %2'
+alias k3='kill -9 %3'
+alias w="which"
+alias push="git push"
+alias pu="git push"
+alias pull="git pull"
+alias commit="git commit"
+alias st="git status"
+alias d="git diff"
+alias v="vim"
+
+hour=`date +%H`
+if [[ $hour -lt 21 && $hour -gt 7 ]]; then
+else
+    alias bat="bat --theme 'Monokai Extended Origin'"
+fi
+
+if [ -x "$(command -v fdfind)" ]
+then
+    alias fd='fdfind'
+fi
+
+if [ -x "$(command -v find_files)" ]
+then
+    alias fdoc='find_files "pdf|md"'
+fi
+
+alias pi='bc -l <<< "scale=10; 4*a(1);"'
+#
+# /ALIAS END #
+
 ### PHP ###
 dk-debug-shell-php()
 {
@@ -89,8 +164,7 @@ random_emojis () {
     done | xargs
 }
 
-alias first='head -1'
-alias collapse_spaces="sed 's/\s+/ /g'"
+alias firstl='head -1'
 ## TEXT EDITTING ###
 
 ### FILES ###
@@ -123,70 +197,7 @@ extract () {
 	echo "'$1' is not a valid file!"
     fi
 }
-### FILES ###
-
-### ALIASES ###
-alias ej='emoj'
-alias reload='_omz::reload'
-alias b="bat"
-alias ll="ls --color -lhF --group-directories-first"
-alias l="ls --color -lAhF --group-directories-first"
-alias msl='bin/mutagen-sync_list'
-alias tolower="awk '{print tolower($0)}'"
-alias open='xdg-open >/dev/null 2>/dev/null'
-alias grep='grep --color=auto -E'
-alias sed='sed -E'
-alias diff='diff --color'
-alias j='jobs -l'
-alias upgrade='sudo apt-get update; sudo apt-get upgrade; sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;'
-alias arch_pgrade='sudo pacman -Syu'
-alias linux_version='uname -srm'
-alias xdebug_staging='php -c /etc/platform/uut3dca33gxuq_stg/php.xdebug.ini -d xdebug.profiler_enable=On  bin/magento'
-alias h='highlight'
-alias remove_color_codes='sed -r "s/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g"'
-alias rm-colors='sed -r "s/\x1B\[(([0-9]+)(;[0-9]+)*)?[m,K,H,f,J]//g"'
-alias suderbobo='sponge'
-alias hyper='hyperfine'
-alias cpath='copypath'
-alias gt='git'
-alias run='rofi -show drun 2>/dev/null'
-alias batman='man bat'
-alias bat_empty='bat --style="header"'
-alias .l="ls -lhGgod ./*"
-alias wbs='web-search'
-alias gi='git'
-alias dockerps_names='docker ps --format '{{.Names}}''
-alias 1pass='open https://monsoonconsulting.1password.com/home'
-alias k1='kill -9 %1'
-alias k2='kill -9 %2'
-alias k3='kill -9 %3'
-alias w="which"
-alias push="git push"
-alias pu="git push"
-alias pull="git pull"
-alias commit="git commit"
-alias st="git status"
-alias d="git diff"
-alias v="vim"
-
-hour=`date +%H`
-if [[ $hour -lt 21 && $hour -gt 7 ]]; then
-else
-    alias bat="bat --theme 'Monokai Extended Origin'"
-fi
-# ALIAS END #
-
-if [ -x "$(command -v fdfind)" ]
-then
-    alias fd='fdfind'
-fi
-
-if [ -x "$(command -v find_files)" ]
-then
-    alias fdoc='find_files "pdf|md"'
-fi
-
-alias pi='bc -l <<< "scale=10; 4*a(1);"'
+### /FILES ###
 
 ascii2pdf_and_open() { a2ps -o - | ps2pdf - |okular - 2>/dev/null}
 null() { cat > /dev/null 2>&1}
@@ -248,7 +259,6 @@ sqlresult2json() {
 	local short="$(echo $content | trim)"
 	echo ${(%):-"%B$short%b copied to clipboard."}
     }
-    alias cpc='clipc'
 
 ### GIT
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
@@ -284,13 +294,6 @@ composer_fd_pkg_lock() {
 ### DOCKER ###
 dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 ### DOCKER ###
-
-## VARIABLES ##
-export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
-export GIT_LOG_ONELINE='%C(always,yellow)%h%C(always,reset) %C(always,green)(%ar)%C(always,reset) %C(always,reset)%s'
-export DEV_DIR="$HOME/dev/"
-## VARIABLES ##
 
 ### PERSONAL ###
 find_ip () {
@@ -387,101 +390,4 @@ urlencode () {
     LC_COLLATE=$old_lc_collate
 }
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
-alias vim='nvim'
 
-### ZLE
-# Expand multiple dots
-# https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
-function expand-multiple-dots() {
-    local MATCH
-    if [[ $LBUFFER =~ '(^| )\.\.\.+' ]]; then
-	LBUFFER=$LBUFFER:fs%\.\.\.%../..%
-    fi
-}
-
-function expand-multiple-dots-then-expand-or-complete() {
-    zle expand-multiple-dots
-    zle expand-or-complete
-}
-
-function expand-multiple-dots-then-accept-line() {
-    zle expand-multiple-dots
-    zle accept-line
-}
-
-zle -N expand-multiple-dots
-zle -N expand-multiple-dots-then-expand-or-complete
-zle -N expand-multiple-dots-then-accept-line
-bindkey '^I' expand-multiple-dots-then-expand-or-complete
-bindkey '^M' expand-multiple-dots-then-accept-line
-# end expand multiple dots
-
-source ~/mouse.zsh
-bindkey '^[m' zle-toggle-mouse
-# zle-toggle-mouse
-
-# put the cursor in a subshell $()
-# using Ctrl-j
-function _zle_subshell {
-    RBUFFER='$()'"$RBUFFER"
-    ((CURSOR=CURSOR+2))
-}
-zle -N _zle_subshell
-bindkey '^J' _zle_subshell
-bindkey -s '^o' 'vif^M'
-
-# list files
-function _zle_ls_list() {
-    # list current files
-    # list=`ls --color -lhF --group-directories-first`
-    ls --color -lhF --group-directories-first
-
-    zle reset-prompt; zle redisplay
-    # RBUFFER=$list"$RBUFFER"
-    # ((CURSOR=CURSOR+${#list}))
-}
-zle -N _zle_ls_list
-bindkey '^[l' _zle_ls_list
-
-# toggles background shell
-fancy-ctrl-z () {
-    if [[ $#BUFFER -eq 0 ]]; then
-	BUFFER="fg"
-	zle accept-line
-    else
-	zle push-input
-	zle clear-screen
-    fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-# _zle git diff
-function _git-diff {
-    zle push-input
-    BUFFER="git diff"
-    zle accept-line
-}
-
-# ctrl+<- | ctrl+->
-bindkey "^[." forward-word
-bindkey "^[," backward-word
-
-# substitute for the default shell behavior of alt+.
-# maps to alt+p
-bindkey "^[p" insert-last-word
-
-# Create a function.
-insert-next-word() {
-    # Tell `insert-last-word` to go forward (1), instead of backward (-1).
-    zle insert-last-word -- 1
-}
-
-# Create a widget that calls the function above.
-zle -N insert-next-word
-
-# next word
-# alt+n???
-bindkey '^[n' insert-next-word
-#
-# end /ZLE
