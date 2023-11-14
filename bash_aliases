@@ -8,6 +8,7 @@ export DEV_DIR="$HOME/dev/"
 ## /VARIABLES ##
 
 ### ALIASES ###
+alias first='head -n 1'
 alias vim='nvim'
 alias j="jobs"
 alias cpc='clipc'
