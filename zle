@@ -67,13 +67,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# _zle git diff
-function _git-diff {
-  zle push-input
-    BUFFER="git diff"
-    zle accept-line
-}
-
 # ctrl+<- | ctrl+->
 bindkey "^[." forward-word
 bindkey "^[," backward-word
@@ -94,6 +87,15 @@ zle -N insert-next-word
 # next word
 # alt+n???
 bindkey '^[n' insert-next-word
-#
-# end /ZLE
+
+# zle_tree
+function _zle_tree {
+  zle push-input
+  BUFFER="tree -L 1"
+  zle accept-line
+}
+
+# widget
+zle -N _zle_tree
+bindkey '^t' _zle_tree
 
