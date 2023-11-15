@@ -225,7 +225,7 @@ local function my_on_attach(bufnr)
 
     -- custom mappings
     vim.keymap.set('n', '<C-f>', treeutils.launch_find_files)
-    vim.keymap.set('n', '<M-g>', treeutils.launch_live_grep)
+    vim.keymap.set('n', '<leader><C-g>', treeutils.launch_live_grep)
     vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
