@@ -5,6 +5,7 @@
             "args": [
                 "language-server", "--no-interaction"
             ],
+            "trace.server": "verbose",
             "filetypes": ["php", "xml"]
         }
     },
