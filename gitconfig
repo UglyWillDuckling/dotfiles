@@ -38,6 +38,7 @@
 	pom = push origin main
 	ds = diff --stat=160,120
 	dh1 = diff HEAD~1
+	short = "!git log --color=always --format='%C(auto) %h %s'"
 	l = "!. ~/.githelpers && pretty_git_log"
 	r = !GIT_NO_PAGER=1 git l -11
 	la = !git l --all
