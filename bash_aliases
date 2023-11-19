@@ -54,6 +54,7 @@ alias commit="git commit"
 alias st="git status"
 alias d="git diff"
 alias v="vim"
+alias td="todo"
 
 hour=`date +%H`
 if [[ $hour -lt 21 && $hour -gt 7 ]]; then
