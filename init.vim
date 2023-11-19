@@ -83,7 +83,17 @@ nnoremap <silent> <M-f> :NvimTreeFindFile<CR>
 nnoremap <silent> <M-,> :NvimTreeToggle<CR>
 " nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
-" GoTo code navigation - COC
+" COC
+inoremap <silent><expr> <C-d> coc#pum#visible() ? coc#pum#confirm() : "\<C-d>"
+inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#cancel() : "\<C-e>"
+nnoremap <silent> <leader>ch :call CocAction('doHover')<CR>
+nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
+nnoremap <silent> <leader>cr <Plug>(coc-codeaction-refactor)
+nnoremap <silent> <leader>cc <Plug>(coc-codeaction-cursor)
+
+nnoremap <silent> <leader>ca <Plug>(coc-codeaction)
+
+" code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
