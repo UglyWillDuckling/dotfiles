@@ -3,15 +3,14 @@ source ~/.vimrc
 set termguicolors
 nnoremap <silent> <BS> <c-w>h
 
-" ------------------NVIM CONFIG------------------
+" https://github.com/EdenEast/nightfox.nvim
+" Plugin 'EdenEast/nightfox.nvim'
 
+" PLUGINS
 Plugin 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-Plugin 'ray-x/sad.nvim'
+" Plugin 'ray-x/sad.nvim'
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
-
-" https://github.com/seandewar/killersheep.nvim
-Plugin 'seandewar/killersheep.nvim'
 
 " https://github.com/ggandor/leap.nvim
 Plugin 'ggandor/leap.nvim'
@@ -21,15 +20,13 @@ Plugin 'ggandor/flit.nvim'
 " https://github.com/chentoast/marks.nvim
 Plugin 'chentoast/marks.nvim'
 " https://github.com/euclidianAce/BetterLua.vim
-Plugin 'euclidianAce/BetterLua.vim'
+" Plugin 'euclidianAce/BetterLua.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
-Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'nvim-tree/nvim-tree.lua'
 Plugin 'nvim-tree/nvim-web-devicons'
-" TODO check out the diff plugin
-" Plugin 'sindrets/diffview.nvim'
 Plugin 'phaazon/hop.nvim'
 Plugin 'nvim-lualine/lualine.nvim'
 " https://github.com/neoclide/coc.nvim
@@ -44,8 +41,11 @@ Plugin 'rhysd/vim-fixjson'
 " https://github.com/karb94/neoscroll.nvim
 Plugin 'karb94/neoscroll.nvim'
 
+" https://github.com/artanikin/vim-synthwave84
+Plugin 'artanikin/vim-synthwave84'
+
 set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldexpr=nvim_treesitter#foldexpr()
 set fillchars+=diff:╱
 autocmd BufReadPost,FileReadPost * normal zR
 
@@ -91,9 +91,10 @@ nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
 nnoremap <silent> <leader>cr <Plug>(coc-codeaction-refactor)
 nnoremap <silent> <leader>cc <Plug>(coc-codeaction-cursor)
 
-nnoremap <silent> <leader>ca <Plug>(coc-codeaction)
+" Code actions
+nmap <leader>ca <Plug>(coc-codeaction)
 
-" code navigation
+" GoTo code navigation - COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -118,6 +119,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> <F2> :call CocAction('diagnosticToggleBuffer')<cr>
 
+colorscheme synthwave84
+
 lua << EOF
 local api = vim.api
 vim.g.loaded_netrw = 0
@@ -125,18 +128,29 @@ vim.g.loaded_netrwPlugin = 0
 vim.opt.winwidth = 40
 vim.opt.fillchars:append { diff = "╱" }
 
-vim.keymap.set('n', '<Left>', require('smart-splits').resize_left)
-vim.keymap.set('n', '<Down>', require('smart-splits').resize_down)
-vim.keymap.set('n', '<Up>', require('smart-splits').resize_up)
-vim.keymap.set('n', '<Right>', require('smart-splits').resize_right)
+local smartsplits = require('smart-splits')
+vim.keymap.set('n', '<Left>', smartsplits.resize_left)
+vim.keymap.set('n', '<Down>', smartsplits.resize_down)
+vim.keymap.set('n', '<Up>', smartsplits.resize_up)
+vim.keymap.set('n', '<Right>', smartsplits.resize_right)
 
+require'marks'.setup {}
+require('smart-splits').setup({})
 require('neoscroll').setup({})
 require'colorizer'.setup()
 require'hop'.setup()
 require('lualine').setup()
-require("registers").setup({ show_empty = true, })
-require'marks'.setup {}
-require('smart-splits').setup({})
+--
+local registers = require("registers")
+registers.setup({
+  show_empty = false,
+  show_register_types = false,
+  bind_keys = {
+    registers = registers.apply_register({ delay = 0.01 }),
+    ["<C-c>"] = registers.close_window()
+  }
+})
+--
 require('leap').add_default_mappings()
 require('leap').setup {
     labeled_modes = "vno",
@@ -151,15 +165,15 @@ require('flit').setup {
     opts = {}
 }
 
-require'sad'.setup({
-  debug = false,
-  exact = true,
-  vsplit = false, -- split sad window the screen vertically, when set to number
-  -- it is a threadhold when window is larger than the threshold sad will split vertically,
-  height_ratio = 0.6, -- height ratio of sad window when split horizontally
-  width_ratio = 0.6, -- height ratio of sad window when split vertically
-})
-
+-- require'sad'.setup({
+--   debug = false,
+--   exact = true,
+--   vsplit = false, -- split sad window the screen vertically, when set to number
+--   -- it is a threadhold when window is larger than the threshold sad will split vertically,
+--   height_ratio = 0.6, -- height ratio of sad window when split horizontally
+--   width_ratio = 0.6, -- height ratio of sad window when split vertically
+-- })
+--
 local actions = require "telescope.actions"
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup {
