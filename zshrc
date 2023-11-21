@@ -168,9 +168,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ### source the https://github.com/junegunn/fzf-git.sh script
-source $HOME/dev/scripts/fzf-git.sh
+# source $HOME/dev/scripts/fzf-git.sh
 
 _gen_fzf_default_opts() {
   local base03="#002b36"
