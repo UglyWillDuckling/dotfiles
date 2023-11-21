@@ -69,7 +69,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
 " https://github.com/morhetz/gruvbox/
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -144,7 +144,7 @@ filetype plugin on
 let g:gruvbox_contrast_light = 'hard'
 " let g:gruvbox_improved_strings = 1
 " GruvBox Init
-autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
 
 syntax enable
 
