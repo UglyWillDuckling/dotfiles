@@ -24,7 +24,7 @@ Plugin 'chentoast/marks.nvim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nvim-lua/plenary.nvim'
 Plugin 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
-" Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'nvim-tree/nvim-tree.lua'
 Plugin 'nvim-tree/nvim-web-devicons'
 Plugin 'phaazon/hop.nvim'
@@ -45,7 +45,7 @@ Plugin 'karb94/neoscroll.nvim'
 Plugin 'artanikin/vim-synthwave84'
 
 set foldmethod=expr
-" set foldexpr=nvim_treesitter#foldexpr()
+set foldexpr=nvim_treesitter#foldexpr()
 set fillchars+=diff:╱
 autocmd BufReadPost,FileReadPost * normal zR
 
