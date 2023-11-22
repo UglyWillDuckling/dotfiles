@@ -267,6 +267,7 @@ set undofile
 " F1 mapping to easily reload this .rc file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F1> :so ~/.vimrc<CR>
+nnoremap <F3> :e!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUT TO REFERENCE CURRENT FILE'S PATH IN COMMAND LINE MODE
