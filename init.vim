@@ -134,7 +134,15 @@ vim.keymap.set('n', '<Down>', smartsplits.resize_down)
 vim.keymap.set('n', '<Up>', smartsplits.resize_up)
 vim.keymap.set('n', '<Right>', smartsplits.resize_right)
 
-require'marks'.setup {}
+require'marks'.setup {
+    mappings     = {
+        delete   = "md",
+        set_next = "m,",
+        next     = "m]",
+        preview  = "m:"
+    },
+    bookmark_0 = { sign = "⚑", virt_text = "" },
+}
 require('smart-splits').setup({})
 require('neoscroll').setup({})
 require'colorizer'.setup()
