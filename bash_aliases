@@ -24,7 +24,6 @@ alias grep='grep --color=auto -E'
 alias sed='sed -E'
 alias diff='diff --color'
 alias j='jobs -l'
-alias upgrade='sudo apt-get update; sudo apt-get upgrade; sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;'
 alias arch_pgrade='sudo pacman -Syu'
 alias linux_version='uname -srm'
 alias xdebug_staging='php -c /etc/platform/uut3dca33gxuq_stg/php.xdebug.ini -d xdebug.profiler_enable=On  bin/magento'
@@ -55,6 +54,18 @@ alias st="git status"
 alias d="git diff"
 alias v="vim"
 alias td="todo"
+
+function upgrade() {
+    if type -p pacman >/dev/null; then
+	yay -Sua
+	sudo pacman -Syu
+    elif type -p apt-get; then
+	sudo apt-get update
+	sudo apt-get upgrade
+    fi
+
+    sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;
+}
 
 hour=`date +%H`
 if [[ $hour -lt 21 && $hour -gt 7 ]]; then
