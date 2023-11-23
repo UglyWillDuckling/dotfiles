@@ -41,8 +41,8 @@ Plugin 'rhysd/vim-fixjson'
 " https://github.com/karb94/neoscroll.nvim
 Plugin 'karb94/neoscroll.nvim'
 
-" https://github.com/artanikin/vim-synthwave84
-Plugin 'artanikin/vim-synthwave84'
+" https://github.com/rakr/vim-one
+Plugin 'rakr/vim-one'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -119,7 +119,9 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> <F2> :call CocAction('diagnosticToggleBuffer')<cr>
 
-colorscheme synthwave84
+" colorscheme synthwave84
+colorscheme one
+set background=dark
 
 lua << EOF
 local api = vim.api
