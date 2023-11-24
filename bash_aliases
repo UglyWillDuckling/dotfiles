@@ -53,7 +53,7 @@ alias commit="git commit"
 alias st="git status"
 alias d="git diff"
 alias v="vim"
-alias td="todo"
+alias td="todo.sh"
 
 function upgrade() {
     if type -p pacman >/dev/null; then
@@ -68,7 +68,7 @@ function upgrade() {
 }
 
 hour=`date +%H`
-if [[ $hour -lt 21 && $hour -gt 7 ]]; then
+if [[ $hour -lt 20 && $hour -gt 7 ]]; then
 else
     alias bat="bat --theme 'Monokai Extended Origin'"
 fi

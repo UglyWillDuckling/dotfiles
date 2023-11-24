@@ -145,7 +145,6 @@ let g:gruvbox_contrast_light = 'hard'
 
 syntax enable
 
-" COLORSCHEME light/dark set
 " if strftime("%H") < 21 && strftime("%H") > 7
 "     set background=light
 " else
