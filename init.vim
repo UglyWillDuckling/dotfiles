@@ -40,7 +40,7 @@ Plugin 'karb94/neoscroll.nvim'
 Plugin 'rakr/vim-one'
 
 " https://github.com/lifepillar/vim-solarized8
-Plugin 'lifepillar/vim-solarized8'
+Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
