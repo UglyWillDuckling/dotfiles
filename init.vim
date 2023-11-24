@@ -3,12 +3,7 @@ source ~/.vimrc
 set termguicolors
 nnoremap <silent> <BS> <c-w>h
 
-" https://github.com/EdenEast/nightfox.nvim
-" Plugin 'EdenEast/nightfox.nvim'
-
-" PLUGINS
 Plugin 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-" Plugin 'ray-x/sad.nvim'
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
 
@@ -43,6 +38,9 @@ Plugin 'karb94/neoscroll.nvim'
 
 " https://github.com/rakr/vim-one
 Plugin 'rakr/vim-one'
+
+" https://github.com/lifepillar/vim-solarized8
+Plugin 'lifepillar/vim-solarized8'
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -119,9 +117,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> <F2> :call CocAction('diagnosticToggleBuffer')<cr>
 
-" colorscheme synthwave84
-colorscheme one
-set background=dark
+colorscheme solarized8_high
+set background=light
 
 lua << EOF
 local api = vim.api
