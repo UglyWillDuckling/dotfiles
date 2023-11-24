@@ -10,6 +10,8 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+Plugin 'junegunn/vim-easy-align'
+
 " https://github.com/skywind3000/asyncrun.vim
 Plugin 'skywind3000/asyncrun.vim'
 
@@ -54,12 +56,6 @@ Plugin 'glts/vim-textobj-comment'
 
 " https://github.com/michaeljsmith/vim-indent-object
 Plugin 'michaeljsmith/vim-indent-object'
-
-" https://github.com/junegunn/vim-peekaboo registers
-" Plugin 'junegunn/vim-peekaboo'
-
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
 
 " https://gitlab.com/gi1242/vim-emoji-ab.git
 Plugin 'https://gitlab.com/gi1242/vim-emoji-ab.git'
@@ -111,6 +107,7 @@ Plugin 'vim-autoformat/vim-autoformat'
 Plugin 'mattn/emmet-vim'
 
 Plugin 'godlygeek/tabular'
+
 " https://github.com/preservim/vim-markdown
 Plugin 'preservim/vim-markdown'
 
@@ -149,12 +146,12 @@ let g:gruvbox_contrast_light = 'hard'
 syntax enable
 
 " COLORSCHEME light/dark set
-if strftime("%H") < 21 && strftime("%H") > 7
-    set background=light
-else
-    set background=dark
-endif
-
+" if strftime("%H") < 21 && strftime("%H") > 7
+"     set background=light
+" else
+"     set background=dark
+" endif
+"
 " vim-autoformat configuration
 let g:python3_host_prog="/usr/bin/python"
 
@@ -267,7 +264,7 @@ set undofile
 " F1 mapping to easily reload this .rc file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F1> :so ~/.vimrc<CR>
-nnoremap <F3> :e!<CR>
+nnoremap <F4> :e!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUT TO REFERENCE CURRENT FILE'S PATH IN COMMAND LINE MODE
@@ -312,7 +309,7 @@ nnoremap gf <C-W>f
 " Write out the current file path
 nnoremap e :!echo %<CR>
 " replace current word under cursor
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " search remappings to enable very magic mode by default
 nnoremap / /\v
@@ -516,8 +513,8 @@ nnoremap <F10> :call asyncrun#quickfix_toggle(11)<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fzf Vim Grep command
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>a :Ag<space>
-nnoremap <leader>A :exec "Ag ".expand("<cword>")<cr>
+nnoremap <leader>s :Ag<space>
+nnoremap <leader>S :exec "Ag ".expand("<cword>")<cr>
 
 autocmd VimEnter * command! -nargs=* Ag
             \ call fzf#vim#grep(
@@ -552,7 +549,7 @@ vnoremap <Up> kjokjxkzvP`[1v
 " +-------------------------------+
 " |         Tabularize            |
 " +-------------------------------+
-vmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
 autocmd FileType make setlocal noexpandtab
@@ -588,4 +585,20 @@ let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky
 " End of php-cs-fixer version 2 config params
 " Mapping
 nnoremap <silent><leader>pc :call PhpCsFixerFixFile()<CR>
+
+" align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
+" path
+set suffixesadd+=.js
+set suffixesadd+=.phtml
+
+set path+=app/code/**/
+
+" paste toggle
+set pastetoggle=<F5>
 

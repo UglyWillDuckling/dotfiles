@@ -4,6 +4,7 @@ set termguicolors
 nnoremap <silent> <BS> <c-w>h
 
 Plugin 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
+
 " https://github.com/tversteeg/registers.nvim
 Plugin 'tversteeg/registers.nvim'
 
@@ -37,7 +38,7 @@ Plugin 'rhysd/vim-fixjson'
 Plugin 'karb94/neoscroll.nvim'
 
 " https://github.com/rakr/vim-one
-Plugin 'rakr/vim-one'
+" Plugin 'rakr/vim-one'
 
 " https://github.com/lifepillar/vim-solarized8
 Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }

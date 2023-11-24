@@ -773,12 +773,12 @@ key_bindings:
   #- { key: Return,                mode: Search|~Vi, action: SearchFocusNext       }
   #- { key: Return, mods: Shift,   mode: Search|~Vi, action: SearchFocusPrevious   }
   # (Windows, Linux, and BSD only)
-  - { key: V,              mods: Alt,                              action: Paste            }
-  - { key: C,              mods: Alt,                              action: Copy             }
+  - { key: V, mods: Alt, action: Paste }
+  - { key: C, mods: Alt, action: Copy }
   #- { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
   #- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
   #- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
-  - { key: V,               mods: Control|Shift,                     action: PasteSelection   }
+  - { key: V, mods: Control|Shift, action: PasteSelection }
   #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
   #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
   #- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
@@ -862,4 +862,4 @@ colors:
     magenta: '0xff9966'
     cyan: '0xffcc99'
     white: '0xd9d9d9'
-theme: inferno.yaml
+theme: inferno
