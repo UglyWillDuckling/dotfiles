@@ -83,11 +83,10 @@ nnoremap <silent> <C-j> :call WinMove('j')<CR>
 nnoremap <silent> <C-k> :call WinMove('k')<CR>
 nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
-" Tree
-" nnoremap <silent> <M-m> :NvimTreeFocus<CR>
+" Nvim-tree
 nnoremap <silent> <M-f> :NvimTreeFindFile<CR>
-nnoremap <silent> <M-,> :NvimTreeToggle<CR>
-" nnoremap <silent> <leader>t :NvimTreeToggle<CR>
+" nnoremap <silent> <M-,> :NvimTreeToggle<CR>
+nnoremap <silent> <leader><space> :NvimTreeToggle<CR>
 
 " COC
 inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#confirm() : "\<C-e>"
