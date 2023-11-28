@@ -43,6 +43,13 @@ Plugin 'karb94/neoscroll.nvim'
 " https://github.com/lifepillar/vim-solarized8
 Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }
 
+colorscheme solarized8_high
+if strftime("%H") >= 5 && strftime("%H") < 21
+    set background=light
+else
+    set background=dark
+endif
+
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set fillchars+=diff:╱
