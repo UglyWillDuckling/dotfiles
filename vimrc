@@ -525,8 +525,7 @@ autocmd VimEnter * command! -nargs=* Ag
 xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
-nnoremap <c-c>:call ClassName()<cr>
-nnoremap c :call ClassName()<cr>
+nnoremap <leader>pcc :call ClassName()<cr>
 function! ClassName()
     let filePath = expand('%:p')
     let @+=system('phpactor class:reflect ' . filePath . ' | head -n 1 | cut -d: -f2 | tr -d "\n\r" | sed "s/^/\\\/"')
