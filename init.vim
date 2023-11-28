@@ -83,8 +83,8 @@ nnoremap <silent> <M-,> :NvimTreeToggle<CR>
 " nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " COC
-inoremap <silent><expr> <C-d> coc#pum#visible() ? coc#pum#confirm() : "\<C-d>"
-inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#cancel() : "\<C-e>"
+inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#confirm() : "\<C-e>"
+inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#cancel() : "\<C-y>"
 nnoremap <silent> <leader>ch :call CocAction('doHover')<CR>
 nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
 nnoremap <silent> <leader>cr <Plug>(coc-codeaction-refactor)
