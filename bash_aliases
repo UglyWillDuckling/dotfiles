@@ -282,7 +282,7 @@ branches-clean() {
 ### GIT
 
 sqlresult2csv () {
-    grep -v '^\+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | awk '{$1=$1};1' | sed -E 's/\s+/ /g' | sed -E 's/^,//;s/,$//g' | sed -E 's/,$//g'
+    trim_all | grep -v '^\+' | awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | awk '{$1=$1};1' | sed -E 's/\s+/ /g' | sed -E 's/^,//;s/,$//g' | sed -E 's/,$//g' | trim_all
 }
 
 showfilesandpaths() { echo "$@"; display "$@" }
