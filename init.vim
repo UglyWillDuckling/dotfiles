@@ -37,16 +37,17 @@ Plugin 'rhysd/vim-fixjson'
 " https://github.com/karb94/neoscroll.nvim
 Plugin 'karb94/neoscroll.nvim'
 
-" https://github.com/rakr/vim-one
-" Plugin 'rakr/vim-one'
-
 " https://github.com/lifepillar/vim-solarized8
 Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }
+
+" https://github.com/ellisonleao/gruvbox.nvim
+Plugin 'ellisonleao/gruvbox.nvim'
 
 colorscheme solarized8_high
 if strftime("%H") >= 5 && strftime("%H") < 21
     set background=light
 else
+    colorscheme gruvbox
     set background=dark
 endif
 
