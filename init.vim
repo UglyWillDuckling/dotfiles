@@ -1,7 +1,7 @@
 let &packpath = &runtimepath
 source ~/.vimrc
 set termguicolors
-nnoremap <silent> <BS> <c-w>h
+" nnoremap <silent> <BS> <c-w>h
 
 Plugin 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
 
@@ -91,41 +91,30 @@ nnoremap <silent> <leader><space> :NvimTreeToggle<CR>
 " COC
 inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#confirm() : "\<C-e>"
 inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#cancel() : "\<C-y>"
-nnoremap <silent> <leader>ch :call CocAction('doHover')<CR>
+nnoremap <leader>ch :call CocAction('doHover')<CR>
 nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
-nnoremap <silent> <leader>cr <Plug>(coc-codeaction-refactor)
+nnoremap <leader>cr <Plug>(coc-codeaction-refactor)
+xmap  <leader>cr  <Plug>(coc-codeaction-refactor-selected)
 nnoremap <silent> <leader>cc <Plug>(coc-codeaction-cursor)
+nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Code actions
-nmap <leader>ca <Plug>(coc-codeaction)
-
-" GoTo code navigation - COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
-" Remap keys for applying refactor code actions
-xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-" Apply the most preferred quickfix action to fix diagnostic on the current line
-nmap <leader>qf  <Plug>(coc-fix-current)
-
 " Use CTRL-S for selections ranges
-" Requires 'textDocument/selectionRange' support of language server
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
+
+xmap af <Plug>(coc-funcobj-a)
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
 nnoremap <silent> <F2> :call CocAction('diagnosticToggleBuffer')<cr>
-
-colorscheme solarized8_high
-set background=light
 
 lua << EOF
 local api = vim.api
