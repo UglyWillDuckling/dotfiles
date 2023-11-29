@@ -145,12 +145,6 @@ let g:gruvbox_contrast_light = 'hard'
 
 syntax enable
 
-" if strftime("%H") < 21 && strftime("%H") > 7
-"     set background=light
-" else
-"     set background=dark
-" endif
-"
 " vim-autoformat configuration
 let g:python3_host_prog="/usr/bin/python"
 
@@ -319,6 +313,7 @@ cnoremap g/ :g/\v
 
 " alt+h
 nnoremap <Leader>hh :History<CR>
+nnoremap <Leader>H :History<CR>
 
 " swap words
 nmap <silent> gw :s/\(\w*\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<cr>
