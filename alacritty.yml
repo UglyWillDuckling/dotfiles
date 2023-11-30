@@ -833,6 +833,7 @@ key_bindings:
   # Highlight window damage information.
   #highlight_damage: false
 import:
+  - ~/.config/alacritty/alacritty.yaml
   #  - ~/.config/alacritty/themes/themes/solarized_light.yaml
   # - ~/.config/alacritty/themes/themes/seashells.yaml
   - ~/.config/alacritty/theme.yaml
