@@ -40,7 +40,7 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'editorconfig/editorconfig-vim'
 
 " https://github.com/justinmk/vim-sneak
-Plugin 'justinmk/vim-sneak'
+" Plugin 'justinmk/vim-sneak'
 
 " https://github.com/kana/vim-textobj-user
 Plugin 'kana/vim-textobj-user'
