@@ -98,10 +98,6 @@ nnoremap <silent> <M-f> :NvimTreeFindFile<CR>
 nnoremap <silent> <leader><space> :NvimTreeToggle<CR>
 
 " COC
-inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#confirm() : "\<C-e>"
-inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#cancel() : "\<C-y>"
-nnoremap <leader>ch :call CocAction('doHover')<CR>
-nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
 nnoremap <leader>cr <Plug>(coc-codeaction-refactor)
 xmap  <leader>cr  <Plug>(coc-codeaction-refactor-selected)
 nnoremap <silent> <leader>cc <Plug>(coc-codeaction-cursor)
