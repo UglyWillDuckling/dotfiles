@@ -11,6 +11,7 @@
 	</array>
 	<key>lineedit_history_viewer-search-panel-expression</key>
 	<array>
+		<string>include</string>
 		<string>find</string>
 		<string>equivalence</string>
 		<string>functional equivalence</string>
