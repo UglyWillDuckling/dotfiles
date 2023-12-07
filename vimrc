@@ -274,6 +274,9 @@ command! -range Md5 :echo system('echo '.shellescape(join(getline(<line1>, <line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use tab to switch tabs
+nmap <Tab> gt
+nmap <S-Tab> gT
 " map <leader>y "*y
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -585,13 +588,9 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-
 " path
 set suffixesadd+=.js
 set suffixesadd+=.phtml
 
 set path+=app/code/**/
-
-" paste toggle
-set pastetoggle=<F5>
 
