@@ -54,6 +54,7 @@ alias st="git status"
 alias d="git diff"
 alias v="vim"
 alias td="todo.sh"
+alias yy="rsync -azv --progress"
 
 function upgrade() {
     if type -p pacman >/dev/null; then
