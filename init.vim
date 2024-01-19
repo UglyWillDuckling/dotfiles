@@ -174,29 +174,22 @@ registers.setup({
   }
 })
 --
-require('leap').add_default_mappings()
-require('leap').setup {
-    labeled_modes = "vno",
-}
+require('leap').setup {}
+require('leap').add_default_mappings(true)
+require('leap').add_repeat_mappings(';', ',', {
+    relative_directions = true,
+    modes = {'n', 'x', 'o'}
+})
 require('flit').setup {
-    keys = { f = 'f', F = 'F', t = 't', T = 'T', },
+    keys = { f = 'f', F = 'F', t = 't', T = 'T' },
     -- A string like "nv", "nvo", "o", etc.
-    labeled_modes = "vno",
+    labeled_modes = "nv",
     multiline = true,
     -- Like `leap`s similar argument (call-specific overrides).
     -- E.g.: opts = { equivalence_classes = {} }
     opts = {}
 }
 
--- require'sad'.setup({
---   debug = false,
---   exact = true,
---   vsplit = false, -- split sad window the screen vertically, when set to number
---   -- it is a threadhold when window is larger than the threshold sad will split vertically,
---   height_ratio = 0.6, -- height ratio of sad window when split horizontally
---   width_ratio = 0.6, -- height ratio of sad window when split vertically
--- })
---
 local actions = require "telescope.actions"
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup {
