@@ -104,6 +104,7 @@ nnoremap <leader>cr <Plug>(coc-codeaction-refactor)
 xmap  <leader>cr  <Plug>(coc-codeaction-refactor-selected)
 nnoremap <silent> <leader>cc <Plug>(coc-codeaction-cursor)
 nmap <leader>qf  <Plug>(coc-fix-current)
+imap <silent> <leader>h <Plug>(coc-float-hide)
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -116,6 +117,12 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 xmap af <Plug>(coc-funcobj-a)
+
+" map ctrl+q to accept suggestion
+inoremap <silent><expr> <C-q> coc#pum#confirm()
+
+xmap <leader>ca <Plug>(coc-codeaction-selected)
+nmap <leader>ca <Plug>(coc-codeaction-selected)
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
