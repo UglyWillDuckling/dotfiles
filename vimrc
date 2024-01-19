@@ -574,8 +574,9 @@ augroup END
 " +-------------------------------+
 " |         PHP CS Fixer           |
 " +-------------------------------+
+let g:php_cs_fixer_path = "./vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
 " If you use php-cs-fixer version 2.x
-let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+let g:php_cs_fixer_rules = "@Magento2"          " options: --rules (default:@PSR2)
 "let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
 "let g:php_cs_fixer_config_file = '.php_cs' " options: --config
 let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky
@@ -594,4 +595,6 @@ set suffixesadd+=.js
 set suffixesadd+=.phtml
 
 set path+=app/code/**/
+
+autocmd ExitPre * :wshada!
 
