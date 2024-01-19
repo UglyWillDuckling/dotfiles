@@ -55,13 +55,16 @@ alias d="git diff"
 alias v="vim"
 alias td="todo.sh"
 alias yy="rsync -azv --progress"
+alias lsf="ll | grep -v '\/$'"
+alias tdl='todo list'
+alias tm='tmux'
 
 function upgrade() {
     if type -p pacman >/dev/null; then
 	yay -Sua
 	sudo pacman -Syu
     elif type -p apt-get; then
-	sudo apt-get update
+	sudo apt-get update 2>&1 | grep -v '^W'
 	sudo apt-get upgrade
     fi
 
