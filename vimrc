@@ -419,7 +419,7 @@ set history=200
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:user_emmet_mode='n'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,xml EmmetInstall
+autocmd FileType html,css,xml,phtml EmmetInstall
 
 nnoremap Y y$
 
@@ -490,6 +490,8 @@ nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 " XML Folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+" HTML Folding
+autocmd FileType html set foldmethod=indent
 
 " Spell Check
 au FileType markdown set spell spelllang=en_us
@@ -596,5 +598,6 @@ set suffixesadd+=.phtml
 
 set path+=app/code/**/
 
+" save info file
 autocmd ExitPre * :wshada!
 
