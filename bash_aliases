@@ -63,7 +63,7 @@ function upgrade() {
     if type -p pacman >/dev/null; then
 	yay -Sua
 	sudo pacman -Syu
-    elif type -p apt-get; then
+    elif type -p apt-get >/dev/null; then
 	sudo apt-get update 2>&1 | grep -v '^W'
 	sudo apt-get upgrade
     fi
