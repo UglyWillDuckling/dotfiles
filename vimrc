@@ -256,7 +256,7 @@ set undofile
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " F1 mapping to easily reload this .rc file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F1> :so ~/.vimrc<CR>
+nnoremap <F1> <silent>:so ~/.vimrc<CR>
 nnoremap <F4> :e!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -578,7 +578,7 @@ augroup END
 " +-------------------------------+
 let g:php_cs_fixer_path = "./vendor/bin/php-cs-fixer" " define the path to the php-cs-fixer.phar
 " If you use php-cs-fixer version 2.x
-let g:php_cs_fixer_rules = "@Magento2"          " options: --rules (default:@PSR2)
+" let g:php_cs_fixer_rules = "@Magento2"          " options: --rules (default:@PSR2)
 "let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
 "let g:php_cs_fixer_config_file = '.php_cs' " options: --config
 let g:php_cs_fixer_allow_risky = "yes"      " options: --allow-risky
