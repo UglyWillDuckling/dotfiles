@@ -56,8 +56,9 @@ alias v="vim"
 alias td="todo.sh"
 alias yy="rsync -azv --progress"
 alias lsf="ll | grep -v '\/$'"
-alias tdl='todo list'
+alias tdl='td list'
 alias tm='tmux'
+alias lst='td ls'
 
 function upgrade() {
     if type -p pacman >/dev/null; then
