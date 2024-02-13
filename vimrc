@@ -601,3 +601,5 @@ set path+=app/code/**/
 " save info file
 autocmd ExitPre * :wshada!
 
+" makefile
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
