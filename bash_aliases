@@ -14,9 +14,7 @@ alias j="jobs"
 alias cpc='clipc'
 alias ej='emoj'
 alias reload='_omz::reload'
-alias b="bat"
 alias ll="ls --color -lhF --group-directories-first"
-alias l="ls --color -lAhF --group-directories-first"
 alias msl='bin/mutagen-sync_list'
 alias tolower="awk '{print tolower($0)}'"
 alias open='xdg-open >/dev/null 2>/dev/null'
@@ -45,7 +43,7 @@ alias 1pass='open https://monsoonconsulting.1password.com/home'
 alias k1='kill -9 %1'
 alias k2='kill -9 %2'
 alias k3='kill -9 %3'
-alias w="which"
+# alias w="which $@ | bat -l bash"
 alias push="git push"
 alias pu="git push"
 alias pull="git pull"
@@ -60,6 +58,9 @@ alias tdl='td list'
 alias tm='tmux'
 alias lst='td ls'
 
+function w() {
+    which "$@" | bat -l bash
+}
 function upgrade() {
     if type -p pacman >/dev/null; then
 	yay -Suay
