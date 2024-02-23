@@ -9,7 +9,8 @@
             "trace.server": "verbose",
             "filetypes": [
                 "php",
-                "xml"
+                "xml",
+                "yaml"
             ]
         }
     },
