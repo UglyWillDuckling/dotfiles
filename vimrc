@@ -604,3 +604,9 @@ autocmd ExitPre * :wshada!
 
 " makefile
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
+augroup twig_ft
+  au!
+  autocmd BufNewFile,BufRead *.html.twig   set syntax=html
+augroup END
+
