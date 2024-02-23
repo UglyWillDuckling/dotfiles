@@ -165,7 +165,11 @@ require'marks'.setup {
         delete   = "md",
         set_next = "m,",
         next     = "m]",
-        preview  = "m:"
+        preview  = "m:",
+        next_bookmark = "<M-.>",
+        prev_bookmark = "<M-,>",
+        next_bookmark0 = "<M-]>",
+        prev_bookmark0 = "<M-[>"
     },
     bookmark_0 = { sign = "⚑", virt_text = "" },
 }
