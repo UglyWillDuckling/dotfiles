@@ -513,7 +513,7 @@ nnoremap <F10> :call asyncrun#quickfix_toggle(11)<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fzf Vim Grep command
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>s :Ag<space>
+nnoremap <leader>l :Ag<space>
 nnoremap <leader>S :exec "Ag ".expand("<cword>")<cr>
 
 autocmd VimEnter * command! -nargs=* Ag
