@@ -51,12 +51,16 @@ Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }
 " https://github.com/ellisonleao/gruvbox.nvim
 Plugin 'ellisonleao/gruvbox.nvim'
 
-colorscheme solarized8_high
 if strftime("%H") >= 5 && strftime("%H") < 21
     set background=light
+    colorscheme solarized8_high
+    highlight Search guifg=Turquoise4
+    highlight Search guibg=White
 else
-    colorscheme gruvbox
     set background=dark
+    colorscheme gruvbox
+    highlight Search guifg=Turquoise4
+    highlight Search guibg=White
 endif
 
 set foldmethod=expr
