@@ -96,8 +96,9 @@ setopt EXTENDED_HISTORY
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  docker-compose
+  tmux
   zsh-history-substring-search
-  # tmux
   z
   k
   chucknorris
