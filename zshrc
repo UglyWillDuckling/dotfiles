@@ -257,6 +257,6 @@ PERL_MB_OPT="--install_base \"/home/vladimir/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/vladimir/perl5"; export PERL_MM_OPT;
 
 # TMUX INIT
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    tmux a -t default || exec tmux new -s default && exit;
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#     tmux a -t default || exec tmux new -s default && exit;
+# fi
