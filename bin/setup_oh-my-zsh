@@ -5,3 +5,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Zplug
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search
+zplug "zsh-users/zsh-history-substring-search", as: plugin
+
