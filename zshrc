@@ -115,22 +115,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
- #Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
- else
-   export EDITOR='nvim'
- fi
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="vi ~/.zshrc"
-alias ohmyzsh="vi ~/.oh-my-zsh"
-
 # zsh coloring
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
@@ -147,6 +131,13 @@ source ~/.zplug/init.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
+
+ #Preferred editor for local and remote sessions
+ if [[ -n $SSH_CONNECTION ]]; then
+     export EDITOR='nvim'
+ else
+     export EDITOR='nvim'
+ fi
 
 # COLORS
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
