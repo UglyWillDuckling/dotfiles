@@ -142,6 +142,9 @@ ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=cyan'
 # END /ZSH
 
+# Zplug
+source ~/.zplug/init.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 2>/dev/null
 
