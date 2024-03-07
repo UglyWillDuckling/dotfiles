@@ -97,7 +97,7 @@ setopt EXTENDED_HISTORY
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   docker-compose
-  tmux
+  # tmux
   zsh-history-substring-search
   z
   k
