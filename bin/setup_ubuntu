@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get install moreutils
+sudo apt-get install moreutils \
+  silversearcher-ag \
+  gcc
 

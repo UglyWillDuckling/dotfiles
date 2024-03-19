@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# This would be a system specific file
+
+OS='ubuntu'
+
+setup_path="bin/setup_$OS"
+
+# run the system specific setup
+[[ -f $setup_path ]] && $setup_path
+
