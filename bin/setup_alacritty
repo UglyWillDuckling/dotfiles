@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo snap install alacritty --classic
+# add themes
+#
+#
+# add fonts

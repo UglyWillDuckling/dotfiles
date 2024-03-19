@@ -17,3 +17,7 @@ ln -s "$(pwd)"/tmux.conf "$HOME"/.tmux.conf
 rm "$HOME"/.config/alacritty/alacritty.yml || 0
 ln -s "$(pwd)"/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
 
+NVIM_CONFIG="$HOME/.config/nvim/init.vim"
+rm -rf $NVIM_CONFIG || 0
+ln -s "$(pwd)"/init.vim "$NVIM_CONFIG"
+

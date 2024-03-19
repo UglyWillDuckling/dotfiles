@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+FONT_DIR='fonts/fira'
+
+setup() {
+  mkdir -p $FONT_DIR
+}
+
+clean() {
+  sudo fc-cache -f -v
+  rm -rf $FONT_DIR
+}
+
+run() {
+  local archive=$FONT_DIR/fira.tar.gz
+  curl -o $archive -L https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.tar.xz
+
+  tar -xf $archive -C $FONT_DIR
+
+  ### Font Installation
+  sudo mkdir -p /usr/share/fonts/fira-code
+  sudo cp $FONT_DIR/*.ttf /usr/share/fonts/fira-code/
+}
+
+setup
+run
+clean
+
