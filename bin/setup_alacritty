@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-sudo snap install alacritty --classic
-# add themes
-#
-#
-# add fonts
+# TODO update this, we can't rely on cargo for this
+cargo install alacritty
+
+# We use Alacritty's default Linux config directory as our storage location here.
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+

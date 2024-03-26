@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
+sudo apt-get update
+
 sudo apt-get install moreutils \
   silversearcher-ag \
-  gcc
+  gcc \
+  bison \
+  flex \
+  libncurses5-dev libncursesw5-dev \
+;
+
+sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 golang automake
 
