@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -e
+
+SANDBOX='sandbox'
+
+INSTALL_DIR=$HOME/.local/bin
+CONFIG_DIR="$HOME/.local/etc"
+BASH_COMPLETION=$HOME/.local/share/bash-completion/completions
+
+setup() {
+  mkdir -p $SANDBOX
+  mkdir -p $INSTALL_DIR
+  mkdir -p $BASH_COMPLETION
+}
+
+install () {
+  git clone git@github.com:todotxt/todo.txt-cli.git
+  cd todo.txt-cli || return
+
+  make
+  make install INSTALL_DIR=$INSTALL_DIR CONFIG_DIR=$CONFIG_DIR BASH_COMPLETION=$BASH_COMPLETION
+
+  # hack - see https://github.com/todotxt/todo.txt-cli/issues/377
+  mkdir -p $HOME/.todo
+  cp $CONFIG_DIR/todo/config $HOME/.todo/config
+}
+
+clean() {
+  rm -rf $SANDBOX
+}
+
+setup
+
+(cd $SANDBOX && install)
+
+clean
+
