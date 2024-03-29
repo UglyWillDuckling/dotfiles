@@ -1,23 +1,21 @@
 #!/usr/bin/env bash
 
-rm "$HOME"/.gitconfig || 0
-ln -s "$(pwd)"/gitconfig "$HOME"/.gitconfig
-rm "$HOME"/.zshrc || 0
-ln -s "$(pwd)"/zshrc "$HOME"/.zshrc
-rm "$HOME"/.vimrc || 0
-ln -s "$(pwd)"/vimrc "$HOME"/.vimrc
-rm "$HOME"/.bash_aliases || 0
-ln -s "$(pwd)"/bash_aliases "$HOME"/.bash_aliases
-rm "$HOME"/.zle || 0
-ln -s "$(pwd)"/zle "$HOME"/.zle
-rm "$HOME"/.config/calibre || 0
-ln -s "$(pwd)"/calibre/config "$HOME"/.config/calibre
-rm "$HOME"/.tmux.conf || 0
-ln -s "$(pwd)"/tmux.conf "$HOME"/.tmux.conf
-rm "$HOME"/.config/alacritty/alacritty.yml || 0
-ln -s "$(pwd)"/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
+ln -f -s "$(pwd)"/gitconfig "$HOME"/.gitconfig
+ln -f -s "$(pwd)"/zshrc "$HOME"/.zshrc
+ln -f -s "$(pwd)"/vimrc "$HOME"/.vimrc
+ln -f -s "$(pwd)"/bash_aliases "$HOME"/.bash_aliases
+ln -f -s "$(pwd)"/zle "$HOME"/.zle
+ln -f -s "$(pwd)"/calibre/config "$HOME"/.config/calibre
+ln -f -s "$(pwd)"/tmux.conf "$HOME"/.tmux.conf
+ln -f -s "$(pwd)"/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
 
+### Nvim
+NVIM_DIR="$HOME/.config/nvim"
 NVIM_CONFIG="$HOME/.config/nvim/init.vim"
-rm -rf $NVIM_CONFIG || 0
-ln -s "$(pwd)"/init.vim "$NVIM_CONFIG"
 
+ln -f -s "$(pwd)"/init.vim "$NVIM_CONFIG"
+
+ln -f -s "$(pwd)"/coc-settings.json $NVIM_DIR/coc-settings.json
+
+### misc
+ln -f -s "$(pwd)"/mouse.zsh "$HOME"/mouse.zsh
