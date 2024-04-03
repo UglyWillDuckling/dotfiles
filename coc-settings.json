@@ -19,7 +19,8 @@
         "files": {
             "associations": [
                 "*.php",
-                "*.phtml"
+                "*.phtml",
+                "*.inc"
             ]
         },
         "exclude": [
