@@ -57,6 +57,7 @@ alias lsf="ll | grep -v '\/$'"
 alias tdl='td list'
 alias tm='tmux'
 alias lst='td ls'
+alias path='echo $PATH | tr ":" "\n"'
 
 function w() {
     which "$@" | bat -l bash
