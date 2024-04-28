@@ -596,6 +596,7 @@ nmap ga <Plug>(EasyAlign)
 " path
 set suffixesadd+=.js
 set suffixesadd+=.phtml
+set suffixesadd+=.inc
 
 set path+=app/code/**/
 
