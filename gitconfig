@@ -7,9 +7,10 @@
 	email = vladimi.sedlar@monsoonconsulting.com
 	name = vladimir
 [alias]
-  # Goodness (summary of diff lines added/removed/total)
-	gn = goodness
-	gnc = goodness --cached
+	blamew = blame -w
+	blamec = blame -w -C -C -C
+
+	pickaxe = git log --pickaxe-all --pickaxe-regex -S
 
 	dog = log --all --decorate --oneline --graph
 	# lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -20,7 +21,7 @@
 	lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
 	lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
-	st = "!git status"
+	st = status
 	sts = status -s
 	sta = status -uall
 	ci = commit --verbose
@@ -38,7 +39,6 @@
 	pom = push origin main
 	ds = diff --stat=160,120
 	dh1 = diff HEAD~1
-	short = "!git log --color=always --format='%C(auto) %h %s'"
 	l = "!. ~/.githelpers && pretty_git_log"
 	r = !GIT_NO_PAGER=1 git l -11
 	la = !git l --all
@@ -46,7 +46,7 @@
 	pu = push --set-upstream origin
 	p = pull
 	dr = push origin --delete
-	b = "!. ~/.githelpers && pretty_git_branch"
+	prettybranch = "!. ~/.githelpers && pretty_git_branch"
 	bs = "!. ~/.githelpers && pretty_git_branch_sorted"
 	bc = b --contains
 	unstage = restore --staged
@@ -67,6 +67,17 @@
 	ra = !git r --all
 	rs = reset
 	sh = show HEAD
+	today = thisday
+	week = thisweek
+  week-s = thisweek --oneline
+  month = thismonth
+  month-s = thismonth --oneline
+	thisday = l --since=1.day
+	thisweek = l --since=1.week
+  thismonth = l --since=1.month
+  thisyear = l --since=1.year
+	short = log --color=always --format='%C(auto) %h %s'
+
 [init]
 	defaultBranch = main
 [credential]
@@ -80,3 +91,31 @@
 
 [safe]
 	directory = /var/www/html
+[pretty]
+	datefirst = %ad %C(auto)%h %s
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[commit]
+	gpgsign = true
+[color]
+	ui = always
+	branch = always
+	diff = always
+	interactive = always
+	status = always
+	grep = always
+	pager = true
+	decorate = always
+	showbranch = always
+[maintenance]
+	repo = /home/vsedlar/dev/projects/MeilleursAgents
+[rerere]
+	enabled = true
+	autoUpdate = true
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
