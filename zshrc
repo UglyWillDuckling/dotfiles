@@ -98,6 +98,7 @@ setopt EXTENDED_HISTORY
 plugins=(
   docker-compose
   # tmux
+  fzf
   zsh-history-substring-search
   z
   # k
