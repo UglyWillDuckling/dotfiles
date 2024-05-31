@@ -48,11 +48,7 @@ function _zle_ls_list() {
   ls --color -lhF --group-directories-first
 
     zle reset-prompt; zle redisplay
-# RBUFFER=$list"$RBUFFER"
-# ((CURSOR=CURSOR+${#list}))
 }
-zle -N _zle_ls_list
-bindkey '^[l' _zle_ls_list
 
 # toggles background shell
 fancy-ctrl-z () {
