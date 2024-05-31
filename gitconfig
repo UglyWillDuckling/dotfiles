@@ -4,7 +4,7 @@
 	editor = nvim
 	pager = less -+$LESS -RSX
 [user]
-	email = vladimi.sedlar@monsoonconsulting.com
+	email = vlado.sedlar@gmail.com
 	name = vladimir
 [alias]
 	blamew = blame -w
