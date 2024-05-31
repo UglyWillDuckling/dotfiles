@@ -100,7 +100,7 @@ plugins=(
   # tmux
   zsh-history-substring-search
   z
-  k
+  # k
   chucknorris
   copypath
   web-search
