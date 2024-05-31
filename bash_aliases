@@ -69,6 +69,7 @@ function upgrade() {
     elif type -p apt-get >/dev/null; then
 	sudo apt-get update 2>&1 | grep -v '^W'
 	sudo apt-get upgrade
+	sudo apt-get autoremove
     fi
 
     sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;
@@ -243,7 +244,7 @@ yml_remove-ports() { yq 'del(.services | .[] | .ports)' }
 mage_clean_composer() { rm -rf vendor/composer vendor/magento/framework* vendor/magento/magento-composer-installer vendor/magento/composer vendor/composer vendor/magento/composer-dependency-version-audit-plugin}
 mage_create_admin() {bin/m admin:user:create --admin-user=admin --admin-password=Admin123 --admin-email=test@admin.com --admin-firstname=Admin --admin-lastname=Bob}
 
-after() { at now + "$@" }
+after () { after="$1"; shift; echo "$@" | at now + "$after" }
 rep-eat () {
     reps=$1
     shift
