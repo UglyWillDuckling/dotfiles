@@ -59,6 +59,7 @@ alias tm='tmux'
 alias lst='td ls'
 alias path='echo $PATH | tr ":" "\n"'
 alias lz='lazygit'
+alias ls='eza'
 
 function w() {
     which "$@" | bat -l bash
