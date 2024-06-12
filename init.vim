@@ -101,6 +101,8 @@ nnoremap <silent> <M-f> :NvimTreeFindFile<CR>
 nnoremap <silent> <leader><space> :NvimTreeToggle<CR>
 
 " COC
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-phpactor', 'coc-tsserver', 'coc-yaml', 'coc-xml', 'coc-sql', 'coc-python', 'coc-lua', 'coc-css', 'coc-python']
+
 nnoremap <leader>ch :call CocAction('doHover')<CR>
 nnoremap <silent> <leader>cs <Plug>(coc-codeaction-source)
 nnoremap <leader>cr <Plug>(coc-codeaction-refactor)
@@ -141,6 +143,7 @@ vim.opt.winwidth = 40
 vim.opt.fillchars:append { diff = "╱" }
 
 local smartsplits = require('smart-splits')
+
 vim.keymap.set('n', '<Left>', smartsplits.resize_left)
 vim.keymap.set('n', '<Down>', smartsplits.resize_down)
 vim.keymap.set('n', '<Up>', smartsplits.resize_up)
