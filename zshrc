@@ -99,6 +99,7 @@ setopt EXTENDED_HISTORY
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   # bgnotify
+  docker
   docker-compose
   # tmux
   fzf
