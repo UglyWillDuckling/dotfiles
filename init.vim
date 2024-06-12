@@ -40,11 +40,6 @@ Plugin 'karb94/neoscroll.nvim'
 " https://github.com/nvim-treesitter/highlight.lua
 " Plugin 'nvim-treesitter/highlight.lua'
 
-" Testing
-Plugin 'antoinemadec/FixCursorHold.nvim'
-Plugin 'nvim-neotest/neotest'
-Plugin 'olimorris/neotest-phpunit'
-
 " https://github.com/lifepillar/vim-solarized8
 Plugin 'lifepillar/vim-solarized8', { 'branch': 'neovim' }
 
@@ -140,19 +135,6 @@ vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 vim.opt.winwidth = 40
 vim.opt.fillchars:append { diff = "╱" }
-
--- neotest
-require("neotest").setup({
-adapters = {
-    require("neotest-phpunit")({
-    phpunit_cmd = function()
-    return "vendor/bin/phpunit"
-    end,
-    root_files = { "composer.json", "phpunit.xml", ".gitignore" },
-    filter_dirs = { ".git", "node_modules", "vendor" }
-    }),
-}
-})
 
 local smartsplits = require('smart-splits')
 vim.keymap.set('n', '<Left>', smartsplits.resize_left)
