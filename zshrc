@@ -23,6 +23,8 @@ export PATH=$HOME/miniconda3/bin/:$PATH
 export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
 
+export GROQ_API_KEY=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
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
