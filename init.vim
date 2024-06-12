@@ -2,6 +2,10 @@ let &packpath = &runtimepath
 source ~/.vimrc
 set termguicolors
 " nnoremap <silent> <BS> <c-w>h
+Plugin 'akinsho/toggleterm.nvim'
+
+" https://github.com/sopa0/telescope-makefile
+Plugin 'sopa0/telescope-makefile'
 
 Plugin 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
 
@@ -141,6 +145,14 @@ vim.keymap.set('n', '<Left>', smartsplits.resize_left)
 vim.keymap.set('n', '<Down>', smartsplits.resize_down)
 vim.keymap.set('n', '<Up>', smartsplits.resize_up)
 vim.keymap.set('n', '<Right>', smartsplits.resize_right)
+
+require'telescope-makefile'.setup {
+    -- The path where to search the makefile in the priority order
+    makefile_priority = { '.', 'build/' },
+    default_target = '[DEFAULT]', -- nil or string : Name of the default target | nil will disable the default_target
+    make_bin = "make", -- Custom makefile binary path, uses system make by def
+}
+require'telescope'.load_extension('make')
 
 require'marks'.setup {
     mappings     = {
