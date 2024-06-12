@@ -1,7 +1,7 @@
 let &packpath = &runtimepath
 source ~/.vimrc
 set termguicolors
-" nnoremap <silent> <BS> <c-w>h
+
 Plugin 'akinsho/toggleterm.nvim'
 
 " https://github.com/sopa0/telescope-makefile
