@@ -111,6 +111,7 @@
 	showbranch = always
 [maintenance]
 	repo = /home/vsedlar/dev/projects/MeilleursAgents
+	repo = /home/vlado/dev/dotfiles
 [rerere]
 	enabled = true
 	autoUpdate = true
