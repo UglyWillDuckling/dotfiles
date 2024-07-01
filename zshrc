@@ -146,6 +146,9 @@ source ~/.zplug/init.zsh
      export EDITOR='nvim'
  fi
 
+export LATTITUDE='45.16413303892156'
+export LONGITUDE='18.00972891721189'
+
 # COLORS
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 
