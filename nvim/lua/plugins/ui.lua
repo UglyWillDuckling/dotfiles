@@ -11,6 +11,8 @@ return {
     keys = {
       { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+      { "<S-l>", false },
+      { "<S-h>", false },
     },
     opts = {
       options = {
