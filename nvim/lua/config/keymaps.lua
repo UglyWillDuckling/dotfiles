@@ -12,12 +12,12 @@ keymap.set("n", "<M-,>", "<C-^>", opts)
 keymap.set("n", "<leader>o", ":only<cr>", opts)
 
 -- New tab
-keymap.set("n", "te", ":tabedit<Return>")
+keymap.set("n", "te", ":tabedit<Return>", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Fold
-keymap.set("n", "<c-space>", "@=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>")
+keymap.set("n", "<c-space>", "@=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>", opts)
 
 -- Telescope
 keymap.set(
