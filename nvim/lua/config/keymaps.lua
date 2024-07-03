@@ -34,10 +34,10 @@ keymap.set(
 )
 
 -- Disable Default window switching
-keymap.set("n", "<C-h>", "<Nop>")
-keymap.set("n", "<C-j>", "<Nop>")
-keymap.set("n", "<C-k>", "<Nop>")
-keymap.set("n", "<C-l>", "<Nop>")
+keymap.set("n", "<C-j>", ":call WinMove('j')<CR>", opts)
+keymap.set("n", "<C-h>", ":call WinMove('h')<CR>", opts)
+keymap.set("n", "<C-k>", ":call WinMove('k')<CR>", opts)
+keymap.set("n", "<C-l>", ":call WinMove('l')<CR>", opts)
 
 local smartsplits = require("smart-splits")
 keymap.set("n", "<Left>", smartsplits.resize_left)
