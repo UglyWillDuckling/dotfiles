@@ -6,6 +6,8 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+keymap.del("n", "<S-l>")
+keymap.del("n", "<S-h>")
 keymap.set("n", "<M-,>", "<C-^>", opts)
 keymap.set("n", "<leader>o", ":only<cr>", opts)
 
