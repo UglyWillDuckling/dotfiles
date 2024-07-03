@@ -45,9 +45,10 @@ keymap.set("n", "<Down>", smartsplits.resize_down)
 keymap.set("n", "<Up>", smartsplits.resize_up)
 keymap.set("n", "<Right>", smartsplits.resize_right)
 
--- Yanky
+-- Yanky -- https://github.com/gbprod/yanky.nvim
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
+--
 vim.keymap.set("n", "Y", "y$", opts)
 
 -- Codeium
