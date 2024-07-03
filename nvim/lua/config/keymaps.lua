@@ -48,6 +48,7 @@ keymap.set("n", "<Right>", smartsplits.resize_right)
 -- Yanky
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
+vim.keymap.set("n", "Y", "y$", opts)
 
 -- Codeium
 vim.keymap.set("n", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
