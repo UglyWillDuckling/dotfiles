@@ -1,7 +1,17 @@
-" TODO: move this to lua
-nmap <C-x> <Cmd>call codeium#Clear()<CR>
 
-source ~/.config/nvim/vim/close_window.vim
-source ~/.config/nvim/vim/copy_path.vim
-source ~/.config/nvim/vim/tmux_navigator.vim
-source ~/.config/nvim/start.lua
+function! SourceConfig()
+  let path = $HOME  . '/.config/nvim/vim'
+  " let path .= ',' . $HOME  . '/dotfiles/vim/config/plugins'
+  " let path .= ',' . $HOME  . '/dotfiles/vim/config/functions'
+
+  let file_list = split(globpath(path, '*.vim'), '\n')
+
+  for file in file_list
+    execute 'source' fnameescape(file)
+  endfor
+
+  source ~/.config/nvim/start.lua
+endfunction
+
+call SourceConfig()
+
