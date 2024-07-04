@@ -387,6 +387,7 @@ matrix () {
 	sleep 0.05
     done | awk "$awkscript"
 }
+
 diff_in_days () {
     datum1=`date -d "$1" "+%s"`
     datum2=`date -d "$2" "+%s"`
