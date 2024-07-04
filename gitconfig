@@ -121,3 +121,6 @@
 	sort = -committerdate
 [column]
 	ui = auto
+[gitbutler]
+	aiModelProvider = anthropic
+	gitbutlerCommitter = 0
