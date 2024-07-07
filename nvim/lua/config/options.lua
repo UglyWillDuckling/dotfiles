@@ -16,3 +16,6 @@ local chadtree_settings = {
 }
 
 vim.api.nvim_set_var("chadtree_settings", chadtree_settings)
+
+vim.g["lsp-defaults-disable"] = 1
+vim.g.codeium_disable_bindings = 1
