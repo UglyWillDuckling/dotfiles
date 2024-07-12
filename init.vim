@@ -205,8 +205,12 @@ require('flit').setup {
 local actions = require "telescope.actions"
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup {
+    defaults = {
+      preview = false
+    },
     pickers = {
         find_files = {
+            theme = "dropdown",
             find_command = { "fd", "--type", "f", "--no-ignore-vcs" },
             mappings = {
                 i = {
