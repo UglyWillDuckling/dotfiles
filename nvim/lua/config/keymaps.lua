@@ -33,7 +33,7 @@ keymap.set(
   { noremap = true, silent = true, desc = "Recent Files" }
 )
 
--- Disable Default window switching
+-- Replace Default window switching
 keymap.set("n", "<C-j>", ":call WinMove('j')<CR>", opts)
 keymap.set("n", "<C-h>", ":call WinMove('h')<CR>", opts)
 keymap.set("n", "<C-k>", ":call WinMove('k')<CR>", opts)
