@@ -10,6 +10,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" https://github.com/nelsyeung/twig.vim
+Plugin 'nelsyeung/twig.vim'
+
 Plugin 'junegunn/vim-easy-align'
 
 " https://github.com/skywind3000/asyncrun.vim
