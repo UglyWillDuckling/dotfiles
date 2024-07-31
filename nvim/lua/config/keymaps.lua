@@ -2,7 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additionol keymaps here
 
--- Disable continuations
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -51,9 +50,10 @@ vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
 --
 vim.keymap.set("n", "Y", "y$", opts)
 
--- Codeium
+-- Codeium https://github.com/Exafunction/codeium.vim
 vim.keymap.set("n", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
 vim.keymap.set("i", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
+vim.keymap.set("i", "<C-u>", "<Cmd>call codeium#Clear()<CR>")
 vim.keymap.set("i", "<M-[>", "<Plug>(codeium-previous)")
 vim.keymap.set("i", "<M-]>", "<Plug>(codeium-next)")
 
