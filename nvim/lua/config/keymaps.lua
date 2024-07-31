@@ -53,6 +53,10 @@ vim.keymap.set("n", "Y", "y$", opts)
 
 -- Codeium
 vim.keymap.set("n", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
+vim.keymap.set("i", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
+vim.keymap.set("i", "<M-[>", "<Plug>(codeium-previous)")
+vim.keymap.set("i", "<M-]>", "<Plug>(codeium-next)")
+
 vim.keymap.set("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
 end, { expr = true, silent = true })
