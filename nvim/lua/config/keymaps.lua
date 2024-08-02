@@ -18,8 +18,8 @@ keymap.set("n", "te", ":tabedit<Return>", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
--- Fold
-keymap.set("n", "<c-space>", "@=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>", opts)
+-- Fold set to numeric 1
+keymap.set("n", "<C-1>", "@=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>", opts)
 
 -- Telescope
 keymap.set(
