@@ -7,7 +7,10 @@ local opts = { noremap = true, silent = true }
 
 keymap.del("n", "<S-l>")
 keymap.del("n", "<S-h>")
-keymap.set("n", "<M-,>", "<C-^>", opts)
+
+-- previous file set to numeric 2
+keymap.set("n", "<C-2>", "<C-^>", opts)
+-- leave only current window
 keymap.set("n", "<leader>o", ":only<cr>", opts)
 
 -- New tab
