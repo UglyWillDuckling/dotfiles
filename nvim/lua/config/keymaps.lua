@@ -15,7 +15,7 @@ keymap.set("n", "<leader>o", ":only<cr>", opts)
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+-- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Fold set to numeric 1
