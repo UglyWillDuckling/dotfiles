@@ -29,10 +29,15 @@ return {
       },
       incremental_selection = {
         keymaps = {
-          init_selection = "<M-;>",
-          node_incremental = "<M-;>",
+          init_selection = "<M-l>",
+          node_incremental = "<M-l>",
           scope_incremental = false,
           node_decremental = "<M-,>",
+        },
+      },
+      textobjects = {
+        move = {
+          enable = false,
         },
       },
     },
