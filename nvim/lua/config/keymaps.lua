@@ -5,6 +5,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+local function map(mode, l, r, desc)
+  vim.keymap.set(mode, l, r, { desc = desc })
+end
+
 keymap.del("n", "<S-l>")
 keymap.del("n", "<S-h>")
 
@@ -63,3 +67,13 @@ vim.keymap.set("i", "<M-]>", "<Plug>(codeium-next)")
 -- vim.keymap.set("i", "<C-g>", function()
 --   return vim.fn["codeium#Accept"]()
 -- end, { expr = true, silent = true })
+
+local gs = require("gitsigns")
+
+map("n", "]c", function()
+  gs.nav_hunk("next")
+end, "Next")
+
+map("n", "[c", function()
+  gs.nav_hunk("prev")
+end, "Prev")
