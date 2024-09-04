@@ -1,13 +1,5 @@
 return {
   {
-    "ms-jpq/chadtree",
-    lazy = true,
-    event = "VeryLazy",
-    keys = {
-      { "<leader>z", ":CHADopen<CR>", mode = { "n" }, silent = true, { noremap = true } },
-    },
-  },
-  {
     "mrjones2014/smart-splits.nvim",
     event = "VeryLazy",
   },
