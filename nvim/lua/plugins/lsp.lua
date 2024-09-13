@@ -20,7 +20,6 @@ return {
         "shfmt",
         "psalm",
         "easy-coding-standard",
-        "markdownlint",
         "marksman",
       })
     end,
