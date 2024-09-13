@@ -26,6 +26,7 @@ return {
         "scss",
         "sql",
         "http",
+        "java",
       },
       incremental_selection = {
         keymaps = {
