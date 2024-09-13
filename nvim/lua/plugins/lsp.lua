@@ -18,7 +18,6 @@ return {
         "luacheck",
         "shellcheck",
         "shfmt",
-        "phpactor",
         "psalm",
         "easy-coding-standard",
         "markdownlint",
