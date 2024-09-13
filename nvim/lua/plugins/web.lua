@@ -4,7 +4,7 @@ return {
     lazy = true,
     event = "VeryLazy",
     init = function()
-      vim.g.user_emmet_mode = "i"
+      vim.g.user_emmet_mode = "in"
     end,
   },
 }
