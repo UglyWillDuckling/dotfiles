@@ -7,7 +7,6 @@ silent! call repeat#set("codeium#Accept", 1)
 
 function! SourceConfig()
   let path = $HOME  . '/.config/nvim/vim'
-  " let path .= ',' . $HOME  . '/dotfiles/vim/config/plugins'
 
   let file_list = split(globpath(path, '*.vim'), '\n')
 
