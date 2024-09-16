@@ -1,4 +1,13 @@
 return {
+  {
+    "fedepujol/move.nvim",
+    event = "VeryLazy",
+    lazy = true,
+    -- !!! opts is required
+    opts = {
+      --- Config
+    },
+  },
   { "hrsh7th/nvim-cmp", enabled = false },
   {
     "folke/noice.nvim",
