@@ -61,10 +61,15 @@ vim.keymap.set("i", "<C-u>", "<Cmd>call codeium#Clear()<CR>")
 vim.keymap.set("i", "<M-[>", "<Plug>(codeium-previous)")
 vim.keymap.set("i", "<M-]>", "<Plug>(codeium-next)")
 
--- vim.keymap.set("i", "<C-g>", function()
---   return vim.fn["codeium#Accept"]()
--- end, { expr = true, silent = true })
+vim.keymap.set("i", "<C-l>", function()
+  return vim.fn["codeium#AcceptNextLine"]()
+end, { expr = true, silent = true })
 
+vim.keymap.set("i", "<C-i>", function()
+  return vim.fn["codeium#AcceptNextWord"]()
+end, { expr = true, silent = true })
+
+-- Git Signs
 local gs = require("gitsigns")
 
 map("n", "]c", function()
