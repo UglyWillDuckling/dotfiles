@@ -9,11 +9,8 @@ local function map(mode, l, r, desc)
   vim.keymap.set(mode, l, r, { desc = desc })
 end
 
-keymap.del("n", "<S-l>")
-keymap.del("n", "<S-h>")
-
--- previous file set to numeric 2
-keymap.set("n", "<C-2>", "<C-^>", opts)
+-- Previous File
+keymap.set("n", "<M-p>", "<C-^>", opts)
 -- leave only current window
 keymap.set("n", "<leader>o", ":only<cr>", opts)
 
