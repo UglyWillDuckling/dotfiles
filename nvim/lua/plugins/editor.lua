@@ -38,6 +38,11 @@ return {
     lazy = true,
     event = "VeryLazy",
   },
+  {
+    "tpope/vim-surround",
+    lazy = true,
+    event = "VeryLazy",
+  },
   -- https://github.com/junegunn/vim-easy-align
   {
     "junegunn/vim-easy-align",
