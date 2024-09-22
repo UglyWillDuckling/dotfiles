@@ -102,15 +102,15 @@
 	required = true
 	clean = git-lfs clean -- %f
 [color]
-	ui = always
+	ui = auto
 	branch = always
-	diff = always
-	interactive = always
-	status = always
+	diff = auto
+	interactive = auto
+	status = auto
 	grep = always
 	pager = true
 	decorate = always
-	showbranch = always
+	showbranch = auto
 [maintenance]
 	repo = /home/vsedlar/dev/projects/MeilleursAgents
 	repo = /home/vlado/dev/dotfiles
