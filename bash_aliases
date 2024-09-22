@@ -12,6 +12,7 @@ alias first='head -n 1'
 alias vim='nvim'
 alias j="jobs"
 alias cpc='clipc'
+alias pwdc='pwd | cpc'
 alias ej='emoj'
 alias reload='_omz::reload'
 alias ll="ls --color -lhF --group-directories-first"
