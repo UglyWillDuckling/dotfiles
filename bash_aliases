@@ -258,31 +258,34 @@ rep-eat () {
 }
 repeat_100() { for i in {1..100}; do "$@"; done }
 repeat_char() { for i in {1..$1}; do echo "$2"; done }
+
 center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
+
 find_sorted_by_time () {
     find . -type f -printf "\n%AD %AT %p" | sort -t' ' -k1.7,1.8n -k1.1,1.2n -k1.4,1.5n -k2.1,2.2n -k2.4,2.5n -k2.7,2.8n -k2.10,2.19n
 }
 
 sqlresult2json() {
-    grep -v '^+' | \
-	awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
-	sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
-	csv2json
-    }
+  grep -v '^+' | \
+  awk 'BEGIN { FS="|"; OFS=","}{$1=$1}1' | \
+  sed -E 's/\s+//g' | sed 's/^,//;s/,$//' | \
+  csv2json
+}
 
-    random-string() {
-	cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
-    }
+random-string() {
+  cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+}
 
-    filter_php_files () {
-	grep -E '(\w*/\w*)+\.php' "$@"
-    }
-    clipc () {
-	local content=$(sponge)
-	echo -n "$content" | clipcopy || return 1
-	local short="$(echo $content | trim)"
-	echo ${(%):-"%B$short%b copied to clipboard."}
-    }
+filter_php_files () {
+  grep -E '(\w*/\w*)+\.php' "$@"
+}
+
+clipc () {
+  local content=$(sponge)
+  echo -n "$content" | clipcopy || return 1
+  local short="$(echo $content | trim)"
+  echo ${(%):-"%B$short%b copied to clipboard."}
+}
 
 ### GIT
 git_remove_origin() { sed -E 's/origin.*,[[:space:]]//' }
