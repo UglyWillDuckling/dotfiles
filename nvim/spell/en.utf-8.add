@@ -23,3 +23,5 @@ Makefile
 danas
 browserify
 tmp
+reactrouter
+dir
