@@ -10,7 +10,7 @@ local function map(mode, l, r, desc)
 end
 
 -- Previous File
-keymap.set("n", "<M-p>", "<C-^>", opts)
+keymap.set("n", "<M-i>", "<C-^>", opts)
 -- leave only current window
 keymap.set("n", "<leader>o", ":only<cr>", opts)
 
