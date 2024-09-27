@@ -79,3 +79,7 @@ end, "Next")
 map("n", "[c", function()
   gs.nav_hunk("prev")
 end, "Prev")
+
+-- vim-surround
+vim.keymap.del("i", "<C-G>S")
+vim.keymap.del("i", "<C-G>s")
