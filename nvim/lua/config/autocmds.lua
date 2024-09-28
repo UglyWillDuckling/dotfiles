@@ -9,7 +9,21 @@ end
 -- Check if we need to reload the file when it changed
 vim.api.nvim_create_autocmd({ "FileType" }, {
   group = augroup("emoji"),
-  pattern = { "javascript", "rs", "ruby", "rb", "html", "php", "markdown", "mmd", "text", "mail", "gitcommit" },
-
-  command = "runtime macros/emoji-ab.vim",
+  pattern = {
+    "typescript",
+    "javascript",
+    "rs",
+    "ruby",
+    "rb",
+    "html",
+    "php",
+    "markdown",
+    "mmd",
+    "text",
+    "mail",
+    "gitcommit",
+  },
+  callback = function()
+    vim.cmd("runtime macros/emoji-ab.vim")
+  end,
 })
