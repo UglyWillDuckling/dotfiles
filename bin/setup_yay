@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+sandbox() {
+  mkdir sandbox
+  (cd sandbox && "$@")
+  rm -rf sandbox
+}
+
+install_yay() {
+  git clone https://aur.archlinux.org/yay.git
+  (
+    cd yay || exit
+    makepkg -si
+  )
+}
+
+sandbox install_yay
