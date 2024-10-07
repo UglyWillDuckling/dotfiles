@@ -55,6 +55,10 @@ vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
 vim.keymap.set("n", "Y", "y$", opts)
 
 -- Codeium https://github.com/Exafunction/codeium.vim
+vim.keymap.set("i", "<C-g>", function()
+  return vim.fn["codeium#Accept"]()
+end, { expr = true, silent = true })
+
 vim.keymap.set("n", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
 vim.keymap.set("i", "<C-q>", "<Cmd>call codeium#Clear()<CR>")
 vim.keymap.set("i", "<C-u>", "<Cmd>call codeium#Clear()<CR>")
