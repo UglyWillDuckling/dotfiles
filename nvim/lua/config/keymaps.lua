@@ -9,6 +9,10 @@ local function map(mode, l, r, desc)
   vim.keymap.set(mode, l, r, { desc = desc })
 end
 
+local function delete(mode, l)
+  vim.keymap.del(mode, l)
+end
+
 -- Previous File
 keymap.set("n", "<M-i>", "<C-^>", opts)
 -- leave only current window
@@ -85,5 +89,5 @@ map("n", "[c", function()
 end, "Prev")
 
 -- vim-surround
-vim.keymap.del("i", "<C-G>S")
-vim.keymap.del("i", "<C-G>s")
+delete("i", "<C-G>s")
+delete("i", "<C-G>S")
