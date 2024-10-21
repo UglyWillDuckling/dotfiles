@@ -10,8 +10,11 @@ end
 vim.api.nvim_create_autocmd({ "FileType" }, {
   group = augroup("emoji"),
   pattern = {
+    "lua",
     "typescript",
     "javascript",
+    "ts",
+    "js",
     "rs",
     "ruby",
     "rb",
