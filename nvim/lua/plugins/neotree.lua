@@ -1,5 +1,13 @@
 return {
   {
+    "PhilRunninger/nerdtree-visual-selection",
+    event = "VeryLazy",
+  },
+  {
+    "scrooloose/nerdtree",
+    event = "VeryLazy",
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       sources = { "filesystem", "git_status" },
