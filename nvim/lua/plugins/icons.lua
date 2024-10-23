@@ -1,0 +1,5 @@
+return {
+  {
+    "ryanoasis/vim-devicons",
+  },
+}
