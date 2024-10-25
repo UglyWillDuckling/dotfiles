@@ -2,11 +2,16 @@ return {
   -- LSP keymaps
   {
     "neovim/nvim-lspconfig",
-    opts = function()
+    opts = function(_, opts)
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       keys[#keys + 1] = { "<a-p>", false }
       keys[#keys + 1] = { "<a-n>", false }
       keys[#keys + 1] = { "<C-K>", false }
+
+      local lspconfig = require("lspconfig")
+      lspconfig.phpactor.setup({})
+
+      return opts
     end,
   },
   {
