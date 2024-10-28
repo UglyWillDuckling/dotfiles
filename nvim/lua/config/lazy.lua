@@ -48,3 +48,11 @@ require("lazy").setup({
     },
   },
 })
+
+local function opts(desc)
+  return { desc = "nvim-tree: " .. desc, noremap = true, silent = true, nowait = true }
+end
+
+local treeutils = require("treeutils")
+vim.keymap.set("n", "<c-f>", treeutils.launch_find_files, opts("Launch Find Files"))
+vim.keymap.set("n", "<c-g>", treeutils.launch_live_grep, opts("Launch Live Grep"))
