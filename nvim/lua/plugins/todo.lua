@@ -18,7 +18,7 @@ return {
         NOTE = { icon = " ", color = "hint" },
         TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
         KNOW = { icon = "📖", color = "default" }, -- blueish
-        IDEA = { icon = "💡", color = "#c9cc09" }, -- yellow
+        IDEA = { icon = "💡", color = "#ffff00" }, -- yellow
         SUGGEST = { icon = " ", color = "#ec46a2" },
         THOUGHT = { icon = "🧠", color = "#ff4de2" }, -- purple
         QUESTION = { icon = "❓", color = "hint" },
