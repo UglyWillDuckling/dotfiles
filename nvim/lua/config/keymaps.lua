@@ -91,3 +91,12 @@ end, "Prev")
 -- vim-surround
 delete("i", "<C-G>s")
 delete("i", "<C-G>S")
+
+-- treeutils for nvim-tree
+-- TODO: make the mapping more specific
+-- don't override existing <C-g> map
+-- use the map function
+
+local treeutils = require("treeutils")
+map("n", "<c-f>", treeutils.launch_find_files, "Launch Find Files")
+map("n", "<c-g>", treeutils.launch_live_grep, "Launch Live Grep")
