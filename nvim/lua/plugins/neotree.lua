@@ -7,12 +7,31 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("nvim-tree").setup({})
+      local function on_attach(bufnr)
+        local api = require("nvim-tree.api")
+        local treeutils = require("treeutils")
+        local navigate = require("left-right")
+
+        local function opts(desc)
+          return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        end
+
+        -- this will setup the default mappings
+        api.config.mappings.default_on_attach(bufnr)
+
+        vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
+
+        vim.keymap.set("n", "<C-f>", treeutils.launch_find_files, opts("Launch Find Files"))
+        vim.keymap.set("n", "<C-g>", treeutils.launch_live_grep, opts("Launch Live Grep"))
+
+        vim.keymap.set("n", "h", navigate.left, opts("Navigate Left"))
+        vim.keymap.set("n", "l", navigate.right, opts("Navigate Right"))
+      end
+
+      require("nvim-tree").setup({
+        on_attach = on_attach,
+      })
     end,
-  },
-  {
-    "PhilRunninger/nerdtree-visual-selection",
-    event = "VeryLazy",
   },
   {
     "scrooloose/nerdtree",
