@@ -1,6 +1,5 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additionol keymaps here
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -92,11 +91,7 @@ end, "Prev")
 delete("i", "<C-G>s")
 delete("i", "<C-G>S")
 
--- treeutils for nvim-tree
--- TODO: make the mapping more specific
--- don't override existing <C-g> map
--- use the map function
-
-local treeutils = require("treeutils")
-map("n", "<c-f>", treeutils.launch_find_files, "Launch Find Files")
-map("n", "<c-g>", treeutils.launch_live_grep, "Launch Live Grep")
+-- NvimTree
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
+vim.keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>", { noremap = true })
+vim.keymap.set("n", "<C-t>", ":NvimTreeFocus<CR>", { noremap = true })
