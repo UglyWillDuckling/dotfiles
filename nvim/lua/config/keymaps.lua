@@ -92,6 +92,6 @@ delete("i", "<C-G>s")
 delete("i", "<C-G>S")
 
 -- NvimTree
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true })
-vim.keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>", { noremap = true })
-vim.keymap.set("n", "<C-t>", ":NvimTreeFocus<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<C-t>", ":NvimTreeFocus<CR>", { silent = true, noremap = true })
