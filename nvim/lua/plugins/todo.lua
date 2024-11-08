@@ -16,7 +16,7 @@ return {
         WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
         PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
         NOTE = { icon = " ", color = "hint" },
-        TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        TEST = { icon = "⏲ ", color = "#03ad12", alt = { "TESTING", "PASSED", "FAILED" } },
         KNOW = { icon = "📖", color = "default" }, -- blueish
         IDEA = { icon = "💡", color = "#ffff00" }, -- yellow
         SUGGEST = { icon = " ", color = "#ec46a2" },
