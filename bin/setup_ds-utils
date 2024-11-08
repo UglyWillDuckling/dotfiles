@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+sandbox() {
+  rm -rf sandbox
+  mkdir sandbox
+  (cd sandbox && "$@")
+  rm -rf sandbox
+}
+
+ds_utils() {
+  git clone git@github.com:jeroenjanssens/dsutils.git
+  cd dsutils || exit
+
+  rm -f *.md LICENSE
+
+  cp * ~/.local/bin
+}
+
+sandbox ds_utils
