@@ -30,6 +30,18 @@ return {
 
       require("nvim-tree").setup({
         on_attach = on_attach,
+        sort = {
+          sorter = "case_sensitive",
+        },
+        view = {
+          width = 40,
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = true,
+        },
       })
     end,
   },
