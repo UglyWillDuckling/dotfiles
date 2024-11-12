@@ -26,6 +26,7 @@ return {
 
         vim.keymap.set("n", "h", navigate.left, opts("Navigate Left"))
         vim.keymap.set("n", "l", navigate.right, opts("Navigate Right"))
+        vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
       end
 
       require("nvim-tree").setup({
