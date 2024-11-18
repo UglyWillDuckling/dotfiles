@@ -15,12 +15,12 @@ return {
         HACK = { icon = " ", color = "warning" },
         WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
         PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-        NOTE = { icon = " ", color = "hint" },
+        NOTE = { icon = " ", color = "#00aa7f" },
         TEST = { icon = "⏲ ", color = "#03ad12", alt = { "TESTING", "PASSED", "FAILED" } },
         KNOW = { icon = "📖", color = "default" }, -- blueish
-        IDEA = { icon = "💡", color = "#ffff00" }, -- yellow
-        SUGGEST = { icon = " ", color = "#ec46a2" },
-        THOUGHT = { icon = "🧠", color = "#ff4de2" }, -- purple
+        IDEA = { icon = "💡", color = "#ded903" }, -- yellow
+        SUGGEST = { icon = " ", color = "#fd56d2" },
+        THOUGHT = { icon = "🧠", color = "#3189f8" }, -- purple
         QUESTION = { icon = "❓", color = "hint" },
       },
     },
