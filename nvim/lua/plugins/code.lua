@@ -1,5 +1,19 @@
 return {
   {
+    "ruifm/gitlinker.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("gitlinker").setup()
+    end,
+  },
+  {
+    "liouk/gitlinks.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("gitlinks").setup()
+    end,
+  },
+  {
     "Exafunction/codeium.vim",
     lazy = true,
     event = "BufEnter",
