@@ -95,3 +95,14 @@ delete("i", "<C-G>S")
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<C-t>", ":NvimTreeFocus<CR>", { silent = true, noremap = true })
+
+-- Move
+-- https://github.com/fedepujol/move.nvim
+-- ../plugins/editor.lua
+vim.keymap.set("n", "<S-Up>", ":MoveLine(-1)<CR>", opts)
+vim.keymap.set("n", "<S-Down>", ":MoveLine(1)<CR>", opts)
+
+vim.keymap.set("v", "<S-Up>", ":MoveBlock(-1)<CR>", opts)
+vim.keymap.set("v", "<S-Down>", ":MoveBlock(1)<CR>", opts)
+vim.keymap.set("v", "<S-Left>", ":MoveHBlock(-1)<CR>", opts)
+vim.keymap.set("v", "<S-Right>", ":MoveHBlock(1)<CR>", opts)

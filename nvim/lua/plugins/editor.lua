@@ -2,10 +2,11 @@ return {
   {
     "fedepujol/move.nvim",
     event = "VeryLazy",
-    lazy = true,
     -- !!! opts is required
     opts = {
-      --- Config
+      char = {
+        enable = true,
+      },
     },
   },
   { "hrsh7th/nvim-cmp", enabled = false },
