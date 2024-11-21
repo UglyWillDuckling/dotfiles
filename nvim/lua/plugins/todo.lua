@@ -11,10 +11,10 @@ return {
           alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
           -- signs = false, -- configure signs for some keywords individually
         },
-        TODO = { icon = " ", color = "info" },
+        TODO = { icon = " ", color = "default" },
         HACK = { icon = " ", color = "warning" },
         WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        PERF = { icon = " ", color = "#ff8055", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
         NOTE = { icon = " ", color = "#00aa7f" },
         TEST = { icon = "⏲ ", color = "#03ad12", alt = { "TESTING", "PASSED", "FAILED" } },
         KNOW = { icon = "📖", color = "default" }, -- blueish
@@ -32,13 +32,12 @@ return {
 --IDEA: https://github.com/folke/todo-comments.nvim
 -- :brain: 🧠
 -- THOUGHT: hello
---
 -- KNOW: you need to know this
 -- INFO: hello
--- TODO"": hello
+-- TODO: todo
 -- HACK: hacked this one
 -- WARN: don't do this
--- PERF: issue with timing
+-- PERF: performance issue with timing
 -- NOTE: remember this
 -- TEST: need to test
 -- SUGGEST: code suggestions
