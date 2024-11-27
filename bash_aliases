@@ -419,3 +419,13 @@ urlencode () {
 }
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
 
+### work
+
+extranet_ssh() {
+  gcloud  compute ssh --zone "europe-west1-c" "extranet-dev-1c-0" --project "ma-dev2"
+}
+
+backyard_tasks_ssh() {
+  gcloud  compute ssh --zone "europe-west1-c" "backyard-tasks-dev-1c-0" --project "ma-dev2"
+}
+
