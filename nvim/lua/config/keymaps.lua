@@ -106,3 +106,6 @@ vim.keymap.set("v", "<S-Up>", ":MoveBlock(-1)<CR>", opts)
 vim.keymap.set("v", "<S-Down>", ":MoveBlock(1)<CR>", opts)
 vim.keymap.set("v", "<S-Left>", ":MoveHBlock(-1)<CR>", opts)
 vim.keymap.set("v", "<S-Right>", ":MoveHBlock(1)<CR>", opts)
+
+-- phpactor
+map("n", "<leader>ac", ":call ClassName()<cr>", "PHP Class Name via phpactor")
