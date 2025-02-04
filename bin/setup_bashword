@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e -o pipefail
+
+sandbox() {
+  mkdir sandbox
+  (cd sandbox && "$@")
+  rm -rf sandbox
+}
+
+install_bashword() {
+  git clone https://github.com/itspriddle/bashword
+  (
+    cd bashword || exit
+    sudo make install PREFIX=/usr/local
+  )
+}
+
+sandbox install_bashword
