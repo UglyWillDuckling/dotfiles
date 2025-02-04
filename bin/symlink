@@ -7,7 +7,10 @@ ln -f -s "$(pwd)"/bash_aliases "$HOME"/.bash_aliases
 ln -f -s "$(pwd)"/zle "$HOME"/.zle
 ln -f -s "$(pwd)"/calibre/config "$HOME"/.config/calibre
 ln -f -s "$(pwd)"/tmux.conf "$HOME"/.tmux.conf
+
+### alacritty
 ln -f -s "$(pwd)"/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
+ln -f -s "$(pwd)"/theme.toml "$HOME"/.config/alacritty/theme.toml
 
 ### Nvim
 NVIM_DIR="$HOME/.config/nvim"
@@ -15,7 +18,7 @@ NVIM_CONFIG="$HOME/.config/nvim/init.vim"
 
 ln -f -s "$(pwd)"/init.vim "$NVIM_CONFIG"
 
-ln -f -s "$(pwd)"/coc-settings.json $NVIM_DIR/coc-settings.json
+ln -f -s "$(pwd)"/coc-settings.json "$NVIM_DIR"/coc-settings.json
 
 ### misc
 ln -f -s "$(pwd)"/mouse.zsh "$HOME"/mouse.zsh
