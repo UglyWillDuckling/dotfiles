@@ -1,0 +1,20 @@
+[general]
+import = [
+  # "~/.config/alacritty/themes/themes/solarized_light.toml",
+  # "~/.config/alacritty/themes/themes/ayu_dark.toml",
+  # "~/.config/alacritty/themes/themes/ashes_dark.toml",
+  # "~/.config/alacritty/themes/themes/aura.toml",
+  # "~/.config/alacritty/themes/themes/carbonfox.toml",
+  "~/.config/alacritty/themes/themes/xterm.toml",
+  # "~/.config/alacritty/themes/themes/deep_space.toml",
+  "~/.config/alacritty/themes/themes/github_dark_dimmed.toml",
+  "~/.config/alacritty/themes/themes/github_dark_tritanopia.toml",
+  "~/.config/alacritty/themes/themes/gnome_terminal.toml",
+  "~/.config/alacritty/themes/themes/google.toml",
+  "~/.config/alacritty/themes/themes/monokai_charcoal.toml",
+  "~/.config/alacritty/themes/themes/papertheme.toml",
+  "~/.config/alacritty/themes/themes/flat_remix.toml",
+  "~/.config/alacritty/themes/themes/pencil_dark.toml",
+  "~/.config/alacritty/themes/themes/falcon.toml",
+  "~/.config/alacritty/themes/themes/rose-pine.toml",
+]
