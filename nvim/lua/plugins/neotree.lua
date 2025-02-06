@@ -21,7 +21,7 @@ return {
 
         vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 
-        vim.keymap.set("n", "<C-f>", treeutils.launch_find_files, opts("Launch Find Files"))
+        vim.keymap.set("n", "<S-f>", treeutils.launch_find_files, opts("Launch Find Files"))
         vim.keymap.set("n", "<C-g>", treeutils.launch_live_grep, opts("Launch Live Grep"))
 
         vim.keymap.set("n", "h", navigate.left, opts("Navigate Left"))

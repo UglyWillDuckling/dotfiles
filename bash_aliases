@@ -61,6 +61,16 @@ alias lst='td ls'
 alias path='echo $PATH | tr ":" "\n"'
 alias lz='lazygit'
 alias ls='eza'
+alias ddown='docker compose down'
+alias dstop='docker compose stop'
+alias dup='docker compose up'
+alias dstart='docker compose start'
+alias dlogs='docker compose logs -f'
+alias dbuild='docker compose build'
+alias dexec='docker compose exec'
+alias dps='docker compose ps'
+alias upandown='docker compose down && docker compose up'
+alias dcrun='docker compose run'
 
 function w() {
     which "$@" | bat -l bash
