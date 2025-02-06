@@ -5,5 +5,6 @@ local opt = vim.opt
 
 opt.list = false -- Hide special chars
 
+vim.g.mapleader = ","
 vim.g["lsp-defaults-disable"] = 1
 vim.g.codeium_disable_bindings = 1
