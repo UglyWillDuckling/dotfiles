@@ -11,6 +11,10 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.phpactor.setup({})
 
+      opts.inlay_hints = {
+        enabled = false,
+      }
+
       return opts
     end,
   },
