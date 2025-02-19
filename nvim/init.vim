@@ -1,4 +1,6 @@
 
+let mapleader=","
+
 function! SourceConfig()
   let path = $HOME  . '/.config/nvim/vim'
 

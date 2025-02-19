@@ -35,7 +35,7 @@ keymap.set(
 keymap.set(
   "n",
   "<leader>r",
-  require("telescope.builtin").oldfiles,
+  LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }),
   { noremap = true, silent = true, desc = "Recent Files" }
 )
 
@@ -75,6 +75,10 @@ end, { expr = true, silent = true })
 vim.keymap.set("i", "<C-t>", function()
   return vim.fn["codeium#AcceptNextWord"]()
 end, { expr = true, silent = true })
+
+map("n", "leader>ai", ":CodeiumEnable<CR>", "Codeium Enable")
+map("n", "<leader>ae", ":CodeiumEnable<CR>", "Codeium Enable")
+map("n", "<leader>ad", ":CodeiumDisable<CR>", "Codeium Disable")
 
 -- Git Signs
 local gs = require("gitsigns")

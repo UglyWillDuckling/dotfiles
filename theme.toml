@@ -5,7 +5,6 @@ import = [
   # "~/.config/alacritty/themes/themes/ashes_dark.toml",
   # "~/.config/alacritty/themes/themes/aura.toml",
   # "~/.config/alacritty/themes/themes/carbonfox.toml",
-  "~/.config/alacritty/themes/themes/xterm.toml",
   # "~/.config/alacritty/themes/themes/deep_space.toml",
   # "~/.config/alacritty/themes/themes/github_dark_dimmed.toml",
   # "~/.config/alacritty/themes/themes/github_dark_tritanopia.toml",
@@ -17,4 +16,6 @@ import = [
   # "~/.config/alacritty/themes/themes/falcon.toml",
   # "~/.config/alacritty/themes/themes/papertheme.toml",
   # "~/.config/alacritty/themes/themes/rose-pine.toml",
+  # "~/.config/alacritty/themes/themes/rose-pine.toml",
+  "~/.config/alacritty/themes/themes/papertheme.toml",
 ]

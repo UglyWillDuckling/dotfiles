@@ -162,28 +162,28 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1048,
-      "width": 1920,
-      "x": 0,
-      "y": 32
+      "height": 1080,
+      "width": 1870,
+      "x": 50,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1011,
-      "width": 1920,
-      "x": 0,
-      "y": 69
+      "height": 1048,
+      "width": 1870,
+      "x": 50,
+      "y": 32
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 999,
-      "width": 1920,
-      "x": 0,
-      "y": 81
+      "height": 1011,
+      "width": 1868,
+      "x": 51,
+      "y": 68
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAIAAAB38AAAQ3AAAAAAAAAFEAAAd/AAAENwAAAAACAAAAB4AAAAAAAAAARQAAB38AAAQ3"
+      "__value__": "AdnQywADAAAAAAAyAAAAAAAAB38AAAQ3AAAAMwAAAEQAAAd+AAAENgAAAAACAAAAB4AAAAAyAAAAIAAAB38AAAQ3"
     },
     "screen": {
       "depth": 24,
@@ -197,7 +197,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "Dell Inc.",
       "model": "DELL P2719H",
-      "name": "DP-0",
+      "name": "HDMI-1",
       "serial": "1J13Q83",
       "size_in_logical_pixels": {
         "height": 1080,
@@ -268,9 +268,10 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHkA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfgA////AAAAAQAAA14AAAOh/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAA6EAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAABBwAAAOhAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAWgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFoA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAIAA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAhUA////AAAAAQAAA14AAAPD/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPgAAA8MAAABTAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABaAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA7AP///wAAA+oAAAPDAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/home/vsedlar/Downloads/Brave New Words _ How AI Will Revolutionize Education (and -- Salman Khan; -- 2024 -- Penguin Random House LLC -- 9780593656952 -- ee318ac25fee734746979fd5ddd373e5 -- Anna’s Archive (1).epub",
     "/home/vlado/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled_ Learn the Art of Solving Computational Problems (73)/Computer Science Distilled_ Learn the Art - Wladston Ferreira Filho.epub",
     "/home/vlado/Downloads/Predložak seminarskog rada.epub",
     "/home/vladimir/Documents/Books/Ursula K. le Guin/The Left Hand of Darkness (133)/The Left Hand of Darkness - Ursula K. le Guin.epub",

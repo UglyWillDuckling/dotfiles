@@ -7,16 +7,13 @@ bin/backup_installed
 bin/setup_node
 bin/setup_docker
 bin/setup_rust
-bin/setup_node
 bin/setup_omz
 bin/setup_alacritty
-bin/setup_vim
 bin/symlink
-#
+
 ### Apps
 bin/setup_bashmarks
 bin/setup_bat
 
 ### system specific
 bin/setup_system
-

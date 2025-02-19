@@ -114,6 +114,7 @@
 [maintenance]
 	repo = /home/vsedlar/dev/projects/MeilleursAgents
 	repo = /home/vlado/dev/dotfiles
+	repo = /home/vsedlar/dev/projects/MA-Infra
 [rerere]
 	enabled = true
 	autoUpdate = true
@@ -124,3 +125,5 @@
 [gitbutler]
 	aiModelProvider = anthropic
 	gitbutlerCommitter = 0
+[include]
+	path = ~/.gitconfig_local

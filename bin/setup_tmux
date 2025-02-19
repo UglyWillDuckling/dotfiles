@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 mkdir sandbox
-cd sandbox
+cd sandbox || exit
 
 git clone https://github.com/tmux/tmux.git
-cd tmux
+cd tmux || exit
 sh autogen.sh
 ./configure
 make && sudo make install

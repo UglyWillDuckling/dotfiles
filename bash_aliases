@@ -5,6 +5,7 @@ export SQL_DATE_FILE_FORMAT="%d_%m_%Y"
 export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
 export GIT_LOG_ONELINE='%C(always,yellow)%h%C(always,reset) %C(always,green)(%ar)%C(always,reset) %C(always,reset)%s'
 export DEV_DIR="$HOME/dev/"
+export MALEGACY="$HOME/dev/projects/MeilleursAgents/MALegacy"
 ## /VARIABLES ##
 
 ### ALIASES ###
@@ -48,6 +49,7 @@ alias k3='kill -9 %3'
 # alias w="which $@ | bat -l bash"
 alias push="git push"
 alias pu="git push"
+alias puf="git push -f"
 alias pull="git pull"
 alias commit="git commit"
 alias st="git status"
@@ -71,6 +73,7 @@ alias dexec='docker compose exec'
 alias dps='docker compose ps'
 alias upandown='docker compose down && docker compose up'
 alias dcrun='docker compose run'
+alias as-tree='tree --fromfile'
 
 function w() {
     which "$@" | bat -l bash
@@ -439,3 +442,6 @@ backyard_tasks_ssh() {
   gcloud  compute ssh --zone "europe-west1-c" "backyard-tasks-dev-1c-0" --project "ma-dev2"
 }
 
+prod_backyard_tasks_ssh () {
+	ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand='gcloud compute start-iap-tunnel backyard-tasks-prod-1d-0 %p --listen-on-stdin --zone europe-west1-d --project ma-prod' vladimir.sedlar-ext@10.60.0.230
+}
