@@ -256,5 +256,6 @@ for script in ~/.shell/lib/*.sh; do
     source "$script"                                                        
 done    
 
-
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+. "/home/vlado/.deno/env"
