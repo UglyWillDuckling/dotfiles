@@ -113,3 +113,5 @@ vim.keymap.set("v", "<S-Right>", ":MoveHBlock(1)<CR>", opts)
 
 -- phpactor
 map("n", "<leader>ac", ":call ClassName()<cr>", "PHP Class Name via phpactor")
+
+map("n", "<leader>mt", ":RenderMarkdown toggle<CR>")
