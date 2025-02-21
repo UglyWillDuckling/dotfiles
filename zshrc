@@ -251,11 +251,6 @@ PERL_LOCAL_LIB_ROOT="/home/vladimir/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LI
 PERL_MB_OPT="--install_base \"/home/vladimir/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/vladimir/perl5"; export PERL_MM_OPT;
 
-# Load helper scripts
-for script in ~/.shell/lib/*.sh; do                                                  
-    source "$script"                                                        
-done    
-
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 . "/home/vlado/.deno/env"
