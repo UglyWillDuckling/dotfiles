@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" 2>/dev/null
 fi
 
+ulimit -n 64000
+
 umask 002
 setopt IGNORE_EOF
 
@@ -253,4 +255,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/vladimir/perl5"; export PERL_MM_OPT;
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-. "/home/vlado/.deno/env"
+[ -s "/home/vlado/.deno/env" ] && \. "/home/vlado/.deno/env"
+
+[ -s "/usr/share/bash-completion/completions/bashly" ] && \. "/usr/share/bash-completion/completions/bashly"  
