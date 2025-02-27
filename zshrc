@@ -255,6 +255,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/vladimir/perl5"; export PERL_MM_OPT;
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-[ -s "/home/vlado/.deno/env" ] && \. "/home/vlado/.deno/env"
+[ -s ~/.deno/env ] && \. ~/.deno/env
 
 [ -s "/usr/share/bash-completion/completions/bashly" ] && \. "/usr/share/bash-completion/completions/bashly"  
