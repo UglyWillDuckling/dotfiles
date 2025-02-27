@@ -2,7 +2,8 @@ local folder_icon = require('icons').symbol_kinds.Folder
 
 local M = {}
 
---- Window bar that shows the current file path (in a fancy way).
+--- INFO: Window bar that shows the current file path (in a fancy way).
+---
 ---@return string
 function M.render()
     -- Get the path and expand variables.
