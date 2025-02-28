@@ -83,6 +83,7 @@ return {
                 },
                 -- Configuration for specific commands.
                 files = {
+                    -- true,        -- inherit all the below in your custom config
                     winopts = {
                         preview = { hidden = true },
                     },
@@ -118,9 +119,21 @@ return {
                         preview = { hidden = true },
                     },
                 },
+                actions = {
+                    files = {
+                        ["enter"]       = actions.file_edit_or_qf,
+                        ["ctrl-q"]      = actions.file_sel_to_qf,
+                        ["ctrl-s"]      = actions.file_split,
+                        ["ctr-v"]        = actions.file_vsplit,
+                        ["ctrl-t"]      = actions.file_tabedit,
+                        ["alt-Q"]       = actions.file_sel_to_ll,
+                        ["alt-i"]       = actions.toggle_ignore,
+                        ["alt-h"]       = actions.toggle_hidden,
+                        ["alt-f"]       = actions.toggle_follow,}
+                  }
             }
         end,
-        init = function()
+        init = functio)
             ---@diagnostic disable-next-line: duplicate-set-field
             vim.ui.select = function(items, opts, on_choice)
                 local ui_select = require 'fzf-lua.providers.ui_select'
