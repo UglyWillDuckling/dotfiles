@@ -52,11 +52,11 @@ return {
             }
 
             -- Use <C-c> to select a choice in a snippet.
-            vim.keymap.set({ 'i', 's' }, '<C-c>', function()
-                if luasnip.choice_active() then
-                    require 'luasnip.extras.select_choice'()
-                end
-            end, { desc = 'Select choice' })
+            -- vim.keymap.set({ 'i', 's' }, '<C-c>', function()
+            --     if luasnip.choice_active() then
+            --         require 'luasnip.extras.select_choice'()
+            --     end
+            -- end, { desc = 'Select choice' })
             ---@diagnostic enable: undefined-field
         end,
     },

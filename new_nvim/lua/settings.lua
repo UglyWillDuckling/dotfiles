@@ -1,8 +1,8 @@
 local arrows = require('icons').arrows
 
 -- Set <space> as the leader key.
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 -- Use an indentation of 4 spaces.
 vim.o.sw = 4

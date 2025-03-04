@@ -13,7 +13,7 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
 -- Formatting.
-vim.keymap.set('n', 'gQ', 'mzgggqG`z<cmd>delmarks z<cr>zz', { desc = 'Format buffer' })
+-- vim.keymap.set('n', 'gQ', 'mzgggqG`z<cmd>delmarks z<cr>zz', { desc = 'Format buffer' })
 
 -- Open the package manager.
 vim.keymap.set('n', '<leader>L', '<cmd>Lazy<cr>', { desc = 'Lazy' })
@@ -50,5 +50,5 @@ vim.keymap.set({ 'i', 'c' }, '<C-l>', '<C-o>A', { desc = 'Go to the end of the l
 
 -- Floating terminal.
 vim.keymap.set({ 'n', 't' }, '<leader>T', function()
-    require('float_term').float_term('fish', { cwd = vim.fn.expand '%:p:h' })
+    require('float_term').float_term('zsh', { cwd = vim.fn.expand '%:p:h' })
 end, { desc = 'Toggle floating terminal' })

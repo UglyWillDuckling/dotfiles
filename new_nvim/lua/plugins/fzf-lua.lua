@@ -124,16 +124,17 @@ return {
                         ["enter"]       = actions.file_edit_or_qf,
                         ["ctrl-q"]      = actions.file_sel_to_qf,
                         ["ctrl-s"]      = actions.file_split,
-                        ["ctr-v"]        = actions.file_vsplit,
+                        ["alt-s"]       = actions.file_vsplit,
                         ["ctrl-t"]      = actions.file_tabedit,
                         ["alt-Q"]       = actions.file_sel_to_ll,
                         ["alt-i"]       = actions.toggle_ignore,
-                        ["alt-h"]       = actions.toggle_hidden,
-                        ["alt-f"]       = actions.toggle_follow,}
-                  }
+                        ["ctrl-h"]       = actions.toggle_hidden,
+                        ["alt-f"]       = actions.toggle_follow
+                    }
+                }
             }
         end,
-        init = functio)
+        init = function()
             ---@diagnostic disable-next-line: duplicate-set-field
             vim.ui.select = function(items, opts, on_choice)
                 local ui_select = require 'fzf-lua.providers.ui_select'
