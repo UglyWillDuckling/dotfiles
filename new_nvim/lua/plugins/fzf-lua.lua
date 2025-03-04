@@ -20,6 +20,7 @@ return {
                 end,
                 desc = 'Grep current buffer',
             },
+            { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
             { '<leader>fc', '<cmd>FzfLua highlights<cr>', desc = 'Highlights' },
             { '<leader>fd', '<cmd>FzfLua lsp_document_diagnostics<cr>', desc = 'Document diagnostics' },
             { '<leader>fD', '<cmd>FzfLua lsp_workspace_diagnostics<cr>', desc = 'Workspace diagnostics' },
