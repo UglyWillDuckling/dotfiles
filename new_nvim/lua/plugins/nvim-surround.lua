@@ -12,7 +12,7 @@ return {
                 normal_cur = 'yzz',
                 normal_line = 'yZ',
                 normal_cur_line = 'yZZ',
-                visual = 'Z',
+                visual = 'S',
             },
         },
     },

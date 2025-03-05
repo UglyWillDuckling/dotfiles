@@ -1,5 +1,9 @@
 -- NOTE: Ordered alphabetically by group name.
 
+local function augroup(name)
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+end
+
 vim.api.nvim_create_autocmd('FileType', {
     group = vim.api.nvim_create_augroup('mariasolos/big_file', { clear = true }),
     desc = 'Disable features in big files',
@@ -116,11 +120,27 @@ vim.api.nvim_create_autocmd({ 'BufDelete', 'BufWipeout' }, {
     command = 'wshada',
 })
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('mariasolos/yank_highlight', { clear = true }),
-    desc = 'Highlight on yank',
-    callback = function()
-        -- Setting a priority higher than the LSP references one.
-        vim.hl.on_yank { higroup = 'Visual', priority = 250 }
-    end,
+-- Check if we need to reload the file when it changed
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  group = augroup("emoji"),
+  pattern = {
+    "lua",
+    "typescript",
+    "javascript",
+    "ts",
+    "js",
+    "rs",
+    "ruby",
+    "rb",
+    "html",
+    "php",
+    "markdown",
+    "mmd",
+    "text",
+    "mail",
+    "gitcommit",
+  },
+  callback = function()
+    vim.cmd("runtime macros/emoji-ab.vim")
+  end,
 })
