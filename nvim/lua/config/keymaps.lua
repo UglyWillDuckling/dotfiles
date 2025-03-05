@@ -4,8 +4,11 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-local function map(mode, l, r, desc)
-  vim.keymap.set(mode, l, r, { desc = desc })
+local function map(mode, l, r, desc, options)
+  options = options or {}
+
+  options.desc = desc
+  vim.keymap.set(mode, l, r, options)
 end
 
 local function delete(mode, l)
@@ -114,4 +117,11 @@ vim.keymap.set("v", "<S-Right>", ":MoveHBlock(1)<CR>", opts)
 -- phpactor
 map("n", "<leader>ac", ":call ClassName()<cr>", "PHP Class Name via phpactor")
 
+-- Markdown
 map("n", "<leader>mt", ":RenderMarkdown toggle<CR>")
+
+-- Obsidian
+map("n", "<leader>moq", ":ObsidianQuickSwitch<CR>")
+
+-- Run this file
+map("n", "<M-e>", ":!./%<CR>", "", opts)
