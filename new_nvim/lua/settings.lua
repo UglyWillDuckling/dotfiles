@@ -77,7 +77,7 @@ vim.o.laststatus = 3
 vim.o.cmdheight = 1
 
 -- Disable cursor blinking in terminal mode.
-vim.o.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block-TermCursor'
+-- vim.o.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block-TermCursor'
 
 -- Disable health checks for these providers.
 vim.g.loaded_python3_provider = 0
