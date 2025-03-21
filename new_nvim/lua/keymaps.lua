@@ -49,6 +49,6 @@ vim.keymap.set({ 's', 'i', 'n', 'v' }, '<C-S-s>', '<esc>:wa<cr>', { desc = 'Exit
 vim.keymap.set({ 'i', 'c' }, '<C-l>', '<C-o>A', { desc = 'Go to the end of the line' })
 
 -- Floating terminal.
-vim.keymap.set({ 'n', 't' }, '<leader>T', function()
+vim.keymap.set({ 'n', 't' }, '<C-/>', function()
     require('float_term').float_term('zsh', { cwd = vim.fn.expand '%:p:h' })
 end, { desc = 'Toggle floating terminal' })

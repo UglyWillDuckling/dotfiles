@@ -48,8 +48,8 @@ return {
         opts = {
             mappings = {
                 show_help = '?',
-                go_in_plus = '<cr>',
-                go_out_plus = '<tab>',
+                -- go_in_plus = '<cr>',
+                -- go_out_plus = '<tab>',
             },
             content = {
                 filter = function(entry)

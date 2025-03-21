@@ -73,7 +73,7 @@ return {
                     init_selection = '<cr>',
                     node_incremental = '<cr>',
                     scope_incremental = false,
-                    node_decremental = '<bs>',
+                    node_decremental = '<space>',
                 },
             },
             indent = {
