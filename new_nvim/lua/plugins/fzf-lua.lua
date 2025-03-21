@@ -7,20 +7,8 @@ return {
         cmd = 'FzfLua',
         keys = {
             { '<leader>f<', '<cmd>FzfLua resume<cr>', desc = 'Resume last command' },
-            {
-                '<leader>fb',
-                function()
-                    require('fzf-lua').lgrep_curbuf {
-                        winopts = {
-                            height = 0.6,
-                            width = 0.5,
-                            preview = { vertical = 'up:70%' },
-                        },
-                    }
-                end,
-                desc = 'Grep current buffer',
-            },
-            { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
+            { '<leader><space>', '<cmd>FzfLua buffers<cr>', desc = 'Buffers' },
+            { '<leader>sk', '<cmd>FzfLua keymaps<cr>', desc = 'Key Maps' },
             { '<leader>fc', '<cmd>FzfLua highlights<cr>', desc = 'Highlights' },
             { '<leader>fd', '<cmd>FzfLua lsp_document_diagnostics<cr>', desc = 'Document diagnostics' },
             { '<leader>fD', '<cmd>FzfLua lsp_workspace_diagnostics<cr>', desc = 'Workspace diagnostics' },
@@ -28,6 +16,7 @@ return {
             { '<leader>/', '<cmd>FzfLua live_grep_glob<cr>', desc = 'Grep' },
             { '<leader>fg', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep', mode = 'x' },
             { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Help' },
+            { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Commands' },
             {
                 '<leader>fr',
                 function()
@@ -122,17 +111,17 @@ return {
                 },
                 actions = {
                     files = {
-                        ["enter"]       = actions.file_edit_or_qf,
-                        ["ctrl-q"]      = actions.file_sel_to_qf,
-                        ["ctrl-s"]      = actions.file_split,
-                        ["alt-s"]       = actions.file_vsplit,
-                        ["ctrl-t"]      = actions.file_tabedit,
-                        ["alt-Q"]       = actions.file_sel_to_ll,
-                        ["alt-i"]       = actions.toggle_ignore,
-                        ["ctrl-h"]       = actions.toggle_hidden,
-                        ["alt-f"]       = actions.toggle_follow
-                    }
-                }
+                        ['enter'] = actions.file_edit_or_qf,
+                        ['ctrl-q'] = actions.file_sel_to_qf,
+                        ['ctrl-s'] = actions.file_split,
+                        ['alt-s'] = actions.file_vsplit,
+                        ['ctrl-t'] = actions.file_tabedit,
+                        ['alt-Q'] = actions.file_sel_to_ll,
+                        ['alt-i'] = actions.toggle_ignore,
+                        ['ctrl-h'] = actions.toggle_hidden,
+                        ['alt-f'] = actions.toggle_follow,
+                    },
+                },
             }
         end,
         init = function()

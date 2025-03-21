@@ -20,7 +20,6 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp = vim.opt.rtp ^ lazypath
 
----@type LazySpec
 local plugins = 'plugins'
 
 -- General setup and goodies (order matters here).
@@ -30,6 +29,7 @@ require 'commands'
 require 'autocmds'
 require 'statusline'
 require 'winbar'
+require 'toggle'
 require 'lsp'
 
 -- Configure plugins.

@@ -51,8 +51,8 @@ return {
                 nmap('<leader>go', function()
                     gitlinker.get_buf_range_url('n', { action_callback = require('gitlinker.actions').open_in_browser })
                 end, 'Open in browser')
-                nmap('[g', gs.prev_hunk, 'Previous hunk')
-                nmap(']g', gs.next_hunk, 'Next hunk')
+                nmap('[c', gs.prev_hunk, 'Previous hunk')
+                nmap(']c', gs.next_hunk, 'Next hunk')
                 nmap('<leader>gR', gs.reset_buffer, 'Reset buffer')
                 nmap('<leader>gb', gs.blame_line, 'Blame line')
                 nmap('<leader>gp', gs.preview_hunk, 'Preview hunk')
@@ -64,6 +64,12 @@ return {
                         cwd = vim.b.gitsigns_status_dict.root,
                     })
                 end, 'Lazygit')
+
+                nmap('<leader>hd', gs.diffthis, 'Diff this')
+
+                nmap('<leader>hD', function()
+                    gs.diffthis '~'
+                end, 'Diff this')
 
                 -- Text object:
                 vim.keymap.set({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<cr>')
