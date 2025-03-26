@@ -249,7 +249,7 @@ end
 
 ---@private
 function M.health()
-    local ok = pcall(require, 'which-key')
+    -- local ok = pcall(require, 'which-key')
     -- Snacks.health[ok and 'ok' or 'warn'](('{which-key} is %s'):format(ok and 'installed' or 'not installed'))
 end
 
