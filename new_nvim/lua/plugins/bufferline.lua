@@ -22,8 +22,8 @@ return {
         },
         keys = {
             -- Buffer navigation.
-            { '[[', '<cmd>BufferLineCyclePrev<cr>', desc = 'Previous buffer' },
-            { ']]', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
+            { '<M-,>', '<cmd>BufferLineCyclePrev<cr>', desc = 'Previous buffer' },
+            { '<M-.>', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
             { '<leader>bb', '<cmd>BufferLinePick<cr>', desc = 'Pick a buffer to open' },
             { '<leader>bc', '<cmd>BufferLinePickClose<cr>', desc = 'Select a buffer to close' },
             { '<leader>bl', '<cmd>BufferLineCloseLeft<cr>', desc = 'Close buffers to the left' },

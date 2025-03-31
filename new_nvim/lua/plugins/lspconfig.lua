@@ -157,7 +157,6 @@ return {
                 settings = {
                     typescript = lang_settings,
                     javascript = lang_settings,
-                    typescriptreact = lang_settings,
                     vtsls = {
                         -- Automatically use workspace version of TypeScript lib on startup.
                         autoUseWorkspaceTsdk = true,

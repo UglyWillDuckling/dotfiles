@@ -18,7 +18,7 @@ return {
             { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Help' },
             { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Commands' },
             {
-                '<leader>fr',
+                '<leader>R',
                 function()
                     -- Read from ShaDa to include files that were already deleted from the buffer list.
                     vim.cmd 'rshada!'
