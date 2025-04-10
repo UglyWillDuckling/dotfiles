@@ -98,6 +98,8 @@ setopt EXTENDED_HISTORY
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+sudo
+  alias-finder
   colored-man-pages
   # bgnotify
   docker
@@ -149,7 +151,12 @@ source ~/.zplug/init.zsh
 export LATTITUDE='45.16413303892156'
 export LONGITUDE='18.00972891721189'
 
-# COLORS
+# alias-finder
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+
 export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 
 # Directory colors
