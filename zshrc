@@ -264,4 +264,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 [ -s ~/.deno/env ] && \. ~/.deno/env
 
-[ -s "/usr/share/bash-completion/completions/bashly" ] && \. "/usr/share/bash-completion/completions/bashly"  
+[ -s "/usr/share/bash-completion/completions/bashly" ] && \. "/usr/share/bash-completion/completions/bashly"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
