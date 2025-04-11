@@ -29,7 +29,6 @@ require 'commands'
 require 'autocmds'
 require 'statusline'
 require 'winbar'
-require 'toggle'
 require 'lsp'
 
 -- Configure plugins.
