@@ -11,6 +11,39 @@ return {
 
             local configure_server = require('lsp').configure_server
 
+            -- require('lspconfig').pyright.setup {}
+            require('lspconfig').pyright.setup {
+                settings = {
+                    pyright = {
+                        -- Using Ruff's import organizer
+                        disableOrganizeImports = true,
+                    },
+                    python = {
+                        analysis = {
+                            -- Ignore all files for analysis to exclusively use Ruff for linting
+                            ignore = { '*' },
+                        },
+                    },
+                },
+            }
+            require('lspconfig').taplo.setup {}
+            require('lspconfig').ruff.setup {
+                settings = { format = false },
+            }
+            require('lspconfig').pyright.setup {
+                settings = {
+                    pyright = {
+                        -- Using Ruff's import organizer
+                        disableOrganizeImports = true,
+                    },
+                    python = {
+                        analysis = {
+                            -- Ignore all files for analysis to exclusively use Ruff for linting
+                            ignore = { '*' },
+                        },
+                    },
+                },
+            }
             -- Servers without extra configuration.
             configure_server 'bashls'
             configure_server 'cssls'
