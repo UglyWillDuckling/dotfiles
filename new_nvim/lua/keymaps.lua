@@ -42,9 +42,6 @@ vim.keymap.set('n', 'U', '<C-r>', { desc = 'Redo' })
 vim.keymap.set({ 's', 'i', 'n', 'v' }, '<C-s>', '<esc>:w<cr>', { desc = 'Exit insert mode and save changes.' })
 vim.keymap.set({ 's', 'i', 'n', 'v' }, '<C-S-s>', '<esc>:wa<cr>', { desc = 'Exit insert mode and save all changes.' })
 
--- Quickly go to the end of the line while in insert mode.
-vim.keymap.set({ 'i', 'c' }, '<C-l>', '<C-o>A', { desc = 'Go to the end of the line' })
-
 -- Floating terminal.
 -- Mapped to <C-/> actually, because of Tmux
 vim.keymap.set({ 'n', 't' }, '<C-_>', function()
@@ -54,3 +51,7 @@ end, { desc = 'Toggle floating terminal' })
 vim.keymap.set({ 'n', 't' }, '<C-/>', function()
     require('float_term').float_term('zsh', { cwd = vim.fn.expand '%:p:h' })
 end, { desc = 'Toggle floating terminal' })
+
+vim.keymap.set('n', '<leader>ud', function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { noremap = true, silent = true, desc = 'Toggle Vim diagnostics' })
