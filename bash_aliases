@@ -6,6 +6,7 @@ export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
 export GIT_LOG_ONELINE='%C(always,yellow)%h%C(always,reset) %C(always,green)(%ar)%C(always,reset) %C(always,reset)%s'
 export DEV_DIR="$HOME/dev/"
 export MALEGACY="$HOME/dev/projects/MeilleursAgents/MALegacy"
+export OBSIDIAN_PATH=~/Documents/Obsidian/diamond-mine/
 ## /VARIABLES ##
 
 ### ALIASES ###
