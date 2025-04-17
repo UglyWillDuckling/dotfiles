@@ -76,9 +76,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
  HIST_STAMPS="mm/dd/yyyy"
 
  #set history size
-export HISTSIZE=200000
+export HISTSIZE=5000
 #save history after logout
-export SAVEHIST=500000
+export SAVEHIST=20000
 #history file
 export HISTFILE=~/.zsh_history
 #append into history file
