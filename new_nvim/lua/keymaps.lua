@@ -1,3 +1,6 @@
+
+vim.keymap.set('n', '<leader>us', ':set spell!<CR>', { desc = 'Toggle Spell'})
+
 -- Remap for dealing with word wrap and adding jumps to the jumplist.
 vim.keymap.set('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
 vim.keymap.set('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
