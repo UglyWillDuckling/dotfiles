@@ -26,6 +26,8 @@ return {
                     },
                 },
             }
+            require'lspconfig'.phpactor.setup{}
+            require'lspconfig'.jsonls.setup{}
             require('lspconfig').taplo.setup {}
             require('lspconfig').ruff.setup {
                 settings = { format = false },
