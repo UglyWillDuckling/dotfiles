@@ -111,10 +111,10 @@
   },
   "geometry-of-import-foreign-geometry": {
     "frame_geometry": {
-      "height": 211,
-      "width": 501,
-      "x": 700,
-      "y": 376
+      "height": 203,
+      "width": 503,
+      "x": 699,
+      "y": 385
     },
     "full_screened": false,
     "geometry": {
@@ -132,7 +132,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAK8AAABeAAABLAAAAJKAAACvAAAAZ0AAASwAAACSgAAAAAAAAAAB4AAAAK8AAABnQAABLAAAAJK"
+      "__value__": "AdnQywADAAAAAAK7AAABgQAABLEAAAJLAAACvAAAAZ0AAASwAAACSgAAAAAAAAAAB4AAAAK8AAABnQAABLAAAAJK"
     },
     "screen": {
       "depth": 24,
@@ -146,7 +146,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "Dell Inc.",
       "model": "DELL P2719H",
-      "name": "DP-0",
+      "name": "DP-2",
       "serial": "1J13Q83",
       "size_in_logical_pixels": {
         "height": 1080,
@@ -162,28 +162,28 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
-      "width": 1870,
-      "x": 50,
+      "height": 1036,
+      "width": 1920,
+      "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 1048,
-      "width": 1870,
-      "x": 50,
-      "y": 32
+      "height": 1008,
+      "width": 1920,
+      "x": 0,
+      "y": 28
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1011,
-      "width": 1868,
-      "x": 51,
-      "y": 68
+      "height": 1007,
+      "width": 1870,
+      "x": 49,
+      "y": 28
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAyAAAAAAAAB38AAAQ3AAAAMwAAAEQAAAd+AAAENgAAAAACAAAAB4AAAAAyAAAAIAAAB38AAAQ3"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQLAAAAMQAAABwAAAd+AAAECgAAAAACAAAAB4AAAAAAAAAAHAAAB38AAAQL"
     },
     "screen": {
       "depth": 24,
@@ -197,7 +197,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "Dell Inc.",
       "model": "DELL P2719H",
-      "name": "HDMI-1",
+      "name": "DP-2",
       "serial": "1J13Q83",
       "size_in_logical_pixels": {
         "height": 1080,
@@ -268,9 +268,10 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAWgD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFoA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAIAA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIwA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAhUA////AAAAAQAAA14AAAPD/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPgAAA8MAAABTAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABaAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA7AP///wAAA+oAAAPDAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAVwD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFcA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHcA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIcA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfUA////AAAAAQAAA14AAAOe/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAA54AAABOAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABXAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAyAP///wAABBwAAAOeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/home/vlado/Downloads/Konačni rezultati za web.epub",
     "/home/vsedlar/Downloads/Brave New Words _ How AI Will Revolutionize Education (and -- Salman Khan; -- 2024 -- Penguin Random House LLC -- 9780593656952 -- ee318ac25fee734746979fd5ddd373e5 -- Anna’s Archive (1).epub",
     "/home/vlado/Documents/Books/Wladston Ferreira Filho/Computer Science Distilled_ Learn the Art of Solving Computational Problems (73)/Computer Science Distilled_ Learn the Art - Wladston Ferreira Filho.epub",
     "/home/vlado/Downloads/Predložak seminarskog rada.epub",
