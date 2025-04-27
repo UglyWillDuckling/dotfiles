@@ -9,10 +9,11 @@ ln -f -s "$(pwd)"/calibre/config "$HOME"/.config/calibre
 ln -f -s "$(pwd)"/tmux.conf "$HOME"/.tmux.conf
 
 ### alacritty
-ln -f -s "$(pwd)"/alacritty.yml "$HOME"/.config/alacritty/alacritty.yml
+ln -f -s "$(pwd)"/alacritty.toml "$HOME"/.config/alacritty/alacritty.toml
 ln -f -s "$(pwd)"/theme.toml "$HOME"/.config/alacritty/theme.toml
 
 ### Nvim - missing
+ln -f -s "$(pwd)"/nvim "$HOME"/.config/nvim
 
 ### misc
-ln -f -s "$(pwd)"/mouse.zsh "$HOME"/mouse.zsh
+# ln -f -s "$(pwd)"/mouse.zsh "$HOME"/mouse.zsh
