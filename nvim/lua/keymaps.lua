@@ -58,3 +58,20 @@ end, { desc = 'Toggle floating terminal' })
 vim.keymap.set('n', '<leader>ud', function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { noremap = true, silent = true, desc = 'Toggle Vim diagnostics' })
+
+-- resize windows
+vim.keymap.set("n", "<Left>", function()
+    require("smart-splits").resize_left()
+end, {})
+
+vim.keymap.set("n", "<Down>", function()
+    require("smart-splits").resize_down()
+end)
+
+vim.keymap.set("n", "<Up>", function()
+    require("smart-splits").resize_up()
+end)
+
+vim.keymap.set("n", "<Right>", function()
+    require("smart-splits").resize_right()
+end)
