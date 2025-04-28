@@ -4,19 +4,19 @@
 # Expand multiple dots
 # https://github.com/parkercoates/dotfiles/blob/master/.zsh/expand-multiple-dots.zsh
 function expand-multiple-dots() {
-  local MATCH
+    local MATCH
     if [[ $LBUFFER =~ (^| )\.\.\.+ ]]; then
-      LBUFFER=$LBUFFER:fs%\.\.\.%../..%
-        fi
+        LBUFFER=$LBUFFER:fs%\.\.\.%../..%
+    fi
 }
 
 function expand-multiple-dots-then-expand-or-complete() {
-  zle expand-multiple-dots
+    zle expand-multiple-dots
     zle expand-or-complete
 }
 
 function expand-multiple-dots-then-accept-line() {
-  zle expand-multiple-dots
+    zle expand-multiple-dots
     zle accept-line
 }
 
@@ -27,38 +27,29 @@ bindkey '^I' expand-multiple-dots-then-expand-or-complete
 bindkey '^M' expand-multiple-dots-then-accept-line
 # end expand multiple dots
 
-source ~/mouse.zsh
-bindkey '^[m' zle-toggle-mouse
+# source ~/mouse.zsh
+# bindkey '^[m' zle-toggle-mouse
 # zle-toggle-mouse
 
 # put the cursor in a subshell $()
 # using Ctrl-j
 function _zle_subshell {
-  RBUFFER='$()'"$RBUFFER"
-    ((CURSOR=CURSOR+2))
+    RBUFFER='$()'"$RBUFFER"
+    ((CURSOR = CURSOR + 2))
 }
 zle -N _zle_subshell
 bindkey '^J' _zle_subshell
-bindkey -s '^o' 'vif^M'
-
-# list files
-function _zle_ls_list() {
-# list current files
-# list=`ls --color -lhF --group-directories-first`
-  ls --color -lhF --group-directories-first
-
-    zle reset-prompt; zle redisplay
-}
+# bindkey -s '^o' 'vif^M'
 
 # toggles background shell
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-      zle accept-line
-  else
-    zle push-input
-      zle clear-screen
-      fi
+fancy-ctrl-z() {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
@@ -73,25 +64,24 @@ bindkey "^[p" insert-last-word
 
 # Create a function.
 insert-next-word() {
-# Tell `insert-last-word` to go forward (1), instead of backward (-1).
-  zle insert-last-word -- 1
+    # Tell `insert-last-word` to go forward (1), instead of backward (-1).
+    zle insert-last-word -- 1
 }
 
 # Create a widget that calls the function above.
 zle -N insert-next-word
 
 # next word
-# alt+n???
+# alt+n
 bindkey '^[n' insert-next-word
 
 # zle_tree
 function _zle_tree {
-  zle push-input
-  BUFFER="tree -L 1 -C"
-  zle accept-line
+    zle push-input
+    BUFFER="tree -L 1 -C"
+    zle accept-line
 }
 
 # widget
 zle -N _zle_tree
 bindkey '^t' _zle_tree
-
