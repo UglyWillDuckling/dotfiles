@@ -15,5 +15,5 @@ ln -f -s "$(pwd)"/theme.toml "$HOME"/.config/alacritty/theme.toml
 ### Nvim - missing
 ln -f -s "$(pwd)"/nvim "$HOME"/.config/nvim
 
-### misc
-# ln -f -s "$(pwd)"/mouse.zsh "$HOME"/mouse.zsh
+### Zellij
+ln -f -s "$(pwd)"/nvim "$HOME"/.config/zellij/config.kdl
