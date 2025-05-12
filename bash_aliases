@@ -84,16 +84,14 @@ function upgrade() {
 	yay -Suay
 	sudo pacman -Syu
     elif type -p apt-get >/dev/null; then
-	sudo apt-get update 2>&1 | grep -v '^W'
-	sudo apt-get upgrade
-	sudo apt-get autoremove
+    sudo pkcon update -y
     fi
 
     sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;
 }
 
 hour=`date +%H`
-if [[ $hour -lt 20 && $hour -gt 7 ]]; then
+if [[ $hour -lt 20 && $hour -gt 7 ]]; then echo;
 else
     alias bat="bat --theme 'Monokai Extended Origin'"
 fi
@@ -337,6 +335,10 @@ dock_image_by_size() { docker image ls | awk 'NR!=1 {print $7" "$0}' | sort -n}
 ### DOCKER ###
 
 ### PERSONAL ###
+convert_html2md() {
+    while read h; do in=$h;out="${h%.html}".md; echo converting $in to $out; html2md --in $h > $out; done
+}
+
 find_ip () {
     me=$(whoami)
     filter="wlp"
