@@ -172,6 +172,8 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt o" { MoveTab "right"; }
 
         bind "Ctrl Alt x" { CloseFocus; }
+
+        bind "Ctrl Alt u" {NewTab; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl space" { SwitchToMode "locked"; }
