@@ -21,7 +21,7 @@ return {
         workspaces = {
             {
                 name = 'merged',
-                path = '~/Documents/Obsidian/diamond-mine/Merge-Kaiser_Ruby',
+                path = vim.env.OBSIDIAN_PATH .. 'Merge-Kaiser_Ruby',
             },
         },
 
