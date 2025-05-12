@@ -1,6 +1,9 @@
 
 let mapleader=","
 
+nnoremap <leader><leader> <c-^>
+nnoremap z, za
+
 function! SourceConfig()
   let path = $HOME  . '/.config/nvim/vim'
 
@@ -14,4 +17,3 @@ function! SourceConfig()
 endfunction
 
 call SourceConfig()
-
