@@ -161,7 +161,7 @@ keybinds clear-defaults=true {
         bind "Alt =" { Resize "Increase"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
-        bind "Alt f" { ToggleFloatingPanes; }
+        bind "Ctrl Alt f" { ToggleFloatingPanes; }
         // bind "Alt h" { MoveFocusOrTab "left"; }
         // bind "Alt j" { MoveFocus "down"; }
         // bind "Alt k" { MoveFocus "up"; }
@@ -170,6 +170,8 @@ keybinds clear-defaults=true {
 
         bind "Ctrl Alt i" { MoveTab "left"; }
         bind "Ctrl Alt o" { MoveTab "right"; }
+
+        bind "Ctrl Alt x" { CloseFocus; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl space" { SwitchToMode "locked"; }
