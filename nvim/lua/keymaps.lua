@@ -1,5 +1,4 @@
-
-vim.keymap.set('n', '<leader>us', ':set spell!<CR>', { desc = 'Toggle Spell'})
+vim.keymap.set('n', '<leader>us', ':set spell!<CR>', { desc = 'Toggle Spell' })
 
 -- Remap for dealing with word wrap and adding jumps to the jumplist.
 vim.keymap.set('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
@@ -60,18 +59,32 @@ vim.keymap.set('n', '<leader>ud', function()
 end, { noremap = true, silent = true, desc = 'Toggle Vim diagnostics' })
 
 -- resize windows
-vim.keymap.set("n", "<Left>", function()
-    require("smart-splits").resize_left()
+vim.keymap.set('n', '<Left>', function()
+    require('smart-splits').resize_left()
 end, {})
 
-vim.keymap.set("n", "<Down>", function()
-    require("smart-splits").resize_down()
+vim.keymap.set('n', '<Down>', function()
+    require('smart-splits').resize_down()
 end)
 
-vim.keymap.set("n", "<Up>", function()
-    require("smart-splits").resize_up()
+vim.keymap.set('n', '<Up>', function()
+    require('smart-splits').resize_up()
 end)
 
-vim.keymap.set("n", "<Right>", function()
-    require("smart-splits").resize_right()
+vim.keymap.set('n', '<Right>', function()
+    require('smart-splits').resize_right()
 end)
+
+vim.keymap.set('n', '<leader>r', function()
+    require('neotest').run.run(vim.fn.expand '%')
+end)
+
+vim.keymap.set('n', '<leader>tr', function()
+    require('neotest').run.run(vim.fn.expand '%')
+end)
+
+vim.keymap.set('n', '<leader>tn', function()
+    require('neotest').run.run()
+end)
+
+vim.keymap.set('n', '<leader>ts', '<cmd>Neotest summary<CR>')
