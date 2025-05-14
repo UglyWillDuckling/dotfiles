@@ -182,7 +182,16 @@ return {
             'nvim-lua/plenary.nvim',
             'antoinemadec/FixCursorHold.nvim',
             'nvim-treesitter/nvim-treesitter',
+            'olimorris/neotest-phpunit',
+            'V13Axel/neotest-pest',
         },
+        config = function()
+            require('neotest').setup {
+                adapters = {
+                    require 'neotest-pest',
+                },
+            }
+        end,
     },
     {
         'vim-test/vim-test',
