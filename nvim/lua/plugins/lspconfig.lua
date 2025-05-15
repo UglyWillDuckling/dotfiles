@@ -11,7 +11,8 @@ return {
 
             local configure_server = require('lsp').configure_server
 
-            -- require('lspconfig').pyright.setup {}
+            vim.lsp.enable('solargraph')
+
             require('lspconfig').pyright.setup {
                 settings = {
                     pyright = {
