@@ -77,14 +77,14 @@ end)
 
 vim.keymap.set('n', '<leader>r', function()
     require('neotest').run.run(vim.fn.expand '%')
-end)
+end, { noremap = true, desc = 'Neotest - run File' })
 
 vim.keymap.set('n', '<leader>tr', function()
     require('neotest').run.run(vim.fn.expand '%')
-end)
+end, { noremap = true, desc = 'Neotest - run File' })
 
 vim.keymap.set('n', '<leader>tn', function()
     require('neotest').run.run()
-end)
+end, { noremap = true, desc = 'Neotest - run Nearest' })
 
-vim.keymap.set('n', '<leader>ts', '<cmd>Neotest summary<CR>')
+vim.keymap.set('n', '<leader>ts', '<cmd>Neotest summary<CR>', { noremap = true, desc = 'Neotest - Summary Window' })
