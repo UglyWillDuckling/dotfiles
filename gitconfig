@@ -8,7 +8,7 @@
 	name = vladimir
 	signingkey = D3E75AB8FA350B7D
 [alias]
-  deleted = log --all --
+    amend = commit --amend
 
 	blamew = blame -w
 	blamec = blame -w -C -C -C
