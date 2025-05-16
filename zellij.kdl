@@ -174,7 +174,11 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt x" { CloseFocus; }
 
         bind "Ctrl Alt u" {NewTab; }
+
+        bind "Ctrl Alt m" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "Ctrl Alt r" { SwitchToMode "renamepane"; PaneNameInput 0; }
     }
+
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl space" { SwitchToMode "locked"; }
         bind "Ctrl q" { Quit; }
