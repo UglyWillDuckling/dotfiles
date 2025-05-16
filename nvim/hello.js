@@ -1,3 +1,5 @@
+import hello from world;
+
 console.log("bye");
 
 if (exists) {
