@@ -433,7 +433,10 @@ urlencode () {
     done
     LC_COLLATE=$old_lc_collate
 }
-sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
+
+sql_values() {
+    sql2csv | trim_both , | tail -n +2 | remove_empty_lines
+}
 
 notify-after () {
 	after=$1
