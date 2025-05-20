@@ -23,6 +23,10 @@ return {
                 name = 'merged',
                 path = vim.env.OBSIDIAN_PATH .. 'Merge-Kaiser_Ruby',
             },
+            {
+                name = 'emerald',
+                path = vim.env.OBSIDIAN_PATH .. 'Emerald/emerald',
+            },
         },
 
         -- see below for full list of options 👇
