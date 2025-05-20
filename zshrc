@@ -76,7 +76,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
  HIST_STAMPS="mm/dd/yyyy"
 
  #set history size
-export HISTSIZE=5000
+export HISTSIZE=10000
 #save history after logout
 export SAVEHIST=20000
 #history file
