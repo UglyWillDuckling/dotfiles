@@ -436,9 +436,10 @@ urlencode () {
 sql_values() { sql2csv | trim_both , | tail -n +2 | remove_empty_lines }
 
 notify-after () {
-	time=$1
+	after=$1
 	shift 1
-	after $time notify-send $*
+	msg="$*"
+	echo "notify-send '$msg'" | at now + " $after"
 }
 
 ### work
@@ -454,3 +455,4 @@ backyard_tasks_ssh() {
 prod_backyard_tasks_ssh () {
 	ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand='gcloud compute start-iap-tunnel backyard-tasks-prod-1d-0 %p --listen-on-stdin --zone europe-west1-d --project ma-prod' vladimir.sedlar-ext@10.60.0.230
 }
+
