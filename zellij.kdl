@@ -171,7 +171,7 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt i" { MoveTab "left"; }
         bind "Ctrl Alt o" { MoveTab "right"; }
 
-        bind "Ctrl Alt x" { CloseFocus; }
+        bind "Ctrl Alt q" { CloseFocus; }
 
         bind "Ctrl Alt u" {NewTab; }
 
