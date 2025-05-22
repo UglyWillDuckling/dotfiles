@@ -8,8 +8,6 @@
 	name = vladimir
 	signingkey = D3E75AB8FA350B7D
 [alias]
-    amend = commit --amend
-
 	blamew = blame -w
 	blamec = blame -w -C -C -C
 
@@ -32,8 +30,8 @@
 	d =  diff --color=always
 	di = diff --find-copies-harder
 	dc = diff --find-copies-harder --cached --color=always
-	am = amend
 	amend = commit --amend
+    mend = amend
 	a = add
 	aa = add --all
 	ff = merge --ff-only
