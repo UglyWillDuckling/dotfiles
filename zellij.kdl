@@ -141,21 +141,24 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
+
+        // move around
+        bind "Ctrl Alt h" { MoveFocusOrTab "left"; }
+        bind "Ctrl Alt j" { MoveFocus "down"; }
+        bind "Ctrl Alt k" { MoveFocus "up"; }
+        bind "Ctrl Alt l" { MoveFocusOrTab "right"; }
+
+        bind "Alt left" { Resize "Increase left"; }
+        bind "Alt down" { Resize "Increase down"; }
+        bind "Alt up" { Resize "Increase up"; }
+        bind "Alt right" { Resize "Increase right"; }
+
         // Move panes around
-        bind "Ctrl Alt h" { MovePane "left"; }
-        bind "Ctrl Alt j" { MovePane "down"; }
-        bind "Ctrl Alt k" { MovePane "up"; }
-        bind "Ctrl Alt l" { MovePane "right"; }
+        bind "Ctrl Alt left" { MovePane "left"; }
+        bind "Ctrl Alt down" { MovePane "down"; }
+        bind "Ctrl Alt up" { MovePane "up"; }
+        bind "Ctrl Alt right" { MovePane "right"; }
 
-        bind "Ctrl Alt left" { Resize "Increase left"; }
-        bind "Ctrl Alt down" { Resize "Increase down"; }
-        bind "Ctrl Alt up" { Resize "Increase up"; }
-        bind "Ctrl Alt right" { Resize "Increase right"; }
-
-        bind "Alt left" { MoveFocusOrTab "left"; }
-        bind "Alt down" { MoveFocus "down"; }
-        bind "Alt up" { MoveFocus "up"; }
-        bind "Alt right" { MoveFocusOrTab "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
@@ -177,6 +180,16 @@ keybinds clear-defaults=true {
 
         bind "Ctrl Alt m" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "Ctrl Alt r" { SwitchToMode "renamepane"; PaneNameInput 0; }
+
+        bind "Ctrl 1" { GoToTab 1; SwitchToMode "locked"; }
+        bind "Ctrl 2" { GoToTab 2; SwitchToMode "locked"; }
+        bind "Ctrl 3" { GoToTab 3; SwitchToMode "locked"; }
+        bind "Ctrl 4" { GoToTab 4; SwitchToMode "locked"; }
+        bind "Ctrl 5" { GoToTab 5; SwitchToMode "locked"; }
+        bind "Ctrl 6" { GoToTab 6; SwitchToMode "locked"; }
+        bind "Ctrl 7" { GoToTab 7; SwitchToMode "locked"; }
+        bind "Ctrl 8" { GoToTab 8; SwitchToMode "locked"; }
+        bind "Ctrl 9" { GoToTab 9; SwitchToMode "locked"; }
     }
 
     shared_except "locked" "renametab" "renamepane" {
@@ -205,7 +218,7 @@ keybinds clear-defaults=true {
         bind "p" { SwitchToMode "pane"; }
     }
     shared_except "locked" "resize" "pane" "tab" "entersearch" "renametab" "renamepane" {
-        bind "r" { SwitchToMode "resize"; }
+        bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
     }
     shared_among "scroll" "search" {
         bind "PageDown" { PageScrollDown; }
