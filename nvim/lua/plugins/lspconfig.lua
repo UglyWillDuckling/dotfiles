@@ -11,7 +11,9 @@ return {
 
             local configure_server = require('lsp').configure_server
 
-            vim.lsp.enable('solargraph')
+            vim.lsp.enable 'solargraph'
+            vim.lsp.enable 'arduino_language_server'
+            vim.lsp.enable 'clangd'
 
             require('lspconfig').pyright.setup {
                 settings = {
@@ -27,8 +29,9 @@ return {
                     },
                 },
             }
-            require'lspconfig'.phpactor.setup{}
-            require'lspconfig'.jsonls.setup{}
+
+            require('lspconfig').phpactor.setup {}
+            require('lspconfig').jsonls.setup {}
             require('lspconfig').taplo.setup {}
             require('lspconfig').ruff.setup {
                 settings = { format = false },
