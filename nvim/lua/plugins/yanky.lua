@@ -8,10 +8,22 @@ return {
     keys = {
         { 'p', '<Plug>(YankyPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after cursor' },
         { 'P', '<Plug>(YankyPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before cursor' },
-        { '=p', '<Plug>(YankyPutAfterLinewise)', desc = 'Put yanked text in line below' },
-        { '=P', '<Plug>(YankyPutBeforeLinewise)', desc = 'Put yanked text in line above' },
-        { '[y', '<Plug>(YankyCycleForward)', desc = 'Cycle forward through yank history' },
-        { ']y', '<Plug>(YankyCycleBackward)', desc = 'Cycle backward through yank history' },
+        -- { '=p', '<Plug>(YankyPutAfterLinewise)', desc = 'Put yanked text in line below' },
+        -- { '=P', '<Plug>(YankyPutBeforeLinewise)', desc = 'Put yanked text in line above' },
+
         { 'y', '<Plug>(YankyYank)', mode = { 'n', 'x' }, desc = 'Yanky yank' },
+        { 'gp', '<Plug>(YankyGPutAfter)', mode = { 'n', 'x' }, desc = 'Put yanked text after selection' },
+        { 'gP', '<Plug>(YankyGPutBefore)', mode = { 'n', 'x' }, desc = 'Put yanked text before selection' },
+
+        { '<c-p>', '<Plug>(YankyPreviousEntry)', desc = 'Select previous entry through yank history' },
+        { '<c-n>', '<Plug>(YankyNextEntry)', desc = 'Select next entry through yank history' },
+
+        { '<leader>p', '<cmd>YankyRingHistory<cr>', mode = { 'n', 'x' }, desc = 'Open Yank History' },
+
+        -- Linewise
+        { ']p', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+        { '[p', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
+        { ']P', '<Plug>(YankyPutIndentAfterLinewise)', desc = 'Put indented after cursor (linewise)' },
+        { '[P', '<Plug>(YankyPutIndentBeforeLinewise)', desc = 'Put indented before cursor (linewise)' },
     },
 }
