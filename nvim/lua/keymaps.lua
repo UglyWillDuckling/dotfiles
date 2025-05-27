@@ -99,23 +99,7 @@ vim.keymap.set('n', 'y,', ':normal gg yG <C-o> <C-o> zz zz<CR>', { noremap = tru
 -- AI
 --
 -- keybinds for prompting with groq
-vim.keymap.set('n', '<leader>m', function()
-    require('llm').prompt { replace = false, service = 'groq' }
-end, { desc = 'Prompt with groq' })
-vim.keymap.set('v', '<leader>m', function()
-    require('llm').prompt { replace = false, service = 'groq' }
-end, { desc = 'Prompt with groq' })
-vim.keymap.set('v', '<leader>.', function()
-    require('llm').prompt { replace = true, service = 'groq' }
-end, { desc = 'Prompt while replacing with groq' })
-
-vim.keymap.set('n', '<leader>n', function()
-    require('llm').create_llm_md()
-end, { desc = 'Create llm.md' })
-
-
---  I've analyzed the code and provided suggestions for improvements, explanations, and potential bugs.
-
-2. **Use comments and docstrings**: You've added some comments, but consider adding more docstrings to explain the purpose of each keymap and function.
-    
---
+vim.keymap.set('n', '<leader>m', function() require('llm').prompt { replace = false, service = 'groq' } end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>m', function() require('llm').prompt { replace = false, service = 'groq' } end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>.', function() require('llm').prompt { replace = true, service = 'groq' } end, { desc = 'Prompt while replacing with groq' })
+vim.keymap.set('n', '<leader>n', function() require('llm').create_llm_md() end, { desc = 'Create llm.md' })
