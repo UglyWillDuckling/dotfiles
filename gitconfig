@@ -125,3 +125,5 @@
 	gitbutlerCommitter = 0
 [include]
 	path = ~/.gitconfig_local
+[push]
+	followTags = true
