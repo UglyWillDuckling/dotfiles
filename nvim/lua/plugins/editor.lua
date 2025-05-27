@@ -6,15 +6,20 @@ return {
         event = 'VeryLazy',
     },
     {
-      "tpope/vim-surround",
-      lazy = true,
-      event = "VeryLazy",
+        'tpope/vim-surround',
+        lazy = true,
+        event = 'VeryLazy',
     },
 
     -- https://github.com/junegunn/vim-easy-align
     {
         'junegunn/vim-easy-align',
         lazy = true,
+        event = 'VeryLazy',
+    },
+    -- use lazy.nvim
+    {
+        'LintaoAmons/scratch.nvim',
         event = 'VeryLazy',
     },
 }
