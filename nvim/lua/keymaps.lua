@@ -1,6 +1,6 @@
 vim.keymap.set('n', '<leader>us', ':set spell!<CR>', { desc = 'Toggle Spell' })
 
--- Remap for dealing with word wrap and adding jumps to the jumplist.
+-- Remap for dealing with word wrap and adding jumps to the jumplist
 vim.keymap.set('n', 'j', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'j']], { expr = true })
 vim.keymap.set('n', 'k', [[(v:count > 1 ? 'm`' . v:count : 'g') . 'k']], { expr = true })
 
@@ -94,3 +94,28 @@ vim.keymap.set('n', '<leader>ts', '<cmd>Neotest summary<CR>', { noremap = true, 
 
 -- Copy buffer
 vim.keymap.set('n', 'y,', ':normal gg yG <C-o> <C-o> zz zz<CR>', { noremap = true, desc = 'Copy the entire buffer' })
+
+--
+-- AI
+--
+-- keybinds for prompting with groq
+vim.keymap.set('n', '<leader>m', function()
+    require('llm').prompt { replace = false, service = 'groq' }
+end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>m', function()
+    require('llm').prompt { replace = false, service = 'groq' }
+end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>.', function()
+    require('llm').prompt { replace = true, service = 'groq' }
+end, { desc = 'Prompt while replacing with groq' })
+
+vim.keymap.set('n', '<leader>n', function()
+    require('llm').create_llm_md()
+end, { desc = 'Create llm.md' })
+
+
+--  I've analyzed the code and provided suggestions for improvements, explanations, and potential bugs.
+
+2. **Use comments and docstrings**: You've added some comments, but consider adding more docstrings to explain the purpose of each keymap and function.
+    
+--
