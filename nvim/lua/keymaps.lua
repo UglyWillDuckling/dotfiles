@@ -75,6 +75,9 @@ vim.keymap.set('n', '<Right>', function()
     require('smart-splits').resize_right()
 end)
 
+--
+-- Neotest
+--
 vim.keymap.set('n', '<leader>r', function()
     require('neotest').run.run(vim.fn.expand '%')
 end, { noremap = true, desc = 'Neotest - run File' })
@@ -88,3 +91,6 @@ vim.keymap.set('n', '<leader>tn', function()
 end, { noremap = true, desc = 'Neotest - run Nearest' })
 
 vim.keymap.set('n', '<leader>ts', '<cmd>Neotest summary<CR>', { noremap = true, desc = 'Neotest - Summary Window' })
+
+-- Copy buffer
+vim.keymap.set('n', 'y,', ':normal gg yG <C-o> <C-o> zz zz<CR>', { noremap = true, desc = 'Copy the entire buffer' })
