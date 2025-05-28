@@ -13,7 +13,7 @@ return {
 
             vim.lsp.enable 'solargraph'
             vim.lsp.enable 'arduino_language_server'
-            vim.lsp.enable 'clangd'
+            -- vim.lsp.enable 'clangd'
 
             require('lspconfig').pyright.setup {
                 settings = {
