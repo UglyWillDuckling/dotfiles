@@ -99,7 +99,18 @@ vim.keymap.set('n', 'y,', ':normal gg yG <C-o> <C-o> zz zz<CR>', { noremap = tru
 -- AI
 --
 -- keybinds for prompting with groq
-vim.keymap.set('n', '<leader>m', function() require('llm').prompt { replace = false, service = 'groq' } end, { desc = 'Prompt with groq' })
-vim.keymap.set('v', '<leader>m', function() require('llm').prompt { replace = false, service = 'groq' } end, { desc = 'Prompt with groq' })
-vim.keymap.set('v', '<leader>.', function() require('llm').prompt { replace = true, service = 'groq' } end, { desc = 'Prompt while replacing with groq' })
-vim.keymap.set('n', '<leader>n', function() require('llm').create_llm_md() end, { desc = 'Create llm.md' })
+vim.keymap.set('n', '<leader>m', function()
+    require('llm').prompt { replace = false, service = 'groq' }
+end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>m', function()
+    require('llm').prompt { replace = false, service = 'groq' }
+end, { desc = 'Prompt with groq' })
+vim.keymap.set('v', '<leader>.', function()
+    require('llm').prompt { replace = true, service = 'groq' }
+end, { desc = 'Prompt while replacing with groq' })
+vim.keymap.set('n', '<leader>n', function()
+    require('llm').create_llm_md()
+end, { desc = 'Create llm.md' })
+
+vim.keymap.set('n', '<leader>sn', '<cmd>Scratch<cr>', { noremap = true, desc = 'Scratch New' })
+vim.keymap.set('n', '<leader>so', '<cmd>ScratchOpen<cr>', { noremap = true, desc = 'Scratch Open' })
