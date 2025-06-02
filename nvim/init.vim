@@ -1,5 +1,9 @@
 
 let mapleader=","
+"
+" Escape insert mode more easily (quickly press jj )
+" NOTE: testing stage, move to lua/keymaps.lua
+imap jj <Esc>
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
