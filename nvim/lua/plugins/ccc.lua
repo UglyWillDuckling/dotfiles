@@ -1,3 +1,4 @@
+-- Color Codes
 -- Filetypes in which to highlight color codes.
 local colored_fts = {
     'cfg',
