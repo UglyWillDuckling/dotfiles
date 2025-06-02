@@ -2,10 +2,21 @@
 return {
     {
         'saghen/blink.cmp',
-        dependencies = 'LuaSnip',
+        dependencies = {
+            {
+                'Kaiser-Yang/blink-cmp-dictionary',
+                dependencies = { 'nvim-lua/plenary.nvim' },
+            },
+            {
+                'LuaSnip',
+            },
+        },
         build = 'cargo +nightly build --release',
         event = 'InsertEnter',
         opts = {
+            enabled = function()
+                return not vim.tbl_contains({ 'markdown' }, vim.bo.filetype)
+            end,
             keymap = {
                 ['<CR>'] = { 'accept', 'fallback' },
                 ['<C-\\>'] = { 'hide', 'fallback' },
@@ -19,7 +30,7 @@ return {
                 list = {
                     -- Insert items while navigating the completion list.
                     selection = { preselect = false, auto_insert = true },
-                    max_items = 10,
+                    max_items = 15,
                 },
                 menu = {
                     border = 'rounded',
@@ -35,7 +46,7 @@ return {
             sources = {
                 -- Disable some sources in comments and strings.
                 default = function()
-                    local sources = { 'lsp', 'buffer' }
+                    local sources = { 'lsp', 'buffer', 'dictionary' }
                     local ok, node = pcall(vim.treesitter.get_node)
 
                     if ok and node then
@@ -49,6 +60,25 @@ return {
 
                     return sources
                 end,
+                providers = {
+                    dictionary = {
+                        module = 'blink-cmp-dictionary',
+                        name = 'Dict',
+                        -- Make sure this is at least 2.
+                        min_keyword_length = 4,
+                        opts = {
+                            -- options for blink-cmp-dictionary
+                            -- dictionary_directories = { vim.fn.expand '~/.config/nvim/dicts' },
+                            dictionary_files = function()
+                                if vim.bo.filetype == 'markdown' then
+                                    return { vim.fn.expand '~/.config/nvim/dicts/words.txt' }
+                                end
+                                return {}
+                            end,
+                            decapitalize_first = true,
+                        },
+                    },
+                },
             },
             appearance = {
                 kind_icons = require('icons').symbol_kinds,
