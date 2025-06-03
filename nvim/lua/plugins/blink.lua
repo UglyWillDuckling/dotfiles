@@ -18,8 +18,6 @@ return {
                 return not vim.tbl_contains({ 'markdown' }, vim.bo.filetype)
             end,
             keymap = {
-                ['<CR>'] = { 'accept', 'fallback' },
-                ['<C-\\>'] = { 'hide', 'fallback' },
                 ['<C-1>'] = {
                     function(cmp)
                         cmp.accept { index = 1 }
@@ -70,6 +68,8 @@ return {
                         cmp.accept { index = 10 }
                     end,
                 },
+                ['<C-m>'] = { 'accept', 'fallback' },
+                ['<C-q>'] = { 'hide', 'fallback' },
                 ['<C-n>'] = { 'select_next', 'show' },
                 ['<Tab>'] = { 'select_next', 'snippet_forward', 'fallback' },
                 ['<C-p>'] = { 'select_prev' },
