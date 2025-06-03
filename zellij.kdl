@@ -181,15 +181,15 @@ keybinds clear-defaults=true {
         bind "Ctrl Alt m" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "Ctrl Alt r" { SwitchToMode "renamepane"; PaneNameInput 0; }
 
-        bind "Ctrl 1" { GoToTab 1; SwitchToMode "locked"; }
-        bind "Ctrl 2" { GoToTab 2; SwitchToMode "locked"; }
-        bind "Ctrl 3" { GoToTab 3; SwitchToMode "locked"; }
-        bind "Ctrl 4" { GoToTab 4; SwitchToMode "locked"; }
-        bind "Ctrl 5" { GoToTab 5; SwitchToMode "locked"; }
-        bind "Ctrl 6" { GoToTab 6; SwitchToMode "locked"; }
-        bind "Ctrl 7" { GoToTab 7; SwitchToMode "locked"; }
-        bind "Ctrl 8" { GoToTab 8; SwitchToMode "locked"; }
-        bind "Ctrl 9" { GoToTab 9; SwitchToMode "locked"; }
+        bind "Alt 1" { GoToTab 1; SwitchToMode "locked"; }
+        bind "Alt 2" { GoToTab 2; SwitchToMode "locked"; }
+        bind "Alt 3" { GoToTab 3; SwitchToMode "locked"; }
+        bind "Alt 4" { GoToTab 4; SwitchToMode "locked"; }
+        bind "Alt 5" { GoToTab 5; SwitchToMode "locked"; }
+        bind "Alt 6" { GoToTab 6; SwitchToMode "locked"; }
+        bind "Alt 7" { GoToTab 7; SwitchToMode "locked"; }
+        bind "Alt 8" { GoToTab 8; SwitchToMode "locked"; }
+        bind "Alt 9" { GoToTab 9; SwitchToMode "locked"; }
     }
 
     shared_among "normal" {
