@@ -85,7 +85,18 @@ return {
                     max_items = 15,
                 },
                 menu = {
-                    border = 'rounded',
+                    draw = {
+                        columns = { { 'item_idx' }, { 'kind_icon' }, { 'label', 'label_description', gap = 1 } },
+                        components = {
+                            item_idx = {
+                                text = function(ctx)
+                                    return ctx.idx == 10 and '0' or ctx.idx >= 10 and ' ' or tostring(ctx.idx)
+                                end,
+                                highlight = 'BlinkCmpItemIdx', -- optional, only if you want to change its color
+                            },
+                        },
+                    },
+                    border = 'single',
                 },
                 documentation = {
                     auto_show = true,
@@ -121,6 +132,7 @@ return {
                         opts = {
                             -- options for blink-cmp-dictionary
                             -- dictionary_directories = { vim.fn.expand '~/.config/nvim/dicts' },
+                            -- dictionary
                             dictionary_files = function()
                                 if vim.bo.filetype == 'markdown' then
                                     return { vim.fn.expand '~/.config/nvim/dicts/words.txt' }
