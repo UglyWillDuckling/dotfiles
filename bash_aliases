@@ -10,6 +10,7 @@ export OBSIDIAN_PATH=~/Documents/Obsidian/diamond-mine/
 ## /VARIABLES ##
 
 ### ALIASES ###
+alias py=python
 alias first='head -n 1'
 alias vim='nvim'
 alias j="jobs"
