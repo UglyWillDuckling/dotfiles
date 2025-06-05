@@ -62,7 +62,7 @@ alias tdl='td list'
 alias tm='tmux'
 alias lst='td ls'
 alias path='echo $PATH | tr ":" "\n"'
-alias lz='lazygit'
+alias lg='lazygit'
 alias ls='eza'
 alias ddown='docker compose down'
 alias dstop='docker compose stop'
@@ -167,9 +167,6 @@ trim_start () {
 }
 trim_end () {
     sed -E "s/$1\$//"
-}
-trim_both () {
-    trim_end "$1" | trim_start "$1"
 }
 replace_separator () {
     awk 'BEGIN {FS="'"$1"'"; OFS="'"$2"'"} {$1=$1; print $0}'
