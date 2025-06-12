@@ -25,6 +25,10 @@ export PATH=$HOME/miniconda3/bin/:$PATH
 export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
 
+# Update cd paths
+CDPATH=$HOME:..
+export CDPATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
