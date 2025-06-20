@@ -1,9 +1,13 @@
 
 let mapleader=","
-"
+
 " Escape insert mode more easily (quickly press jj )
-" NOTE: testing stage, move to lua/keymaps.lua
 imap jj <Esc>
+
+" TODO: move to lua
+nmap <S-m> %
+vmap <S-m> %
+nmap <F2> :e!<CR>
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
