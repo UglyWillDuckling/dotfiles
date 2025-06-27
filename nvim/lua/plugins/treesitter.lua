@@ -64,7 +64,8 @@ return {
                 'vim',
                 'vimdoc',
                 'yaml',
-                'php'
+                'php',
+                'arduino',
             },
             highlight = { enable = true },
             incremental_selection = {
