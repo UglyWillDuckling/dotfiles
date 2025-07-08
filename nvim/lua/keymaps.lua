@@ -114,3 +114,11 @@ end, { desc = 'Create llm.md' })
 
 vim.keymap.set('n', '<leader>sn', '<cmd>Scratch<cr>', { noremap = true, desc = 'Scratch New' })
 vim.keymap.set('n', '<leader>so', '<cmd>ScratchOpen<cr>', { noremap = true, desc = 'Scratch Open' })
+
+vim.keymap.set('n', ']t', function()
+    require('todo-comments').jump_next()
+end, { desc = 'Next todo comment' })
+
+vim.keymap.set('n', '[t', function()
+    require('todo-comments').jump_prev()
+end, { desc = 'Previous todo comment' })
