@@ -179,6 +179,7 @@ return {
         'nvim-neotest/neotest',
         dependencies = {
             'nvim-neotest/nvim-nio',
+            'nvim-neotest/neotest-python',
             'nvim-lua/plenary.nvim',
             'antoinemadec/FixCursorHold.nvim',
             'nvim-treesitter/nvim-treesitter',
@@ -189,6 +190,7 @@ return {
             require('neotest').setup {
                 adapters = {
                     require 'neotest-pest',
+                    require 'neotest-python',
                 },
             }
         end,
