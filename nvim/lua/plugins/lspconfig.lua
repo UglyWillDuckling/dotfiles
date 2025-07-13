@@ -14,8 +14,8 @@ return {
             vim.lsp.enable 'solargraph'
             vim.lsp.enable 'arduino_language_server'
             vim.lsp.enable 'twiggy_language_server'
-            -- vim.lsp.enable 'clangd'
 
+            vim.lsp.enable 'djlsp'
             require('lspconfig').pyright.setup {
                 settings = {
                     pyright = {
