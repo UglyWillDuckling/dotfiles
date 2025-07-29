@@ -6,6 +6,8 @@ return {
         opts = {
             notify_on_error = false,
             formatters_by_ft = {
+                blade = { 'html_beautify' },
+                html = { 'html_beautify' },
                 ['php'] = { 'easy-coding-standard' },
                 python = { 'ruff_format' },
                 c = { name = 'clangd', timeout_ms = 500, lsp_format = 'prefer' },

@@ -66,6 +66,7 @@ return {
                 'yaml',
                 'php',
                 'arduino',
+                'blade',
             },
             highlight = { enable = true },
             incremental_selection = {

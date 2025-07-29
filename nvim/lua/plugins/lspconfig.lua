@@ -55,8 +55,24 @@ return {
             configure_server 'bashls'
             configure_server 'cssls'
             configure_server 'dprint'
-            configure_server 'html'
+            -- configure_server 'html'
             configure_server 'zls'
+
+            local html_capabilities = vim.lsp.protocol.make_client_capabilities()
+            html_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+            require('lspconfig').html.setup {
+                capabilities = html_capabilities,
+                filetypes = { 'html', 'blade' },
+                init_options = {
+                    configurationSection = { 'html', 'css', 'javascript' },
+                    embeddedLanguages = {
+                        css = true,
+                        javascript = false,
+                    },
+                    provideFormatter = true,
+                },
+            }
 
             configure_server('clangd', {
                 cmd = {
