@@ -79,6 +79,7 @@
   thisyear = l --since=1.year
   short = log --color=always --format='%C(auto) %h %s'
   inline = log --format=format:'%C(yellow)%h%C(reset) %Cgreen%ad%C(reset) %C(blue)%an%C(reset) %s' --date=short --abbrev-commit
+  autoreword = !git commit --fixup reword:$1 && GIT_EDITOR=true && git rebase --autosquash --interactive $1~1 && echo \"autoreword finished\"
 
 [init]
 	defaultBranch = main
