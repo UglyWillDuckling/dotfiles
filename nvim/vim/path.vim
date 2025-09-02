@@ -8,3 +8,5 @@ set path+=backyard/**/
 set path+=share/**/
 set path+=framework/**/
 
+set path+=templates/**
+set path+=static/**
