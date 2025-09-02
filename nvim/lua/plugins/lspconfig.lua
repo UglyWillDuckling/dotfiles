@@ -16,20 +16,22 @@ return {
             vim.lsp.enable 'twiggy_language_server'
 
             vim.lsp.enable 'djlsp'
-            require('lspconfig').pyright.setup {
-                settings = {
-                    pyright = {
-                        -- Using Ruff's import organizer
-                        disableOrganizeImports = true,
-                    },
-                    python = {
-                        analysis = {
-                            -- Ignore all files for analysis to exclusively use Ruff for linting
-                            ignore = { '*' },
-                        },
-                    },
-                },
-            }
+            vim.lsp.enable 'pylsp'
+
+            -- require('lspconfig').pyright.setup {
+            --     settings = {
+            --         pyright = {
+            --             -- Using Ruff's import organizer
+            --             disableOrganizeImports = true,
+            --         },
+            --         python = {
+            --             analysis = {
+            --                 -- Ignore all files for analysis to exclusively use Ruff for linting
+            --                 ignore = { '*' },
+            --             },
+            --         },
+            --     },
+            -- }
 
             require('lspconfig').phpactor.setup {}
             require('lspconfig').jsonls.setup {}
@@ -37,20 +39,7 @@ return {
             require('lspconfig').ruff.setup {
                 settings = { format = false },
             }
-            require('lspconfig').pyright.setup {
-                settings = {
-                    pyright = {
-                        -- Using Ruff's import organizer
-                        disableOrganizeImports = true,
-                    },
-                    python = {
-                        analysis = {
-                            -- Ignore all files for analysis to exclusively use Ruff for linting
-                            ignore = { '*' },
-                        },
-                    },
-                },
-            }
+
             -- Servers without extra configuration.
             configure_server 'bashls'
             configure_server 'cssls'
