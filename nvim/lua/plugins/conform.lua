@@ -9,6 +9,7 @@ return {
                 blade = { 'html_beautify' },
                 html = { 'html_beautify' },
                 ['php'] = { 'easy-coding-standard' },
+                htmldjango = { 'djlint' },
                 python = { 'ruff_format' },
                 c = { name = 'clangd', timeout_ms = 500, lsp_format = 'prefer' },
                 javascript = { 'prettier', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
