@@ -10,8 +10,6 @@ return {
                 set_next = 'm,',
                 next = 'm]',
                 preview = 'm:',
-                -- next_bookmark = '<M-.>',
-                -- prev_bookmark = '<M-,>',
                 next_bookmark0 = '<M-]>',
                 prev_bookmark0 = '<M-[>',
             },
