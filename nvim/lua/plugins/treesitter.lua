@@ -67,6 +67,8 @@ return {
                 'php',
                 'arduino',
                 'blade',
+                'groovy',
+                'make',
             },
             highlight = { enable = true },
             incremental_selection = {
