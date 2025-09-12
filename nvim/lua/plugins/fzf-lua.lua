@@ -13,11 +13,11 @@ return {
             { '<leader>fd', '<cmd>FzfLua lsp_document_diagnostics<cr>', desc = 'Document diagnostics' },
             { '<leader>fD', '<cmd>FzfLua lsp_workspace_diagnostics<cr>', desc = 'Workspace diagnostics' },
             { '<leader>ff', '<cmd>FzfLua files<cr>', desc = 'Find files' },
-            { '<space>/', '<cmd>FzfLua live_grep_glob<cr>', desc = 'Grep' },
-            { '<leader>fg', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep', mode = 'x' },
-            { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Help' },
-            { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Commands' },
-            { '<space><space>', '<cmd>FzfLua files<cr>', desc = 'Files again' },
+            { '<space>/', '<cmd>FzfLua live_grep_resume<cr>', desc = 'Grep Normal', mode = 'n' },
+            { '<space>/', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep Visual', mode = 'v' },
+            { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Show Help' },
+            { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Show Commands' },
+            { '<space><space>', '<cmd>FzfLua files<cr>', desc = 'Find Files fast' },
             {
                 'R',
                 function()
