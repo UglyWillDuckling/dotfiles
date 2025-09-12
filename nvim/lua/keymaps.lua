@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>tc', '<cmd>tabclose<cr>', { desc = 'Close tab page'
 vim.keymap.set('n', '<leader>tn', '<cmd>tab split<cr>', { desc = 'New tab page' })
 vim.keymap.set('n', '<leader>to', '<cmd>tabonly<cr>', { desc = 'Close other tab pages' })
 
--- Poweful <esc>.
+-- Powerful <esc>.
 vim.keymap.set({ 'i', 's', 'n' }, '<esc>', function()
     if require('luasnip').expand_or_jumpable() then
         require('luasnip').unlink_current()
@@ -122,3 +122,6 @@ end, { desc = 'Next todo comment' })
 vim.keymap.set('n', '[t', function()
     require('todo-comments').jump_prev()
 end, { desc = 'Previous todo comment' })
+
+-- You probably also want to set a keymap to toggle aerial
+vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
