@@ -15,6 +15,7 @@ function M.float_term(cmd, opts)
 
     if terminal and terminal:buf_valid() and vim.b[terminal.buf].lazyterm_cmd == cmd then
         terminal:toggle()
+        vim.cmd 'startinsert'
     else
         terminal = require('lazy.util').float_term(cmd, opts)
         vim.b[terminal.buf].lazyterm_cmd = cmd
