@@ -249,9 +249,11 @@ function M.configure_server(server, settings)
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
-    require('lspconfig')[server].setup(
-        vim.tbl_deep_extend('error', { capabilities = capabilities, silent = true }, settings or {})
-    )
+    vim.lsp.config(server, vim.tbl_deep_extend('error', { capabilities = capabilities, silent = true }, settings or {}))
+
+    -- require('lspconfig')[server].setup(
+    --     vim.tbl_deep_extend('error', { capabilities = capabilities, silent = true }, settings or {})
+    -- )
 end
 
 return M
