@@ -11,21 +11,21 @@ return {
         },
         keys = {
             {
-                '<leader>xq',
+                '<leader>qq',
                 function()
                     require('quicker').toggle()
                 end,
                 desc = 'Toggle quickfix',
             },
             {
-                '<leader>xl',
+                '<leader>ql',
                 function()
                     require('quicker').toggle { loclist = true }
                 end,
                 desc = 'Toggle loclist list',
             },
             {
-                '<leader>xd',
+                '<leader>qd',
                 function()
                     local quicker = require 'quicker'
 
