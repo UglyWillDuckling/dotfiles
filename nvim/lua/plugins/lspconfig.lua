@@ -24,7 +24,7 @@ return {
                 settings = {
                     pyright = {
                         -- Using Ruff's import organizer
-                        disableOrganizeImports = true,
+                        disableOrganizeImports = false,
                     },
                     python = {
                         analysis = {
