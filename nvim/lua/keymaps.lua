@@ -125,3 +125,6 @@ end, { desc = 'Previous todo comment' })
 
 -- You probably also want to set a keymap to toggle aerial
 vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
+
+-- FilePath Current
+vim.keymap.set('n', '<M-p>', ':call FilePathCpc()<CR>', { noremap = true, desc = 'Copy current file path' })

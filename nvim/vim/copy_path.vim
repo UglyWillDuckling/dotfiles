@@ -1,5 +1,5 @@
 
-nnoremap a :call FilePathCpc()<cr>
+"nnoremap a :call FilePathCpc()<cr>
 function! FilePathCpc()
     let @+=@%
 endfunction
