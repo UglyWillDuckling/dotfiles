@@ -1,5 +1,4 @@
-
-nnoremap <leader>cpc :call ClassName()<cr>
+nnoremap ycc :call ClassName()<cr>
 
 function! ClassName()
     let filePath = expand('%:p')
