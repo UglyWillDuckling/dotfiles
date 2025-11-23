@@ -7,7 +7,7 @@ return {
             notify_on_error = false,
             formatters_by_ft = {
                 blade = { 'html_beautify' },
-                html = { 'html_beautify' },
+                html = { 'prettier', stop_on_first = true, name = 'dprint', timeout_ms = 500, lsp_format = 'prefer' },
                 ['php'] = { 'easy-coding-standard' },
                 htmldjango = { 'djlint' },
                 python = { 'ruff_format' },
