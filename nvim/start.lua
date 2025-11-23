@@ -69,3 +69,26 @@ require('aerial').setup {
         vim.keymap.set('n', '<M-o>', '<cmd>AerialNext<CR>', { buffer = bufnr })
     end,
 }
+
+require('llm').setup {
+    -- How long to wait for the request to start returning data.
+    timeout_ms = 10000,
+    services = {
+        -- Supported services configured by default
+        groq = {
+            url = 'https://api.groq.com/openai/v1/chat/completions',
+            model = 'llama-3.1-8b-instant',
+            api_key_name = 'GROQ_API_KEY',
+        },
+        -- openai = {
+        --     url = "https://api.openai.com/v1/chat/completions",
+        --     model = "gpt-4o",
+        --     api_key_name = "OPENAI_API_KEY",
+        -- },
+        -- anthropic = {
+        --     url = "https://api.anthropic.com/v1/messages",
+        --     model = "claude-3-5-sonnet-20240620",
+        --     api_key_name = "ANTHROPIC_API_KEY",
+        -- },
+    },
+}
