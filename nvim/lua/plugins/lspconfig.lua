@@ -15,12 +15,22 @@ return {
             vim.lsp.enable 'arduino_language_server'
             vim.lsp.enable 'twiggy_language_server'
 
-            vim.lsp.enable 'djlsp'
+            -- vim.lsp.enable 'djlsp'
 
-            -- vim.lsp.enable 'pylsp'
-            -- configure_server 'pylsp'
+            configure_server('ltex', {
+                filetypes = { 'markdown', 'text', 'tex', 'gitcommit' },
+                settings = {
+                    ltex = {
+                        language = 'en',
+                        additionalRules = {
+                            languageModel = '~/models/ngrams/',
+                        },
+                    },
+                },
+                flags = { debounce_text_changes = 300 },
+            })
 
-            require('lspconfig').pyright.setup {
+            configure_server('pyright', {
                 settings = {
                     pyright = {
                         -- Using Ruff's import organizer
@@ -33,27 +43,25 @@ return {
                         },
                     },
                 },
-            }
+            })
 
-            require('lspconfig').phpactor.setup {}
-            require('lspconfig').jsonls.setup {}
-            require('lspconfig').taplo.setup {}
-            require('lspconfig').ruff.setup {
+            configure_server 'phpactor'
+            configure_server 'jsonls'
+            configure_server 'taplo'
+            configure_server('ruff', {
                 settings = { format = false },
-            }
+            })
 
             -- Servers without extra configuration.
             configure_server 'bashls'
             configure_server 'cssls'
             configure_server 'dprint'
-            -- configure_server 'html'
             configure_server 'zls'
 
             local html_capabilities = vim.lsp.protocol.make_client_capabilities()
             html_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-            require('lspconfig').html.setup {
-                capabilities = html_capabilities,
+            configure_server('html', {
                 filetypes = { 'html', 'blade' },
                 init_options = {
                     configurationSection = { 'html', 'css', 'javascript' },
@@ -63,7 +71,7 @@ return {
                     },
                     provideFormatter = true,
                 },
-            }
+            }, html_capabilities)
 
             configure_server('clangd', {
                 cmd = {
