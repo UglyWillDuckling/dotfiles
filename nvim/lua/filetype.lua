@@ -5,6 +5,10 @@ vim.filetype.add {
     pattern = {
         ['tsconfig*.json'] = 'jsonc',
         ['.*/%.vscode/.*%.json'] = 'jsonc',
+        ['docker-compose%.yml'] = 'yaml.docker-compose',
+        ['docker-compose%.yaml'] = 'yaml.docker-compose',
+        ['compose%.yml'] = 'yaml.docker-compose',
+        ['compose%.yaml'] = 'yaml.docker-compose',
         -- Borrowed from LazyVim. Mark huge files to disable features later.
         ['.*'] = function(path, bufnr)
             return vim.bo[bufnr]
