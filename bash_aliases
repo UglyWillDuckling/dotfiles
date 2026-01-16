@@ -76,6 +76,7 @@ alias dps='docker compose ps'
 alias upandown='docker compose down && docker compose up'
 alias dcrun='docker compose run'
 alias as-tree='tree --fromfile'
+alias okta-code="google-otp --name='okta aviv' | jq '.token' -r"
 
 function w() {
     which "$@" | bat -l bash
