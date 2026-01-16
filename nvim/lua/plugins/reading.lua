@@ -1,7 +1,7 @@
 return {
-    {
-        'vimwiki/vimwiki',
-    },
+    -- {
+    --     'vimwiki/vimwiki',
+    -- },
     {
         'preservim/vim-markdown',
     },
