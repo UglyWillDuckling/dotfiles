@@ -99,10 +99,10 @@ vim.keymap.set('n', 'y,', ':normal gg yG <C-o> <C-o> zz zz<CR>', { noremap = tru
 -- AI
 --
 -- keybinds for prompting with groq
-vim.keymap.set('n', '<leader>m', function()
-    require('llm').prompt { replace = false, service = 'groq' }
+vim.keymap.set('n', '<leader>ll', function()
+    require('llm').prompt { replace = true, service = 'groq' }
 end, { desc = 'Prompt with groq' })
-vim.keymap.set('v', '<leader>m', function()
+vim.keymap.set('v', '<leader>ll', function()
     require('llm').prompt { replace = false, service = 'groq' }
 end, { desc = 'Prompt with groq' })
 vim.keymap.set('v', '<leader>.', function()
