@@ -134,7 +134,7 @@ return {
                             -- dictionary_directories = { vim.fn.expand '~/.config/nvim/dicts' },
                             -- dictionary
                             dictionary_files = function()
-                                if vim.bo.filetype == 'markdown' then
+                                if vim.bo.filetype == 'markdown' or vim.bo.filetype == 'gitcommit' then
                                     return { vim.fn.expand '~/.config/nvim/dicts/words.txt' }
                                 end
                                 return {}
