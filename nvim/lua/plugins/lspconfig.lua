@@ -45,6 +45,8 @@ return {
                 },
             })
 
+            configure_server 'kotlin_lsp'
+
             configure_server 'phpactor'
             configure_server 'jsonls'
             configure_server 'taplo'
@@ -57,6 +59,8 @@ return {
             configure_server 'cssls'
             configure_server 'dprint'
             configure_server 'zls'
+            configure_server 'dockerls'
+            configure_server 'docker_compose_language_service'
 
             local html_capabilities = vim.lsp.protocol.make_client_capabilities()
             html_capabilities.textDocument.completion.completionItem.snippetSupport = true
