@@ -11,11 +11,14 @@ return {
 
             local configure_server = require('lsp').configure_server
 
-            vim.lsp.enable 'solargraph'
+            -- vim.lsp.enable 'solargraph'
             vim.lsp.enable 'arduino_language_server'
-            vim.lsp.enable 'twiggy_language_server'
+            -- vim.lsp.enable 'twiggy_language_server'
 
-            -- vim.lsp.enable 'djlsp'
+            configure_server('kotlin_language_server', {
+                filetypes = { 'kotlin', 'kt', 'kts' },
+                cmd = { 'kotlin-lsp' },
+            })
 
             configure_server('ltex', {
                 filetypes = { 'markdown', 'text', 'tex', 'gitcommit' },
