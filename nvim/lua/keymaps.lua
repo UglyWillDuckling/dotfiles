@@ -45,13 +45,8 @@ vim.keymap.set({ 's', 'i', 'n', 'v' }, '<C-s>', '<esc>:w<cr>', { desc = 'Exit in
 vim.keymap.set({ 's', 'i', 'n', 'v' }, '<C-S-s>', '<esc>:wa<cr>', { desc = 'Exit insert mode and save all changes.' })
 
 -- Floating terminal.
--- Mapped to <C-/> actually, because of Tmux
-vim.keymap.set({ 'n', 't' }, '<C-_>', function()
-    require('float_term').float_term('zsh', { cwd = vim.fn.expand '%:p:h' })
-end, { desc = 'Toggle floating terminal' })
--- duplicate mapping to support work outside of Tmux
 vim.keymap.set({ 'n', 't' }, '<C-/>', function()
-    require('float_term').float_term('zsh', { cwd = vim.fn.expand '%:p:h' })
+    require('float_term').float_term 'zsh'
 end, { desc = 'Toggle floating terminal' })
 
 vim.keymap.set('n', '<leader>ud', function()
