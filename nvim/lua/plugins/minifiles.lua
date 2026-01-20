@@ -30,6 +30,9 @@ return {
     {
         'echasnovski/mini.files',
         lazy = false,
+        dependencies = {
+            'nvim-mini/mini.icons',
+        },
         keys = {
             {
                 '<leader>e',
