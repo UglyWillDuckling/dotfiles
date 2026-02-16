@@ -41,8 +41,14 @@ return {
                     },
                     python = {
                         analysis = {
-                            -- Ignore all files for analysis to exclusively use Ruff for linting
-                            ignore = { '*' },
+                            extraPaths = { './src', './site-packages' },
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                            diagnosticSeverityOverrides = {
+                                reportUnusedVariable = 'warning',
+                            },
+                            -- typeCheckingMode = 'off', -- Set type-checking mode to off
+                            -- diagnosticMode = 'off', -- Disable diagnostics entirely
                         },
                     },
                 },
