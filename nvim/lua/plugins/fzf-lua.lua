@@ -13,7 +13,7 @@ return {
             { '<leader>fd', '<cmd>FzfLua lsp_document_diagnostics<cr>', desc = 'Document diagnostics' },
             { '<leader>fD', '<cmd>FzfLua lsp_workspace_diagnostics<cr>', desc = 'Workspace diagnostics' },
             { '<leader>ff', '<cmd>FzfLua files<cr>', desc = 'Find files' },
-            { '<space>/', '<cmd>FzfLua live_grep_resume<cr>', desc = 'Grep Normal', mode = 'n' },
+            { '<space>/', '<cmd>FzfLua live_grep resume=true<cr>', desc = 'Grep Normal', mode = 'n' },
             { '<space>/', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep Visual', mode = 'v' },
             { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Show Help' },
             { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Show Commands' },
