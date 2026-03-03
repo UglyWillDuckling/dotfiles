@@ -20,6 +20,7 @@ return {
                 lua = { 'stylua' },
                 rust = { name = 'rust_analyzer', timeout_ms = 500, lsp_format = 'prefer' },
                 scss = { 'prettier' },
+                css = { 'prettier' },
                 sh = { 'shfmt' },
                 typescript = { 'prettier', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },
                 typescriptreact = { 'prettier', name = 'dprint', timeout_ms = 500, lsp_format = 'fallback' },

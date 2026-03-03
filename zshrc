@@ -20,7 +20,7 @@ export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/dev/tools/dsutils:$PATH
-export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH
 export PATH=$HOME/miniconda3/bin/:$PATH
 export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
@@ -280,3 +280,19 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
  eval "$(pyenv init -)"
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/vlado/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vlado/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vlado/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vlado/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
