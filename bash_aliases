@@ -151,12 +151,14 @@ git-ls_by_size () {
 }
 git-select () { git diff --name-only "$@" | fzf -m }
 git-diffselect () { git diff `git-select` }
+
 branches-clean() {
-    git branch --merged | grep -v `git branch --show-current` | grep -v 'master|production|staging' | while read branch; do git branch -d $branch; done
+    git branch --merged | grep -v `git branch --show-current` | grep -v 'master|production|staging|main' | xargs -n 1 git branch -d
 }
 git-files_between_revs () {
     git diff $1..$2 | grep --color=auto -E "^diff" | cut -d " " -f3 | sed -E 's/^a\///'
 }
+
 github_filter_commit_php_files () {
     # get the php files from the GitHub commit page
     grep --color=auto -E "\.php" | pup 'span[data-filterable-item-text=""] text{}'
