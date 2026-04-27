@@ -21,7 +21,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/dev/tools/dsutils:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH
-export PATH=$HOME/miniconda3/bin/:$PATH
+#export PATH=$HOME/miniconda3/bin/:$PATH
 export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
@@ -283,16 +283,15 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/vlado/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/vlado/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/vlado/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/vlado/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/vlado/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/vlado/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/vlado/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/vlado/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
-
