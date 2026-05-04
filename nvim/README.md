@@ -15,8 +15,13 @@ based on ~/dev/open/nvim_MariaSolOs
 4. 222
 
 
+
 - fsdfsdf
     - fdsfsdfd
+    -
+    -
+
+> [!WARNING] stop, don't do it!
 
 
 # header zwei
@@ -28,3 +33,5 @@ second list
 - [o] try to link the setup
 
     [setup](docs/setup)
+
+> [!HINT] hint hint
