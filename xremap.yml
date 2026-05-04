@@ -1,0 +1,4 @@
+modmap:
+  - name: Caps Lock
+    remap:
+      CapsLock: Ctrl_L
