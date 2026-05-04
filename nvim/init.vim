@@ -3,6 +3,7 @@ let mapleader=","
 
 " Escape insert mode more easily (quickly press jj )
 imap jj <Esc>
+imap <C-c> <Esc>
 
 " TODO: move to lua
 nmap <S-m> %
