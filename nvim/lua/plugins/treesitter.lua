@@ -37,6 +37,7 @@ return {
         build = ':TSUpdate',
         opts = {
             ensure_installed = {
+                'sql',
                 'bash',
                 'c',
                 'cpp',
