@@ -21,7 +21,7 @@ return {
             })
 
             configure_server('ltex', {
-                filetypes = { 'markdown', 'text', 'tex', 'gitcommit' },
+                filetypes = { 'text', 'tex', 'gitcommit' },
                 settings = {
                     ltex = {
                         language = 'en',
