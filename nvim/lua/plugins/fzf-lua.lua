@@ -17,7 +17,8 @@ return {
             { '<space>/', '<cmd>FzfLua grep_visual<cr>', desc = 'Grep Visual', mode = 'v' },
             { '<leader>fh', '<cmd>FzfLua help_tags<cr>', desc = 'Show Help' },
             { '<leader>sc', '<cmd>FzfLua commands<cr>', desc = 'Show Commands' },
-            { '<space><space>', '<cmd>FzfLua files<cr>', desc = 'Find Files fast' },
+            { '<space><space>', '<cmd>FzfLua files resume=true<cr>', desc = 'Find Files fast' },
+            { '<space><space>', '<cmd>FzfLua files resume=true<cr>', desc = 'Find Files fast visually', mode = 'v' },
             {
                 'R',
                 function()
