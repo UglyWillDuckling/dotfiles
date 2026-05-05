@@ -12,10 +12,12 @@ nmap <F2> :e!<CR>
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
-nmap ,wo <Plug>VimwikiFollowLink
-
 nnoremap <leader><leader> <c-^>
 nnoremap z, za
+
+if executable("gh")
+    command! -nargs=* GBrowsePR exe "!gh pr view --web <args>"
+endif
 
 function! SourceConfig()
   let path = $HOME  . '/.config/nvim/vim'
