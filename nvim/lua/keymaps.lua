@@ -124,5 +124,4 @@ vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
 -- FilePath Current
 vim.keymap.set('n', 'yp', ':call FilePathCpc()<CR>', { noremap = true, desc = 'Copy current file path' })
 
----
-vim.keymap.set('n', '<leader>uf', '<cmd>ToggleFormat<cr>')
+vim.keymap.set('n', '<leader>uf', '<cmd>ToggleFormat<CR>', { noremap = true, desc = 'Toggle Formatting' })
