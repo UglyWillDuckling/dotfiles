@@ -26,6 +26,7 @@ export PATH=$HOME/dev/projects/notion-api/api/:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/dev/projects/Squeak6.0:$PATH"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
