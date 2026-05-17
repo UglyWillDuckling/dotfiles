@@ -81,6 +81,7 @@ alias okta-code="google-otp --name='okta aviv' | jq '.token' -r"
 function w() {
     which "$@" | bat -l bash
 }
+
 function upgrade() {
     if type -p pacman >/dev/null; then
 	yay -Suay
@@ -271,6 +272,15 @@ rep-eat () {
 }
 repeat_100() { for i in {1..100}; do "$@"; done }
 repeat_char() { for i in {1..$1}; do echo "$2"; done }
+
+# Run a command every ? seconds
+# Example: every 2 ls -l # run ls -l every 2 seconds
+every () {
+    sec=$1;shift
+    while true;
+    do "$@"; sleep $sec
+    done
+}
 
 center() { awk '{ printf("%*s\n", ('${COLUMNS}' + length($0))/2, $0); }' }
 
