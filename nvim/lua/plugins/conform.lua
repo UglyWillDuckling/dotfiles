@@ -6,7 +6,7 @@ return {
         opts = {
             notify_on_error = false,
             formatters_by_ft = {
-                blade = { 'html_beautify' },
+                blade = { 'prettier' },
                 html = { 'prettier', stop_on_first = true, name = 'dprint', timeout_ms = 500, lsp_format = 'prefer' },
                 ['php'] = { 'easy-coding-standard' },
                 htmldjango = { 'djlint' },
