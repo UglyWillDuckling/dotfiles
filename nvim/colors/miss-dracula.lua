@@ -120,7 +120,7 @@ local groups = vim.tbl_extend('error', statusline_groups, {
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { fg = colors.fg, bg = colors.bg },
     Number = { fg = colors.orange },
-    Pmenu = { fg = colors.white, bg = colors.transparent_blue },
+    Pmenu = { fg = colors.white, bg = colors.bg },
     PmenuSbar = { bg = colors.transparent_blue },
     PmenuSel = { fg = colors.cyan, bg = colors.selection },
     PmenuThumb = { bg = colors.selection },
@@ -235,10 +235,8 @@ local groups = vim.tbl_extend('error', statusline_groups, {
     ['@struct'] = { fg = colors.cyan },
     ['@typeParameter'] = { fg = colors.cyan },
 
-    -- Package manager.
-    LazyDimmed = { fg = colors.grey },
-
     -- LSP.
+    ComplHint = { link = 'Comment' },
     DiagnosticDeprecated = { strikethrough = true, fg = colors.fg },
     DiagnosticError = { fg = colors.red },
     DiagnosticFloatingError = { fg = colors.red },
@@ -257,8 +255,7 @@ local groups = vim.tbl_extend('error', statusline_groups, {
     DiagnosticVirtualTextInfo = { fg = colors.cyan, bg = colors.transparent_blue },
     DiagnosticVirtualTextWarn = { fg = colors.yellow, bg = colors.transparent_yellow },
     DiagnosticWarn = { fg = colors.yellow },
-    LspCodeLens = { fg = colors.cyan },
-    LspFloatWinBorder = { fg = colors.comment },
+    LspCodeLens = { fg = colors.cyan, underline = true },
     LspInlayHint = { fg = colors.lavender, italic = true },
     LspReferenceRead = { bg = colors.transparent_blue },
     LspReferenceText = {},
@@ -299,41 +296,18 @@ local groups = vim.tbl_extend('error', statusline_groups, {
 
     -- Dap UI.
     DapStoppedLine = { default = true, link = 'Visual' },
-    DapUIBreakpointsCurrentLine = { fg = colors.bright_green, bold = true },
-    DapUIBreakpointsInfo = { fg = colors.bright_green },
-    DapUIBreakpointsPath = { fg = colors.bright_cyan },
-    DapUIDecoration = { fg = colors.bright_cyan },
-    DapUIFloatBorder = { fg = colors.bright_cyan },
-    DapUILineNumber = { fg = colors.bright_cyan },
-    DapUIModifiedValue = { fg = colors.bright_cyan, bold = true },
-    DapUIPlayPause = { fg = colors.bright_green },
-    DapUIRestart = { fg = colors.green },
-    DapUIScope = { fg = colors.bright_cyan },
-    DapUISource = { fg = colors.bright_blue },
-    DapUIStepBack = { fg = colors.cyan },
-    DapUIStepInto = { fg = colors.cyan },
-    DapUIStepOut = { fg = colors.cyan },
-    DapUIStepOver = { fg = colors.cyan },
-    DapUIStop = { fg = colors.red },
-    DapUIStoppedThread = { fg = colors.bright_cyan },
-    DapUIThread = { fg = colors.bright_green },
-    DapUIType = { fg = colors.bright_blue },
-    DapUIWatchesEmpty = { fg = colors.pink },
-    DapUIWatchesError = { fg = colors.pink },
-    DapUIWatchesValue = { fg = colors.bright_green },
-    DapUIWinSelect = { fg = colors.bright_cyan, bold = true },
     NvimDapVirtualText = { fg = colors.lavender, underline = true },
 
     -- Diffs.
     DiffAdd = { fg = colors.green, bg = colors.transparent_green },
-    DiffChange = { fg = colors.yellow, bg = colors.transparent_yellow },
+    DiffChange = { fg = colors.white, bg = colors.transparent_yellow },
     DiffDelete = { fg = colors.red, bg = colors.transparent_red },
-    DiffText = { fg = colors.bright_white, bg = colors.transparent_black },
+    DiffText = { fg = colors.orange, bg = colors.transparent_yellow, bold = true },
+    DiffviewFolderSign = { fg = colors.cyan },
     DiffviewNonText = { fg = colors.lilac },
     diffAdded = { fg = colors.bright_green, bold = true },
     diffChanged = { fg = colors.bright_yellow, bold = true },
     diffRemoved = { fg = colors.bright_red, bold = true },
-    DiffviewFolderSign = { fg = colors.cyan },
 
     -- Command line.
     MoreMsg = { fg = colors.bright_white, bold = true },
@@ -352,10 +326,14 @@ local groups = vim.tbl_extend('error', statusline_groups, {
     -- Gitsigns.
     GitSignsAdd = { fg = colors.bright_green },
     GitSignsChange = { fg = colors.cyan },
+    GitSignsCurrentLineBlame = { fg = colors.lavender },
     GitSignsDelete = { fg = colors.bright_red },
     GitSignsStagedAdd = { fg = colors.orange },
     GitSignsStagedChange = { fg = colors.orange },
     GitSignsStagedDelete = { fg = colors.orange },
+
+    -- Gitlinker.
+    NvimGitLinkerHighlightTextObject = { link = 'Visual' },
 
     -- Bufferline.
     BufferLineBufferSelected = { bg = colors.bg, underline = true, sp = colors.purple },
@@ -388,16 +366,16 @@ local groups = vim.tbl_extend('error', statusline_groups, {
     FzfLuaPreviewTitle = { fg = colors.fg },
     FzfLuaSearch = { bg = colors.transparent_red },
 
-    -- TODOs and notes.
-    MiniHipatternsHack = { fg = colors.bg, bg = colors.orange, bold = true },
-    MiniHipatternsNote = { fg = colors.bg, bg = colors.bright_green, bold = true },
-    MiniHipatternsTodo = { fg = colors.bg, bg = colors.cyan, bold = true },
-
-    -- Overseeer.
-    OverseerComponent = { link = '@keyword' },
+    -- Nicer sign column highlights for grug-far.
+    GrugFarResultsChangeIndicator = { link = 'Changed' },
+    GrugFarResultsRemoveIndicator = { link = 'Removed' },
+    GrugFarResultsAddIndicator = { link = 'Added' },
 
     -- Links.
     HighlightUrl = { underline = true, fg = colors.neon_cyan, sp = colors.neon_cyan },
+
+    -- AI completions.
+    NeoCodeiumSuggestion = { link = 'Comment' },
 })
 
 for group, opts in pairs(groups) do

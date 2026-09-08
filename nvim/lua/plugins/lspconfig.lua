@@ -12,7 +12,7 @@ return {
             local configure_server = require('lsp').configure_server
 
             -- vim.lsp.enable 'solargraph'
-            vim.lsp.enable 'arduino_language_server'
+            -- vim.lsp.enable 'arduino_language_server'
             -- vim.lsp.enable 'twiggy_language_server'
 
             configure_server('kotlin_language_server', {
