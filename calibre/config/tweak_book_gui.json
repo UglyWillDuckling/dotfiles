@@ -111,50 +111,50 @@
   },
   "geometry-of-import-foreign-geometry": {
     "frame_geometry": {
-      "height": 203,
-      "width": 503,
-      "x": 699,
-      "y": 385
+      "height": 867,
+      "width": 742,
+      "x": 0,
+      "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 174,
-      "width": 501,
-      "x": 700,
-      "y": 413
+      "height": 867,
+      "width": 742,
+      "x": 0,
+      "y": 0
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
-      "height": 174,
-      "width": 501,
-      "x": 700,
-      "y": 413
+      "height": 872,
+      "width": 1495,
+      "x": 0,
+      "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAK7AAABgQAABLEAAAJLAAACvAAAAZ0AAASwAAACSgAAAAAAAAAAB4AAAAK8AAABnQAABLAAAAJK"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAuUAAANiAAAAAAAAAAAAAAXWAAADZwAAAAACAAAADIAAAAAAAAAAAAAAAuUAAANi"
     },
     "screen": {
-      "depth": 24,
-      "device_pixel_ratio": 1.0,
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
+        "height": 1800,
+        "width": 3200,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL P2719H",
-      "name": "DP-2",
-      "serial": "1J13Q83",
+      "manufacturer": "BNQ",
+      "model": "BenQ RD320U",
+      "name": "HDMI-A-1",
+      "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 1800,
+        "width": 3200
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 1920,
+        "height": 1800,
+        "width": 3200,
         "x": 0,
         "y": 0
       }
@@ -162,50 +162,50 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1036,
-      "width": 1920,
-      "x": 0,
-      "y": 0
+      "height": 867,
+      "width": 1489,
+      "x": 640,
+      "y": 382
     },
     "full_screened": false,
     "geometry": {
-      "height": 1008,
-      "width": 1920,
-      "x": 0,
-      "y": 28
+      "height": 867,
+      "width": 1489,
+      "x": 640,
+      "y": 382
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1007,
-      "width": 1870,
-      "x": 49,
-      "y": 28
+      "height": 872,
+      "width": 1495,
+      "x": 640,
+      "y": 382
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAAB38AAAQLAAAAMQAAABwAAAd+AAAECgAAAAACAAAAB4AAAAAAAAAAHAAAB38AAAQL"
+      "__value__": "AdnQywADAAAAAAKAAAABfgAACFAAAATgAAACgAAAAX4AAAhWAAAE5QAAAAACAAAADIAAAAKAAAABfgAACFAAAATg"
     },
     "screen": {
-      "depth": 24,
-      "device_pixel_ratio": 1.0,
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920,
+        "height": 1800,
+        "width": 3200,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
-      "manufacturer": "Dell Inc.",
-      "model": "DELL P2719H",
-      "name": "DP-2",
-      "serial": "1J13Q83",
+      "manufacturer": "BNQ",
+      "model": "BenQ RD320U",
+      "name": "HDMI-A-1",
+      "serial": "",
       "size_in_logical_pixels": {
-        "height": 1080,
-        "width": 1920
+        "height": 1800,
+        "width": 3200
       },
       "virtual_geometry": {
-        "height": 1080,
-        "width": 1920,
+        "height": 1800,
+        "width": 3200,
         "x": 0,
         "y": 0
       }
@@ -268,7 +268,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAVwD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFcA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHcA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIcA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfUA////AAAAAQAAA14AAAOe/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAA54AAABOAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABXAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAyAP///wAABBwAAAOeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADqvwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAAAAADwAAAOqAAAAVwD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFcA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHQA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIcA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfUA////AAAAAQAAAlwAAAMR/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAPAAAAxEAAABOAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABXAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAyAP///wAAA28AAAMRAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
     "/home/vlado/Downloads/Konačni rezultati za web.epub",
