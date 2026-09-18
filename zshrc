@@ -127,7 +127,6 @@ sudo
   emoji
   zsh-syntax-highlighting
   dirhistory
-  dotenv
   qrcode
 )
 
