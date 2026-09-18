@@ -4,10 +4,14 @@ return {
         require('dooing').setup {
             -- Window settings
             window = {
-                width = 65, -- Width of the floating window
-                height = 23, -- Height of the floating window
-                position = 'bottom-left', -- 'right', 'left', 'top', 'bottom', 'center',
+                position = 'bottom', -- 'right', 'left', 'top', 'bottom', 'center',
                 -- 'top-right', 'top-left', 'bottom-right', 'bottom-left'
+                dimensions = function()
+                    return {
+                        width = math.max(60, math.floor(vim.o.columns * 0.4)),
+                        height = math.max(20, math.floor(vim.o.lines * 0.5)),
+                    }
+                end,
             },
             keymaps = {
                 toggle_window = '<leader>dg', -- Toggle global todos
