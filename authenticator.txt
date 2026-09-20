@@ -1,1 +1,0 @@
-otpauth://totp/GitHub:UglyWillDuckling?secret=5464AWK36U557YHC&issuer=GitHub
