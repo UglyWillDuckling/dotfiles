@@ -8,10 +8,11 @@
 	name = vladimir
 	signingkey = D3E75AB8FA350B7D
 [alias]
+    commitdiff = "!. ~/.githelpers && show_commit_diff"
 	blamew = blame -w
 	blamec = blame -w -C -C -C
 
-	pickaxe = git log --pickaxe-all --pickaxe-regex -S
+	axe = log -p -S
 
 	dog = log --all --decorate --oneline --graph
 	# lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -130,3 +131,5 @@
 	path = ~/.gitconfig_local
 [push]
 	followTags = true
+[coderabbit]
+	machineId = cli/13500c09018c411f83c1d80a3c516de3

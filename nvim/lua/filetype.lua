@@ -9,6 +9,7 @@ vim.filetype.add {
         ['docker-compose%.yaml'] = 'yaml.docker-compose',
         ['compose%.yml'] = 'yaml.docker-compose',
         ['compose%.yaml'] = 'yaml.docker-compose',
+        ['.*%.blade%.php'] = 'blade',
         -- Borrowed from LazyVim. Mark huge files to disable features later.
         ['.*'] = function(path, bufnr)
             return vim.bo[bufnr]

@@ -283,15 +283,31 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/vlado/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/vlado/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/vlado/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/vlado/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/home/vsedlar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vsedlar/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vsedlar/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vsedlar/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
+
+# opencode
+export PATH=/home/vsedlar/.opencode/bin:$PATH
+
+## NPM registries
+export GSL_NEXUS_REGISTRY_TOKEN=""
+
+export NEXUS_NPM_TOKEN="bWEtbnBtLXVzZXJzOkxoMnZ6ajkpZnYlMw=="
+export PACKAGECLOUD_NPM_TOKEN="5a437f5ec3db1d55e243644691ed21170b8befe2d1ed94a8"
+export PACKAGECLOUD_TOKEN="51f450d6782bfa3fb69d62a79d05c88ed686be7256f2029c"
+export PACKAGECLOUD_NPM_PUBLISH_TOKEN="70b055ad75ff4778332ff3076c38837d37df0751e5e82ae0"
+
+# Lokalize for WLEF
+export LOKALIZE_WLEF_API_READ_TOKEN="c9653a813e8d090d5e01ce15b57e1f4eeeabc32d"
+export LOKALIZE_WLEF_API_WRITE_TOKEN="4f2672e48969720b96ba12bafe63fac903290c0e"
+export LOKALIZE_WLEF_PROJECT_ID="467936026312081c6e2e81.03164889"

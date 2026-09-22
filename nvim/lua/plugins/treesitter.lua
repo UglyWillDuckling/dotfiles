@@ -1,112 +1,83 @@
--- Highlight, edit, and navigate code.
 return {
     {
         'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ':TSUpdate',
+        opts = {},
+        highlight = { enable = true },
+        indent = {
+            enable = true,
+            -- Treesitter unindents Yaml lists for some reason.
+            disable = { 'yaml' },
+        },
         dependencies = {
             {
                 'nvim-treesitter/nvim-treesitter-context',
+                dependencies = { 'nvim-treesitter/nvim-treesitter' },
+                event = 'VeryLazy',
                 opts = {
-                    -- Avoid the sticky context from growing a lot.
-                    max_lines = 3,
-                    -- Match the context lines to the source code.
-                    multiline_threshold = 1,
-                    -- Disable it when the window is too small.
-                    min_window_height = 20,
-                },
-                keys = {
-                    {
-                        '[c',
-                        function()
-                            -- Jump to previous change when in diffview.
-                            if vim.wo.diff then
-                                return '[c'
-                            else
-                                vim.schedule(function()
-                                    require('treesitter-context').go_to_context()
-                                end)
-                                return '<Ignore>'
-                            end
-                        end,
-                        desc = 'Jump to upper context',
-                        expr = true,
-                    },
+                    max_lines = 3, -- how many context lines to show at most
+                    min_window_height = 0,
+                    line_numbers = true,
+                    multiline_threshold = 20,
+                    trim_scope = 'outer', -- or 'inner'
+                    mode = 'cursor', -- or 'topline'
+                    separator = nil, -- e.g. '─' for a divider line under the context
+                    zindex = 20,
+                    on_attach = nil,
                 },
             },
         },
-        version = false,
-        build = ':TSUpdate',
-        opts = {
-            ensure_installed = {
-                'vue',
-                'sql',
-                'bash',
+        config = function()
+            local ensure_installed = {
                 'c',
                 'cpp',
-                'fish',
-                'gitcommit',
-                'graphql',
-                'html',
-                'java',
-                'javascript',
-                'json',
-                'json5',
-                'jsonc',
                 'lua',
-                -- 'markdown',
-                -- 'markdown_inline',
-                'python',
-                'query',
-                'rasi',
-                'regex',
-                'rust',
-                'scss',
-                'toml',
-                'tsx',
-                'typescript',
                 'vim',
                 'vimdoc',
+                'query',
+                'bash',
+                'json',
                 'yaml',
+                'markdown',
+                'javascript',
+                'typescript',
+                'html',
+                'css',
                 'php',
-                'arduino',
-                'groovy',
-                'make',
-            },
-            highlight = { enable = true },
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    init_selection = '<S-l>',
-                    node_incremental = '<S-l>',
-                    scope_incremental = false,
-                    node_decremental = '<S-h>',
-                },
-            },
-            indent = {
-                enable = true,
-                -- Treesitter unindents Yaml lists for some reason.
-                disable = { 'yaml' },
-            },
-        },
-        config = function(_, opts)
-            local toggle_inc_selection_group =
-                vim.api.nvim_create_augroup('mariasolos/toggle_inc_selection', { clear = true })
-            vim.api.nvim_create_autocmd('CmdwinEnter', {
-                desc = 'Disable incremental selection when entering the cmdline window',
-                group = toggle_inc_selection_group,
-                command = 'TSBufDisable incremental_selection',
-            })
-            vim.api.nvim_create_autocmd('CmdwinLeave', {
-                desc = 'Enable incremental selection when leaving the cmdline window',
-                group = toggle_inc_selection_group,
-                command = 'TSBufEnable incremental_selection',
-            })
-            vim.filetype.add {
-                pattern = {
-                    ['.*%.blade%.php'] = 'blade',
-                },
+                'python',
             }
 
-            require('nvim-treesitter.configs').setup(opts)
+            require('nvim-treesitter').install(ensure_installed)
+
+            -- turn on highlighting for those filetypes
+            vim.api.nvim_create_autocmd('FileType', {
+                pattern = ensure_installed,
+                callback = function()
+                    vim.treesitter.start()
+
+                    -- indentation
+                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+                    -- folding
+                    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+                    vim.wo.foldmethod = 'expr'
+                end,
+            })
         end,
+    },
+    {
+        -- https://github.com/shushtain/incselect.nvim
+        'maxischmaxi/inc-select.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        event = 'VeryLazy',
+        opts = {
+            keymaps = {
+                init_selection = '<S-l>', -- normal mode
+                node_incremental = '<S-l>', -- visual mode
+                -- scope_incremental = '<S-space>', -- visual mode
+                node_decremental = '<S-h>', -- visual mode
+            },
+        },
     },
 }
