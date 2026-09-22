@@ -80,6 +80,7 @@ return {
                 ['<C-p>'] = { 'select_prev' },
                 ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
                 ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+                ['<C-k>'] = { 'show_documentation', 'fallback' },
                 -- disable a keymap from the preset
                 ['<C-e>'] = {},
             },
