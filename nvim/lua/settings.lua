@@ -1,3 +1,6 @@
+-- fallback so LSP servers are found regardless of the active nvm version
+vim.env.PATH = vim.env.PATH .. ':' .. vim.fn.expand '~/.nvm/versions/node/v22.11.0/bin'
+
 local arrows = require('icons').arrows
 
 vim.g.mapleader = ','
