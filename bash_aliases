@@ -87,7 +87,7 @@ function upgrade() {
 	yay -Suay
 	sudo pacman -Syu
     elif type -p apt-get >/dev/null; then
-    sudo pkcon update -y
+    sudo apt-get update && sudo apt-get full-upgrade
     fi
 
     sudo flatpak update; sudo flatpak remove --unused; sudo snap refresh;
